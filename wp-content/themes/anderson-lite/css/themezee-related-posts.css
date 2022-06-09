@@ -1,0 +1,199 @@
+/*
+ * Themezee Related Posts CSS
+ * https://themezee.com/plugins/related-posts/
+ *
+ * Copyright(C) 2015, ThemeZee.com - support@themezee.com
+ * License: GPL v3
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+ *
+ * @package Anderson Lite
+ */
+
+/*--------------------------------------------------------------
+# General Styling
+---------------------------------------------------------------- */
+.related-posts .related-posts-title {
+	margin-bottom: 0.5em;
+	color: #222;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	font-size: 1.5em;
+	font-family: 'Share', Tahoma, Verdana, Arial;
+}
+
+.related-posts .entry-title {
+	font-size: 1.4em;
+}
+
+.related-posts .entry-meta span:before {
+	display: inline-block;
+	color: #555;
+	vertical-align: middle;
+	font: normal 16px 'Genericons';
+	-webkit-font-smoothing: antialiased;
+}
+
+.related-posts .entry-meta .meta-author {
+	margin-left: 0.8em;
+}
+
+.related-posts .entry-meta .meta-date:before{
+	content: '\f303';
+}
+
+.related-posts .entry-meta .meta-author:before{
+	content: '\f411';
+}
+
+/*--------------------------------------------------------------
+# List Layout
+---------------------------------------------------------------- */
+ul.related-posts-list {
+	margin: 1em 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.related-posts-list li {
+	margin: 0 0 1em;
+	padding: 0;
+	list-style: none;
+}
+
+.related-posts-list li .entry-header {
+	margin-top: 0.25em;
+}
+
+.related-posts-list li .wp-post-image {
+	float: left;
+	margin: 0 1em 0 0;
+	padding: 0;
+	max-width: 20%;
+	border: none;
+}
+
+
+/*--------------------------------------------------------------
+# Grid Layouts
+---------------------------------------------------------------- */
+.related-posts-grid {
+	margin: 1em 0 0;
+}
+
+.related-posts-columns {
+	margin-right: -1em;
+}
+
+.related-posts-columns .related-post-column {
+	float: left;
+	box-sizing: border-box;
+	margin-bottom: 1em;
+	padding-right: 1em;
+}
+
+.related-posts-two-columns .related-post-column {
+	width: 50%;
+}
+
+.related-posts-three-columns .related-post-column {
+	width: 33.3333333333333%;
+}
+
+.related-posts-four-columns .related-post-column {
+	width: 25%;
+}
+
+.related-posts-two-columns .related-post-column:nth-child(2n + 1) {
+	clear: left;
+}
+
+.related-posts-three-columns .related-post-column:nth-child(3n + 1) {
+	clear: left;
+}
+
+.related-posts-four-columns .related-post-column:nth-child(4n + 1) {
+	clear: left;
+}
+
+.related-posts-three-columns .related-post-column .entry-title {
+	font-size: 1.2em;
+}
+
+.related-posts-four-columns .related-post-column .entry-title {
+	font-size: 1em;
+}
+
+.related-posts-columns .related-post-column .wp-post-image {
+	margin: 0 0 1em 0;
+	padding: 0;
+	border: none;
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+---------------------------------------------------------------- */
+
+@media only screen and (max-width: 50em) {
+	/* Columns */
+	.related-posts-four-columns .related-post-column {
+		width: 50%;
+	}
+	
+	.related-posts-four-columns .related-post-column:nth-child(2n + 1) {
+		clear: left;
+	}
+	
+	.related-posts-four-columns .related-post-column .entry-title {
+		font-size: 1.2em;
+	}
+	
+	/* List */
+	.related-posts-list li .wp-post-image {
+		max-width: 25%;
+	}
+	
+	.related-posts-list li .entry-title {
+		font-size: 1.2em;
+	}
+}
+
+@media only screen and (max-width: 35em) {
+	/* Columns */
+	.related-posts-three-columns {
+		margin: 0;
+	}
+	
+	.related-posts-three-columns .related-post-column {
+		float: none;
+		padding-right: 0;
+		width: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 25em) {
+	/* Columns */
+	.related-posts-two-columns,
+	.related-posts-four-columns {
+		margin: 0;
+	}
+	
+	.related-posts-two-columns .related-post-column,
+	.related-posts-four-columns .related-post-column {
+		float: none;
+		padding-right: 0;
+		width: 100%;
+	}
+	
+	.related-posts-two-columns .related-post-column .entry-title {
+		font-size: 1.2em;
+	}
+	
+	/* List */
+	.related-posts-list li .wp-post-image {
+		float: none;
+		margin: 0 0 0.5em 0;
+		max-width: 100%;
+	}
+
+}

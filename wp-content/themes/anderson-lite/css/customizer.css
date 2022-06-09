@@ -1,0 +1,78 @@
+/*
+ * Theme Customizer CSS
+ *
+ */
+
+.customize-control-checkbox {
+    margin-bottom: 4px;
+}
+
+#customize-control-anderson_theme_options-header_tagline {
+	margin-bottom: 16px;
+}
+
+#customize-control-anderson_control_slider_active_header,
+#customize-control-anderson_control_footer_text,
+#customize-control-anderson_control_post_images,
+#customize-control-anderson_control_excerpt_text_headline,
+#customize-control-anderson_control_postmeta_headline,
+#customize-control-anderson_control_post_footer_headline,
+#customize-control-anderson_control_image_grayscale_headline,
+#customize-control-anderson_theme_options-slider_speed  {
+	margin-top: 16px;
+}
+#customize-control-anderson_control_featured_posts_header,
+#customize-control-anderson_control_slider_animation {
+	margin-top: 8px;
+	padding-top: 14px;
+	border-top: 1px solid #eee;
+}
+
+#customize-control-anderson_control_featured_posts_header,
+#customize-control-anderson_control_default_fonts,
+#customize-control-anderson_control_header_content,
+#customize-control-anderson_control_post_images,
+#customize-control-anderson_control_excerpt_text_headline,
+#customize-control-anderson_control_postmeta_headline,
+#customize-control-anderson_control_post_footer_headline,
+#customize-control-anderson_control_grayscale_filter_headline,
+#customize-control-anderson_control_slider_active_header {
+	margin-bottom: 0;
+}
+
+#customize-control-anderson_control_footer_text textarea {
+	height: 4em;
+}
+
+#customize-control-anderson_control_upgrade div {
+	margin: 4px 0 32px;
+}
+#customize-control-anderson_control_upgrade div .customize-control-title {
+	margin-bottom: 4px;
+}
+
+#customize-theme-controls [id$=accordion-panel-anderson_panel_options] .customize-info .customize-help-toggle {
+	top: 24px;
+	right: 4px;
+}
+
+#customize-theme-controls [id$=accordion-panel-anderson_panel_options] .customize-info .customize-help-toggle::before {
+	content: "\f333";
+	color: #a0a5aa;
+	font-size: 28px;
+	padding: 0;
+	left: 0;
+	top: 0;
+}
+
+#customize-theme-controls [id$=accordion-panel-anderson_panel_options] .customize-info .customize-help-toggle[aria-expanded="true"]::before {
+	content: "\f335";
+}
+
+#customize-theme-controls [id$=accordion-panel-anderson_panel_options] .customize-info .customize-help-toggle:hover::before {
+	color: #72777c;
+}
+
+#customize-theme-controls [id$=accordion-panel-anderson_panel_options] .customize-info .customize-help-toggle:focus::before {
+	box-shadow: none;
+}
