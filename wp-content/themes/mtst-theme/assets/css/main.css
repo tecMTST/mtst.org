@@ -5,15 +5,17 @@
     --topo: #342F2F;
     --branco: #fff;
     --preto: #000;
+    --vermelho-escuro: #D70000;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    background: var(--branco);
 }
 
 /* Header */
-header {
+.topo {
     background: var(--topo);
     padding: 10px 20px;
 }
@@ -77,4 +79,31 @@ ul.redes-sociais li {
     display: flex;
     height: 100%;
     vertical-align: middle;
+}
+
+/* Menu Principal */
+.menu-principal {
+    padding: 24px 20px;
+}
+
+.menu-principal ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-principal ul li a {
+    color: var(--preto);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.nav-link {
+    padding-bottom: 4px;
+}
+
+.nav-link.active, .nav-link:hover {
+    background-image: url(../images/borda-menu.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
