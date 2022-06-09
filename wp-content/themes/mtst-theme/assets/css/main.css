@@ -144,6 +144,7 @@ h2.titulo-secao {
 .ultima-noticia .thumb {
     border-radius: 20px 20px 0px 0px;
     height: 370px;
+    background-size: cover;
 }
 
 .categoria {

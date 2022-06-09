@@ -8,6 +8,6 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <?php get_template_part( 'template-parts/header/site-header' ); ?>
     
