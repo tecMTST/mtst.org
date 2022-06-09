@@ -99,7 +99,7 @@ ul.redes-sociais li {
 }
 
 .nav-link {
-    padding-bottom: 4px;
+    padding-bottom: 16px;
 }
 
 .nav-link.active, .nav-link:hover {
@@ -107,3 +107,10 @@ ul.redes-sociais li {
     background-position: bottom;
     background-repeat: no-repeat;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Banner do topo */
