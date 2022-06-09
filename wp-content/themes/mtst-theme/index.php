@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="container">
+<!-- <div class="container">
   <?php if ( have_posts() ) : while ( have_posts() ) :   the_post(); ?>
     <h2>
       <a href="<?php the_permalink() ?>">
@@ -10,5 +10,5 @@
   <?php endwhile; else: ?>
     <p>Não há posts para exibir</p>
   <?php endif; ?>
-</div>
+</div> -->
 <?php get_footer(); ?>
