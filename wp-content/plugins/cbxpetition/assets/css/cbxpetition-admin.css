@@ -1,0 +1,315 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+body.dragging, body.dragging * {
+	cursor: move !important;
+}
+
+.dragged {
+	position: absolute;
+	opacity: 0.5;
+	z-index: 2000;
+}
+
+/** WordPress 3.8 Fix **/
+.form-table th {
+	padding: 20px 10px;
+}
+
+#wpbody-content .metabox-holder {
+	padding-top: 5px;
+}
+
+.chosen-container-single, .chosen-container-multi {
+	min-width: 244px !important;
+}
+
+#poststuff h2.nav-tab-wrapper {
+	margin-bottom: 0px !important;
+	padding-bottom: 0px;;
+}
+
+.nav-tab-active, .nav-tab-active:hover {
+	background: #fff !important;
+}
+
+.nav-tab-active, .nav-tab-active:focus, .nav-tab-active:focus:active, .nav-tab-active:hover, .postbox {
+	border-top: 2px solid #0085ba;
+}
+
+
+.cbxpetitionshortcodetrigger {
+	margin-top: 5px;
+	margin-left: 4px;
+	float: left;
+	display: inline-block;
+}
+
+.cbxpetitionshortcode, .cbxpetitionshortcode-text {
+	background: #f7f7f7;
+	border: 1px solid #ccc !important;
+	padding: 3px 6px !important;
+	float: left;
+	display: inline-block;
+	/*max-width: 125px;*/
+}
+
+.cbxpetitionshortcode-text {
+	/*max-width: 125px;*/
+}
+
+
+#petition_banner_wrapper{
+	position: relative;
+	background-size: cover;
+	min-height: 15rem;
+	border-radius: 10px;
+	border: 1px solid #3c8dbc;
+	text-align: center;
+	line-height: 15rem;
+}
+
+#petition_banner_wrapper .cbxpetition-add-banner,
+#petition_banner_wrapper .cbxpetition-remove-banner{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 35%;
+	display: block;
+	width: 200px;
+}
+
+#petition_banner_wrapper .cbxpetition-remove-banner{
+	top: 50%;
+	color: red;
+}
+
+/* Field: recipient */
+#cbxpetition_repeat_fields_recipient {
+	position: relative;
+}
+
+#cbxpetition_repeat_fields_recipient .cbxpetition_repeat_field_recipient {
+	outline: 1px solid #ccc;
+	margin-bottom: 5px;
+	padding: 5px;
+	position: relative;
+	width: 100%;
+}
+
+#cbxpetition_repeat_fields_recipient .cbxpetition_repeat_field_recipient.dragged {
+	position: absolute;
+}
+
+#cbxpetition_repeat_fields_recipient .cbxpetition_repeat_field_recipient_placeholder {
+	position: relative;
+	outline: 1px dotted red;
+	height: 30px;
+	width: 100%;
+	position: relative;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+#cbxpetition_repeat_fields_recipient .cbxpetition_repeat_field_recipient .field{
+
+	display: inline-block;
+}
+
+
+#cbxpetition_repeat_fields_recipient .cbxpetition_repeat_field_recipient .trash-repeat {
+
+}
+
+#cbxpetition_repeat_fields_recipient .cbxpetition_repeat_field_recipient .move-recipient {
+	cursor: move;
+}
+
+
+/*#cbxpetition_photos{
+	position: relative;
+}
+
+#cbxpetition_photos .cbxpetition_photo{
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	outline: 1px solid #ccc;
+	margin: 5px;
+	position: relative;
+	float: left;
+	display: inline-block;
+}
+#cbxpetition_photos .cbxpetition_photo.dragged{
+	outline: 1px dashed #ccc;
+	position: absolute;
+}
+
+#cbxpetition_photos .cbxpetition_photo_placeholder {
+	outline: 1px dashed #000;
+	width: 200px;
+	height: 200px;
+	position: relative;
+	margin: 5px;
+	background-color: #ddd;
+	display: inline-block;
+	float: left;
+	display: inline-block;
+}
+
+#cbxpetition_photos .cbxpetition_photo:hover{
+	cursor: move;
+}
+
+#cbxpetition_photos .cbxpetition_photo .delete_photo{
+	position: absolute;
+	bottom:10px;
+	right: 10px;
+	color: red;
+	background-color: rgba(255,255,255, 0.3);
+}
+#cbxpetition_photos .cbxpetition_photo_background{
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}*/
+
+
+.cbxpetition_photos_wrap {
+
+}
+
+.cbxpetition_photos {
+	position: relative;
+}
+.cbxpetition_photos_error{
+	display: none;
+	color: red;
+}
+
+
+.cbxpetition_photo {
+	display: inline-block;
+	border: 1px solid #ccc;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	position: relative;
+}
+.cbxpetition_photo.dragged{
+	border: 1px dashed red !important;
+}
+
+
+.cbxpetition_photo_placeholder {
+	position: relative;
+	display: inline-block;
+	border: 1px dashed #ccc;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+}
+
+.cbxpetition_photo_loading{
+	background: transparent url("../images/ajax-loader.gif") 50% 50% no-repeat;
+}
+.cbxpetition_photo_add{
+	border: 1px solid #ccc;
+	border-radius: 30px;
+	padding: 5px 10px;
+}
+.cbxpetition_photo_add:hover{
+	border:1px solid #000;
+}
+
+.cbxpetition_photo_add .cbxpetition_photo_upload{
+	background: url("../images/icon_upload.png") no-repeat ;
+	padding-left: 20px;
+	line-height: 20px;
+	text-decoration: none;
+
+}
+.cbxpetition_photo_add .cbxpetition_photo_upload:hover{
+
+}
+
+
+
+.cbxpetition_photo_preview{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 98px;
+	height: 98px;
+	display: block;
+}
+
+.cbxpetition_photo_delete {
+	display: none;
+	margin: auto;
+	position: absolute;
+	top: 0;
+
+	bottom: 0;
+	right: 5px;
+	width: 32px; height: 32px;
+	background:#fff url("../images/icon_delete.png") center no-repeat ;
+	padding: 2px;
+	text-decoration: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow:none !important;
+}
+
+.cbxpetition_photo_drag {
+	display: none;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 5px;
+	bottom: 0;
+	width: 32px; height: 32px;
+	background:#ffff  url("../images/icon_move.png") center no-repeat ;
+	padding: 2px;
+	text-decoration: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow:none !important;
+
+}
+
+
+.cbxpetition_photo_delete:hover{
+	text-decoration: none !important;
+}
+
+.cbxpetition_photo_drag:hover{
+	text-decoration: none !important;
+}
+
+.cbxpetition_photo:hover .cbxpetition_photo_delete {
+	display: block;
+	cursor: pointer;
+}
+
+.cbxpetition_photo:hover .cbxpetition_photo_drag {
+	display: block;
+	cursor: move;
+}
+
+.cbxpetition_display_none {
+	display: none;
+}
+.cbxpetition_photo_add{
+	border: 1px solid #ccc;
+	border-radius: 30px;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+.cbxpetition_photo_add a{
+	text-decoration: none;
+}
