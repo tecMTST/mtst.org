@@ -40,7 +40,7 @@
                     <li><a class="nav-link" href="#">Quem Somos</a></li>
                     <li><a class="nav-link" href="#">Notícias</a></li>
                     <li><a class="nav-link" href="#">Campanhas</a></li>
-                    <li><a class="nav-link" href="#">Loja</a></li>
+                    <!-- <li><a class="nav-link" href="#">Loja</a></li> -->
                     <li><a class="nav-link" href="#">Galeria</a></li>
                 </ul>
             </nav>
