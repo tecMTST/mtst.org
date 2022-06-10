@@ -10,4 +10,5 @@
 </head>
 <body <?php body_class(); ?>>
     <?php get_template_part( 'template-parts/header/site-header' ); ?>
+    <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
     

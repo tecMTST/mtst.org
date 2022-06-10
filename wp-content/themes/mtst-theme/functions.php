@@ -31,3 +31,7 @@ add_theme_support( 'html5', array(
 	'gallery',
 	'caption',
 ) );
+
+/* Carrega os endpoints da API */
+
+// require_once(get_template_directory() . "/api/api-spotfy.php");

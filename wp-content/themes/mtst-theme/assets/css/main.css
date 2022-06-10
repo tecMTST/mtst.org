@@ -220,3 +220,15 @@ h2.titulo-secao {
 .ver-tudo a {
     color: var(--preto);
 }
+
+/* PROGRAMAS */
+
+.programas {
+    padding: 40px 20px 0;
+}
+
+.embed-iframe {
+    height: auto;
+    margin-bottom: 20px;
+}
+
