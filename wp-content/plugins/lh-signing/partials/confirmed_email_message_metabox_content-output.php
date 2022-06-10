@@ -1,0 +1,3 @@
+<p>Available placeholders: %first_name% %last_name%, %bloginfo_name%, and %user_email% </p>
+<label class="screen-reader-text" id="<?php  echo $this->namespace."-confirmed_email_title-prompt-text";  ?>" for="<?php  echo $this->namespace."-confirmed_email_title";  ?>">Enter title here</label>
+<input type="text" name="<?php  echo $this->namespace."-confirmed_email_title";  ?>" id="<?php  echo $this->namespace."-confirmed_email_title";  ?>"  size="50" value="<?php echo $title;  ?>" placeholder="Enter Email title here" />

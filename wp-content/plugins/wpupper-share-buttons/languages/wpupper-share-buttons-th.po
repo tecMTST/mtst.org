@@ -1,0 +1,1042 @@
+# Translation of Development (trunk) in Thai
+# This file is distributed under the same license as the Development (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Development (trunk)\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpupper-share-"
+"buttons\n"
+"POT-Creation-Date: 2019-08-25 19:05:29+00:00\n"
+"PO-Revision-Date: 2017-02-20 22:14-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.11\n"
+
+#: Config/enqueue-scripts.php:110
+msgid "View Untitled"
+msgstr ""
+
+#: Config/enqueue-scripts.php:111
+msgid "View without count"
+msgstr ""
+
+#: Config/enqueue-scripts.php:112
+msgid "See with title"
+msgstr ""
+
+#: Config/enqueue-scripts.php:113
+#, fuzzy
+msgid "See with count"
+msgstr "ชื่อผู้ใช้ทวิตเตอร์"
+
+#: Config/enqueue-scripts.php:142
+msgid "Close"
+msgstr ""
+
+#: Config/enqueue-scripts.php:143
+msgid "Today"
+msgstr ""
+
+#: Config/enqueue-scripts.php:151
+msgid "Next"
+msgstr ""
+
+#: Config/enqueue-scripts.php:152
+msgid "Previous"
+msgstr ""
+
+#: Config/social-elements.php:104 Controller/share-reports.controller.php:290
+#: Widget/widget.php:166
+#, fuzzy
+msgid "Facebook"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:107
+msgid "Share on Facebook"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:113 Config/social-elements.php:149
+#: Config/social-elements.php:167 Config/social-elements.php:185
+#: Config/social-elements.php:203 Config/social-elements.php:275
+#: Config/social-elements.php:293 Config/social-elements.php:311
+#: Config/social-elements.php:347 Config/social-elements.php:383
+#: Config/social-elements.php:401 Config/social-elements.php:419
+msgid "Share"
+msgstr "แบ่งปัน"
+
+#: Config/social-elements.php:122 Controller/share-reports.controller.php:291
+#: Widget/widget.php:176
+msgid "Twitter"
+msgstr "ทวีตเตอร์"
+
+#: Config/social-elements.php:125 Config/social-elements.php:131
+msgid "Tweet"
+msgstr "ทวีต"
+
+#: Config/social-elements.php:140 Widget/widget.php:338
+msgid "WhatsApp"
+msgstr ""
+
+#: Config/social-elements.php:143
+#, fuzzy
+msgid "Share on WhatsApp"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:158 Controller/share-reports.controller.php:293
+#: Widget/widget.php:196
+msgid "Pinterest"
+msgstr ""
+
+#: Config/social-elements.php:161
+#, fuzzy
+msgid "Share on Pinterest"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:176 Controller/share-reports.controller.php:292
+#: Widget/widget.php:186
+msgid "Linkedin"
+msgstr ""
+
+#: Config/social-elements.php:179
+#, fuzzy
+msgid "Share on Linkedin"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:194 Controller/share-reports.controller.php:294
+#: Widget/widget.php:256
+msgid "Tumblr"
+msgstr ""
+
+#: Config/social-elements.php:197
+#, fuzzy
+msgid "Share on Tumblr"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:212
+msgid "Email"
+msgstr ""
+
+#: Config/social-elements.php:215
+msgid "Send by email"
+msgstr ""
+
+#: Config/social-elements.php:230
+msgid "Gmail"
+msgstr ""
+
+#: Config/social-elements.php:233
+msgid "Send by Gmail"
+msgstr ""
+
+#: Config/social-elements.php:248
+msgid "PrintFriendly"
+msgstr ""
+
+#: Config/social-elements.php:251
+msgid "Print via PrintFriendly"
+msgstr ""
+
+#: Config/social-elements.php:257
+msgid "Print"
+msgstr "พิมพ์"
+
+#: Config/social-elements.php:266
+msgid "Telegram"
+msgstr ""
+
+#: Config/social-elements.php:269
+#, fuzzy
+msgid "Share on Telegram"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:284
+msgid "Skype"
+msgstr ""
+
+#: Config/social-elements.php:287
+#, fuzzy
+msgid "Share on Skype"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:302
+msgid "Viber"
+msgstr ""
+
+#: Config/social-elements.php:305
+#, fuzzy
+msgid "Share on Viber"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:320 Config/social-elements.php:329
+msgid "Like"
+msgstr ""
+
+#: Config/social-elements.php:323
+#, fuzzy
+msgid "Like on Facebook"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:338 Widget/widget.php:216
+msgid "Reddit"
+msgstr ""
+
+#: Config/social-elements.php:341
+#, fuzzy
+msgid "Share on Reddit"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:356 Config/social-elements.php:365
+msgid "Messenger"
+msgstr ""
+
+#: Config/social-elements.php:359
+#, fuzzy
+msgid "Send on Facebook Messenger"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:374 Controller/share-reports.controller.php:295
+msgid "Buffer"
+msgstr ""
+
+#: Config/social-elements.php:377
+#, fuzzy
+msgid "Share on Buffer"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:392 Widget/widget.php:328
+msgid "VK"
+msgstr ""
+
+#: Config/social-elements.php:395
+#, fuzzy
+msgid "Share on VK"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:410
+#, fuzzy
+msgid "Flipboard"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:413
+#, fuzzy
+msgid "Share on Flipboard"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Config/social-elements.php:428
+#, fuzzy
+msgid "Modal Share"
+msgstr "แบ่งปัน"
+
+#: Config/social-elements.php:431 Templates/layouts-primary.php:170
+msgid "Open modal social networks"
+msgstr ""
+
+#: Config/social-elements.php:623
+msgid "Click to see also"
+msgstr ""
+
+#: Config/social-elements.php:627 View/settings-extra.view.php:87
+msgid "I just saw"
+msgstr ""
+
+#: Controller/ajax-sharing-reports.controller.php:92
+msgid "Not valid reference"
+msgstr ""
+
+#: Controller/ajax-sharing-reports.controller.php:144
+msgid "Empty counts"
+msgstr ""
+
+#: Controller/ajax.controller.php:117
+msgid "Error: Could not process css file."
+msgstr ""
+
+#: Controller/settings.controller.php:68 View/settings.view.php:48
+msgid "Settings"
+msgstr "การตั้งค่า"
+
+#. Plugin Name of the plugin/theme
+msgid "WPUpper Share Buttons"
+msgstr ""
+
+#: Controller/settings.controller.php:88
+msgid "WPUpper Share"
+msgstr ""
+
+#: Controller/settings.controller.php:95 View/addons.view.php:38
+#: View/utils.view.php:501
+msgid "Extensions"
+msgstr ""
+
+#: Controller/settings.controller.php:105 View/settings-extra.view.php:47
+#: View/utils.view.php:507
+#, fuzzy
+msgid "Extra Settings"
+msgstr "การตั้งค่า"
+
+#: Controller/settings.controller.php:115 View/settings-custom-css.view.php:39
+#: View/utils.view.php:513
+msgid "Custom CSS"
+msgstr ""
+
+#: Controller/settings.controller.php:125 View/settings-faq.view.php:37
+#: View/utils.view.php:519
+msgid "Use options"
+msgstr ""
+
+#: Controller/share-reports.controller.php:117
+msgid "Sharing Report | WPUpper Share Buttons"
+msgstr ""
+
+#: Controller/share-reports.controller.php:118 View/utils.view.php:527
+#, fuzzy
+msgid "Sharing Report"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Controller/share-reports.controller.php:289 View/settings.view.php:551
+msgid "Title"
+msgstr "ชื่อโครงการวิจัย"
+
+#: Controller/share-reports.controller.php:296 View/share-report.view.php:199
+msgid "Total"
+msgstr "รวม"
+
+#: Controller/share-reports.controller.php:297
+msgid "Post date"
+msgstr ""
+
+#: Controller/share-reports.controller.php:358
+msgid "Filter"
+msgstr ""
+
+#: Controller/share-reports.controller.php:541
+msgid "There is no record available at the moment!"
+msgstr ""
+
+#: Controller/share-reports.controller.php:605
+msgid "Y/m/d"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:19
+msgid "Insert the Follow Us of your social networks."
+msgstr ""
+
+#: Controller/widget-follow.controller.php:37
+msgid "CSS is disabled!"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:59
+#: Controller/widgets.controller.php:83
+msgid "Widget title"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:64 View/settings.view.php:543
+msgid "Custom class"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:69
+#: Controller/widgets.controller.php:98 View/settings.view.php:429
+msgid "Icons size"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:75
+#: Controller/widgets.controller.php:104 View/settings.view.php:487
+msgid "Icons color"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:81
+#: Controller/widgets.controller.php:134
+msgid "Layout"
+msgstr ""
+
+#: Controller/widgets.controller.php:17
+msgid "Insert share buttons of social networks."
+msgstr ""
+
+#: Controller/widgets.controller.php:88
+msgid "Post title"
+msgstr ""
+
+#: Controller/widgets.controller.php:93
+msgid "URL"
+msgstr ""
+
+#: Controller/widgets.controller.php:110
+msgid "Buttons background color. <br>Layouts: Square plus and Button"
+msgstr ""
+
+#: Controller/widgets.controller.php:116 View/settings.view.php:531
+msgid "Buttons title color"
+msgstr ""
+
+#: Controller/widgets.controller.php:122 View/settings.view.php:475
+#, fuzzy
+msgid "Share count text color"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Controller/widgets.controller.php:128
+msgid ""
+"Share count background color. <br>Layouts: Default, Button, Rounded and "
+"Square."
+msgstr ""
+
+#: Controller/widgets.controller.php:140 View/settings.view.php:599
+#, fuzzy
+msgid "Remove counter"
+msgstr "ก่อนเนื้อหา"
+
+#: Controller/widgets.controller.php:145 View/settings.view.php:590
+#, fuzzy
+msgid "Remove button title"
+msgstr "ก่อนเนื้อหา"
+
+#: Helper/utils-share.php:402 Helper/utils.php:2151 View/settings.view.php:203
+#: View/settings.view.php:464
+msgid "Default"
+msgstr "ค่าตั้งต้น"
+
+#: Helper/utils-share.php:403 View/settings.view.php:217
+#: View/settings.view.php:465 View/settings.view.php:521
+msgid "Button"
+msgstr ""
+
+#: Helper/utils-share.php:404 View/settings.view.php:231
+#: View/settings.view.php:366 View/settings.view.php:397
+#: View/settings.view.php:466
+msgid "Rounded"
+msgstr ""
+
+#: Helper/utils-share.php:405 View/settings.view.php:245
+#: View/settings.view.php:336 View/settings.view.php:351
+#: View/settings.view.php:467
+msgid "Square"
+msgstr "สี่เหลี่ยม"
+
+#: Helper/utils-share.php:406 View/settings.view.php:259
+#: View/settings.view.php:411 View/settings.view.php:420
+#: View/settings.view.php:522
+#, fuzzy
+msgid "Square plus"
+msgstr "สี่เหลี่ยม"
+
+#: Helper/utils.php:1528
+msgid "SHARES"
+msgstr ""
+
+#: Templates/fixed-left.php:150
+#, fuzzy
+msgid "Shares"
+msgstr "แบ่งปัน"
+
+#: View/addons.view.php:32 View/settings-custom-css.view.php:33
+#: View/settings-extra.view.php:41 View/settings-faq.view.php:31
+#: View/settings.view.php:43 View/share-report.view.php:32
+msgid "Add the Share Buttons automatically."
+msgstr ""
+
+#: View/addons.view.php:70
+msgid "View video"
+msgstr ""
+
+#: View/settings-custom-css.view.php:57
+msgid "Enter your custom CSS ..."
+msgstr ""
+
+#: View/settings-custom-css.view.php:69 View/settings.view.php:648
+msgid "Save Changes"
+msgstr "บันทึกการเปลี่ยนแปลง"
+
+#: View/settings-extra.view.php:64 View/settings-extra.view.php:66
+msgid "Twitter username"
+msgstr "ชื่อผู้ใช้ทวิตเตอร์"
+
+#: View/settings-extra.view.php:65
+#, fuzzy
+msgid "Your twitter username"
+msgstr "ชื่อผู้ใช้ทวิตเตอร์"
+
+#: View/settings-extra.view.php:73 View/settings-extra.view.php:74
+#, fuzzy
+msgid "Twitter hashtags"
+msgstr "ชื่อผู้ใช้ทวิตเตอร์"
+
+#: View/settings-extra.view.php:75
+msgid ""
+"Optional Hashtags appended onto the tweet (comma separated. don't include \"#"
+"\")"
+msgstr ""
+
+#: View/settings-extra.view.php:77 View/settings-extra.view.php:88
+#: View/settings-extra.view.php:99
+msgid "Example: "
+msgstr ""
+
+#: View/settings-extra.view.php:84 View/settings-extra.view.php:85
+#, fuzzy
+msgid "Twitter text"
+msgstr "ทวีตเตอร์"
+
+#: View/settings-extra.view.php:86
+msgid "Use {title} to add the post title"
+msgstr ""
+
+#: View/settings-extra.view.php:95
+msgid "UTM tracking"
+msgstr ""
+
+#: View/settings-extra.view.php:96
+msgid "Add UTM tracking (Analytics)"
+msgstr ""
+
+#: View/settings-extra.view.php:97
+msgid "Use <code>?</code> and"
+msgstr ""
+
+#: View/settings-extra.view.php:97
+msgid "adding parameters to use <code>&</code> in the tracking."
+msgstr ""
+
+#: View/settings-extra.view.php:106
+msgid "Bitly access token"
+msgstr ""
+
+#: View/settings-extra.view.php:107
+msgid "Insert your access token Bitly"
+msgstr ""
+
+#: View/settings-extra.view.php:108
+msgid "Shorten urls using bitly, generate token in "
+msgstr ""
+
+#: View/settings-extra.view.php:120
+msgid "Select Bitly domain"
+msgstr ""
+
+#: View/settings-extra.view.php:138
+msgid "Post types is enabled"
+msgstr ""
+
+#: View/settings-extra.view.php:143
+msgid "Minimum 1 post type, default all."
+msgstr ""
+
+#: View/settings-extra.view.php:152
+msgid "Minify html buttons share"
+msgstr ""
+
+#: View/settings-extra.view.php:154
+msgid "Minify the HTML helps site performance."
+msgstr ""
+
+#: View/settings-extra.view.php:162
+msgid "Deactivate sharing report"
+msgstr ""
+
+#: View/settings-extra.view.php:164
+msgid ""
+"This allows you to disable counting of the shares report. You will not lose "
+"the report you have already computed."
+msgstr ""
+
+#: View/settings-extra.view.php:172
+msgid "Disable CSS"
+msgstr ""
+
+#: View/settings-extra.view.php:181
+msgid "Disable JS"
+msgstr ""
+
+#: View/settings-extra.view.php:190
+msgid "CSS file in footer"
+msgstr ""
+
+#: View/settings-extra.view.php:192
+msgid ""
+"Keep the CSS style in the footer is recommended to improve the performance "
+"of your website."
+msgstr ""
+
+#: View/settings-faq.view.php:111
+msgid "Available filters"
+msgstr ""
+
+#: View/settings.view.php:67
+msgid "Places available"
+msgstr ""
+
+#: View/settings.view.php:78
+msgid "Page home"
+msgstr ""
+
+#: View/settings.view.php:89
+msgid "Archive/Category"
+msgstr ""
+
+#: View/settings.view.php:100
+msgid "Pages"
+msgstr "หน้า"
+
+#: View/settings.view.php:111
+msgid "Single"
+msgstr ""
+
+#: View/settings.view.php:124
+msgid "WooCommerce share"
+msgstr ""
+
+#: View/settings.view.php:137
+msgid "Before content"
+msgstr "ก่อนเนื้อหา"
+
+#: View/settings.view.php:148
+msgid "After content"
+msgstr "หลังจากเนื้อหา"
+
+#: View/settings.view.php:157
+msgid "Social networks available"
+msgstr ""
+
+#: View/settings.view.php:188
+msgid "Layout options"
+msgstr ""
+
+#: View/settings.view.php:191
+msgid "All layout supports responsive"
+msgstr ""
+
+#: View/settings.view.php:269 View/settings.view.php:523
+msgid "Position fixed"
+msgstr ""
+
+#: View/settings.view.php:280
+#, fuzzy
+msgid "Fixed left"
+msgstr "คงที่"
+
+#: View/settings.view.php:295
+#, fuzzy
+msgid "Fixed right"
+msgstr "คงที่"
+
+#: View/settings.view.php:306
+msgid "Clear"
+msgstr ""
+
+#: View/settings.view.php:307
+msgid "Click to clear the positions."
+msgstr ""
+
+#: View/settings.view.php:322 View/settings.view.php:396
+msgid "Position fixed layout"
+msgstr ""
+
+#: View/settings.view.php:385
+#, fuzzy
+msgid "Text below sharing count"
+msgstr "ชื่อผู้ใช้ทวิตเตอร์"
+
+#: View/settings.view.php:393 View/settings.view.php:419
+msgid "Change text below sharing count. Default SHARES"
+msgstr ""
+
+#: View/settings.view.php:395
+msgid "Used in %1$s %2$s."
+msgstr ""
+
+#: View/settings.view.php:411
+msgid "%s: Text below sharing count"
+msgstr ""
+
+#: View/settings.view.php:420
+msgid "Used in %s layout."
+msgstr ""
+
+#: View/settings.view.php:452
+#, fuzzy
+msgid "Share count background color"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: View/settings.view.php:463
+msgid "Layouts: %1$s, %2$s, %3$s and %4$s."
+msgstr ""
+
+#: View/settings.view.php:509
+msgid "Buttons background color"
+msgstr ""
+
+#: View/settings.view.php:520
+msgid "Layouts: %1$s, %2$s, and %3$s."
+msgstr ""
+
+#: View/settings.view.php:544
+msgid "Custom class for primary div"
+msgstr ""
+
+#: View/settings.view.php:552
+msgid "Insert the title here."
+msgstr ""
+
+#: View/settings.view.php:553
+msgid "Text to display above the sharing buttons."
+msgstr ""
+
+#: View/settings.view.php:560
+msgid "HTML id attribute"
+msgstr ""
+
+#: View/settings.view.php:561
+msgid "Enter name to context of search. ID of content tag"
+msgstr ""
+
+#: View/settings.view.php:562
+msgid ""
+"This is to set the fixed layout to the left of the post content. "
+"<strong>Example:</strong> <code>wrap</code> use {id} for post id."
+msgstr ""
+
+#: View/settings.view.php:570
+msgid "Fixed Items in top"
+msgstr ""
+
+#: View/settings.view.php:572
+msgid "It is activated when scrolling the page on the buttons position."
+msgstr ""
+
+#: View/settings.view.php:580
+msgid "Highlighted by reference"
+msgstr ""
+
+#: View/settings.view.php:582
+msgid "This allows highlight the social network where the user Came from."
+msgstr ""
+
+#: View/settings.view.php:608
+#, fuzzy
+msgid "Pinterest alt text"
+msgstr "ทวีตเตอร์"
+
+#: View/settings.view.php:610
+msgid ""
+"Use in description of Pinterest the alt text of highlighted image in place "
+"of title of post."
+msgstr ""
+
+#: View/settings.view.php:618
+msgid "Min count to display"
+msgstr ""
+
+#: View/settings.view.php:621
+msgid ""
+"When you enter the value, share counts are only displayed when the total "
+"counts of each item than equal to or greater than the informed value."
+msgstr ""
+
+#: View/settings.view.php:629
+#, fuzzy
+msgid "Twitter share count"
+msgstr "ชื่อผู้ใช้ทวิตเตอร์"
+
+#: View/settings.view.php:633
+msgid ""
+"The share count Twitter is powered by <a href=\"http://newsharecounts.com\" "
+"target=\"_blank\">newsharecounts.com</a>, you have to sign up with your "
+"Twitter account to get free service and twitter count. Just visit the "
+"website, fill in the domain of your site and click Sign in with Twitter. "
+"That, and nothing else!"
+msgstr ""
+
+#: View/share-report.view.php:52
+msgid "Search"
+msgstr "เริ่มค้นหา"
+
+#: View/share-report.view.php:98
+msgid "Start date:"
+msgstr ""
+
+#: View/share-report.view.php:110
+msgid "End date:"
+msgstr ""
+
+#: View/share-report.view.php:135
+msgid "Export CSV"
+msgstr ""
+
+#: View/share-report.view.php:160
+msgid "Classification by social network"
+msgstr ""
+
+#: View/share-report.view.php:169
+msgid "Name"
+msgstr ""
+
+#: View/share-report.view.php:170
+msgid "Count"
+msgstr ""
+
+#: View/shares.view.php:33
+msgid "Disable on this post"
+msgstr ""
+
+#: View/utils.view.php:322 View/widgets.view.php:317
+msgid "YES"
+msgstr ""
+
+#: View/utils.view.php:323 View/widgets.view.php:318
+msgid "NO"
+msgstr ""
+
+#: View/utils.view.php:454
+msgid ""
+"Help keep the free %1$s, you can make a donation or vote with %2$s at "
+"WordPress.org. Thank you very much!"
+msgstr ""
+
+#: View/utils.view.php:466
+msgid "Make a donation"
+msgstr ""
+
+#: View/utils.view.php:473
+msgid "Make a review"
+msgstr ""
+
+#: View/utils.view.php:483
+msgid "Settings saved."
+msgstr "การตั้งค่าถูกบันทึกแล้ว"
+
+#: View/utils.view.php:495
+msgid "General"
+msgstr ""
+
+#: View/widget-follow.view.php:17
+msgid "No social networks were enabled in the Widget."
+msgstr ""
+
+#: View/widgets.view.php:33
+msgid "Override post title"
+msgstr ""
+
+#: View/widgets.view.php:34
+msgid "Override permalinks"
+msgstr ""
+
+#: View/widgets.view.php:35
+msgid "Class name for CSS customization"
+msgstr ""
+
+#: View/widgets.view.php:138 View/widgets.view.php:162
+msgid "Drag & Drop to order and click to select"
+msgstr ""
+
+#: View/widgets.view.php:165
+msgid "The [item] URL field is empty."
+msgstr ""
+
+#: View/widgets.view.php:207
+msgid "Give the title:"
+msgstr ""
+
+#: View/widgets.view.php:223
+msgid "Enter the network URL here:"
+msgstr ""
+
+#: View/widgets.view.php:237
+msgid "Example:"
+msgstr ""
+
+#: View/widgets.view.php:251
+msgid "Your email:"
+msgstr ""
+
+#: View/widgets.view.php:260
+msgid "Subject:"
+msgstr ""
+
+#: View/widgets.view.php:275
+msgid "WhatsApp number:"
+msgstr ""
+
+#: View/widgets.view.php:291
+msgid "Message:"
+msgstr ""
+
+#: Widget/widget.php:168
+#, fuzzy
+msgid "Follow us on Facebook"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Widget/widget.php:178
+#, fuzzy
+msgid "Follow us on Twitter"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Widget/widget.php:188
+msgid "Find us on Linkedin"
+msgstr ""
+
+#: Widget/widget.php:198
+msgid "My Pinterest board"
+msgstr ""
+
+#: Widget/widget.php:206
+msgid "Instagram"
+msgstr ""
+
+#: Widget/widget.php:208
+msgid "Check out our Instagram"
+msgstr ""
+
+#: Widget/widget.php:218
+msgid "Follow us Reddit"
+msgstr ""
+
+#: Widget/widget.php:226
+msgid "YouTube"
+msgstr ""
+
+#: Widget/widget.php:228
+msgid "Subscribe to our YouTube"
+msgstr ""
+
+#: Widget/widget.php:236
+msgid "Vimeo"
+msgstr ""
+
+#: Widget/widget.php:238
+msgid "Find us on Vimeo"
+msgstr ""
+
+#: Widget/widget.php:246
+msgid "RSS Feed"
+msgstr ""
+
+#: Widget/widget.php:248
+msgid "Subscribe to our RSS Feed"
+msgstr ""
+
+#: Widget/widget.php:258
+#, fuzzy
+msgid "Find us on Tumblr"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Widget/widget.php:266
+msgid "Flickr"
+msgstr ""
+
+#: Widget/widget.php:268
+msgid "Check out our Flickr"
+msgstr ""
+
+#: Widget/widget.php:276
+#, fuzzy
+msgid "Foursquare"
+msgstr "สี่เหลี่ยม"
+
+#: Widget/widget.php:278
+msgid "Check out our Foursquare"
+msgstr ""
+
+#: Widget/widget.php:286
+msgid "GitHub"
+msgstr ""
+
+#: Widget/widget.php:288
+msgid "Check out our GitHub"
+msgstr ""
+
+#: Widget/widget.php:296
+msgid "E-mail"
+msgstr ""
+
+#: Widget/widget.php:298
+msgid "Contact Us"
+msgstr ""
+
+#: Widget/widget.php:308
+msgid "Snapchat"
+msgstr ""
+
+#: Widget/widget.php:310
+#, fuzzy
+msgid "Follow us on Snapchat"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Widget/widget.php:318
+msgid "Behance"
+msgstr ""
+
+#: Widget/widget.php:320
+#, fuzzy
+msgid "Follow us on Behance"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Widget/widget.php:330
+#, fuzzy
+msgid "Follow us on VKontakte"
+msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#: Widget/widget.php:339
+msgid "The complete phone number with country code."
+msgstr ""
+
+#: Widget/widget.php:340
+msgid "Click to Chat"
+msgstr ""
+
+#: Widget/widget.php:341
+msgid "Pre-filled message that will automatically appear in the text field."
+msgstr ""
+
+#: wpupper-share-buttons.php:109
+msgid ""
+"It does not support your PHP version. Please, install a version greater than "
+"or equal to 5.2.4."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/victorfreitas/wpupper-share-buttons"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Insert share buttons of social networks. The buttons are inserted "
+"automatically or can be called via shortcode or php method."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Victor Freitas"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/victorfreitas"
+msgstr ""
+
+#: View/share-report.view.php:92
+msgctxt "placeholder"
+msgid "YYYY-MM-DD"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Share on Google+"
+#~ msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#, fuzzy
+#~ msgid "Google+"
+#~ msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#, fuzzy
+#~ msgid "Follow us on Google+"
+#~ msgstr "แบ่งปันบนเฟซบุ๊ค"
+
+#, fuzzy
+#~ msgid "Total count"
+#~ msgstr "รวม"
+
+#~ msgid "Minute"
+#~ msgstr "นาที"
+
+#~ msgid "minutes"
+#~ msgstr "นาที"
