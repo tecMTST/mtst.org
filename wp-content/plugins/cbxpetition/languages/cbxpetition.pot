@@ -1,0 +1,1524 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2020-02-12 11:10+0000\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: admin/class-cbxpetition-admin.php:108
+msgid "Basic Setting"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:112
+msgid "Global Email Template"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:116
+msgid "Admin Email Alert"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:120
+msgid "User Email Alert"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:124
+msgid "Tools"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:139
+msgid "Following database tables will be reset/deleted."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:148
+msgid ""
+"Following option values created by this plugin will be deleted from "
+"wordpress option table"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:169
+msgid "Enable Auto Integration"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:170
+msgid "Show petition features before or after content"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:176
+msgid "Auto Integration Before Content"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:177
+msgid "Which shortcode/blocks will be added before content"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:182 admin/class-cbxpetition-admin.php:207
+msgid "Banner"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:183 admin/class-cbxpetition-admin.php:208
+msgid "Statistics"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:184 admin/class-cbxpetition-admin.php:209
+msgid "Video"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:185 admin/class-cbxpetition-admin.php:210
+msgid "Photos"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:186 admin/class-cbxpetition-admin.php:211
+msgid "Letter"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:187 admin/class-cbxpetition-admin.php:212
+msgid "Signature Form"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:188 admin/class-cbxpetition-admin.php:213
+msgid "Signature Listing"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:195
+msgid "Auto Integration After Content"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:196
+msgid "Which shortcode/blocks will be added after content"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:221
+msgid "Default Sign Status"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:222
+msgid "What will be status when a new sign is requested?"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:229
+msgid "Guest Email Activation"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:230
+msgid ""
+"Enable/Disable (To make this feature work need to enable user email "
+"notification on and user email template should have the tag syntax <code>"
+"{activation_link}</code>)"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:237
+msgid "Signature Listing Limit"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:238
+msgid "Default signature listing limit"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:245
+msgid "Petition Photo(s) Configuration"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:251
+msgid "Petition Photo Limit"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:252
+msgid "Maximum number of photos allowed in petition"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:259
+msgid "Petition Photo Max File Size(MB)"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:260
+msgid "What will be the maximum photo size in MB?"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:267
+msgid "Petition Photo Extensions"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:268
+msgid ""
+"Photo extensions that are allowable to upload, if all unchecked then jpg, "
+"jpeg, gif, png are allowed."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:274
+msgid "Petition Photo Thumbnail max width"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:275
+msgid "What will be the maximum width of thumbnail photo?"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:282
+msgid "Petition Photo Thumbnail max height"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:283
+msgid "What will be the maximum height of thumbnail photo?"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:290
+msgid "Petition Photo(s) max width"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:291
+msgid "What will be the maximum width of photo?"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:298
+msgid "Petition Photo(s) max height"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:299
+msgid "What will be the maximum height of photo?"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:306
+msgid "Petition Banner Configuration"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:312
+msgid "Petition Banner Max File Size(MB)"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:313
+msgid "What will be the maximum banner size in MB?"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:320
+msgid "Petition Banner Extensions"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:321
+msgid ""
+"Banner extensions that are allowable to upload, if all unchecked then jpg, "
+"jpeg, gif, png are allowed."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:327
+msgid "Petition Banner max width"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:328
+msgid "What will be the maximum width of banner?"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:335
+msgid "Petition Banner max height"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:336
+msgid "What will be the maximum height of banner?"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:346
+msgid "Header Image"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:347
+msgid ""
+"Url To email you want to show as email header.Upload Image by media uploader."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:354
+msgid "Footer Text"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:355
+msgid "The text to appear at the email footer."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:361
+msgid "Base Color"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:362
+msgid "The base color of the email."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:368
+msgid "Background Colour"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:369
+msgid "The background color of the email."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:375
+msgid "Body Background Color"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:376
+msgid "The background colour of the main body of email."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:382
+msgid "Body Text Color"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:383
+msgid "The body text colour of the main body of email."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:391
+msgid "New Sign Admin Email Alert"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:392
+msgid "Admin gets email for new sign request"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:398 admin/class-cbxpetition-admin.php:471
+#: admin/class-cbxpetition-admin.php:526
+msgid "Enable/Disable"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:399 admin/class-cbxpetition-admin.php:472
+#: admin/class-cbxpetition-admin.php:527
+msgid "Enable this email notification"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:405 admin/class-cbxpetition-admin.php:478
+#: admin/class-cbxpetition-admin.php:533
+msgid "E-mail Format"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:406 admin/class-cbxpetition-admin.php:479
+#: admin/class-cbxpetition-admin.php:534
+msgid "Select the format of the E-mail."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:413 admin/class-cbxpetition-admin.php:486
+#: admin/class-cbxpetition-admin.php:541
+msgid "To Email"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:414
+msgid "To Email Address."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:420 admin/class-cbxpetition-admin.php:493
+#: admin/class-cbxpetition-admin.php:548
+msgid "Reply To"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:421
+msgid "Reply To Email Address. Syntax available - <code>{user_email}</code>"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:428 admin/class-cbxpetition-admin.php:500
+#: admin/class-cbxpetition-admin.php:555
+msgid "Subject"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:434 admin/class-cbxpetition-admin.php:506
+#: admin/class-cbxpetition-admin.php:561
+msgid "Email Body Heading"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:440
+msgid "Body"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:441
+msgid ""
+"Email Body.  Syntax available - <code>{first_name}, {last_name}, {user_email}"
+", {comment}, {comment}, {petition}, {signature_edit_url}</code>"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:448
+msgid "CC"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:449
+msgid "Email CC, for multiple use comma."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:455
+msgid "BCC"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:456
+msgid "Email BCC, for multiple use comma"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:464
+msgid "New Sign User Email Alert"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:465
+msgid "User gets email for new sign request"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:487 admin/class-cbxpetition-admin.php:542
+msgid "To Email Address. Syntax available - <code>{user_email}</code>"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:494 admin/class-cbxpetition-admin.php:549
+msgid "Reply To Email Address."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:512 admin/class-cbxpetition-admin.php:567
+msgid "Email Body"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:513
+msgid ""
+"Email content user will receive when they make an initial sign request. "
+"Syntax available - <code>{petition}, {first_name}, {last_name}, {user_email},"
+" {comment}, {status}, {activation_link}</code>"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:519
+msgid "Sign Approve Email Alert"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:520
+msgid "User gets email when sign is approved"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:568
+msgid ""
+"Email content user will receive when admin confirmed sign request. Syntax "
+"available - <code>{petition}, {first_name}, {last_name}, {user_email}, "
+"{comment}, {status}</code>"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:577
+msgid "On Uninstall delete plugin data"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:578
+msgid ""
+"Delete Global Config data and custom table created by this plugin on "
+"uninstall."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:579
+msgid ""
+"<strong>Please note that this process can not be undone and it is "
+"recommended to keep full database backup before doing this.</strong>"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:583
+msgid "Yes"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:584
+msgid "No"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:621
+msgid "Signs Listing"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:622 admin/class-cbxpetition-admin.php:992
+msgid "Signatures"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:638 admin/class-cbxpetition-admin.php:639
+msgid "Global Setting"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:674
+msgid "Number of signs per page:"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:691
+msgid "No signature found"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:709
+msgid "Invalid signature or not found"
+msgstr ""
+
+#. $id
+#: admin/class-cbxpetition-admin.php:741
+msgid "CBX Petition Options"
+msgstr ""
+
+#. $id
+#: admin/class-cbxpetition-admin.php:749
+msgid "Petition Result"
+msgstr ""
+
+#. $id
+#: admin/class-cbxpetition-admin.php:760 admin/class-cbxpetition-admin.php:927
+msgid "Shortcode"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:800
+#, php-format
+msgid "Signatures: %d of %d (%s)"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:805
+#, php-format
+msgid "Expiry Date: %s"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:928
+msgid "Signature Target"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:929
+msgid "Signature Received"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:930
+#: public/class-cbxpetition-public.php:368 templates/admin/admin-metabox.php:35
+#: widgets/classic_widgets/class-cbxpetition-summary-widget.php:206
+msgid "Expire Date"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:962
+msgid "Not Set Yet"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1033
+msgid "Sorry! Invalid signature id"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1037
+msgid "Please provide sign state."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1087
+msgid "Signature updated successfully."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1116
+msgid "Signature approved email sent successfully."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1122
+msgid "Signature approved email sent failed. "
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1133
+msgid "Sorry! Some problem during updating, please try again."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1301
+#: includes/class-cbxpetition-settings.php:335
+msgid "Please Select"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1303
+#: admin/class-cbxpetition-admin.php:1374
+msgid "Upload"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1304
+msgid "Select Media"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1375
+msgid "Select Media File"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1376
+#: admin/class-cbxpetition-admin.php:1379
+#: includes/class-cbxpetition-signatures.php:235
+#: templates/admin/admin-metabox-media.php:38
+msgid "Delete"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1377
+msgid ""
+"Are you sure to delete? After delete if you save the post once this "
+"information will be lost forever."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1380
+#: templates/admin/admin-metabox-media.php:39
+msgid "Sort"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1382
+#: admin/class-cbxpetition-admin.php:1528
+#: admin/class-cbxpetition-admin.php:1733
+msgid "Maximum number of files exceeded"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1383
+msgid "File type not allowed"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1384
+msgid "File is too large"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1385
+#: admin/class-cbxpetition-admin.php:1526
+#: admin/class-cbxpetition-admin.php:1731
+msgid "File is too small"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1392
+msgid "Sorry, file upload failed."
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1517
+#: admin/class-cbxpetition-admin.php:1722
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1518
+#: admin/class-cbxpetition-admin.php:1723
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1519
+#: admin/class-cbxpetition-admin.php:1724
+msgid "The uploaded file was only partially uploaded"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1520
+#: admin/class-cbxpetition-admin.php:1725
+msgid "No file was uploaded"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1521
+#: admin/class-cbxpetition-admin.php:1726
+msgid "Missing a temporary folder"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1522
+#: admin/class-cbxpetition-admin.php:1727
+msgid "Failed to write file to disk"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1523
+#: admin/class-cbxpetition-admin.php:1728
+msgid "A PHP extension stopped the file upload"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1524
+#: admin/class-cbxpetition-admin.php:1729
+msgid "The uploaded file exceeds the post_max_size directive in php.ini"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1525
+#: admin/class-cbxpetition-admin.php:1730
+msgid "File is too big"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1527
+#: admin/class-cbxpetition-admin.php:1732
+msgid "Filetype not allowed"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1529
+#: admin/class-cbxpetition-admin.php:1734
+msgid "Image exceeds maximum width"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1530
+#: admin/class-cbxpetition-admin.php:1735
+msgid "Image requires a minimum width"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1531
+#: admin/class-cbxpetition-admin.php:1736
+msgid "Image exceeds maximum height"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1532
+#: admin/class-cbxpetition-admin.php:1737
+msgid "Image requires a minimum height"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1533
+#: admin/class-cbxpetition-admin.php:1738
+msgid "File upload aborted"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1534
+#: admin/class-cbxpetition-admin.php:1739
+msgid "Failed to resize image"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1946
+#, php-format
+msgid "Thanks for installing/deactivating CBX Petition V%s - Codeboxr Team"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1956
+#, php-format
+msgid ""
+"Thanks for upgrading CBX Petition V%s , enjoy the new features and bug fixes "
+"- Codeboxr Team"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:1986
+#, php-format
+msgid ""
+"CBX Petition Pro Addon has frontend petition submission features and more "
+"controls, <a target=\"_blank\" href=\"%s\">try it</a>  - Codeboxr Team"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:2000
+msgid "View settings"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:2000
+msgid "Settings"
+msgstr ""
+
+#: admin/class-cbxpetition-admin.php:2021
+#: admin/class-cbxpetition-admin.php:2022
+msgid "Try Pro"
+msgstr ""
+
+#. %s template
+#: includes/cbxpetition-functions.php:220
+#, php-format
+msgid "%s does not exist."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:63
+msgctxt "Post Type General Name"
+msgid "Petitions"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:64
+msgctxt "Post Type Singular Name"
+msgid "Petition"
+msgstr ""
+
+#. Name of the plugin
+#: includes/class-cbxpetition-helper.php:65
+#: includes/class-cbxpetition-helper.php:77
+#: includes/class-cbxpetition-helper.php:78
+msgid "CBX Petition"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:66
+msgid "Parent Item:"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:67
+msgid "Petitions"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:68
+msgid "View Petition"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:69
+#: includes/class-cbxpetition-helper.php:70
+msgid "Create Petition"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:71
+#: includes/class-cbxpetition-signatures.php:102
+msgid "Edit Petition"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:72
+msgid "Update Petition"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:73
+msgid "Search Petition"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:99
+msgctxt "Taxonomy General Name"
+msgid "Categories"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:100
+msgctxt "Taxonomy Singular Name"
+msgid "Category"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:101
+msgid "Categories"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:102
+msgid "All Categories"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:103
+msgid "Parent Category"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:104
+msgid "Parent Category:"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:105
+msgid "New Category Name"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:106
+msgid "Add New Category"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:107
+msgid "Edit Category"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:108
+msgid "Update Category"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:109
+msgid "View Category"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:110
+msgid "Separate Categories with commas"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:111
+msgid "Add or remove Categories"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:112
+#: includes/class-cbxpetition-helper.php:146
+msgid "Choose from the most used"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:113
+msgid "Popular Categories"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:114
+msgid "Search Categories"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:115
+#: includes/class-cbxpetition-helper.php:149
+msgid "Not Found"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:116
+msgid "No Categories"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:117
+msgid "Categories list"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:118
+msgid "Categories list navigation"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:133
+msgctxt "Taxonomy General Name"
+msgid "Tags"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:134
+msgctxt "Taxonomy Singular Name"
+msgid "Tag"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:135
+msgid "Tags"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:136
+msgid "All Tags"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:137
+msgid "Parent Tag"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:138
+msgid "Parent Tag:"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:139
+msgid "New Tag Name"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:140
+msgid "Add New Tag"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:141
+msgid "Edit Tag"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:142
+msgid "Update Tag"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:143
+msgid "View Tag"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:144
+msgid "Separate Tags with commas"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:145
+msgid "Add or remove Tags"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:147
+msgid "Popular Tags"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:148
+msgid "Search Tags"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:150
+msgid "No Tags"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:151
+msgid "Tags list"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:152
+msgid "Tags list navigation"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:226
+#: includes/class-cbxpetition-helper.php:250
+msgid "Unnamed"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:362
+msgid "Unverified"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:363
+msgid "Pending"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:364
+msgid "Approved"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:365
+msgid "Unapproved"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:897
+#: includes/class-cbxpetition-helper.php:915
+msgid "Guest"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1024
+msgid "Righ Html Email"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1025
+msgid "Rich Html with Attachment"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1026
+msgid "Plain Text"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1040
+msgid ""
+"Hi, Admin\n"
+"                            \n"
+"A new signature is made. Here is the details:\n"
+"\n"
+"Petition: {petition}\n"
+"First Name: {first_name}\n"
+"Last Name: {last_name}\n"
+"Email: {user_email}\n"
+"Comment: {comment}\n"
+"Signature Status: {status}\n"
+"\n"
+"{signature_edit_url}\n"
+"\n"
+"Thank you."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1055
+msgid "New Petition Sign Notification"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1056
+msgid "New Petition Sign"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1061
+#: includes/class-cbxpetition-helper.php:1086
+msgid ""
+"Hi, {user_name}\n"
+"                            \n"
+"We got a signature request for email address {user_email}.\n"
+"\n"
+"Sign Details: \n"
+"\n"
+"Petition: {petition}\n"
+"First Name: {first_name}\n"
+"Last Name: {last_name}\n"
+"Email: {user_email}\n"
+"Comment: {comment}\n"
+"\n"
+"Signature Status: {status}\n"
+"\n"
+"{activation_link}\n"
+"\n"
+"\n"
+"Thank you."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1080
+msgid "Petition Sign Notification"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1081
+msgid "Petition Signed"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1105
+msgid "Email Confirmation Notification"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1106
+msgid "Confirm Your Email"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1157
+msgid "This field is required."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1158
+msgid "Please fix this field."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1159
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1160
+msgid "Please enter a valid URL."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1161
+msgid "Please enter a valid date."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1162
+msgid "Please enter a valid date ( ISO )."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1163
+msgid "Please enter a valid number."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1164
+msgid "Please enter only digits."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1165
+msgid "Please enter the same value again."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1166
+msgid "Please enter no more than {0} characters."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1167
+msgid "Please enter at least {0} characters."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1168
+msgid "Please enter a value between {0} and {1} characters long."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1169
+msgid "Please enter a value between {0} and {1}."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1170
+msgid "Please enter a value less than or equal to {0}."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1171
+msgid "Please enter a value greater than or equal to {0}."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1172
+msgid "Please check the captcha."
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1175
+msgid "Please wait, loading"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1176
+#: templates/public-petition-signatures.php:41
+msgid "Load More"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1177
+msgid "Sorry, request failed, please submit again"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1180
+msgid "Read More"
+msgstr ""
+
+#: includes/class-cbxpetition-helper.php:1181
+msgid "Close"
+msgstr ""
+
+#: includes/class-cbxpetition-mailalert.php:59
+#, php-format
+msgid "<p>To Edit <a href=\"%s\">click this url.</a></p>"
+msgstr ""
+
+#: includes/class-cbxpetition-mailalert.php:154
+#, php-format
+msgid ""
+"<p>To confirm your signature request, please verify your email address by <a "
+"href=\"%s\">clicking this url.</a></p>"
+msgstr ""
+
+#: includes/class-cbxpetition-settings.php:539
+msgid "Choose File"
+msgstr ""
+
+#: includes/class-cbxpetition-signatures.php:56
+msgid "View User"
+msgstr ""
+
+#: includes/class-cbxpetition-signatures.php:57
+msgid "View"
+msgstr ""
+
+#: includes/class-cbxpetition-signatures.php:61
+msgid "(Guest)"
+msgstr ""
+
+#: includes/class-cbxpetition-signatures.php:101
+msgid "ID:"
+msgstr ""
+
+#: includes/class-cbxpetition-signatures.php:103
+#: includes/class-cbxpetition-signatures.php:120
+msgid " (Edit)"
+msgstr ""
+
+#: includes/class-cbxpetition-signatures.php:119
+msgid "Edit Signature"
+msgstr ""
+
+#: includes/class-cbxpetition-signatures.php:201
+msgid "ID"
+msgstr ""
+
+#: includes/class-cbxpetition-signatures.php:202
+#: templates/admin/admin-sign-edit.php:85
+msgid "Petition"
+msgstr ""
+
+#: includes/class-cbxpetition-signatures.php:203
+#: templates/public-sign-form.php:99 templates/public-sign-form.php:101
+#: templates/admin/admin-sign-edit.php:93
+msgid "First Name"
+msgstr ""
+
+#: includes/class-cbxpetition-signatures.php:204
+#: templates/public-sign-form.php:105 templates/public-sign-form.php:107
+#: templates/admin/admin-sign-edit.php:101
+msgid "Last Name"
+msgstr ""
+
+#: includes/class-cbxpetition-signatures.php:205
+#: templates/public-sign-form.php:113 templates/public-sign-form.php:116
+msgid "Email"
+msgstr ""
+
+#: includes/class-cbxpetition-signatures.php:206
+#: templates/public-sign-form.php:129 templates/admin/admin-sign-edit.php:130
+msgid "Comment"
+msgstr ""
+
+#: includes/class-cbxpetition-signatures.php:207
+msgid "State"
+msgstr ""
+
+#: includes/class-cbxpetition-signatures.php:415
+msgid ""
+"No petition sign found. Please change your search criteria for better result."
+msgstr ""
+
+#: public/class-cbxpetition-public.php:218
+#: public/class-cbxpetition-public.php:279
+#: public/class-cbxpetition-public.php:403
+#: public/class-cbxpetition-public.php:466
+#: public/class-cbxpetition-public.php:505
+#: public/class-cbxpetition-public.php:544
+#: public/class-cbxpetition-public.php:583
+#: public/class-cbxpetition-public.php:629
+#: public/class-cbxpetition-public.php:682
+#: widgets/classic_widgets/class-cbxpetition-signform-widget.php:83
+#: widgets/classic_widgets/class-cbxpetition-summary-widget.php:114
+msgid "No valid petition id found."
+msgstr ""
+
+#: public/class-cbxpetition-public.php:352
+#: widgets/classic_widgets/class-cbxpetition-summary-widget.php:189
+msgid "Sorry, Petition expire date is not set yet."
+msgstr ""
+
+#: public/class-cbxpetition-public.php:364
+#: widgets/classic_widgets/class-cbxpetition-summary-widget.php:201
+#, php-format
+msgid "Sorry, petition already expired on %s"
+msgstr ""
+
+#: public/class-cbxpetition-public.php:410
+#: widgets/classic_widgets/class-cbxpetition-signform-widget.php:90
+msgid "Sorry, petition did not start yet."
+msgstr ""
+
+#: public/class-cbxpetition-public.php:418
+msgid "Sorry, petition already expired"
+msgstr ""
+
+#: public/class-cbxpetition-public.php:427
+#: widgets/classic_widgets/class-cbxpetition-signform-widget.php:106
+msgid "You signed the petition, thank you."
+msgstr ""
+
+#: public/class-cbxpetition-public.php:807
+msgid "Invalid petition, petition doesn't exists or expired."
+msgstr ""
+
+#: public/class-cbxpetition-public.php:811
+msgid "First name is required and needs at least 3 characters."
+msgstr ""
+
+#: public/class-cbxpetition-public.php:815
+msgid "Last name is required and needs at least 3 characters."
+msgstr ""
+
+#: public/class-cbxpetition-public.php:821
+msgid "Email is required and needs valid email address"
+msgstr ""
+
+#: public/class-cbxpetition-public.php:824
+#: public/class-cbxpetition-public.php:832
+msgid "Email already exists to any registered user"
+msgstr ""
+
+#: public/class-cbxpetition-public.php:826
+msgid "This petition has been signed using this email"
+msgstr ""
+
+#: public/class-cbxpetition-public.php:923
+msgid "Your signature request stored successfully. Thank you!"
+msgstr ""
+
+#: public/class-cbxpetition-public.php:945
+msgid "Confirmation Email sent Successfully."
+msgstr ""
+
+#: public/class-cbxpetition-public.php:951
+msgid "Confirmation Email sent failed. "
+msgstr ""
+
+#: public/class-cbxpetition-public.php:962
+msgid ""
+"Sorry! Problem during signing request, please check again and try again."
+msgstr ""
+
+#: public/class-cbxpetition-public.php:1040
+#, php-format
+msgid ""
+"Signature validated successfully. No email will be sent to inform this. Site "
+"admin will check your request and signature confirmation will be set as per "
+"system setting. <a href=\"%s\">Click to go petition page</a>."
+msgstr ""
+
+#: public/class-cbxpetition-public.php:1046
+#, php-format
+msgid ""
+"Sorry, signature found but validation failed.<a href=\"%s\">Click to go "
+"petition page</a>."
+msgstr ""
+
+#: public/class-cbxpetition-public.php:1054
+#, php-format
+msgid ""
+"Sorry, signature not found or already validated. <a href=\"%s\">Click to go "
+"home</a>."
+msgstr ""
+
+#: templates/public-petition-signature.php:38
+#: templates/admin/admin-sign-edit.php:112
+#: templates/admin/admin-sign-edit.php:122
+msgid " at "
+msgstr ""
+
+#: templates/public-petition-signatures.php:27
+msgid "Reasons for signing"
+msgstr ""
+
+#: templates/public-petition-signatures.php:28
+#, php-format
+msgid "Total Signatures: %d"
+msgstr ""
+
+#: templates/public-petition-stat.php:35
+#, php-format
+msgid ""
+"<span class=\"cbxpetition_stat_count_target\">Target: %d</span> <span "
+"class=\"cbxpetition_stat_count_received\">Signatures Received: %d</span>"
+msgstr ""
+
+#: templates/public-sign-form.php:59
+msgid "Sign this Petition"
+msgstr ""
+
+#: templates/public-sign-form.php:122
+#, php-format
+msgid "You are logged in as <strong>%s</strong>, <a href=\"%s\">Logout?</a>"
+msgstr ""
+
+#: templates/public-sign-form.php:131
+msgid "I’m signing because… (optional)"
+msgstr ""
+
+#: templates/public-sign-form.php:137
+#, php-format
+msgid "YES, I agree with <a href=\"%s\" target=\"_blank\">Privacy policy</a>"
+msgstr ""
+
+#: templates/public-sign-form.php:142
+msgid "Sign This"
+msgstr ""
+
+#: templates/admin/admin-metabox-letter.php:13
+msgid "Recipient"
+msgstr ""
+
+#: templates/admin/admin-metabox-letter.php:17
+#: templates/admin/admin-metabox-letter.php:68
+msgid "Recipient's Designation"
+msgstr ""
+
+#: templates/admin/admin-metabox-letter.php:21
+#: templates/admin/admin-metabox-letter.php:74
+msgid "Recipient's Email"
+msgstr ""
+
+#: templates/admin/admin-metabox-letter.php:24
+#: templates/admin/admin-metabox-letter.php:78
+msgid "Move Recipient"
+msgstr ""
+
+#: templates/admin/admin-metabox-letter.php:25
+#: templates/admin/admin-metabox-letter.php:79
+msgid "Delete Recipient"
+msgstr ""
+
+#: templates/admin/admin-metabox-letter.php:62
+msgid "Recipient Name"
+msgstr ""
+
+#: templates/admin/admin-metabox-letter.php:88
+msgid "Add Recipient"
+msgstr ""
+
+#: templates/admin/admin-metabox-media.php:23
+msgid "Petition Photos"
+msgstr ""
+
+#: templates/admin/admin-metabox-media.php:28
+msgid "Upload photos"
+msgstr ""
+
+#: templates/admin/admin-metabox-media.php:63
+msgid "Featured Banner"
+msgstr ""
+
+#: templates/admin/admin-metabox-media.php:68
+msgid "Add Banner"
+msgstr ""
+
+#: templates/admin/admin-metabox-media.php:69
+msgid "Remove Banner"
+msgstr ""
+
+#: templates/admin/admin-metabox-media.php:90
+msgid "Video Url(Youtube)"
+msgstr ""
+
+#: templates/admin/admin-metabox-media.php:93
+msgid "Video Title"
+msgstr ""
+
+#: templates/admin/admin-metabox-media.php:96
+msgid "Video Description"
+msgstr ""
+
+#: templates/admin/admin-metabox.php:24
+msgid "Petition General"
+msgstr ""
+
+#: templates/admin/admin-metabox.php:25
+msgid "Media Info (Optional)"
+msgstr ""
+
+#: templates/admin/admin-metabox.php:26
+msgid "The Letter (Optional)"
+msgstr ""
+
+#: templates/admin/admin-metabox.php:32
+msgid "Signature Target (Required)"
+msgstr ""
+
+#: templates/admin/admin-settings-display.php:20
+msgid "CBX Petition: Global Setting"
+msgstr ""
+
+#: templates/admin/admin-sign-edit.php:24
+#, php-format
+msgid "Signature Edit: ID - %d"
+msgstr ""
+
+#: templates/admin/admin-sign-edit.php:27
+msgid "Back to Lists"
+msgstr ""
+
+#: templates/admin/admin-sign-edit.php:46
+msgid "Edit Sign"
+msgstr ""
+
+#: templates/admin/admin-sign-edit.php:88
+#, php-format
+msgid "ID: %d"
+msgstr ""
+
+#: templates/admin/admin-sign-edit.php:109
+#: templates/admin/admin-sign-edit.php:119
+msgid "Add Date"
+msgstr ""
+
+#: templates/admin/admin-sign-edit.php:144
+msgid "Status"
+msgstr ""
+
+#: templates/admin/admin-sign-edit.php:168
+msgid "Update Sign"
+msgstr ""
+
+#: templates/admin/admin-sign-edit.php:175
+msgid "No data Found"
+msgstr ""
+
+#: templates/admin/admin-signs-listing.php:28
+msgid "Petition: Sign Listing"
+msgstr ""
+
+#: templates/admin/admin-signs-listing.php:31
+msgid "Add New Petition"
+msgstr ""
+
+#: templates/admin/admin-signs-listing.php:44
+msgid "Search Sign"
+msgstr ""
+
+#: templates/admin/sidebar.php:10
+msgid "Help & Supports"
+msgstr ""
+
+#: templates/admin/sidebar.php:19
+msgid "Other WordPress Plugins"
+msgstr ""
+
+#: templates/admin/sidebar.php:55
+msgid "Codeboxr News Updates"
+msgstr ""
+
+#: widgets/classic_widgets/class-cbxpetition-signform-widget.php:20
+msgid "CBX Petition Sign Form"
+msgstr ""
+
+#: widgets/classic_widgets/class-cbxpetition-signform-widget.php:22
+msgid "Single Petition Sign Form Widget for CBX Petition"
+msgstr ""
+
+#: widgets/classic_widgets/class-cbxpetition-signform-widget.php:32
+#: widgets/classic_widgets/class-cbxpetition-summary-widget.php:20
+#: widgets/classic_widgets/class-cbxpetition-summary-widget.php:32
+msgid "CBX Petition Summary"
+msgstr ""
+
+#: widgets/classic_widgets/class-cbxpetition-signform-widget.php:43
+#: widgets/classic_widgets/class-cbxpetition-summary-widget.php:47
+msgid "Title:"
+msgstr ""
+
+#: widgets/classic_widgets/class-cbxpetition-signform-widget.php:49
+#: widgets/classic_widgets/class-cbxpetition-summary-widget.php:53
+msgid "Petition ID:"
+msgstr ""
+
+#: widgets/classic_widgets/class-cbxpetition-signform-widget.php:56
+#, php-format
+msgid ""
+"Showing petition sign form for <a target=\"_blank\" href=\"%s\"><strong>"
+"%s</strong></a>"
+msgstr ""
+
+#: widgets/classic_widgets/class-cbxpetition-signform-widget.php:58
+#: widgets/classic_widgets/class-cbxpetition-summary-widget.php:62
+msgid "Seems <strong>Petition ID</strong> doesn't belong to any valid Petition"
+msgstr ""
+
+#: widgets/classic_widgets/class-cbxpetition-signform-widget.php:73
+#: widgets/classic_widgets/class-cbxpetition-summary-widget.php:99
+msgid "Business Hours"
+msgstr ""
+
+#: widgets/classic_widgets/class-cbxpetition-signform-widget.php:98
+msgid "Sorry, petition expired to take more sign."
+msgstr ""
+
+#: widgets/classic_widgets/class-cbxpetition-summary-widget.php:22
+msgid "Single Petition Summary Widget for CBX Petition"
+msgstr ""
+
+#: widgets/classic_widgets/class-cbxpetition-summary-widget.php:60
+#, php-format
+msgid ""
+"Showing petition for <a target=\"_blank\" href=\"%s\"><strong>%s</strong></a>"
+msgstr ""
+
+#: widgets/classic_widgets/class-cbxpetition-summary-widget.php:67
+msgid "Petition Summary Sections"
+msgstr ""
+
+#. Description of the plugin
+msgid "A plugin to create, manage petition and collect signatures for petition"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://codeboxr.com/product/cbx-petition-for-wordpress/"
+msgstr ""
+
+#. Author of the plugin
+msgid "Codeboxr"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://codeboxr.com"
+msgstr ""

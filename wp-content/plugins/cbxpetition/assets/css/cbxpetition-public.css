@@ -1,0 +1,389 @@
+.cbxpetition_wrapper .cbxpetition-error, .cbxpetition_wrapper .error {
+	color: red;
+}
+
+.cbxpetition_wrapper .clear{
+	clear: both;
+}
+
+.cbxpetition_signform_wrapper{
+
+}
+
+.cbxpetition_signform_wrapper .cbxpetition-signform-field{
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+.cbxpetition_signform_wrapper .cbxpetition-signform-field  label{
+	width: 100%;
+	margin-bottom: 5px;
+	padding: 0;
+}
+.cbxpetition_signform_wrapper .cbxpetition-signform-field  .cbxpetition-signform-field-input{
+
+}
+
+.cbxpetition_signform_wrapper .cbxpetition-signform-field p.error{
+	color: red !important;
+}
+
+.cbxpetition_signform_wrapper .cbxpetition-signform-field input[type="text"],
+.cbxpetition_signform_wrapper .cbxpetition-signform-field input[type="email"],
+.cbxpetition_signform_wrapper .cbxpetition-signform-field input[type="url"]{
+	width: 100%;
+	padding: 2px 5px;
+}
+
+.cbxpetition_signform_wrapper .cbxpetition-signform-field input[type="text"].error,
+.cbxpetition_signform_wrapper .cbxpetition-signform-field input[type="email"].error,
+.cbxpetition_signform_wrapper .cbxpetition-signform-field input[type="url"].error{
+	border: 1px solid red;
+}
+.cbxpetition_signform_wrapper .cbxpetition-signform-field textarea{
+	width: 100%;
+	padding: 5px;
+}
+
+.cbxpetition_signform_wrapper .cbxpetition-signform-field textarea.error{
+	border: 1px solid red;
+}
+
+
+.cbxpetition_col{
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 10px;
+	float: left;
+	display: inline-block;
+}
+.cbxpetition_col_2{
+	width: 50%;
+}
+
+.cbxpetition_video_wrapper{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+
+
+
+}
+
+.cbxpetition_video_wrapper .cbxpetition_video_embed,
+.cbxpetition_video_wrapper .cbxpetition_video_story{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+
+.cbxpetition_video_wrapper .cbxpetition_video_title{
+	text-transform: capitalize;
+	font-size: 22px;
+	line-height: 1.5;
+}
+.cbxpetition_video_wrapper .cbxpetition_video_content{}
+
+.cbxpetition_video_wrapper .cbxpetition_responsive_video {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 60px; overflow: hidden;
+}
+
+.cbxpetition_video_wrapper  .cbxpetition_responsive_video iframe,
+.cbxpetition_video_wrapper  .cbxpetition_responsive_video object,
+.cbxpetition_video_wrapper  .cbxpetition_responsive_video embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media (max-width: 767px) {
+	.cbxpetition_col_2{
+		width: 100%;
+	}
+}
+.cbxpetition_photos_wrapper{
+
+}
+.cbxpetition_photos_wrapper #cbxpetition_photos{
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.cbxpetition_photos_wrapper #cbxpetition_photos .cbxpetition_photo{
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	outline: 1px solid #ccc;
+	margin: 5px;
+	position: relative;
+}
+
+.cbxpetition_photos_wrapper #cbxpetition_photos .cbxpetition_photo_background{
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+.cbxpetition_letter_wrapper{
+	margin: 20px 0;
+}
+.cbxpetition_letter_wrapper .cbxpetition_letter_note{
+	text-align: center;
+}
+
+#cbxpetition_letter_recipients{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+
+	align-items: center;
+	justify-content: center;
+}
+
+#cbxpetition_letter_recipients .cbxpetition_letter_recipient{
+	float: left;
+	display: inline-block;
+	width: 25%;
+
+	padding: 20px;
+	border-radius: 4px;
+	text-align: center;
+	margin: 20px 10px;
+	background: rgba(187,187,187,.1);
+
+	-webkit-box-shadow: 1px 2px 7px 0 #bbb;
+	-moz-box-shadow: 1px 2px 7px 0 #bbb;
+	box-shadow: 1px 2px 7px 0 #bbb;
+}
+
+#cbxpetition_letter_recipients .cbxpetition_letter_recipient .recipient_name{
+	font-weight: bold;
+}
+#cbxpetition_letter_recipients .cbxpetition_letter_recipient .recipient_designation{
+	margin-bottom: 0px;
+}
+
+@media (max-width: 767px) {
+	#cbxpetition_letter_recipients .cbxpetition_letter_recipient{
+		width: 50%;
+	}
+}
+
+@media (max-width: 480px) {
+	#cbxpetition_letter_recipients .cbxpetition_letter_recipient{
+		width: 100%;
+	}
+}
+
+#cbxpetition_letter{
+	background-color: #202c41;
+	color: #ffffff;
+	padding: 50px 20px;
+}
+
+
+.cbxpetition_banner_wrapper{
+	margin-bottom: 20px;
+}
+
+.cbxpetition_signature_wrapper{
+
+}
+.cbxpetition_signature_listing_heading{
+
+}
+.cbxpetition_signature_listing_total{
+	font-weight: bold;
+}
+.cbxpetition_signature_items{
+
+}
+.cbxpetition_signature_item{
+	margin-bottom: 20px;
+}
+.cbxpetition_signature_item .signature-card{
+	width: 100%;
+	box-shadow: 0 0 5px #bbb;
+	border-radius: 4px;
+	padding: 10px;
+
+	/*display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;*/
+}
+
+.cbxpetition_signature_item .signature-card .signature-thumb-photo{
+	float: left;
+	display: inline-block;
+	margin: 0 10px 10px 0;
+}
+
+.cbxpetition_signature_item .signature-card .signature-thumb-photo img{
+	border-radius: 10%;
+}
+
+.cbxpetition_signature_item .signature-card .signature-info{
+}
+
+.cbxpetition_signature_item .signature-card .signature-info .signature-name{
+	text-transform: capitalize;
+	margin-bottom: 5px;
+}
+.cbxpetition_signature_item .signature-card .signature-info .signature-date-time{
+	font-size: 12px;
+}
+.cbxpetition_signature_item .signature-card .signature-message-wrap{
+	margin: 10px 0;
+	clear: both;
+}
+.cbxpetition_signature_item .signature-card .signature-message{
+	margin-bottom: 15px;
+
+	font-size: 14px;
+	line-height: 1.5;
+
+}
+.cbxpetition_signature_item .signature-card .signature-message p:last-child{
+	margin-bottom: 0px;
+}
+.cbxpetition_signature_item .signature-card .signature-message + a[data-readmore-toggle]{
+	box-shadow: none;
+	color: #7dacff;
+	text-align: right;
+	margin-top: -10px;
+}
+.cbxpetition_load_more_signs_wrap{
+	clear: both;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.cbxpetition_stat_wrapper{
+	margin-bottom: 20px;
+}
+.cbxpetition_stat_wrapper .cbxpetition_stat_count{
+	margin-bottom: 5px;
+}
+
+.cbxpetition_stat_wrapper .cbxpetition_stat_count .cbxpetition_stat_count_target{
+	float: left;
+	display: inline-block;
+}
+.cbxpetition_stat_wrapper .cbxpetition_stat_count .cbxpetition_stat_count_received{
+	float: right;
+	display: inline-block;
+}
+
+.cbxpetition-progress-wrapper{
+
+}
+
+.cbxpetition-progress-wrapper .cbxpetition-progress{
+	float: left;
+	display: inline-block;
+	margin-top: 4px;
+	width: 85%;
+	height: 14px;
+	background: #7dacff;
+	margin-bottom: 0;
+	overflow: hidden;
+	border: 0;
+}
+
+.cbxpetition-progress-wrapper .cbxpetition-progress .cbxpetition-progress-value{
+	/*height: 6px;*/
+/*	width: 67%;*/
+	height: 14px;
+
+	background: #446cb3;
+}
+
+.cbxpetition-progress-wrapper .cbxpetition-progress-ratio{
+	float: right;
+	display: inline-block;
+	color: #446cb3;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 700;
+	width: 14%;
+	text-align: right;
+}
+
+.cbxpetition_signform_wrapper .cbxpetition-alert{
+	position: relative;
+	padding: 5px 10px;
+	margin-bottom: 5px;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+}
+.cbxpetition_signform_wrapper .cbxpetition-alert-success{
+	color: #155724;
+	background-color: #d4edda;
+	border-color: #c3e6cb;
+}
+.cbxpetition_signform_wrapper .cbxpetition-alert-danger{
+	color: #721c24;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+}
+
+.cbxpetition_summary_wrap{
+	background: #e9ebee;
+	padding: 10px;
+	margin: 20px 0;
+}
+
+.cbxpetition-submit{
+	color: #fff;
+	background: #446cb3;
+	border: 0;
+	padding: 5px 15px;
+	font-size: 14px;
+	line-height: 1.5;
+	cursor: pointer;
+}
+
+@media (max-width: 767px) {
+	.cbxpetition_stat_wrapper .cbxpetition_stat_count .cbxpetition_stat_count_target,
+	.cbxpetition_stat_wrapper_widget .cbxpetition_stat_count .cbxpetition_stat_count_target{
+		float: left;
+		display: inline-block;
+		width: 100%;
+	}
+	.cbxpetition_stat_wrapper .cbxpetition_stat_count .cbxpetition_stat_count_received,
+	.cbxpetition_stat_wrapper_widget .cbxpetition_stat_count .cbxpetition_stat_count_received{
+		clear: both;
+		float: left;
+		display: inline-block;
+		width: 100%;
+	}
+}
