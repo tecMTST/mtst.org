@@ -7,6 +7,10 @@ wp-content/*
 !wp-content/mu-plugins/
 !wp-content/plugins/
 !wp-content/themes/
+!wp-content/uploads/
+!languages
+!upgrade
+
 
 # ignore these plugins
 wp-content/plugins/hello.php
@@ -23,4 +27,3 @@ node_modules/
 *.sql
 *.
 
-wp-config.php

@@ -12,12 +12,15 @@
                     </div>
                     <div class="col-md-6">
                         <div class="embed-iframe">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/5X2nnU5w9uptyMiApbPCWj?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/5X2nnU5w9uptyMiApbPCWj?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                         </div>
                         <div class="embed-iframe">
                             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/563F90vbBEeqs14IJ8gLqo?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                         </div>
                     </div>
                 </div>
+                <div class="ver-tudo"><a target="_blank" href="https://open.spotify.com/show/5X2nnU5w9uptyMiApbPCWj">VER TUDO >>></a></div>
             </div>
         </section>
+
+         
