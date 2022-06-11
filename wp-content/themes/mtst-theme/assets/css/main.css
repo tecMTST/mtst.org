@@ -316,3 +316,24 @@ h2.titulo-secao {
 .txt-video-r {
     height: 160px;
 }
+
+/* Fotos */
+
+.fotos {
+    padding: 30px 20px 64px;
+}
+
+.foto.foto-menor {
+    margin-bottom: 30px;
+}
+
+.fotos .ver-tudo {
+    margin-top: 0;
+}
+
+/* Swiper Carrossel */
+.swiper .swiper-button-next:after, .swiper-button-prev:after {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+}
