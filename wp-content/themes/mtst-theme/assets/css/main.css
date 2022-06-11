@@ -232,3 +232,87 @@ h2.titulo-secao {
     margin-bottom: 20px;
 }
 
+/* Vídeos */
+
+.youtube-video iframe {
+    max-width: 100%;
+    color: var(--preto);
+}
+
+.titulo-video {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 10px 0;
+    color: var(--preto);
+}
+
+.desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--preto);
+}
+
+/* Vídeo Modal */
+
+.modal-dialog {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.modal-body {
+    position:relative;
+    padding:0px;
+}
+
+.close {
+    position:absolute;
+    right:-30px;
+    top:0;
+    z-index:999;
+    font-size:2rem;
+    font-weight: normal;
+    color:#fff;
+    opacity:1;
+}
+
+.player-video {
+    position: relative;
+    left: 40%;
+    top: -90px;
+}
+
+.player-video-big {
+    position: absolute;
+    top: 24%;
+    left: 43%;
+}
+
+.youtube-video.ltt {
+    margin-bottom: -20px;
+}
+
+.titulo-video.ltt {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.titulo-video.ltt h3 {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+
+.desc.ltt {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.desc.ltt p {
+    margin-bottom: 0;
+}
+
+.txt-video-r {
+    height: 160px;
+}
