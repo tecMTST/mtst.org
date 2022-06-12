@@ -1,6 +1,5 @@
 
     <?php wp_footer(); ?>
-	<?php global $post; ?>
 	<footer>
 		<?php get_template_part( 'template-parts/footer/newsletter' ); ?>
 		<?php get_template_part( 'template-parts/footer/site-footer' ); ?>

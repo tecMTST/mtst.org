@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <?php wp_head(); ?>
+    <?php global $post; ?>
 </head>
 <body <?php body_class(); ?>>
     <?php get_template_part( 'template-parts/header/site-header' ); ?>
