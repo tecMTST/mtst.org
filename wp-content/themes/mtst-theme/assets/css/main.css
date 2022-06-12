@@ -443,3 +443,38 @@ span.YouTubePopUp-Close {
 .nav-footer ul li a:hover {
     opacity: 1;
 }
+
+/* Breadcrumbs */
+
+section.breadcrumbs {
+    padding: 20px;
+}
+
+ul.bread {
+    display: inline-flex;
+}
+
+li.crumb a {
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: var(--preto);
+    opacity: 0.8;
+}
+
+li.crumb a:hover {
+    text-decoration: underline;
+}
+
+li.crumb.item3.active a {
+    font-weight: bold;
+}
+
+li.separator {
+    margin: 0 15px;
+    line-height: 1.8;
+}
