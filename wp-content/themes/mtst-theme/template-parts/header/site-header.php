@@ -36,12 +36,12 @@
         <div class="menu-principal container">
             <nav>
                 <ul>
-                    <li><a class="nav-link active" href="<?php echo home_url(); ?>">Home</a></li>
-                    <li><a class="nav-link" href="#">Quem Somos</a></li>
-                    <li><a class="nav-link" href="#">Notícias</a></li>
-                    <li><a class="nav-link" href="#">Campanhas</a></li>
+                    <li><a class="nav-link home active" href="<?php echo home_url(); ?>">Home</a></li>
+                    <li><a class="nav-link quem-somos" href="#">Quem Somos</a></li>
+                    <li><a class="nav-link noticias" href="#">Notícias</a></li>
+                    <li><a class="nav-link campanha" href="#">Campanhas</a></li>
                     <!-- <li><a class="nav-link" href="#">Loja</a></li> -->
-                    <li><a class="nav-link" href="#">Galeria</a></li>
+                    <li><a class="nav-link galeria" href="#">Galeria</a></li>
                 </ul>
             </nav>
         </div>
