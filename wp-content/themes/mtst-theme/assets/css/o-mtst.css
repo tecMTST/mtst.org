@@ -1,0 +1,25 @@
+/* Topo */
+
+.quem-somos-topo {
+    background: linear-gradient(180deg, #000000 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+.quem-somos-topo .banner {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titulo-pagina h1 {
+    margin-bottom: 36px;
+}
+
+
+/* Responsivo */
+
+
+
