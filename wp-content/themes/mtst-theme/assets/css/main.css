@@ -5,6 +5,7 @@
     --topo: #342F2F;
     --branco: #fff;
     --preto: #000;
+    --cinza: #616161;
     --vermelho-escuro: #D70000;
 }
 
@@ -21,6 +22,22 @@ a, a:hover {
 
 a:hover {
     font-weight: 600;
+}
+
+h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: var(--preto);
+    opacity: 0.8;
+}
+
+.titulo-pagina h1 img {
+    margin-right: 20px;
+    margin-top: -4px;
 }
 
 /* Header */
@@ -477,4 +494,24 @@ li.crumb.item3.active a {
 li.separator {
     margin: 0 15px;
     line-height: 1.8;
+}
+
+/* Content */
+
+section.content {
+    padding: 20px;
+}
+
+.content p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #616161;
+}
+
+.content figcaption {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #616466;
 }

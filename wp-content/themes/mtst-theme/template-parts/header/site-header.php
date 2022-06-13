@@ -36,7 +36,7 @@
         <div class="menu-principal container">
             <nav>
                 <ul>
-                    <li><a class="nav-link active" href="<?php home_url(); ?>">Home</a></li>
+                    <li><a class="nav-link active" href="<?php echo home_url(); ?>">Home</a></li>
                     <li><a class="nav-link" href="#">Quem Somos</a></li>
                     <li><a class="nav-link" href="#">Notícias</a></li>
                     <li><a class="nav-link" href="#">Campanhas</a></li>
