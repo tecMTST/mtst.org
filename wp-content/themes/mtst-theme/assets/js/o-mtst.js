@@ -1,4 +1,4 @@
-const home =  document.querySelector('.home');
+const home =  document.querySelector('.menu-home');
 home.classList.remove('active');
-const quemsomos =  document.querySelector('.quem-somos');
+const quemsomos =  document.querySelector('.menu-quem-somos');
 quemsomos.classList.add('active');
