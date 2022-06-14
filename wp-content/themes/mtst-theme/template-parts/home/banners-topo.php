@@ -6,7 +6,7 @@
                     </a>
                 </div>
                 <div class="banner-topo">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="<?php echo home_url(); ?>/quem-somos/fake-news" target="_blank" rel="noopener noreferrer">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-fake-news.jpg" alt="Não caia em Fake News">
                     </a>
                 </div>
