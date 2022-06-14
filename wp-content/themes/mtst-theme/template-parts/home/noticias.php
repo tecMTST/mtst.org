@@ -60,7 +60,7 @@
                     <?php endif; ?>
                 <?php endforeach; ?>
                 </div>
-                <div class="ver-tudo"><a href="<?php echo home_url() ?>/noticias">VER TUDO >>></a></div>  
+                <div class="ver-tudo"><a href="<?php echo home_url() ?>/noticias/ultimas-noticias">VER TUDO >>></a></div>  
             </div>
          </section>
 

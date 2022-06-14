@@ -4,7 +4,7 @@
                 <div class="row">
                     <div class="col-md-2">
                         <div class="logo-mtst">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" width="106" height="106" alt="Logo do MTST">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-novo.png" width="106" height="106" alt="Logo do MTST">
                         </div>
                     </div>
                     <div class="col-md-6">
