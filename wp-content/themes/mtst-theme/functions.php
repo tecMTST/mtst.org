@@ -8,8 +8,11 @@ function slug() {
 function themebs_enqueue_styles() {
   wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/bootstrap/bootstrap-4.6.1-dist/css/bootstrap.min.css' );
   wp_enqueue_style( 'core', get_template_directory_uri() . '/assets/css/main.css' );
-  if (slug()!='home') { // CSS complementar das páginas internas
+  if (slug()!='home' && get_post_type() == 'page') { // CSS complementar das páginas internas
     wp_enqueue_style( 'page', get_template_directory_uri() . '/assets/css/'. slug() .'.css' );
+  }
+  if (is_archive() || is_search()) { // CSS complementar para categorias e resulta da busca
+    wp_enqueue_style( 'archive', get_template_directory_uri() . '/assets/css/archive.css' );
   }
 }
 add_action( 'wp_enqueue_scripts', 'themebs_enqueue_styles');

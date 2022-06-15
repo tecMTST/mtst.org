@@ -522,15 +522,18 @@ section.content {
 }
 
 /* Página de busca */
-.search .col-md-6 {
+.search .col-md-6,
+.archive .col-md-6 {
     margin-bottom: 40px;
 }
 
-.search .ultima-noticia {
+.search .ultima-noticia,
+.archive .ultima-noticia {
     min-height: 530px;
 }
 
-.search .page-header {
+.search .page-header,
+.archive .page-header {
     margin-top: 30px;
     margin-bottom: 40px;
 }
@@ -541,6 +544,11 @@ section.content {
     font-size: 20px;
 }
 
-.search main {
+.search main,
+.archive main {
     padding-bottom: 40px;
+}
+
+.pagination .page-numbers {
+    margin-right: 10px;
 }
