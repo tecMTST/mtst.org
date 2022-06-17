@@ -55,8 +55,8 @@ add_theme_support( 'html5', array(
 function rmc_sidebar_init() {
 
     register_sidebar( array(
-        'name' => __( 'Sidebar', 'wpb' ),
-        'id' => 'sidebar-mtst',
+        'name' => __( 'Sidebar Notícias', 'wpb' ),
+        'id' => 'sidebar-single',
         'description' => __( 'Sidebar da página de notícias', 'rmc' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
