@@ -14,6 +14,9 @@ function themebs_enqueue_styles() {
   if (is_archive() || is_search()) { // CSS complementar para categorias e resulta da busca
     wp_enqueue_style( 'archive', get_template_directory_uri() . '/assets/css/archive.css' );
   }
+  if (is_single()) { // CSS complementar para categorias e resulta da busca
+    wp_enqueue_style( 'archive', get_template_directory_uri() . '/assets/css/single.css' );
+  }
 }
 add_action( 'wp_enqueue_scripts', 'themebs_enqueue_styles');
 

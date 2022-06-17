@@ -7,5 +7,8 @@
 	<?php if (slug()=='home' || slug()=='o-mtst' || slug()=='fake-news' || slug()=='ultimas-noticias') : ?>
 	<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/assets/js/<?php echo $post->post_name; ?>.js'></script>
 	<?php endif; ?>
+	<?php if (is_single()) : ?>
+	<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/assets/js/single.js'></script>
+	<?php endif; ?>
 	</body>
 </html>

@@ -1,0 +1,19 @@
+.titulo-pagina h1 {
+    margin-bottom: 40px;
+}
+
+.single .content img {
+    margin-bottom: 10px;
+}
+
+section.content {
+    padding: 20px 20px 40px;
+}
+
+.content .saboxplugin-wrap .saboxplugin-gravatar {
+    padding-left: 0;
+}
+
+.author-container {
+    padding: 30px 0;
+}

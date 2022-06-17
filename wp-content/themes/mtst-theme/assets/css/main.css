@@ -521,34 +521,3 @@ section.content {
     color: #616466;
 }
 
-/* Página de busca */
-.search .col-md-6,
-.archive .col-md-6 {
-    margin-bottom: 40px;
-}
-
-.search .ultima-noticia,
-.archive .ultima-noticia {
-    min-height: 530px;
-}
-
-.search .page-header,
-.archive .page-header {
-    margin-top: 30px;
-    margin-bottom: 40px;
-}
-
-.pagination {
-    text-align: center;
-    margin: 0 auto;
-    font-size: 20px;
-}
-
-.search main,
-.archive main {
-    padding-bottom: 40px;
-}
-
-.pagination .page-numbers {
-    margin-right: 10px;
-}
