@@ -49,3 +49,21 @@ add_theme_support( 'html5', array(
 /* Carrega os endpoints da API */
 
 // require_once(get_template_directory() . "/api/api-spotfy.php");
+
+
+/* Registra Sidebar */
+function rmc_sidebar_init() {
+
+    register_sidebar( array(
+        'name' => __( 'Sidebar', 'wpb' ),
+        'id' => 'sidebar-mtst',
+        'description' => __( 'Sidebar da página de notícias', 'rmc' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+
+}
+
+add_action( 'widgets_init', 'rmc_sidebar_init' );
