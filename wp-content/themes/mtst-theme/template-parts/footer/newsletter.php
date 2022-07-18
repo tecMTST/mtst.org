@@ -6,7 +6,7 @@
                                 <h2>FIQUE POR DENTRO!</h2>
                             </div>
                             <div class="news-desc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam volutpat, massa pellentesque eu, duis molestie viverra lorem. Orci erat morbi quisque tempor sit turpis condimentum. Quis libero varius.</p>
+                                <p>Assine nossa news e saiba tudo sobre os momentos mais marcantes do MTST, da política nacional, eventos, redes sociais e da nossa lojinha.</p>
                             </div>
                         </div>
                         <div class="col-md-6">

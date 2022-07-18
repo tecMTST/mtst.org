@@ -145,6 +145,34 @@ img {
     height: auto;
 }
 
+/* Sub Menu */
+
+.menu-principal .submenu {
+    display: none;
+    padding: 20px 40px 10px 30px;
+    background-color: #fff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    z-index: 999;
+}
+
+.menu-principal .submenu li {
+    margin-bottom: 20px;
+}
+
+.menu-principal .submenu li a {
+    font-weight: 500;
+}
+
+.menu-principal .submenu li a:hover {
+    font-weight: 700;
+}
+
+.menu-principal ul li.over > .submenu, 
+.menu-principal ul li:hover > .submenu {
+    display: inline-block;
+    position: absolute;
+}
+
 /* Banner do topo */
 
 .banner-topo {
@@ -221,6 +249,10 @@ h2.titulo-secao {
     font-size: 18px;
     line-height: 1;
     text-decoration: none;
+}
+
+.ler-mais a:hover {
+    font-weight: 700;
 }
 
 .mais-noticias .ultima-noticia .thumb {
@@ -510,7 +542,7 @@ section.content {
 .content p {
     font-weight: 400;
     font-size: 24px;
-    line-height: 28px;
+    line-height: 1.5;
     color: #616161;
 }
 
@@ -521,3 +553,186 @@ section.content {
     color: #616466;
 }
 
+.topo-mobile {
+    display: none;
+}
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+.menu-principal.menu-mobile {
+    display: none;
+}
+
+/* Responsivo */
+
+@media (max-width:768px) {
+    .topo-desktop {
+        display: none;
+    }
+    .topo-mobile {
+        display: block;
+    }
+    .menu-principal {
+        display: none;
+    }
+    .logo-mtst {
+        max-width: 52px;
+    }
+    .topo-mobile .col-logo {
+        padding-left: 0;
+    }
+    .topo-mobile .search-container {
+        display: none;
+    }
+    .topo-mobile .busca {
+        padding: 0;
+    }
+    .topo-mobile .col-7 {
+        display: table;
+        padding: 0;
+    }
+    .topo-mobile .busca {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .search-container {
+        width: 100%;
+        height: 40px;
+        padding: 5px 10px;
+    }
+    input#search {
+        width: 100%;
+        padding: 0;
+        font-size: 14px;
+    }
+    .hamb {
+        cursor: pointer;
+        float: right;
+        padding: 0;
+        margin: 0 auto;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .topo-mobile .col-hamb {
+        padding: 0;
+        display: table;
+    }
+    .icon-mobile {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .hamb-line::after {
+        margin-top: -3px;
+    }
+    .hamb-line::before {
+        margin-top: 3px;
+    }
+    button.lupa-busca img {
+        max-width: 30px;
+    }
+    .side-menu:checked ~ .hamb .hamb-line::before,
+    .side-menu:checked ~ .hamb .hamb-line::after {
+        margin-top: 0;
+    }
+    section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .side-menu:checked ~ .topo-mobile .menu-principal.menu-mobile {
+        display: block;
+    }
+    #menu-mobile nav ul {
+        display: block;
+        float: right;
+    }
+    .menu-principal ul li a {
+        font-size: 22px;
+        font-weight: 500;
+        text-align: right;
+    }
+    .nav-link.active, .nav-link:hover {
+        background-image: none;
+        font-weight: 700;
+    }
+    .menu-principal .submenu li {
+        margin-bottom: 0;
+        text-align: right;
+    }
+    .menu-principal .submenu li a {
+        line-height: 1.3;
+    }
+    #menu-mobile.menu-principal .submenu {
+        display: none;
+        padding: 0;
+        background-color: #fff;
+        filter: none;
+        z-index: 999;
+        position: relative;
+    }
+    #menu-mobile.menu-principal {
+        position: absolute;
+        background: #fff;
+        width: 75%;
+        margin-left: 25%;
+        z-index: 999;
+    }
+    .menu-principal .submenu li a {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
