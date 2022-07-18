@@ -8,7 +8,7 @@ get_header();
 	if ( have_posts() ) : ?>
 
 		<div class="page-header container">
-			<h1><?php the_archive_title(); ?></h1>
+			<h1><?php single_term_title(); ?></h1>
         </div>
         <div class="container">
             <div class="row">
