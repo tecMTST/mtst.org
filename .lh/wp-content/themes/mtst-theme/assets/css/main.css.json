@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 211,
+            "activePatchIndex": 221,
             "patches": [
                 {
                     "date": 1658104367213,
@@ -852,6 +852,46 @@
                 {
                     "date": 1658139222411,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -852,5 +852,8 @@\n     }\r\n     .site-footer {\r\n         padding: 30px 20px 30px;\r\n     }\r\n+    section#videos {\r\n+        padding: 0 15px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658617868386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -733,8 +733,9 @@\n         background-color: #fff;\r\n         filter: none;\r\n         z-index: 999;\r\n         position: relative;\r\n+        margin-bottom: 10px;\r\n     }\r\n     #menu-mobile.menu-principal {\r\n         position: absolute;\r\n         background: #fff;\r\n"
+                },
+                {
+                    "date": 1658618807421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,16 @@\n     --cinza: #616161;\r\n     --vermelho-escuro: #D70000;\r\n }\r\n \r\n+html, body {\r\n+    overflow-x: hidden;\r\n+}\r\n body {\r\n+    position: relative\r\n+}\r\n+\r\n+body {\r\n     font-family: 'Roboto', sans-serif;\r\n     font-weight: 400;\r\n     background: var(--branco);\r\n }\r\n"
+                },
+                {
+                    "date": 1658619137241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -791,9 +791,9 @@\n     .ultima-noticia {\r\n         margin-bottom: 20px;\r\n     }\r\n     .noticias {\r\n-        padding: 12px 12px 30px;\r\n+        padding: 20px 12px 30px;\r\n     }\r\n     section.mais-noticias {\r\n         padding: 0 12px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658619200826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -863,5 +863,8 @@\n     }\r\n     section#videos {\r\n         padding: 0 15px;\r\n     }\r\n+    .titulo-noticia {\r\n+        padding: 14px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658619289910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -785,9 +785,9 @@\n         font-size: 16px;\r\n         margin: 14px;\r\n     }\r\n     .ultima-noticia .thumb {\r\n-        height: 230px;\r\n+        height: 260px;\r\n     }\r\n     .ultima-noticia {\r\n         margin-bottom: 20px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658619341617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -791,9 +791,9 @@\n     .ultima-noticia {\r\n         margin-bottom: 20px;\r\n     }\r\n     .noticias {\r\n-        padding: 20px 12px 30px;\r\n+        padding: 20px 14px 30px;\r\n     }\r\n     section.mais-noticias {\r\n         padding: 0 12px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658619406565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -788,9 +788,9 @@\n     .ultima-noticia .thumb {\r\n         height: 260px;\r\n     }\r\n     .ultima-noticia {\r\n-        margin-bottom: 20px;\r\n+        margin-bottom: 30px;\r\n     }\r\n     .noticias {\r\n         padding: 20px 14px 30px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658619489518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -797,9 +797,9 @@\n     section.mais-noticias {\r\n         padding: 0 12px;\r\n     }\r\n     .mais-noticias .ultima-noticia .thumb {\r\n-        height: 160px;\r\n+        height: 200px;\r\n     }\r\n     .ver-tudo {\r\n         font-size: 16px;\r\n         line-height: 20px;\r\n"
+                },
+                {
+                    "date": 1658619613987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -272,9 +272,9 @@\n     margin: 18px 12px;\r\n }\r\n \r\n .mais-noticias .titulo-noticia {\r\n-    padding: 12px;\r\n+    padding: 14px;\r\n }\r\n \r\n .mais-noticias .titulo-noticia h3 {\r\n     font-size: 16px;\r\n"
+                },
+                {
+                    "date": 1658619694850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -282,9 +282,10 @@\n     margin-bottom: 0;\r\n     min-height: 72px;\r\n }\r\n \r\n-.mais-noticias .ler-mais a {\r\n+.mais-noticias .ler-mais a,\r\n+.ultima-noticia .ler-mais a {\r\n     font-size: 14px;\r\n     line-height: 16px;\r\n }\r\n \r\n"
                 }
             ],
             "date": 1658104367213,

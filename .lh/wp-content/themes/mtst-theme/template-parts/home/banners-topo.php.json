@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 16,
+            "activePatchIndex": 18,
             "patches": [
                 {
                     "date": 1658133116264,
@@ -72,6 +72,14 @@
                 {
                     "date": 1658134197759,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,15 @@\n                         <img class=\"desktop-view\" src=\"<?php echo get_template_directory_uri(); ?>/assets/images/banner-cozinhas-solidarias.jpg\" alt=\"Apoia-se Cozinhas Solidárias\">\r\n                         <img class=\"mobile-view\" src=\"<?php echo get_template_directory_uri(); ?>/assets/images/banner-cozinhas-mobile.jpg\" alt=\"Apoia-se Cozinhas Solidárias\">\r\n                     </a>\r\n                 </div>\r\n-                <div class=\"banner-topo col-md-12 col-3\">\r\n+                <div class=\"banner-topo col-md-12 col-4\">\r\n                     <a href=\"<?php echo home_url(); ?>/quem-somos/fake-news\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n                         <img class=\"desktop-view\" src=\"<?php echo get_template_directory_uri(); ?>/assets/images/banner-fake-news.jpg\" alt=\"Não caia em Fake News\">\r\n                         <img class=\"mobile-view\" src=\"<?php echo get_template_directory_uri(); ?>/assets/images/banner-fakenews-mobile.jpg\" alt=\"Não caia em Fake News\">\r\n                     </a>\r\n                 </div>\r\n-                <div class=\"banner-topo col-md-12 col-9\">\r\n+                <div class=\"banner-topo col-md-12 col-8\">\r\n                     <a href=\"https://contratequemluta.com/\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n                         <img class=\"desktop-view\" src=\"<?php echo get_template_directory_uri(); ?>/assets/images/banner-contrate.jpg\" alt=\"Não caia em Fake News\">\r\n                         <img class=\"mobile-view\" src=\"<?php echo get_template_directory_uri(); ?>/assets/images/banner-cql-mobile.jpg\" alt=\"Não caia em Fake News\">\r\n                     </a>\r\n"
+                },
+                {
+                    "date": 1658139615999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n         <section class=\"banners\">\r\n-            <div class=\"container row\">\r\n+            <div class=\"container\">\r\n                 <div class=\"banner-topo col-12\">\r\n                     <a href=\"https://apoia.se/cozinhasolidaria\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n                         <img class=\"desktop-view\" src=\"<?php echo get_template_directory_uri(); ?>/assets/images/banner-cozinhas-solidarias.jpg\" alt=\"Apoia-se Cozinhas Solidárias\">\r\n                         <img class=\"mobile-view\" src=\"<?php echo get_template_directory_uri(); ?>/assets/images/banner-cozinhas-mobile.jpg\" alt=\"Apoia-se Cozinhas Solidárias\">\r\n"
+                },
+                {
+                    "date": 1658142366623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n         <section class=\"banners\">\r\n             <div class=\"container\">\r\n+                <div class=\"row\">\r\n                 <div class=\"banner-topo col-12\">\r\n                     <a href=\"https://apoia.se/cozinhasolidaria\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n                         <img class=\"desktop-view\" src=\"<?php echo get_template_directory_uri(); ?>/assets/images/banner-cozinhas-solidarias.jpg\" alt=\"Apoia-se Cozinhas Solidárias\">\r\n                         <img class=\"mobile-view\" src=\"<?php echo get_template_directory_uri(); ?>/assets/images/banner-cozinhas-mobile.jpg\" alt=\"Apoia-se Cozinhas Solidárias\">\r\n@@ -17,6 +18,7 @@\n                         <img class=\"desktop-view\" src=\"<?php echo get_template_directory_uri(); ?>/assets/images/banner-contrate.jpg\" alt=\"Não caia em Fake News\">\r\n                         <img class=\"mobile-view\" src=\"<?php echo get_template_directory_uri(); ?>/assets/images/banner-cql-mobile.jpg\" alt=\"Não caia em Fake News\">\r\n                     </a>\r\n                 </div>\r\n+                </div>\r\n             </div>\r\n         </section>\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1658133116264,
