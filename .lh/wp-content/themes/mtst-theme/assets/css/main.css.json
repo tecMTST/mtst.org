@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 233,
+            "activePatchIndex": 243,
             "patches": [
                 {
                     "date": 1658104367213,
@@ -940,6 +940,46 @@
                 {
                     "date": 1658642934107,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -345,8 +345,9 @@\n }\r\n \r\n ul.videos li {\r\n     width: 48%;\r\n+    margin-bottom: 4px;\r\n }\r\n \r\n ul.videos li:first-child {\r\n     margin-right: 4%;\r\n"
+                },
+                {
+                    "date": 1658645641443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -813,9 +813,9 @@\n     .noticias {\r\n         padding: 20px 14px 30px;\r\n     }\r\n     section.mais-noticias {\r\n-        padding: 0 12px;\r\n+        padding: 0 14px;\r\n     }\r\n     .mais-noticias .ultima-noticia .thumb {\r\n         height: 200px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658645656559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -877,9 +877,9 @@\n     .newsletter {\r\n         padding: 20px;\r\n     }\r\n     .site-footer {\r\n-        padding: 30px 20px 30px;\r\n+        padding: 30px 14px 30px;\r\n     }\r\n     section#videos {\r\n         padding: 0 15px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658645714885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -885,5 +885,8 @@\n     }\r\n     .titulo-noticia {\r\n         padding: 14px;\r\n     }\r\n+    .fotos {\r\n+        padding: 30px 14px 64px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658645759153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -873,10 +873,10 @@\n         font-size: 18px;\r\n         line-height: 24px;\r\n         margin-bottom: 20px;\r\n     }\r\n-    .newsletter {\r\n-        padding: 20px;\r\n+    .newsletter { \r\n+        padding: 20px 14px;\r\n     }\r\n     .site-footer {\r\n         padding: 30px 14px 30px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658645935965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -888,5 +888,8 @@\n     }\r\n     .fotos {\r\n         padding: 30px 14px 64px;\r\n     }\r\n+    .videos {\r\n+        padding: 20px 14px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658645942059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -889,7 +889,7 @@\n     .fotos {\r\n         padding: 30px 14px 64px;\r\n     }\r\n     .videos {\r\n-        padding: 20px 14px;\r\n+        padding: 20px 14px 0;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658646089407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -891,5 +891,9 @@\n     }\r\n     .videos {\r\n         padding: 20px 14px 0;\r\n     }\r\n+    .youtube-video-mobile {\r\n+        background-size: cover;\r\n+        height: 180px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658646338908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -847,11 +847,8 @@\n     .desc {\r\n         font-size: 14px;\r\n         line-height: 18px;\r\n     }\r\n-    .txt-video-r {\r\n-        display: none;\r\n-    }\r\n     .foto.foto-maior {\r\n         margin-bottom: 10px;\r\n     }\r\n     .foto.foto-menor {\r\n"
+                },
+                {
+                    "date": 1658646399781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -829,13 +829,8 @@\n         top: 28%;\r\n         left: 42%;\r\n         width: 16%;\r\n     }\r\n-    .player-video {\r\n-        position: relative;\r\n-        left: 38%;\r\n-        top: -100px;\r\n-    }\r\n     .titulo-secao h2 {\r\n         font-size: 26px;\r\n         line-height: 32px;\r\n         margin-bottom: 14px;\r\n"
+                },
+                {
+                    "date": 1658646729424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -885,7 +885,9 @@\n         padding: 20px 14px 0;\r\n     }\r\n     .youtube-video-mobile {\r\n         background-size: cover;\r\n+        background-position: center;\r\n         height: 180px;\r\n+        margin-bottom: 14px;\r\n     }\r\n }\r\n"
                 }
             ],
             "date": 1658104367213,

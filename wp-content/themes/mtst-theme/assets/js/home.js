@@ -1,5 +1,5 @@
 const swiperFotos = function(){
-  return swiper = new Swiper('.swiper', {
+  return swiper = new Swiper('.swiper-foto', {
     // Default parameters
     slidesPerView: 1,
     spaceBetween: 10,
@@ -25,5 +25,23 @@ const swiperFotos = function(){
   })
 }
 
-swiperFotos()
+swiperFotos();
+
+const swiperVideos = function(){
+  return swiper = new Swiper('.swiper-videos', {
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 10,
+    speed: 500,
+    autoplay: {
+      delay: 4000,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+  })
+}
+
+swiperVideos();
 

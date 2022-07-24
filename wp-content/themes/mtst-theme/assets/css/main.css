@@ -814,7 +814,7 @@ section.content {
         padding: 20px 14px 30px;
     }
     section.mais-noticias {
-        padding: 0 12px;
+        padding: 0 14px;
     }
     .mais-noticias .ultima-noticia .thumb {
         height: 200px;
@@ -830,11 +830,6 @@ section.content {
         left: 42%;
         width: 16%;
     }
-    .player-video {
-        position: relative;
-        left: 38%;
-        top: -100px;
-    }
     .titulo-secao h2 {
         font-size: 26px;
         line-height: 32px;
@@ -847,9 +842,6 @@ section.content {
     .desc {
         font-size: 14px;
         line-height: 18px;
-    }
-    .txt-video-r {
-        display: none;
     }
     .foto.foto-maior {
         margin-bottom: 10px;
@@ -874,16 +866,28 @@ section.content {
         line-height: 24px;
         margin-bottom: 20px;
     }
-    .newsletter {
-        padding: 20px;
+    .newsletter { 
+        padding: 20px 14px;
     }
     .site-footer {
-        padding: 30px 20px 30px;
+        padding: 30px 14px 30px;
     }
     section#videos {
         padding: 0 15px;
     }
     .titulo-noticia {
         padding: 14px;
+    }
+    .fotos {
+        padding: 30px 14px 64px;
+    }
+    .videos {
+        padding: 20px 14px 0;
+    }
+    .youtube-video-mobile {
+        background-size: cover;
+        background-position: center;
+        height: 180px;
+        margin-bottom: 14px;
     }
 }

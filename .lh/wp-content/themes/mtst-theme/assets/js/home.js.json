@@ -1,0 +1,50 @@
+{
+    "sourceFile": "wp-content/themes/mtst-theme/assets/js/home.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1658645128769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1658645139609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const swiperFotos = function(){\r\n-  return swiper = new Swiper('.swiper-fotos', {\r\n+  return swiper = new Swiper('.swiper-foto', {\r\n     // Default parameters\r\n     slidesPerView: 1,\r\n     spaceBetween: 10,\r\n     speed: 500,\r\n"
+                },
+                {
+                    "date": 1658645152764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,4 +26,33 @@\n }\r\n \r\n swiperFotos()\r\n \r\n+const swiperFotos = function(){\r\n+  return swiper = new Swiper('.swiper-videos', {\r\n+    // Default parameters\r\n+    slidesPerView: 1,\r\n+    spaceBetween: 10,\r\n+    speed: 500,\r\n+    autoplay: {\r\n+      delay: 4000,\r\n+    },\r\n+    navigation: {\r\n+        nextEl: '.swiper-button-next',\r\n+        prevEl: '.swiper-button-prev',\r\n+    },\r\n+    // Responsive breakpoints\r\n+    breakpoints: {\r\n+      // when window width is >= 640px\r\n+      640: {\r\n+        slidesPerView: 1,\r\n+        spaceBetween: 10,\r\n+      },\r\n+      pagination: {\r\n+        el: '.swiper-pagination',\r\n+      },    \r\n+    }\r\n+  })\r\n+}\r\n+\r\n+swiperFotos()\r\n+\r\n"
+                },
+                {
+                    "date": 1658645163156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n }\r\n \r\n swiperFotos()\r\n \r\n-const swiperFotos = function(){\r\n+const swiperVideos = function(){\r\n   return swiper = new Swiper('.swiper-videos', {\r\n     // Default parameters\r\n     slidesPerView: 1,\r\n     spaceBetween: 10,\r\n"
+                },
+                {
+                    "date": 1658645170518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,6 +53,6 @@\n     }\r\n   })\r\n }\r\n \r\n-swiperFotos()\r\n+swiperVideos()\r\n \r\n"
+                },
+                {
+                    "date": 1658645217715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,19 +39,8 @@\n     navigation: {\r\n         nextEl: '.swiper-button-next',\r\n         prevEl: '.swiper-button-prev',\r\n     },\r\n-    // Responsive breakpoints\r\n-    breakpoints: {\r\n-      // when window width is >= 640px\r\n-      640: {\r\n-        slidesPerView: 1,\r\n-        spaceBetween: 10,\r\n-      },\r\n-      pagination: {\r\n-        el: '.swiper-pagination',\r\n-      },    \r\n-    }\r\n   })\r\n }\r\n \r\n swiperVideos()\r\n"
+                },
+                {
+                    "date": 1658645236456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,11 +35,10 @@\n     speed: 500,\r\n     autoplay: {\r\n       delay: 4000,\r\n     },\r\n-    navigation: {\r\n-        nextEl: '.swiper-button-next',\r\n-        prevEl: '.swiper-button-prev',\r\n+    pagination: {\r\n+        el\r\n     },\r\n   })\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1658645319418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,10 @@\n     autoplay: {\r\n       delay: 4000,\r\n     },\r\n     pagination: {\r\n-        el\r\n+      el: '.swiper-pagination',\r\n+      type: 'bullets',\r\n     },\r\n   })\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1658645837487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     }\r\n   })\r\n }\r\n \r\n-swiperFotos()\r\n+swiperFotos();\r\n \r\n const swiperVideos = function(){\r\n   return swiper = new Swiper('.swiper-videos', {\r\n     // Default parameters\r\n@@ -42,6 +42,6 @@\n     },\r\n   })\r\n }\r\n \r\n-swiperVideos()\r\n+swiperVideos();\r\n \r\n"
+                }
+            ],
+            "date": 1658645128769,
+            "name": "Commit-0",
+            "content": "const swiperFotos = function(){\r\n  return swiper = new Swiper('.swiper-fotos', {\r\n    // Default parameters\r\n    slidesPerView: 1,\r\n    spaceBetween: 10,\r\n    speed: 500,\r\n    autoplay: {\r\n      delay: 4000,\r\n    },\r\n    navigation: {\r\n        nextEl: '.swiper-button-next',\r\n        prevEl: '.swiper-button-prev',\r\n    },\r\n    // Responsive breakpoints\r\n    breakpoints: {\r\n      // when window width is >= 640px\r\n      640: {\r\n        slidesPerView: 1,\r\n        spaceBetween: 10,\r\n      },\r\n      pagination: {\r\n        el: '.swiper-pagination',\r\n      },    \r\n    }\r\n  })\r\n}\r\n\r\nswiperFotos()\r\n\r\n"
+        }
+    ]
+}
