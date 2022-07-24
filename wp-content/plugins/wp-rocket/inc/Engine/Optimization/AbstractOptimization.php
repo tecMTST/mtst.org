@@ -10,7 +10,7 @@ use WP_Rocket\Admin\Options_Data;
  * @author Remy Perona
  */
 abstract class AbstractOptimization {
-
+	use RegexTrait;
 	/**
 	 * Plugin options.
 	 *
@@ -65,7 +65,7 @@ abstract class AbstractOptimization {
 	 * @param string $html HTML content.
 	 * @return bool|array
 	 */
-	protected function find( $pattern, $html ) {
+	protected function find( string $pattern, string $html ) {
 		preg_match_all( '/' . $pattern . '/Umsi', $html, $matches, PREG_SET_ORDER );
 
 		if ( empty( $matches ) ) {
@@ -126,18 +126,17 @@ abstract class AbstractOptimization {
 		if ( empty( $hosts ) ) {
 			return true;
 		}
-
 		// URL has domain and domain is part of the internal domains.
 		if ( ! empty( $file['host'] ) ) {
 			foreach ( $hosts as $host ) {
-				if ( false !== strpos( $url, $host ) ) {
+				$check_url = strtok( $url, '?' );
+				if ( false !== strpos( $check_url, $host ) ) {
 					return false;
 				}
 			}
 
 			return true;
 		}
-
 		// URL has no domain and doesn't contain the WP_CONTENT path or wp-includes.
 		return ! preg_match( '#(' . $wp_content['path'] . '|wp-includes)#', $file['path'] );
 	}
@@ -214,4 +213,29 @@ abstract class AbstractOptimization {
 
 		return $html;
 	}
+
+	/**
+	 * Get full minified url with ?ver query string.
+	 *
+	 * @param string $minified_path Path of minified file.
+	 * @param string $minified_url Url of minified file.
+	 *
+	 * @return string
+	 */
+	protected function get_full_minified_url( $minified_path, $minified_url ) {
+		$file_mtime = rocket_direct_filesystem()->mtime( $minified_path );
+
+		$version = $file_mtime ? $file_mtime : md5( $minified_url . $this->minify_key );
+
+		return add_query_arg( 'ver', $version, $minified_url );
+	}
+
+	/**
+	 * Gets the CDN zones.
+	 *
+	 * @since  3.1
+	 *
+	 * @return array
+	 */
+	abstract public function get_zones();
 }

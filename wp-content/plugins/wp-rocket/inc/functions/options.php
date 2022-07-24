@@ -160,22 +160,65 @@ function rocket_get_dns_prefetch_domains() {
  */
 function rocket_get_ignored_parameters() {
 	$params = [
-		'utm_source'      => 1,
-		'utm_medium'      => 1,
-		'utm_campaign'    => 1,
-		'utm_expid'       => 1,
-		'utm_term'        => 1,
-		'utm_content'     => 1,
-		'fb_action_ids'   => 1,
-		'fb_action_types' => 1,
-		'fb_source'       => 1,
-		'fbclid'          => 1,
-		'gclid'           => 1,
-		'age-verified'    => 1,
-		'ao_noptimize'    => 1,
-		'usqp'            => 1,
-		'cn-reloaded'     => 1,
-		'_ga'             => 1,
+		'utm_source'            => 1,
+		'utm_medium'            => 1,
+		'utm_campaign'          => 1,
+		'utm_expid'             => 1,
+		'utm_term'              => 1,
+		'utm_content'           => 1,
+		'mtm_source'            => 1,
+		'mtm_medium'            => 1,
+		'mtm_campaign'          => 1,
+		'mtm_keyword'           => 1,
+		'mtm_cid'               => 1,
+		'mtm_content'           => 1,
+		'pk_source'             => 1,
+		'pk_medium'             => 1,
+		'pk_campaign'           => 1,
+		'pk_keyword'            => 1,
+		'pk_cid'                => 1,
+		'pk_content'            => 1,
+		'fb_action_ids'         => 1,
+		'fb_action_types'       => 1,
+		'fb_source'             => 1,
+		'fbclid'                => 1,
+		'campaignid'            => 1,
+		'adgroupid'             => 1,
+		'adid'                  => 1,
+		'gclid'                 => 1,
+		'age-verified'          => 1,
+		'ao_noptimize'          => 1,
+		'usqp'                  => 1,
+		'cn-reloaded'           => 1,
+		'_ga'                   => 1,
+		'sscid'                 => 1,
+		'gclsrc'                => 1,
+		'_gl'                   => 1,
+		'mc_cid'                => 1,
+		'mc_eid'                => 1,
+		'_bta_tid'              => 1,
+		'_bta_c'                => 1,
+		'trk_contact'           => 1,
+		'trk_msg'               => 1,
+		'trk_module'            => 1,
+		'trk_sid'               => 1,
+		'gdfms'                 => 1,
+		'gdftrk'                => 1,
+		'gdffi'                 => 1,
+		'_ke'                   => 1,
+		'redirect_log_mongo_id' => 1,
+		'redirect_mongo_id'     => 1,
+		'sb_referer_host'       => 1,
+		'mkwid'                 => 1,
+		'pcrid'                 => 1,
+		'ef_id'                 => 1,
+		's_kwcid'               => 1,
+		'msclkid'               => 1,
+		'dm_i'                  => 1,
+		'epik'                  => 1,
+		'pp'                    => 1,
+		'gbraid'                => 1,
+		'wbraid'                => 1,
 	];
 
 	/**
@@ -215,9 +258,9 @@ function get_rocket_cache_reject_uri( $force = false ) { // phpcs:ignore WordPre
 	$uris              = (array) get_rocket_option( 'cache_reject_uri', [] );
 	$home_root         = rocket_get_home_dirname();
 	$home_root_escaped = preg_quote( $home_root, '/' ); // The site is not at the domain root, it's in a folder.
+	$home_root_len     = strlen( $home_root );
 
 	if ( '' !== $home_root && $uris ) {
-		$home_root_len = strlen( $home_root );
 		foreach ( $uris as $i => $uri ) {
 			/**
 			 * Since these URIs can be regex patterns like `/homeroot(/.+)/`, we can't simply search for the string `/homeroot/` (nor `/homeroot`).
@@ -235,7 +278,7 @@ function get_rocket_cache_reject_uri( $force = false ) { // phpcs:ignore WordPre
 	}
 
 	// Exclude feeds.
-	$uris[] = '/(.+/)?' . $wp_rewrite->feed_base . '/?.+/?';
+	$uris[] = '/(?:.+/)?' . $wp_rewrite->feed_base . '(?:/(?:.+/?)?)?$';
 
 	// Exlude embedded URLs.
 	$uris[] = '/(?:.+/)?embed/';
@@ -364,6 +407,7 @@ function get_rocket_cache_dynamic_cookies() { // phpcs:ignore WordPress.NamingCo
 function get_rocket_cache_reject_ua() { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals
 	$ua   = get_rocket_option( 'cache_reject_ua', [] );
 	$ua[] = 'facebookexternalhit';
+	$ua[] = 'WhatsApp';
 
 	/**
 	 * Filter the rejected User-Agent
@@ -405,57 +449,6 @@ function get_rocket_cache_query_string() { // phpcs:ignore WordPress.NamingConve
 }
 
 /**
- * Get list of JS files to be excluded from defer JS.
- *
- * @since 2.10
- * @author Remy Perona
- *
- * @return array An array of URLs for the JS files to be excluded.
- */
-function get_rocket_exclude_defer_js() { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals
-	$exclude_defer_js = [
-		'gist.github.com',
-		'content.jwplatform.com',
-		'js.hsforms.net',
-		'www.uplaunch.com',
-		'google.com/recaptcha',
-		'widget.reviews.co.uk',
-		'verify.authorize.net/anetseal',
-		'lib/admin/assets/lib/webfont/webfont.min.js',
-		'app.mailerlite.com',
-		'widget.reviews.io',
-	];
-
-	if ( get_rocket_option( 'defer_all_js', 0 ) && get_rocket_option( 'defer_all_js_safe', 0 ) ) {
-		$jquery            = site_url( wp_scripts()->registered['jquery-core']->src );
-		$jetpack_jquery    = 'c0.wp.com/c/(?:.+)/wp-includes/js/jquery/jquery.js';
-		$googleapis_jquery = 'ajax.googleapis.com/ajax/libs/jquery/(?:.+)/jquery(?:\.min)?.js';
-		$cdnjs_jquery      = 'cdnjs.cloudflare.com/ajax/libs/jquery/(?:.+)/jquery(?:\.min)?.js';
-
-		$exclude_defer_js[] = rocket_clean_exclude_file( $jquery );
-		$exclude_defer_js[] = $jetpack_jquery;
-		$exclude_defer_js[] = $googleapis_jquery;
-		$exclude_defer_js[] = $cdnjs_jquery;
-	}
-
-	/**
-	 * Filter list of Deferred JavaScript files
-	 *
-	 * @since 2.10
-	 * @author Remy Perona
-	 *
-	 * @param array $exclude_defer_js An array of URLs for the JS files to be excluded.
-	 */
-	$exclude_defer_js = apply_filters( 'rocket_exclude_defer_js', $exclude_defer_js );
-
-	foreach ( $exclude_defer_js as $i => $exclude ) {
-		$exclude_defer_js[ $i ] = str_replace( '#', '\#', $exclude );
-	}
-
-	return $exclude_defer_js;
-}
-
-/**
  * Determine if the key is valid
  *
  * @since 2.9 use hash_equals() to compare the hash values
@@ -465,6 +458,7 @@ function get_rocket_exclude_defer_js() { // phpcs:ignore WordPress.NamingConvent
  */
 function rocket_valid_key() {
 	return true;
+	delete_transient( 'rocket_check_key_errors' );
 }
 
 /**
@@ -516,7 +510,7 @@ function rocket_check_key() {
 		if ( '' === $body ) {
 			Logger::error( 'License validation failed. No body available in response.', [ 'license validation process' ] );
 			// Translators: %1$s = opening em tag, %2$s = closing em tag, %3$s = opening link tag, %4$s closing link tag.
-			$message = __( 'License validation failed. Our server could not resolve the request from your website.', 'rocket' ) . '<br>' . sprintf( __( 'Try clicking %1$sSave Changes%2$s below. If the error persists, follow %3$sthis guide%4$s.', 'rocket' ), '<em>', '</em>', '<a href="https://docs.wp-rocket.me/article/100-resolving-problems-with-license-validation#general">', '</a>' );
+			$message = __( 'License validation failed. Our server could not resolve the request from your website.', 'rocket' ) . '<br>' . sprintf( __( 'Try clicking %1$sValidate License%2$s below. If the error persists, follow %3$sthis guide%4$s.', 'rocket' ), '<em>', '</em>', '<a href="https://docs.wp-rocket.me/article/100-resolving-problems-with-license-validation#general">', '</a>' );
 			set_transient( 'rocket_check_key_errors', [ $message ] );
 
 			return $return;

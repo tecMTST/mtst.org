@@ -1,7 +1,7 @@
 <?php
 namespace WP_Rocket\Engine\Media;
 
-use League\Container\ServiceProvider\AbstractServiceProvider;
+use WP_Rocket\Dependencies\League\Container\ServiceProvider\AbstractServiceProvider;
 
 /**
  * Service provider for Media module
@@ -24,23 +24,42 @@ class ServiceProvider extends AbstractServiceProvider {
 		'lazyload_image',
 		'lazyload_iframe',
 		'lazyload_subscriber',
+		'lazyload_admin_subscriber',
+		'emojis_subscriber',
+		'image_dimensions',
+		'image_dimensions_subscriber',
+		'image_dimensions_admin_subscriber',
 	];
 
 	/**
-	 * Registers the services in the container
-	 *
-	 * @since 3.6
+	 * Registers items with the container
 	 *
 	 * @return void
 	 */
 	public function register() {
-		$this->getContainer()->add( 'lazyload_assets', 'RocketLazyload\Assets' );
-		$this->getContainer()->add( 'lazyload_image', 'RocketLazyload\Image' );
-		$this->getContainer()->add( 'lazyload_iframe', 'RocketLazyload\Iframe' );
-		$this->getContainer()->share( 'lazyload_subscriber', 'WP_Rocket\Engine\Media\LazyloadSubscriber' )
-			->withArgument( $this->getContainer()->get( 'options' ) )
-			->withArgument( $this->getContainer()->get( 'lazyload_assets' ) )
-			->withArgument( $this->getContainer()->get( 'lazyload_image' ) )
-			->withArgument( $this->getContainer()->get( 'lazyload_iframe' ) );
+		$options = $this->getContainer()->get( 'options' );
+
+		$this->getContainer()->add( 'lazyload_assets', 'WP_Rocket\Dependencies\RocketLazyload\Assets' );
+		$this->getContainer()->add( 'lazyload_image', 'WP_Rocket\Dependencies\RocketLazyload\Image' );
+		$this->getContainer()->add( 'lazyload_iframe', 'WP_Rocket\Dependencies\RocketLazyload\Iframe' );
+		$this->getContainer()->share( 'lazyload_subscriber', 'WP_Rocket\Engine\Media\Lazyload\Subscriber' )
+			->addArgument( $options )
+			->addArgument( $this->getContainer()->get( 'lazyload_assets' ) )
+			->addArgument( $this->getContainer()->get( 'lazyload_image' ) )
+			->addArgument( $this->getContainer()->get( 'lazyload_iframe' ) )
+			->addTag( 'lazyload_subscriber' );
+		$this->getContainer()->share( 'lazyload_admin_subscriber', 'WP_Rocket\Engine\Media\Lazyload\AdminSubscriber' )
+			->addTag( 'admin_subscriber' );
+		$this->getContainer()->share( 'emojis_subscriber', 'WP_Rocket\Engine\Media\Emojis\EmojisSubscriber' )
+			->addArgument( $options )
+			->addTag( 'front_subscriber' );
+		$this->getContainer()->add( 'image_dimensions', 'WP_Rocket\Engine\Media\ImageDimensions\ImageDimensions' )
+			->addArgument( $options );
+		$this->getContainer()->share( 'image_dimensions_subscriber', 'WP_Rocket\Engine\Media\ImageDimensions\Subscriber' )
+			->addArgument( $this->getContainer()->get( 'image_dimensions' ) )
+			->addTag( 'front_subscriber' );
+		$this->getContainer()->share( 'image_dimensions_admin_subscriber', 'WP_Rocket\Engine\Media\ImageDimensions\AdminSubscriber' )
+			->addArgument( $this->getContainer()->get( 'image_dimensions' ) )
+			->addTag( 'admin_subscriber' );
 	}
 }

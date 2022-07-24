@@ -36,7 +36,7 @@ class Logger {
 	 * @since  3.1.4
 	 * @author Grégory Viguier
 	 */
-	const LOG_FILE_NAME = 'wp-rocket-debug.log';
+	const LOG_FILE_NAME = 'wp-rocket-debug.log.html';
 
 	/**
 	 * A unique ID given to the current thread.
@@ -234,7 +234,13 @@ class Logger {
 			return preg_replace( '/\.[^.]*$/', '', WP_ROCKET_DEBUG_LOG_FILE ) . '.log';
 		}
 
-		return WP_CONTENT_DIR . '/wp-rocket-config/' . static::LOG_FILE_NAME;
+		if ( defined( 'WP_ROCKET_DEBUG_INTERVAL' ) ) {
+			// Adds an optional logs rotator depending on a constant value - WP_ROCKET_DEBUG_INTERVAL (interval by minutes).
+			$rotator = str_pad( round( ( strtotime( 'now' ) - strtotime( 'today midnight' ) ) / 60 / WP_ROCKET_DEBUG_INTERVAL ), 4, '0', STR_PAD_LEFT );
+			return WP_CONTENT_DIR . '/wp-rocket-config/' . $rotator . '-' . static::LOG_FILE_NAME;
+		} else {
+			return WP_CONTENT_DIR . '/wp-rocket-config/' . static::LOG_FILE_NAME;
+		}
 	}
 
 	/**

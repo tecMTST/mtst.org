@@ -3,8 +3,10 @@
 namespace WP_Rocket\Engine\Cache;
 
 use WP_Filesystem_Direct;
+use WP_Rocket\Engine\Activation\ActivationInterface;
+use WP_Rocket\Engine\Deactivation\DeactivationInterface;
 
-class AdvancedCache {
+class AdvancedCache implements ActivationInterface, DeactivationInterface {
 
 	/**
 	 * Absolute path to template files
@@ -40,6 +42,65 @@ class AdvancedCache {
 	}
 
 	/**
+	 * Actions to perform on plugin activation
+	 *
+	 * @since 3.6.3
+	 *
+	 * @return void
+	 */
+	public function activate() {
+		add_action( 'rocket_activation', [ $this, 'update_advanced_cache' ] );
+	}
+
+	/**
+	 * Actions to perform on plugin deactivation
+	 *
+	 * @since 3.6.3
+	 *
+	 * @return void
+	 */
+	public function deactivate() {
+		add_action( 'rocket_deactivation', [ $this, 'update_advanced_cache' ] );
+	}
+
+	/**
+	 * Generates the advanced-cache.php file with its content
+	 *
+	 * @since 3.6.3
+	 *
+	 * @param int $sites_number Number of WP Rocket config files found.
+	 * @return void
+	 */
+	public function update_advanced_cache( $sites_number = 0 ) {
+		/**
+		 * Filters whether to generate the advanced-cache.php file.
+		 *
+		 * @since 3.6.3
+		 *
+		 * @param bool True (default) to go ahead with advanced cache file generation; false to stop generation.
+		 */
+		if ( ! (bool) apply_filters( 'rocket_generate_advanced_cache_file', true ) ) {
+			return;
+		}
+
+		$content = $this->get_advanced_cache_content();
+
+		if ( 'rocket_deactivation' === current_filter() ) {
+			if ( is_multisite() && 0 !== $sites_number ) {
+				return;
+			}
+
+			$content = '';
+		}
+
+		$this->filesystem->put_contents(
+			"{$this->content_dir}/advanced-cache.php",
+			$content,
+			rocket_get_filesystem_perms( 'file' )
+		);
+	}
+
+	/**
 	 * Gets the content for the advanced-cache.php file
 	 *
 	 * @since 3.6
@@ -54,7 +115,6 @@ class AdvancedCache {
 		$replacements = [
 			'{{WP_ROCKET_PHP_VERSION}}' => rocket_get_constant( 'WP_ROCKET_PHP_VERSION' ),
 			'{{WP_ROCKET_PATH}}'        => rocket_get_constant( 'WP_ROCKET_PATH' ),
-			'{{VENDOR_PATH}}'           => rocket_get_constant( 'WP_ROCKET_VENDORS_PATH' ),
 			'{{WP_ROCKET_CONFIG_PATH}}' => rocket_get_constant( 'WP_ROCKET_CONFIG_PATH' ),
 			'{{WP_ROCKET_CACHE_PATH}}'  => rocket_get_constant( 'WP_ROCKET_CACHE_PATH' ),
 		];
@@ -83,6 +143,11 @@ class AdvancedCache {
 	 */
 	public function notice_permissions() {
 		if ( ! $this->is_user_allowed() ) {
+			return;
+		}
+
+		// This filter is documented in inc/functions/files.php.
+		if ( ! (bool) apply_filters( 'rocket_generate_advanced_cache_file', true ) ) {
 			return;
 		}
 

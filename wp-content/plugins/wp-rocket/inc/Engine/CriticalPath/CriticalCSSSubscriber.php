@@ -3,6 +3,7 @@
 namespace WP_Rocket\Engine\CriticalPath;
 
 use WP_Rocket\Admin\Options_Data;
+use WP_Rocket\Engine\Optimization\RegexTrait;
 use WP_Rocket\Event_Management\Subscriber_Interface;
 use WP_Filesystem_Direct;
 
@@ -12,7 +13,7 @@ use WP_Filesystem_Direct;
  * @since 3.3
  */
 class CriticalCSSSubscriber implements Subscriber_Interface {
-
+	use RegexTrait;
 	/**
 	 * Instance of Critical CSS.
 	 *
@@ -91,6 +92,8 @@ class CriticalCSSSubscriber implements Subscriber_Interface {
 			'switch_theme'                      => 'maybe_regenerate_cpcss',
 			'rocket_excluded_inline_js_content' => 'exclude_inline_js',
 			'before_delete_post'                => 'delete_cpcss',
+			'admin_post_rocket_rollback' => [ 'stop_critical_css_generation', 9 ],
+			'wp_rocket_upgrade' => [ 'stop_critical_css_generation', 9 ],
 		];
 		// phpcs:enable WordPress.Arrays.MultipleStatementAlignment.DoubleArrowNotAligned
 	}
@@ -135,6 +138,10 @@ class CriticalCSSSubscriber implements Subscriber_Interface {
 		$screen = get_current_screen();
 
 		if ( 'settings_page_wprocket' === $screen->id ) {
+			return;
+		}
+
+		if ( ! $this->options->get( 'async_css', 0 ) ) {
 			return;
 		}
 
@@ -300,10 +307,7 @@ class CriticalCSSSubscriber implements Subscriber_Interface {
 			&&
 			0 === (int) $value['async_css']
 		) {
-			$this->critical_css->stop_generation();
-
-			delete_transient( 'rocket_critical_css_generation_process_running' );
-			delete_transient( 'rocket_critical_css_generation_process_complete' );
+			$this->stop_critical_css_generation();
 		}
 	}
 
@@ -578,25 +582,17 @@ JS;
 	 * @return string
 	 */
 	protected function return_remove_cpcss_script() {
-		if ( ! rocket_get_constant( 'SCRIPT_DEBUG' ) ) {
-			return '<script>const wprRemoveCPCSS = () => { $elem = document.getElementById( "rocket-critical-css" ); if ( $elem ) { $elem.remove(); } }; if ( window.addEventListener ) { window.addEventListener( "load", wprRemoveCPCSS ); } else if ( window.attachEvent ) { window.attachEvent( "onload", wprRemoveCPCSS ); }</script>';
+		$filename = rocket_get_constant( 'SCRIPT_DEBUG' ) ? 'cpcss-removal.js' : 'cpcss-removal.min.js';
+		$script   = rocket_get_constant( 'WP_ROCKET_PATH' ) . "assets/js/{$filename}";
+
+		if ( ! is_readable( $script ) ) {
+			return '';
 		}
 
-		return '
-			<script>
-				const wprRemoveCPCSS = () => {
-					$elem = document.getElementById( "rocket-critical-css" );
-					if ( $elem ) {
-						$elem.remove();
-					}
-				};
-				if ( window.addEventListener ) {
-					window.addEventListener( "load", wprRemoveCPCSS );
-				} else if ( window.attachEvent ) {
-					window.attachEvent( "onload", wprRemoveCPCSS );
-				}
-			</script>
-			';
+		return sprintf(
+			'<script>%s</script>',
+			$this->filesystem->get_contents( $script )
+		);
 	}
 
 	/**
@@ -650,8 +646,12 @@ JS;
 			'/(?=<link[^>]*\s(rel\s*=\s*[\'"]stylesheet["\']))<link[^>]*\shref\s*=\s*[\'"]([^\'"]+)[\'"](.*)>/iU'
 		);
 
+		// Remove comments from the buffer.
+		$clean_buffer = $this->hide_comments( $buffer );
+		$clean_buffer = $this->hide_noscripts( $clean_buffer );
+
 		// Get all css files with this regex.
-		preg_match_all( $css_pattern, $buffer, $tags_match );
+		preg_match_all( $css_pattern, $clean_buffer, $tags_match );
 		if ( ! isset( $tags_match[0] ) ) {
 			return $buffer;
 		}
@@ -667,8 +667,12 @@ JS;
 				continue;
 			}
 
+			if ( preg_match( '/media\s*=\s*[\'"]print[\'"]/i', $tags_match[0][ $i ] ) ) {
+				continue;
+			}
+
 			$preload = str_replace( 'stylesheet', 'preload', $tags_match[1][ $i ] );
-			$onload  = preg_replace( '~' . preg_quote( $tags_match[3][ $i ], '~' ) . '~iU', ' as="style" onload=""' . $tags_match[3][ $i ] . '>', $tags_match[3][ $i ] );
+			$onload  = preg_replace( '~' . preg_quote( $tags_match[3][ $i ], '~' ) . '~iU', ' data-rocket-async="style" as="style" onload="" onerror="this.removeAttribute(\'data-rocket-async\')" ' . $tags_match[3][ $i ] . '>', $tags_match[3][ $i ] );
 			$tag     = str_replace( $tags_match[3][ $i ] . '>', $onload, $tag );
 			$tag     = str_replace( $tags_match[1][ $i ], $preload, $tag );
 			$tag     = str_replace( 'onload=""', 'onload="this.onload=null;this.rel=\'stylesheet\'"', $tag );
@@ -732,5 +736,19 @@ JS;
 		}
 
 		return ! is_rocket_post_excluded_option( 'async_css' );
+	}
+
+	/**
+	 * Stops the critical CSS generation.
+	 *
+	 * @since 3.10
+	 *
+	 * @return void
+	 */
+	public function stop_critical_css_generation() {
+
+		$this->critical_css->stop_generation();
+		delete_transient( 'rocket_critical_css_generation_process_running' );
+		delete_transient( 'rocket_critical_css_generation_process_complete' );
 	}
 }

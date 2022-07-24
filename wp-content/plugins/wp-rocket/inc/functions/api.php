@@ -65,8 +65,9 @@ function get_rocket_cdn_cnames( $zone = 'all' ) { // phpcs:ignore WordPress.Nami
 	 * @since 2.7
 	 *
 	 * @param array $hosts List of CNAMES.
+	 * @param array $zone  Array of CDN zones.
 	 */
-	$hosts = (array) apply_filters( 'rocket_cdn_cnames', $hosts );
+	$hosts = (array) apply_filters( 'rocket_cdn_cnames', $hosts, $zone );
 	$hosts = array_filter( $hosts );
 	$hosts = array_flip( array_flip( $hosts ) );
 	$hosts = array_values( $hosts );
@@ -117,6 +118,7 @@ function rocket_is_live_site() {
 	// Check for staging sites.
 	$staging = [
 		'.wpengine.com',
+		'.wpenginepowered.com',
 		'.pantheonsite.io',
 		'.flywheelsites.com',
 		'.flywheelstaging.com',
@@ -127,6 +129,15 @@ function rocket_is_live_site() {
 		'.wpserveur.net',
 		'-liquidwebsites.com',
 		'.myftpupload.com',
+		'.dream.press',
+		'.sg-host.com',
+		'.platformsh.site',
+		'.wpstage.net',
+		'.bigscoots-staging.com',
+		'.wpsc.site',
+		'.runcloud.link',
+		'.onrocket.site',
+		'.singlestaging.com',
 	];
 	foreach ( $staging as $partial_host ) {
 		if ( strpos( $host, $partial_host ) ) {

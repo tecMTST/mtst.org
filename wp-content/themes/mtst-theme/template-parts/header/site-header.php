@@ -120,7 +120,7 @@
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/publicacoes">Publicações</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="nav-link menu-campanha item-mob" onclick="subCampanha()">Campanhas</a>
+                                    <li><a id="menu-campanha" class="nav-link menu-campanha item-mob" onclick="subCampanha()">Campanhas</a>
                                         <ul class="submenu" id="sub-campanha" style="display:none">
                                             <li><a class="nav-link" href="#">Apoia.se</a></li>
                                             <li><a class="nav-link" href="https://apoia.se/cozinhasolidaria" target="_blank">Cozinhas Solidárias</a></li>
@@ -166,10 +166,13 @@
                             }
                             function subNoticias() {
                             var x = document.getElementById("sub-noticias");
+                            var y = document.getElementById("menu-campanha");
                                 if (x.style.display === "none") {
                                     x.style.display = "block";
+                                    y.style.marginTop = "92px";
                                 } else {
                                     x.style.display = "none";
+                                    y.style.marginTop = "0";
                                 }
                             }
                             function subCampanha() {

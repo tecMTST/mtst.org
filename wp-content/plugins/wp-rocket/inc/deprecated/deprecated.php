@@ -1,5 +1,5 @@
 <?php
-use MatthiasMullie\Minify;
+use WP_Rocket\Dependencies\Minify;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -1228,6 +1228,10 @@ if ( ! function_exists( 'rocket_settings_callback' ) ) {
 
 		if ( isset( $_FILES['import'] ) && 0 !== $_FILES['import']['size'] && $settings = rocket_handle_settings_import( $_FILES['import'], 'wp-rocket', $inputs ) ) {
 			$inputs = $settings;
+		}
+
+		if ( ! rocket_valid_key() ) {
+			$checked = rocket_check_key();
 		}
 
 		if ( isset( $checked ) && is_array( $checked ) ) {

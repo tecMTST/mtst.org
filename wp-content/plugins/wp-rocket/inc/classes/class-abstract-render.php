@@ -118,13 +118,13 @@ abstract class Abstract_Render implements Render_Interface {
 				break;
 			case 'purge_cache':
 			case 'preload':
-			case 'rocket_purge_opcache':
 			case 'rocket_purge_cloudflare':
 			case 'rocket_purge_sucuri':
 			case 'rocket_rollback':
 			case 'rocket_export':
 			case 'rocket_generate_critical_css':
 			case 'rocket_purge_rocketcdn':
+			case 'rocket_clear_usedcss':
 				$url = admin_url( 'admin-post.php?action=' . $action );
 
 				if ( ! empty( $args['parameters'] ) ) {

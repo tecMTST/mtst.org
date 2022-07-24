@@ -41,18 +41,6 @@ add_filter( 'widget_update_callback', 'rocket_widget_update_callback' );
 function rocket_get_purge_urls( $post_id, $post ) {
 	$purge_urls = [];
 
-	// Get the post language.
-	$i18n_plugin = rocket_has_i18n();
-	$lang        = false;
-
-	if ( 'wpml' === $i18n_plugin && ! rocket_is_plugin_active( 'woocommerce-multilingual/wpml-woocommerce.php' ) ) {
-		// WPML.
-		$lang = $GLOBALS['sitepress']->get_language_for_element( $post_id, 'post_' . get_post_type( $post_id ) );
-	} elseif ( 'polylang' === $i18n_plugin && function_exists( 'pll_get_post_language' ) ) {
-		// Polylang.
-		$lang = pll_get_post_language( $post_id );
-	}
-
 	// Get the permalink structure.
 	$permalink_structure = get_rocket_sample_permalink( $post_id );
 
@@ -61,17 +49,18 @@ function rocket_get_purge_urls( $post_id, $post ) {
 
 	// Add permalink.
 	if ( rocket_extract_url_component( $permalink, PHP_URL_PATH ) !== '/' ) {
-		array_push( $purge_urls, $permalink );
+		$purge_urls[] = $permalink;
 	}
 
 	// Add Posts page.
 	if ( 'post' === $post->post_type && (int) get_option( 'page_for_posts' ) > 0 ) {
-		array_push( $purge_urls, get_permalink( get_option( 'page_for_posts' ) ) );
+		$purge_urls[] = get_permalink( get_option( 'page_for_posts' ) );
 	}
 
 	// Add Post Type archive.
-	if ( 'post' !== $post->post_type ) {
-		$post_type_archive = get_post_type_archive_link( get_post_type( $post_id ) );
+	$post_type = $post->post_type;
+	if ( 'post' !== $post_type ) {
+		$post_type_archive = get_post_type_archive_link( $post_type );
 		if ( $post_type_archive ) {
 			// Rename the caching filename for SSL URLs.
 			$filename = 'index';
@@ -80,34 +69,34 @@ function rocket_get_purge_urls( $post_id, $post ) {
 			}
 
 			$post_type_archive = trailingslashit( $post_type_archive );
-			array_push( $purge_urls, $post_type_archive . $filename . '.html' );
-			array_push( $purge_urls, $post_type_archive . $filename . '.html_gzip' );
-			array_push( $purge_urls, $post_type_archive . $GLOBALS['wp_rewrite']->pagination_base );
+			$purge_urls[]      = $post_type_archive . $filename . '.html';
+			$purge_urls[]      = $post_type_archive . $filename . '.html_gzip';
+			$purge_urls[]      = $post_type_archive . $filename . $GLOBALS['wp_rewrite']->pagination_base;
 		}
 	}
 
 	// Add next post.
 	$next_post = get_adjacent_post( false, '', false );
 	if ( $next_post ) {
-		array_push( $purge_urls, get_permalink( $next_post ) );
+		$purge_urls[] = get_permalink( $next_post );
 	}
 
 	// Add next post in same category.
 	$next_in_same_cat_post = get_adjacent_post( true, '', false );
 	if ( $next_in_same_cat_post && $next_in_same_cat_post !== $next_post ) {
-		array_push( $purge_urls, get_permalink( $next_in_same_cat_post ) );
+		$purge_urls[] = get_permalink( $next_in_same_cat_post );
 	}
 
 	// Add previous post.
 	$previous_post = get_adjacent_post( false, '', true );
 	if ( $previous_post ) {
-		array_push( $purge_urls, get_permalink( $previous_post ) );
+		$purge_urls[] = get_permalink( $previous_post );
 	}
 
 	// Add previous post in same category.
 	$previous_in_same_cat_post = get_adjacent_post( true, '', true );
 	if ( $previous_in_same_cat_post && $previous_in_same_cat_post !== $previous_post ) {
-		array_push( $purge_urls, get_permalink( $previous_in_same_cat_post ) );
+		$purge_urls[] = get_permalink( $previous_in_same_cat_post );
 	}
 
 	// Add urls page to purge every time a post is save.
@@ -123,25 +112,39 @@ function rocket_get_purge_urls( $post_id, $post ) {
 			restore_current_blog();
 		}
 
+		$home_parts = get_rocket_parse_url( $home_url );
+		$home_url   = "{$home_parts['scheme']}://{$home_parts['host']}";
+		$cache_path = rocket_get_constant( 'WP_ROCKET_CACHE_PATH' ) . $home_parts['host'];
+
 		foreach ( $cache_purge_pages as $page ) {
-			$page = trailingslashit( $home_url ) . $page;
-			array_push( $purge_urls, $page );
+			// Check if it contains regex pattern.
+			if ( strstr( $page, '*' ) ) {
+				$matches_files = _rocket_get_recursive_dir_files_by_regex( '#' . $page . '#i' );
+				foreach ( $matches_files as $file ) {
+					// Convert path to URL.
+					$purge_urls[] = str_replace( $cache_path, untrailingslashit( $home_url ), $file->getPath() );
+				}
+				continue;
+			}
+			$purge_urls[] = trailingslashit( $home_url ) . $page;
 		}
 	}
 
 	// Add the author page.
-	$purge_author = [ get_author_posts_url( $post->post_author ) ];
-	$purge_urls   = array_merge( $purge_urls, $purge_author );
+	$purge_urls[] = get_author_posts_url( $post->post_author );
 
 	// Add all parents.
 	$parents = get_post_ancestors( $post_id );
 	if ( (bool) $parents ) {
 		foreach ( $parents as $parent_id ) {
-			array_push( $purge_urls, get_permalink( $parent_id ) );
+			$purge_urls[] = get_permalink( $parent_id );
 		}
 	}
 
-	return $purge_urls;
+	// Remove entries with empty values in array.
+	$purge_urls = array_filter( $purge_urls, 'is_string' );
+
+	return array_flip( array_flip( $purge_urls ) );
 }
 
 /**
@@ -166,13 +169,13 @@ function rocket_clean_post( $post_id, $post = null ) {
 	static $done = [];
 
 	if ( isset( $done[ $post_id ] ) ) {
-		return;
+		return false;
 	}
 
 	$done[ $post_id ] = 1;
 
 	if ( defined( 'DOING_AUTOSAVE' ) ) {
-		return;
+		return false;
 	}
 
 	$purge_urls = [];
@@ -184,18 +187,18 @@ function rocket_clean_post( $post_id, $post = null ) {
 
 	// Return if $post is not an object.
 	if ( ! is_object( $post ) ) {
-		return;
+		return false;
 	}
 
 	// No purge for specific conditions.
 	if ( 'auto-draft' === $post->post_status || 'draft' === $post->post_status || empty( $post->post_type ) || 'nav_menu_item' === $post->post_type || 'attachment' === $post->post_type ) {
-		return;
+		return false;
 	}
 
 	// Don't purge if post's post type is not public or not publicly queryable.
 	$post_type = get_post_type_object( $post->post_type );
 	if ( ! is_object( $post_type ) || true !== $post_type->public ) {
-		return;
+		return false;
 	}
 
 	// Get the post language.
@@ -239,7 +242,9 @@ function rocket_clean_post( $post_id, $post = null ) {
 	rocket_clean_home( $lang );
 
 	// Purge home feeds (blog & comments).
-	rocket_clean_home_feeds();
+	if ( has_filter( 'rocket_cache_reject_uri', 'wp_rocket_cache_feed' ) !== false ) {
+		rocket_clean_home_feeds();
+	}
 
 	/**
 	 * Fires after cache files related with the post are deleted
@@ -251,6 +256,8 @@ function rocket_clean_post( $post_id, $post = null ) {
 	 * @param string  $lang       The post language
 	 */
 	do_action( 'after_rocket_clean_post', $post, $purge_urls, $lang ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals
+
+	return true;
 }
 add_action( 'wp_trash_post',           'rocket_clean_post' );
 add_action( 'delete_post',             'rocket_clean_post' );
@@ -432,6 +439,7 @@ function do_admin_post_rocket_purge_cache() { // phpcs:ignore WordPress.NamingCo
 				if ( '' === $lang ) {
 					// Remove all minify cache files.
 					rocket_clean_minify();
+					rocket_clean_cache_busting();
 
 					// Generate a new random key for minify cache file.
 					$options                   = get_option( WP_ROCKET_SLUG );
@@ -534,41 +542,6 @@ function do_admin_post_rocket_purge_cache() { // phpcs:ignore WordPress.NamingCo
 	}
 }
 add_action( 'admin_post_purge_cache', 'do_admin_post_rocket_purge_cache' );
-
-/**
- * Purge OPCache content in Admin Bar
- *
- * @since 2.7
- */
-function do_admin_post_rocket_purge_opcache() { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals
-	if ( ! isset( $_GET['_wpnonce'] ) || ! wp_verify_nonce( sanitize_key( $_GET['_wpnonce'] ), 'rocket_purge_opcache' ) ) {
-		wp_nonce_ays( '' );
-	}
-
-	if ( ! current_user_can( 'rocket_purge_opcache' ) ) {
-		return;
-	}
-
-	$reset_opcache = rocket_reset_opcache();
-
-	if ( ! $reset_opcache ) {
-		$op_purge_result = [
-			'result'  => 'error',
-			'message' => __( 'OPcache purge failed.', 'rocket' ),
-		];
-	} else {
-		$op_purge_result = [
-			'result'  => 'success',
-			'message' => __( 'OPcache successfully purged', 'rocket' ),
-		];
-	}
-
-	set_transient( get_current_user_id() . '_opcache_purge_result', $op_purge_result );
-
-	wp_safe_redirect( esc_url_raw( wp_get_referer() ) );
-	die();
-}
-add_action( 'admin_post_rocket_purge_opcache', 'do_admin_post_rocket_purge_opcache' );
 
 /**
  * Clean the cache when the current theme is updated.
