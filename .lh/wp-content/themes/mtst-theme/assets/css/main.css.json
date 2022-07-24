@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 162,
+            "activePatchIndex": 233,
             "patches": [
                 {
                     "date": 1658104367213,
@@ -656,6 +656,290 @@
                 {
                     "date": 1658132509678,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -730,5 +730,9 @@\n         font-weight: 500;\r\n         font-size: 18px;\r\n         line-height: 21px;\r\n     }\r\n+    .container {\r\n+        padding-left: 0;\r\n+        padding-right: 0;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658133197177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -612,8 +612,12 @@\n .menu-principal.menu-mobile {\r\n     display: none;\r\n }\r\n \r\n+.mobile-view {\r\n+    display: none!important;\r\n+}\r\n+\r\n /* Responsivo */\r\n \r\n @media (max-width:768px) {\r\n     .topo-desktop {\r\n"
+                },
+                {
+                    "date": 1658133212614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -619,8 +619,11 @@\n \r\n /* Responsivo */\r\n \r\n @media (max-width:768px) {\r\n+    .mobile-view {\r\n+        display: block!important;\r\n+    }\r\n     .topo-desktop {\r\n         display: none;\r\n     }\r\n     .topo-mobile {\r\n"
+                },
+                {
+                    "date": 1658133269234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -616,8 +616,12 @@\n .mobile-view {\r\n     display: none!important;\r\n }\r\n \r\n+.desktop-view {\r\n+    \r\n+}\r\n+\r\n /* Responsivo */\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658133279260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -617,9 +617,9 @@\n     display: none!important;\r\n }\r\n \r\n .desktop-view {\r\n-    \r\n+    display: block!important;\r\n }\r\n \r\n /* Responsivo */\r\n \r\n"
+                },
+                {
+                    "date": 1658133291811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -626,8 +626,11 @@\n @media (max-width:768px) {\r\n     .mobile-view {\r\n         display: block!important;\r\n     }\r\n+    .desktop-view {\r\n+        display: none!important;\r\n+    }\r\n     .topo-desktop {\r\n         display: none;\r\n     }\r\n     .topo-mobile {\r\n"
+                },
+                {
+                    "date": 1658133814255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -748,5 +748,6 @@\n     .container {\r\n         padding-left: 0;\r\n         padding-right: 0;\r\n     }\r\n+    \r\n }\r\n"
+                },
+                {
+                    "date": 1658133825777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -748,6 +748,8 @@\n     .container {\r\n         padding-left: 0;\r\n         padding-right: 0;\r\n     }\r\n-    \r\n+    .banner-topo {\r\n+        margin-bottom: 10px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658134464642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -751,5 +751,9 @@\n     }\r\n     .banner-topo {\r\n         margin-bottom: 10px;\r\n     }\r\n+    .col-4, .col-8 {\r\n+        padding-left: 0;\r\n+        padding-right: 0;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658134512012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -752,8 +752,8 @@\n     .banner-topo {\r\n         margin-bottom: 10px;\r\n     }\r\n     .col-4, .col-8 {\r\n-        padding-left: 0;\r\n-        padding-right: 0;\r\n+        padding-left: 5px;\r\n+        padding-right: 5px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658134597704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -755,5 +755,8 @@\n     .col-4, .col-8 {\r\n         padding-left: 5px;\r\n         padding-right: 5px;\r\n     }\r\n+    .col-8 img {\r\n+        max-width: 90%;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658134848061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -683,8 +683,9 @@\n     }\r\n     .icon-mobile {\r\n         display: table-cell;\r\n         vertical-align: middle;\r\n+        padding-right: 10px;\r\n     }\r\n     .hamb-line::after {\r\n         margin-top: -3px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658135832457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -758,6 +758,7 @@\n         padding-right: 5px;\r\n     }\r\n     .col-8 img {\r\n         max-width: 90%;\r\n+        margin: 0 auto;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658135838708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -753,10 +753,10 @@\n     .banner-topo {\r\n         margin-bottom: 10px;\r\n     }\r\n     .col-4, .col-8 {\r\n-        padding-left: 5px;\r\n-        padding-right: 5px;\r\n+        padding-left: 0;\r\n+        padding-right: 0;\r\n     }\r\n     .col-8 img {\r\n         max-width: 90%;\r\n         margin: 0 auto;\r\n"
+                },
+                {
+                    "date": 1658135880494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -757,8 +757,8 @@\n         padding-left: 0;\r\n         padding-right: 0;\r\n     }\r\n     .col-8 img {\r\n-        max-width: 90%;\r\n+        max-width: 93%;\r\n         margin: 0 auto;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658135932241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -566,9 +566,9 @@\n \r\n .hamb-line {\r\n     background: var(--white);\r\n     display: block;\r\n-    height: 2px;\r\n+    height: 3px;\r\n     position: relative;\r\n     width: 24px;\r\n \r\n } /* Style span tag */\r\n"
+                },
+                {
+                    "date": 1658135970254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -568,9 +568,9 @@\n     background: var(--white);\r\n     display: block;\r\n     height: 3px;\r\n     position: relative;\r\n-    width: 24px;\r\n+    width: 26px;\r\n \r\n } /* Style span tag */\r\n \r\n .hamb-line::before,\r\n"
+                },
+                {
+                    "date": 1658136015735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -569,8 +569,9 @@\n     display: block;\r\n     height: 3px;\r\n     position: relative;\r\n     width: 26px;\r\n+    border-radius: 4px;\r\n \r\n } /* Style span tag */\r\n \r\n .hamb-line::before,\r\n"
+                },
+                {
+                    "date": 1658136085830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -570,9 +570,8 @@\n     height: 3px;\r\n     position: relative;\r\n     width: 26px;\r\n     border-radius: 4px;\r\n-\r\n } /* Style span tag */\r\n \r\n .hamb-line::before,\r\n .hamb-line::after{\r\n@@ -582,8 +581,9 @@\n     height: 100%;\r\n     position: absolute;\r\n     transition: all .2s ease-out;\r\n     width: 100%;\r\n+    border-radius: 4px;\r\n }\r\n .hamb-line::before{\r\n     top: 5px;\r\n }\r\n"
+                },
+                {
+                    "date": 1658136114501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -568,9 +568,9 @@\n     background: var(--white);\r\n     display: block;\r\n     height: 3px;\r\n     position: relative;\r\n-    width: 26px;\r\n+    width: 30px;\r\n     border-radius: 4px;\r\n } /* Style span tag */\r\n \r\n .hamb-line::before,\r\n"
+                },
+                {
+                    "date": 1658136914456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -761,5 +761,10 @@\n     .col-8 img {\r\n         max-width: 93%;\r\n         margin: 0 auto;\r\n     }\r\n+    h2.titulo-secao {\r\n+        font-size: 26px;\r\n+        line-height: 32px;\r\n+        margin-bottom: 14px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658137037637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -766,5 +766,10 @@\n         font-size: 26px;\r\n         line-height: 32px;\r\n         margin-bottom: 14px;\r\n     }\r\n+    .titulo-noticia h3 {\r\n+        font-size: 18px;\r\n+        line-height: 22px;\r\n+        margin-bottom: 10px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658137118732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -771,5 +771,15 @@\n         font-size: 18px;\r\n         line-height: 22px;\r\n         margin-bottom: 10px;\r\n     }\r\n+    .categoria {\r\n+        float: right;\r\n+        padding: 2px 18px;\r\n+        color: #fff;\r\n+        background: var(--preto);\r\n+        border-radius: 30px;\r\n+        font-weight: 400;\r\n+        font-size: 16px;\r\n+        margin: 14px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658137150254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -772,14 +772,9 @@\n         line-height: 22px;\r\n         margin-bottom: 10px;\r\n     }\r\n     .categoria {\r\n-        float: right;\r\n-        padding: 2px 18px;\r\n-        color: #fff;\r\n-        background: var(--preto);\r\n         border-radius: 30px;\r\n-        font-weight: 400;\r\n         font-size: 16px;\r\n         margin: 14px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658137208693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -776,5 +776,10 @@\n         border-radius: 30px;\r\n         font-size: 16px;\r\n         margin: 14px;\r\n     }\r\n+    .ultima-noticia .thumb {\r\n+        border-radius: 20px 20px 0px 0px;\r\n+        height: 230px;\r\n+        background-size: cover;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658137215894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -777,9 +777,7 @@\n         font-size: 16px;\r\n         margin: 14px;\r\n     }\r\n     .ultima-noticia .thumb {\r\n-        border-radius: 20px 20px 0px 0px;\r\n         height: 230px;\r\n-        background-size: cover;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658137264561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -779,5 +779,8 @@\n     }\r\n     .ultima-noticia .thumb {\r\n         height: 230px;\r\n     }\r\n+    .ultima-noticia {\r\n+        margin-bottom: 20px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658137328743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -782,5 +782,8 @@\n     }\r\n     .ultima-noticia {\r\n         margin-bottom: 20px;\r\n     }\r\n+    .noticias {\r\n+        padding: 12px 12px 30px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658137365662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -785,5 +785,8 @@\n     }\r\n     .noticias {\r\n         padding: 12px 12px 30px;\r\n     }\r\n+    section.mais-noticias {\r\n+        padding: 0 12px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658137410461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -788,5 +788,8 @@\n     }\r\n     section.mais-noticias {\r\n         padding: 0 12px;\r\n     }\r\n+    .mais-noticias .ultima-noticia .thumb {\r\n+        height: 160px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658137508842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -791,5 +791,13 @@\n     }\r\n     .mais-noticias .ultima-noticia .thumb {\r\n         height: 160px;\r\n     }\r\n+    .ver-tudo {\r\n+        font-size: 16px;\r\n+        line-height: 20px;\r\n+        text-align: center;\r\n+        text-decoration-line: underline;\r\n+        text-transform: uppercase;\r\n+        margin: 10px 0;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658137514219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -794,10 +794,7 @@\n     }\r\n     .ver-tudo {\r\n         font-size: 16px;\r\n         line-height: 20px;\r\n-        text-align: center;\r\n-        text-decoration-line: underline;\r\n-        text-transform: uppercase;\r\n         margin: 10px 0;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658137901951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -796,5 +796,11 @@\n         font-size: 16px;\r\n         line-height: 20px;\r\n         margin: 10px 0;\r\n     }\r\n+    .player-video-big {\r\n+        position: absolute;\r\n+        top: 24%;\r\n+        left: 38%;\r\n+        width: 16%;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658137956538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -802,5 +802,10 @@\n         top: 24%;\r\n         left: 38%;\r\n         width: 16%;\r\n     }\r\n+    .player-video {\r\n+        position: relative;\r\n+        left: 38%;\r\n+        top: -100px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658138089427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -807,5 +807,10 @@\n         position: relative;\r\n         left: 38%;\r\n         top: -100px;\r\n     }\r\n+    .titulo-secao h2 {\r\n+        font-size: 26px;\r\n+        line-height: 32px;\r\n+        margin-bottom: 14px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658138193123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -812,5 +812,9 @@\n         font-size: 26px;\r\n         line-height: 32px;\r\n         margin-bottom: 14px;\r\n     }\r\n+    .titulo-video h3 {\r\n+        font-size: 20px;\r\n+        line-height: 24px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658138237215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -816,5 +816,11 @@\n     .titulo-video h3 {\r\n         font-size: 20px;\r\n         line-height: 24px;\r\n     }\r\n+    .desc {\r\n+        font-weight: 400;\r\n+        font-size: 14px;\r\n+        line-height: 18px;\r\n+        color: var(--preto);\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658138243993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -817,10 +817,8 @@\n         font-size: 20px;\r\n         line-height: 24px;\r\n     }\r\n     .desc {\r\n-        font-weight: 400;\r\n         font-size: 14px;\r\n         line-height: 18px;\r\n-        color: var(--preto);\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658138295412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -820,5 +820,8 @@\n     .desc {\r\n         font-size: 14px;\r\n         line-height: 18px;\r\n     }\r\n+    .txt-video-r {\r\n+        display: none;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658138335116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -823,5 +823,8 @@\n     }\r\n     .txt-video-r {\r\n         display: none;\r\n     }\r\n+    .foto.foto-maior {\r\n+        margin-bottom: 10px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658138368617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -826,5 +826,8 @@\n     }\r\n     .foto.foto-maior {\r\n         margin-bottom: 10px;\r\n     }\r\n+    .foto.foto-menor {\r\n+        margin-bottom: 10px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658138414173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -829,5 +829,12 @@\n     }\r\n     .foto.foto-menor {\r\n         margin-bottom: 10px;\r\n     }\r\n+    .news-desc {\r\n+        margin-top: 20px;\r\n+        font-weight: 500;\r\n+        font-size: 18px;\r\n+        line-height: 23px;\r\n+        opacity: 0.8;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658138421193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -834,7 +834,6 @@\n         margin-top: 20px;\r\n         font-weight: 500;\r\n         font-size: 18px;\r\n         line-height: 23px;\r\n-        opacity: 0.8;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658138632517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -830,10 +830,17 @@\n     .foto.foto-menor {\r\n         margin-bottom: 10px;\r\n     }\r\n     .news-desc {\r\n-        margin-top: 20px;\r\n-        font-weight: 500;\r\n         font-size: 18px;\r\n         line-height: 23px;\r\n     }\r\n+    \r\n+    .form-newsletter input {\r\n+        margin-bottom: 0px;\r\n+        margin-top: 4px;\r\n+        font-size: 18px;\r\n+        line-height: 18px;\r\n+        width: 100%;\r\n+        height: 44px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658138637886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -835,9 +835,8 @@\n         line-height: 23px;\r\n     }\r\n     \r\n     .form-newsletter input {\r\n-        margin-bottom: 0px;\r\n         margin-top: 4px;\r\n         font-size: 18px;\r\n         line-height: 18px;\r\n         width: 100%;\r\n"
+                },
+                {
+                    "date": 1658138795646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -841,5 +841,10 @@\n         line-height: 18px;\r\n         width: 100%;\r\n         height: 44px;\r\n     }\r\n+    .txt-footer {\r\n+        font-size: 18px;\r\n+        line-height: 24px;\r\n+        margin-bottom: 20px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658138886060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -846,5 +846,8 @@\n         font-size: 18px;\r\n         line-height: 24px;\r\n         margin-bottom: 20px;\r\n     }\r\n+    .newsletter {\r\n+        padding: 20px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658138930486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -849,5 +849,9 @@\n     }\r\n     .newsletter {\r\n         padding: 20px;\r\n     }\r\n+    .site-footer {\r\n+        padding: 30px 20px 30px;\r\n+        background-color: var(--preto);\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658139117117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -798,10 +798,10 @@\n         margin: 10px 0;\r\n     }\r\n     .player-video-big {\r\n         position: absolute;\r\n-        top: 24%;\r\n-        left: 38%;\r\n+        top: 28%;\r\n+        left: 42%;\r\n         width: 16%;\r\n     }\r\n     .player-video {\r\n         position: relative;\r\n@@ -851,7 +851,6 @@\n         padding: 20px;\r\n     }\r\n     .site-footer {\r\n         padding: 30px 20px 30px;\r\n-        background-color: var(--preto);\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658139222411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -852,5 +852,8 @@\n     }\r\n     .site-footer {\r\n         padding: 30px 20px 30px;\r\n     }\r\n+    section#videos {\r\n+        padding: 0 15px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658617868386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -733,8 +733,9 @@\n         background-color: #fff;\r\n         filter: none;\r\n         z-index: 999;\r\n         position: relative;\r\n+        margin-bottom: 10px;\r\n     }\r\n     #menu-mobile.menu-principal {\r\n         position: absolute;\r\n         background: #fff;\r\n"
+                },
+                {
+                    "date": 1658618807421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,16 @@\n     --cinza: #616161;\r\n     --vermelho-escuro: #D70000;\r\n }\r\n \r\n+html, body {\r\n+    overflow-x: hidden;\r\n+}\r\n body {\r\n+    position: relative\r\n+}\r\n+\r\n+body {\r\n     font-family: 'Roboto', sans-serif;\r\n     font-weight: 400;\r\n     background: var(--branco);\r\n }\r\n"
+                },
+                {
+                    "date": 1658619137241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -791,9 +791,9 @@\n     .ultima-noticia {\r\n         margin-bottom: 20px;\r\n     }\r\n     .noticias {\r\n-        padding: 12px 12px 30px;\r\n+        padding: 20px 12px 30px;\r\n     }\r\n     section.mais-noticias {\r\n         padding: 0 12px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658619200826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -863,5 +863,8 @@\n     }\r\n     section#videos {\r\n         padding: 0 15px;\r\n     }\r\n+    .titulo-noticia {\r\n+        padding: 14px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658619289910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -785,9 +785,9 @@\n         font-size: 16px;\r\n         margin: 14px;\r\n     }\r\n     .ultima-noticia .thumb {\r\n-        height: 230px;\r\n+        height: 260px;\r\n     }\r\n     .ultima-noticia {\r\n         margin-bottom: 20px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658619341617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -791,9 +791,9 @@\n     .ultima-noticia {\r\n         margin-bottom: 20px;\r\n     }\r\n     .noticias {\r\n-        padding: 20px 12px 30px;\r\n+        padding: 20px 14px 30px;\r\n     }\r\n     section.mais-noticias {\r\n         padding: 0 12px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658619406565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -788,9 +788,9 @@\n     .ultima-noticia .thumb {\r\n         height: 260px;\r\n     }\r\n     .ultima-noticia {\r\n-        margin-bottom: 20px;\r\n+        margin-bottom: 30px;\r\n     }\r\n     .noticias {\r\n         padding: 20px 14px 30px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658619489518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -797,9 +797,9 @@\n     section.mais-noticias {\r\n         padding: 0 12px;\r\n     }\r\n     .mais-noticias .ultima-noticia .thumb {\r\n-        height: 160px;\r\n+        height: 200px;\r\n     }\r\n     .ver-tudo {\r\n         font-size: 16px;\r\n         line-height: 20px;\r\n"
+                },
+                {
+                    "date": 1658619613987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -272,9 +272,9 @@\n     margin: 18px 12px;\r\n }\r\n \r\n .mais-noticias .titulo-noticia {\r\n-    padding: 12px;\r\n+    padding: 14px;\r\n }\r\n \r\n .mais-noticias .titulo-noticia h3 {\r\n     font-size: 16px;\r\n"
+                },
+                {
+                    "date": 1658619694850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -282,9 +282,10 @@\n     margin-bottom: 0;\r\n     min-height: 72px;\r\n }\r\n \r\n-.mais-noticias .ler-mais a {\r\n+.mais-noticias .ler-mais a,\r\n+.ultima-noticia .ler-mais a {\r\n     font-size: 14px;\r\n     line-height: 16px;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1658640979299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -334,8 +334,13 @@\n     line-height: 21px;\r\n     color: var(--preto);\r\n }\r\n \r\n+.youtube-video {\r\n+    height: 300px;\r\n+    background-size: cover!important;\r\n+}\r\n+\r\n /* Vídeo Modal */\r\n \r\n .modal-dialog {\r\n     max-width: 800px;\r\n"
+                },
+                {
+                    "date": 1658641033330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -369,10 +369,10 @@\n     top: -90px;\r\n }\r\n \r\n .player-video-big {\r\n-    position: absolute;\r\n-    top: 24%;\r\n+    position: relative;\r\n+    top: 43%;\r\n     left: 43%;\r\n }\r\n \r\n .youtube-video.ltt {\r\n"
+                },
+                {
+                    "date": 1658641408165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -339,8 +339,12 @@\n     height: 300px;\r\n     background-size: cover!important;\r\n }\r\n \r\n+ul.videos {\r\n+    display: inline-flex;\r\n+}\r\n+\r\n /* Vídeo Modal */\r\n \r\n .modal-dialog {\r\n     max-width: 800px;\r\n"
+                },
+                {
+                    "date": 1658641501627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -343,8 +343,13 @@\n ul.videos {\r\n     display: inline-flex;\r\n }\r\n \r\n+ul.videos li {\r\n+    width: 46%;\r\n+    /* margin-right: 4%; */\r\n+}\r\n+\r\n /* Vídeo Modal */\r\n \r\n .modal-dialog {\r\n     max-width: 800px;\r\n"
+                },
+                {
+                    "date": 1658641539205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -348,8 +348,12 @@\n     width: 46%;\r\n     /* margin-right: 4%; */\r\n }\r\n \r\n+ul.videos li:first-child {\r\n+    margin-right: 4%;\r\n+}\r\n+\r\n /* Vídeo Modal */\r\n \r\n .modal-dialog {\r\n     max-width: 800px;\r\n"
+                },
+                {
+                    "date": 1658641614300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -345,9 +345,8 @@\n }\r\n \r\n ul.videos li {\r\n     width: 46%;\r\n-    /* margin-right: 4%; */\r\n }\r\n \r\n ul.videos li:first-child {\r\n     margin-right: 4%;\r\n"
+                },
+                {
+                    "date": 1658641647762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -344,9 +344,9 @@\n     display: inline-flex;\r\n }\r\n \r\n ul.videos li {\r\n-    width: 46%;\r\n+    width: 48%;\r\n }\r\n \r\n ul.videos li:first-child {\r\n     margin-right: 4%;\r\n"
+                },
+                {
+                    "date": 1658641810936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -387,9 +387,10 @@\n     left: 43%;\r\n }\r\n \r\n .youtube-video.ltt {\r\n-    margin-bottom: -20px;\r\n+    /* margin-bottom: -20px; */\r\n+    height: 150px;\r\n }\r\n \r\n .titulo-video.ltt {\r\n     margin-top: 0;\r\n"
+                },
+                {
+                    "date": 1658641817081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -387,9 +387,8 @@\n     left: 43%;\r\n }\r\n \r\n .youtube-video.ltt {\r\n-    /* margin-bottom: -20px; */\r\n     height: 150px;\r\n }\r\n \r\n .titulo-video.ltt {\r\n"
+                },
+                {
+                    "date": 1658641896842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -377,9 +377,9 @@\n \r\n .player-video {\r\n     position: relative;\r\n     left: 40%;\r\n-    top: -90px;\r\n+    top: 40%;\r\n }\r\n \r\n .player-video-big {\r\n     position: relative;\r\n"
+                },
+                {
+                    "date": 1658641961122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -398,9 +398,9 @@\n \r\n .titulo-video.ltt h3 {\r\n     font-size: 18px;\r\n     line-height: 20px;\r\n-    margin-bottom: 4px;\r\n+    margin-bottom: 6px;\r\n }\r\n \r\n .desc.ltt {\r\n     font-size: 14px;\r\n"
+                },
+                {
+                    "date": 1658642934107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -345,8 +345,9 @@\n }\r\n \r\n ul.videos li {\r\n     width: 48%;\r\n+    margin-bottom: 4px;\r\n }\r\n \r\n ul.videos li:first-child {\r\n     margin-right: 4%;\r\n"
                 }
             ],
             "date": 1658104367213,
