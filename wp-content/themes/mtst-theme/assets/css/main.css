@@ -507,22 +507,36 @@ span.YouTubePopUp-Close {
 }
 
 .nav-footer ul {
-    display: flex;
+    display: block;
     justify-content: space-between;
+}
+
+.nav-footer ul li {
+    margin-bottom: 20px;
+}
+
+.nav-footer ul li {
+    color: var(--branco);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: left;
+    text-decoration-line: none;
+    opacity: 0.8;
 }
 
 .nav-footer ul li a {
     color: var(--branco);
     font-weight: 400;
     font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    text-decoration-line: underline;
-    opacity: 0.8;
+    line-height: 30px;
+    text-align: left;
+    text-decoration-line: none;
 }
 
 .nav-footer ul li a:hover {
     opacity: 1;
+    text-decoration-line: underline;
 }
 
 /* Breadcrumbs */
@@ -650,6 +664,149 @@ section.content {
 }
 
 /* Responsivo */
+
+@media (max-width: 1199px) {
+    ul.videos li:first-child {
+        margin-right: 2%;
+    }
+    ul.videos li {
+        width: 49%;
+        margin-bottom: 10px;
+    }
+    .titulo-video.ltt h3 {
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 4px;
+    }
+    .desc.ltt {
+        font-size: 12px;
+        line-height: 15px;
+        height: max-content;
+    }
+    .topo-desktop {
+        display: none;
+    }
+    .topo-mobile {
+        display: block;
+    }
+    .menu-principal {
+        display: none;
+    }
+    .logo-mtst {
+        max-width: 52px;
+    }
+    .topo-mobile .col-logo {
+        padding-left: 0;
+    }
+    .topo-mobile .search-container {
+        display: none;
+    }
+    .topo-mobile .busca {
+        padding: 0;
+    }
+    .topo-mobile .col-7 {
+        display: table;
+        padding: 0;
+    }
+    .topo-mobile .busca {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .search-container {
+        width: 100%;
+        height: 40px;
+        padding: 5px 10px;
+    }
+    input#search {
+        width: 100%;
+        padding: 0;
+        font-size: 14px;
+    }
+    .hamb {
+        cursor: pointer;
+        float: right;
+        padding: 0;
+        margin: 0 auto;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .topo-mobile .col-hamb {
+        padding: 0;
+        display: table;
+    }
+    .icon-mobile {
+        display: table-cell!important;
+        vertical-align: middle!important;
+        padding-right: 10px!important;
+    }
+    .hamb-line::after {
+        margin-top: -3px;
+    }
+    .hamb-line::before {
+        margin-top: 3px;
+    }
+    button.lupa-busca img {
+        max-width: 30px;
+    }
+    .side-menu:checked ~ .hamb .hamb-line::before,
+    .side-menu:checked ~ .hamb .hamb-line::after {
+        margin-top: 0;
+    }
+    .side-menu:checked ~ .topo-mobile .menu-principal.menu-mobile {
+        display: block;
+    }
+    #menu-mobile nav ul {
+        display: block;
+        float: right;
+    }
+    .menu-principal ul li a {
+        font-size: 22px;
+        font-weight: 500;
+        text-align: right;
+        cursor: pointer;
+    }
+    .nav-link.active, .nav-link:hover {
+        background-image: none;
+        font-weight: 700;
+    }
+    .menu-principal .submenu li {
+        margin-bottom: 0;
+        text-align: right;
+    }
+    .menu-principal .submenu li a {
+        line-height: 1.3;
+    }
+    #menu-mobile.menu-principal .submenu {
+        display: none;
+        padding: 0;
+        background-color: #fff;
+        filter: none;
+        z-index: 999;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    #menu-mobile.menu-principal {
+        position: absolute;
+        background: #fff;
+        width: 75%;
+        margin-left: 25%;
+        z-index: 999;
+    }
+    .menu-principal .submenu li a {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .ultima-noticia {
+        margin-bottom: 30px;
+    }
+    .ultima-noticia .thumb {
+        height: 258px;
+    }
+    .titulo-noticia {
+        padding: 14px 24px;
+    }
+}
 
 @media (max-width:768px) {
     .mobile-view {
@@ -868,10 +1025,10 @@ section.content {
         margin-bottom: 20px;
     }
     .newsletter { 
-        padding: 20px 14px;
+        padding: 20px 16px;
     }
     .site-footer {
-        padding: 30px 14px 30px;
+        padding: 30px 16px 30px;
     }
     section#videos {
         padding: 0 15px;
@@ -899,5 +1056,18 @@ section.content {
     }
     .embed-iframe {
         margin-bottom: 10px;
+    }
+    .desc.ltt {
+        font-size: 14px;
+        line-height: 18px;
+        height: max-content;
+    }
+    .titulo-video.ltt h3 {
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+    .programas {
+        padding: 40px 14px 0;
     }
 }

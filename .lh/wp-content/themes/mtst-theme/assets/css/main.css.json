@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 247,
+            "activePatchIndex": 291,
             "patches": [
                 {
                     "date": 1658104367213,
@@ -996,6 +996,182 @@
                 {
                     "date": 1658648610664,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -896,5 +896,9 @@\n     }\r\n     .fotos-mobile .swiper-wrapper {\r\n         padding-bottom: 40px;\r\n     }\r\n+    .embed-iframe {\r\n+        height: auto;\r\n+        margin-bottom: 10px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658650085664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -650,8 +650,12 @@\n }\r\n \r\n /* Responsivo */\r\n \r\n+@media (max-width: 1198px) {\r\n+    \r\n+}\r\n+\r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n         display: block!important;\r\n     }\r\n@@ -897,8 +901,7 @@\n     .fotos-mobile .swiper-wrapper {\r\n         padding-bottom: 40px;\r\n     }\r\n     .embed-iframe {\r\n-        height: auto;\r\n         margin-bottom: 10px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658650113757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -651,9 +651,11 @@\n \r\n /* Responsivo */\r\n \r\n @media (max-width: 1198px) {\r\n-    \r\n+    ul.videos li:first-child {\r\n+        margin-right: 2%;\r\n+    }\r\n }\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658650125000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -654,8 +654,12 @@\n @media (max-width: 1198px) {\r\n     ul.videos li:first-child {\r\n         margin-right: 2%;\r\n     }\r\n+    ul.videos li {\r\n+        width: 49%;\r\n+        margin-bottom: 4px;\r\n+    }\r\n }\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658650131026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -656,9 +656,9 @@\n         margin-right: 2%;\r\n     }\r\n     ul.videos li {\r\n         width: 49%;\r\n-        margin-bottom: 4px;\r\n+        margin-bottom: 10px;\r\n     }\r\n }\r\n \r\n @media (max-width:768px) {\r\n"
+                },
+                {
+                    "date": 1658650203835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -658,8 +658,13 @@\n     ul.videos li {\r\n         width: 49%;\r\n         margin-bottom: 10px;\r\n     }\r\n+    titulo-video.ltt h3 {\r\n+        font-size: 16px;\r\n+        line-height: 18px;\r\n+        margin-bottom: 4px;\r\n+    }\r\n }\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658650524276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -658,13 +658,18 @@\n     ul.videos li {\r\n         width: 49%;\r\n         margin-bottom: 10px;\r\n     }\r\n-    titulo-video.ltt h3 {\r\n+    .titulo-video.ltt h3 {\r\n         font-size: 16px;\r\n         line-height: 18px;\r\n         margin-bottom: 4px;\r\n     }\r\n+    .desc.ltt {\r\n+        font-size: 12px;\r\n+        line-height: 15px;\r\n+        height: max-content;\r\n+    }\r\n }\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658650859623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -506,9 +506,9 @@\n     margin-bottom: 40px;\r\n }\r\n \r\n .nav-footer ul {\r\n-    display: flex;\r\n+    display: block;\r\n     justify-content: space-between;\r\n }\r\n \r\n .nav-footer ul li a {\r\n"
+                },
+                {
+                    "date": 1658650917322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -518,8 +518,9 @@\n     line-height: 28px;\r\n     text-align: center;\r\n     text-decoration-line: underline;\r\n     opacity: 0.8;\r\n+    margin-bottom: 10px;\r\n }\r\n \r\n .nav-footer ul li a:hover {\r\n     opacity: 1;\r\n"
+                },
+                {
+                    "date": 1658650960109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -510,17 +510,20 @@\n     display: block;\r\n     justify-content: space-between;\r\n }\r\n \r\n+.nav-footer ul li {\r\n+\r\n+}\r\n+\r\n .nav-footer ul li a {\r\n     color: var(--branco);\r\n     font-weight: 400;\r\n     font-size: 24px;\r\n     line-height: 28px;\r\n     text-align: center;\r\n     text-decoration-line: underline;\r\n     opacity: 0.8;\r\n-    margin-bottom: 10px;\r\n }\r\n \r\n .nav-footer ul li a:hover {\r\n     opacity: 1;\r\n"
+                },
+                {
+                    "date": 1658651292495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -511,9 +511,9 @@\n     justify-content: space-between;\r\n }\r\n \r\n .nav-footer ul li {\r\n-\r\n+    margin-bottom: 20px;\r\n }\r\n \r\n .nav-footer ul li a {\r\n     color: var(--branco);\r\n"
+                },
+                {
+                    "date": 1658651592209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -514,9 +514,10 @@\n .nav-footer ul li {\r\n     margin-bottom: 20px;\r\n }\r\n \r\n-.nav-footer ul li a {\r\n+.nav-footer ul li a,\r\n+.nav-footer ul li {\r\n     color: var(--branco);\r\n     font-weight: 400;\r\n     font-size: 24px;\r\n     line-height: 28px;\r\n"
+                },
+                {
+                    "date": 1658651597961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -521,9 +521,9 @@\n     font-weight: 400;\r\n     font-size: 24px;\r\n     line-height: 28px;\r\n     text-align: center;\r\n-    text-decoration-line: underline;\r\n+    text-decoration-line: none;\r\n     opacity: 0.8;\r\n }\r\n \r\n .nav-footer ul li a:hover {\r\n"
+                },
+                {
+                    "date": 1658651606807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -527,8 +527,9 @@\n }\r\n \r\n .nav-footer ul li a:hover {\r\n     opacity: 1;\r\n+    text-decoration-line: underline;\r\n }\r\n \r\n /* Breadcrumbs */\r\n \r\n"
+                },
+                {
+                    "date": 1658651623637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -520,9 +520,9 @@\n     color: var(--branco);\r\n     font-weight: 400;\r\n     font-size: 24px;\r\n     line-height: 28px;\r\n-    text-align: center;\r\n+    text-align: left;\r\n     text-decoration-line: none;\r\n     opacity: 0.8;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1658651677275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -519,9 +519,9 @@\n .nav-footer ul li {\r\n     color: var(--branco);\r\n     font-weight: 400;\r\n     font-size: 24px;\r\n-    line-height: 28px;\r\n+    line-height: 30px;\r\n     text-align: left;\r\n     text-decoration-line: none;\r\n     opacity: 0.8;\r\n }\r\n"
+                },
+                {
+                    "date": 1658651880586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -514,9 +514,9 @@\n .nav-footer ul li {\r\n     margin-bottom: 20px;\r\n }\r\n \r\n-.nav-footer ul li a,\r\n+\r\n .nav-footer ul li {\r\n     color: var(--branco);\r\n     font-weight: 400;\r\n     font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1658651896337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -514,9 +514,9 @@\n .nav-footer ul li {\r\n     margin-bottom: 20px;\r\n }\r\n \r\n-\r\n+.nav-footer ul li a,\r\n .nav-footer ul li {\r\n     color: var(--branco);\r\n     font-weight: 400;\r\n     font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1658651935731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -525,8 +525,12 @@\n     text-decoration-line: none;\r\n     opacity: 0.8;\r\n }\r\n \r\n+.nav-footer ul li {\r\n+    opacity: 0.8;\r\n+}\r\n+\r\n .nav-footer ul li a:hover {\r\n     opacity: 1;\r\n     text-decoration-line: underline;\r\n }\r\n"
+                },
+                {
+                    "date": 1658652004625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -514,10 +514,9 @@\n .nav-footer ul li {\r\n     margin-bottom: 20px;\r\n }\r\n \r\n-.nav-footer ul li a,\r\n-.nav-footer ul li {\r\n+.nav-footer ul li a {\r\n     color: var(--branco);\r\n     font-weight: 400;\r\n     font-size: 24px;\r\n     line-height: 30px;\r\n@@ -526,8 +525,14 @@\n     opacity: 0.8;\r\n }\r\n \r\n .nav-footer ul li {\r\n+    color: var(--branco);\r\n+    font-weight: 400;\r\n+    font-size: 24px;\r\n+    line-height: 30px;\r\n+    text-align: left;\r\n+    text-decoration-line: none;\r\n     opacity: 0.8;\r\n }\r\n \r\n .nav-footer ul li a:hover {\r\n"
+                },
+                {
+                    "date": 1658652048975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -514,9 +514,9 @@\n .nav-footer ul li {\r\n     margin-bottom: 20px;\r\n }\r\n \r\n-.nav-footer ul li a {\r\n+.nav-footer ul li {\r\n     color: var(--branco);\r\n     font-weight: 400;\r\n     font-size: 24px;\r\n     line-height: 30px;\r\n@@ -524,9 +524,9 @@\n     text-decoration-line: none;\r\n     opacity: 0.8;\r\n }\r\n \r\n-.nav-footer ul li {\r\n+.nav-footer ul li a {\r\n     color: var(--branco);\r\n     font-weight: 400;\r\n     font-size: 24px;\r\n     line-height: 30px;\r\n"
+                },
+                {
+                    "date": 1658652134949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -531,9 +531,8 @@\n     font-size: 24px;\r\n     line-height: 30px;\r\n     text-align: left;\r\n     text-decoration-line: none;\r\n-    opacity: 0.8;\r\n }\r\n \r\n .nav-footer ul li a:hover {\r\n     opacity: 1;\r\n"
+                },
+                {
+                    "date": 1658653159967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -682,8 +682,14 @@\n         font-size: 12px;\r\n         line-height: 15px;\r\n         height: max-content;\r\n     }\r\n+    .topo-desktop {\r\n+        display: none;\r\n+    }\r\n+    .topo-mobile {\r\n+        display: block;\r\n+    }\r\n }\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658653304160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -683,9 +683,9 @@\n         line-height: 15px;\r\n         height: max-content;\r\n     }\r\n     .topo-desktop {\r\n-        display: none;\r\n+        display: none!important;\r\n     }\r\n     .topo-mobile {\r\n         display: block;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658653394595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -683,9 +683,9 @@\n         line-height: 15px;\r\n         height: max-content;\r\n     }\r\n     .topo-desktop {\r\n-        display: none!important;\r\n+        display: none;\r\n     }\r\n     .topo-mobile {\r\n         display: block;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658653404122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -688,8 +688,11 @@\n     }\r\n     .topo-mobile {\r\n         display: block;\r\n     }\r\n+    .menu-principal {\r\n+        display: none;\r\n+    }\r\n }\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658653657197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -691,8 +691,12 @@\n     }\r\n     .menu-principal {\r\n         display: none;\r\n     }\r\n+    .menu-principal ul li:hover > .submenu {\r\n+        display: none;\r\n+        position: absolute;\r\n+    }\r\n }\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658653680692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -693,9 +693,8 @@\n         display: none;\r\n     }\r\n     .menu-principal ul li:hover > .submenu {\r\n         display: none;\r\n-        position: absolute;\r\n     }\r\n }\r\n \r\n @media (max-width:768px) {\r\n"
+                },
+                {
+                    "date": 1658653748224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -691,11 +691,8 @@\n     }\r\n     .menu-principal {\r\n         display: none;\r\n     }\r\n-    .menu-principal ul li:hover > .submenu {\r\n-        display: none;\r\n-    }\r\n }\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658653879622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -682,17 +682,8 @@\n         font-size: 12px;\r\n         line-height: 15px;\r\n         height: max-content;\r\n     }\r\n-    .topo-desktop {\r\n-        display: none;\r\n-    }\r\n-    .topo-mobile {\r\n-        display: block;\r\n-    }\r\n-    .menu-principal {\r\n-        display: none;\r\n-    }\r\n }\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658653944107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -682,8 +682,125 @@\n         font-size: 12px;\r\n         line-height: 15px;\r\n         height: max-content;\r\n     }\r\n+    .topo-desktop {\r\n+        display: none;\r\n+    }\r\n+    .topo-mobile {\r\n+        display: block;\r\n+    }\r\n+    .menu-principal {\r\n+        display: none;\r\n+    }\r\n+    .logo-mtst {\r\n+        max-width: 52px;\r\n+    }\r\n+    .topo-mobile .col-logo {\r\n+        padding-left: 0;\r\n+    }\r\n+    .topo-mobile .search-container {\r\n+        display: none;\r\n+    }\r\n+    .topo-mobile .busca {\r\n+        padding: 0;\r\n+    }\r\n+    .topo-mobile .col-7 {\r\n+        display: table;\r\n+        padding: 0;\r\n+    }\r\n+    .topo-mobile .busca {\r\n+        display: table-cell;\r\n+        vertical-align: middle;\r\n+    }\r\n+    .search-container {\r\n+        width: 100%;\r\n+        height: 40px;\r\n+        padding: 5px 10px;\r\n+    }\r\n+    input#search {\r\n+        width: 100%;\r\n+        padding: 0;\r\n+        font-size: 14px;\r\n+    }\r\n+    .hamb {\r\n+        cursor: pointer;\r\n+        float: right;\r\n+        padding: 0;\r\n+        margin: 0 auto;\r\n+        display: table-cell;\r\n+        vertical-align: middle;\r\n+    }\r\n+    .topo-mobile .col-hamb {\r\n+        padding: 0;\r\n+        display: table;\r\n+    }\r\n+    .icon-mobile {\r\n+        display: table-cell;\r\n+        vertical-align: middle;\r\n+        padding-right: 10px;\r\n+    }\r\n+    .hamb-line::after {\r\n+        margin-top: -3px;\r\n+    }\r\n+    .hamb-line::before {\r\n+        margin-top: 3px;\r\n+    }\r\n+    button.lupa-busca img {\r\n+        max-width: 30px;\r\n+    }\r\n+    .side-menu:checked ~ .hamb .hamb-line::before,\r\n+    .side-menu:checked ~ .hamb .hamb-line::after {\r\n+        margin-top: 0;\r\n+    }\r\n+    section {\r\n+        padding-left: 0;\r\n+        padding-right: 0;\r\n+    }\r\n+    .side-menu:checked ~ .topo-mobile .menu-principal.menu-mobile {\r\n+        display: block;\r\n+    }\r\n+    #menu-mobile nav ul {\r\n+        display: block;\r\n+        float: right;\r\n+    }\r\n+    .menu-principal ul li a {\r\n+        font-size: 22px;\r\n+        font-weight: 500;\r\n+        text-align: right;\r\n+    }\r\n+    .nav-link.active, .nav-link:hover {\r\n+        background-image: none;\r\n+        font-weight: 700;\r\n+    }\r\n+    .menu-principal .submenu li {\r\n+        margin-bottom: 0;\r\n+        text-align: right;\r\n+    }\r\n+    .menu-principal .submenu li a {\r\n+        line-height: 1.3;\r\n+    }\r\n+    #menu-mobile.menu-principal .submenu {\r\n+        display: none;\r\n+        padding: 0;\r\n+        background-color: #fff;\r\n+        filter: none;\r\n+        z-index: 999;\r\n+        position: relative;\r\n+        margin-bottom: 10px;\r\n+    }\r\n+    #menu-mobile.menu-principal {\r\n+        position: absolute;\r\n+        background: #fff;\r\n+        width: 75%;\r\n+        margin-left: 25%;\r\n+        z-index: 999;\r\n+    }\r\n+    .menu-principal .submenu li a {\r\n+        font-weight: 500;\r\n+        font-size: 18px;\r\n+        line-height: 21px;\r\n+    }\r\n }\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658654065391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -751,12 +751,8 @@\n     .side-menu:checked ~ .hamb .hamb-line::before,\r\n     .side-menu:checked ~ .hamb .hamb-line::after {\r\n         margin-top: 0;\r\n     }\r\n-    section {\r\n-        padding-left: 0;\r\n-        padding-right: 0;\r\n-    }\r\n     .side-menu:checked ~ .topo-mobile .menu-principal.menu-mobile {\r\n         display: block;\r\n     }\r\n     #menu-mobile nav ul {\r\n"
+                },
+                {
+                    "date": 1658654361126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -664,9 +664,9 @@\n }\r\n \r\n /* Responsivo */\r\n \r\n-@media (max-width: 1198px) {\r\n+@media (max-width: 1199px) {\r\n     ul.videos li:first-child {\r\n         margin-right: 2%;\r\n     }\r\n     ul.videos li {\r\n"
+                },
+                {
+                    "date": 1658654386970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -795,8 +795,10 @@\n         font-weight: 500;\r\n         font-size: 18px;\r\n         line-height: 21px;\r\n     }\r\n+    .ultima-noticia {\r\n+        margin-bottom: 30px;\r\n }\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658654396518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -797,8 +797,9 @@\n         line-height: 21px;\r\n     }\r\n     .ultima-noticia {\r\n         margin-bottom: 30px;\r\n+    }\r\n }\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658654731453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -798,8 +798,13 @@\n     }\r\n     .ultima-noticia {\r\n         margin-bottom: 30px;\r\n     }\r\n+    .ultima-noticia .thumb {\r\n+        border-radius: 20px 20px 0px 0px;\r\n+        height: 258px;\r\n+        background-size: cover;\r\n+    }\r\n }\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658654738787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -799,11 +799,9 @@\n     .ultima-noticia {\r\n         margin-bottom: 30px;\r\n     }\r\n     .ultima-noticia .thumb {\r\n-        border-radius: 20px 20px 0px 0px;\r\n         height: 258px;\r\n-        background-size: cover;\r\n     }\r\n }\r\n \r\n @media (max-width:768px) {\r\n"
+                },
+                {
+                    "date": 1658654764373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -801,8 +801,11 @@\n     }\r\n     .ultima-noticia .thumb {\r\n         height: 258px;\r\n     }\r\n+    titulo-noticia {\r\n+        padding: 14px 24px;\r\n+    }\r\n }\r\n \r\n @media (max-width:768px) {\r\n     .mobile-view {\r\n"
+                },
+                {
+                    "date": 1658654963123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -734,11 +734,11 @@\n         padding: 0;\r\n         display: table;\r\n     }\r\n     .icon-mobile {\r\n-        display: table-cell;\r\n-        vertical-align: middle;\r\n-        padding-right: 10px;\r\n+        display: table-cell!important;\r\n+        vertical-align: middle!important;\r\n+        padding-right: 10px!important;\r\n     }\r\n     .hamb-line::after {\r\n         margin-top: -3px;\r\n     }\r\n@@ -801,9 +801,9 @@\n     }\r\n     .ultima-noticia .thumb {\r\n         height: 258px;\r\n     }\r\n-    titulo-noticia {\r\n+    .titulo-noticia {\r\n         padding: 14px 24px;\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1658655118589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1055,5 +1055,10 @@\n     }\r\n     .embed-iframe {\r\n         margin-bottom: 10px;\r\n     }\r\n+    .desc.ltt {\r\n+        font-size: 14px;\r\n+        line-height: 18px;\r\n+        height: max-content;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658655166464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1060,5 +1060,10 @@\n         font-size: 14px;\r\n         line-height: 18px;\r\n         height: max-content;\r\n     }\r\n+    .titulo-video.ltt h3 {\r\n+        font-size: 18px;\r\n+        line-height: 20px;\r\n+        margin-bottom: 4px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658655172870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1063,7 +1063,7 @@\n     }\r\n     .titulo-video.ltt h3 {\r\n         font-size: 18px;\r\n         line-height: 20px;\r\n-        margin-bottom: 4px;\r\n+        margin-bottom: 8px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658655229010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1065,5 +1065,8 @@\n         font-size: 18px;\r\n         line-height: 20px;\r\n         margin-bottom: 8px;\r\n     }\r\n+    .programas {\r\n+        padding: 40px 14px 0;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658655264420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1023,12 +1023,12 @@\n         line-height: 24px;\r\n         margin-bottom: 20px;\r\n     }\r\n     .newsletter { \r\n-        padding: 20px 14px;\r\n+        padding: 20px 16px;\r\n     }\r\n     .site-footer {\r\n-        padding: 30px 14px 30px;\r\n+        padding: 30px 16px 30px;\r\n     }\r\n     section#videos {\r\n         padding: 0 15px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658656760145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -762,8 +762,9 @@\n     .menu-principal ul li a {\r\n         font-size: 22px;\r\n         font-weight: 500;\r\n         text-align: right;\r\n+        cursor: pointer;\r\n     }\r\n     .nav-link.active, .nav-link:hover {\r\n         background-image: none;\r\n         font-weight: 700;\r\n"
                 }
             ],
             "date": 1658104367213,

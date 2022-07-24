@@ -59,7 +59,7 @@
                             <li><a href="#">Fora Bolsonaro</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link menu-loja" href="#">Loja</a></li>
+                    <li><a class="nav-link menu-loja" href="https://wa.me/5511914631714" target="_blank">Loja</a></li>
                     <li><a class="nav-link menu-galeria" href="#">Galeria</a>
                         <ul class="submenu">
                             <li><a href="https://open.spotify.com/show/5X2nnU5w9uptyMiApbPCWj" target="_blank">Podcasts</a></li>
@@ -127,7 +127,7 @@
                                             <li><a class="nav-link" href="#">Fora Bolsonaro</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="nav-link menu-loja" href="#">Loja</a></li>
+                                    <li><a class="nav-link menu-loja" href="https://wa.me/5511914631714" target="_blank">Loja</a></li>
                                     <li><a class="nav-link menu-galeria" onclick="subGaleria()">Galeria</a>
                                         <ul class="submenu" id="sub-galeria" style="display:none;">
                                             <li><a class="nav-link" href="https://open.spotify.com/show/5X2nnU5w9uptyMiApbPCWj" target="_blank">Podcasts</a></li>
