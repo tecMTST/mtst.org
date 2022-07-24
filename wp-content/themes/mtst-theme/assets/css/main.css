@@ -389,7 +389,8 @@ ul.videos li:first-child {
 }
 
 .youtube-video.ltt {
-    height: 150px;
+    height: 146px;
+    background-position: center;
 }
 
 .titulo-video.ltt {
@@ -889,5 +890,14 @@ section.content {
         background-position: center;
         height: 180px;
         margin-bottom: 14px;
+    }
+    .fotos .ver-tudo {
+        margin-top: 30px;
+    }
+    .fotos-mobile .swiper-wrapper {
+        padding-bottom: 40px;
+    }
+    .embed-iframe {
+        margin-bottom: 10px;
     }
 }

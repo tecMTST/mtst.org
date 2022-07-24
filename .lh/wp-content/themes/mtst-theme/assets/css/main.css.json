@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 243,
+            "activePatchIndex": 247,
             "patches": [
                 {
                     "date": 1658104367213,
@@ -980,6 +980,22 @@
                 {
                     "date": 1658646729424,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -885,7 +885,9 @@\n         padding: 20px 14px 0;\r\n     }\r\n     .youtube-video-mobile {\r\n         background-size: cover;\r\n+        background-position: center;\r\n         height: 180px;\r\n+        margin-bottom: 14px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658647912462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -388,9 +388,10 @@\n     left: 43%;\r\n }\r\n \r\n .youtube-video.ltt {\r\n-    height: 150px;\r\n+    height: 146px;\r\n+    background-position: center;\r\n }\r\n \r\n .titulo-video.ltt {\r\n     margin-top: 0;\r\n"
+                },
+                {
+                    "date": 1658648108276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -890,5 +890,8 @@\n         background-position: center;\r\n         height: 180px;\r\n         margin-bottom: 14px;\r\n     }\r\n+    .fotos .ver-tudo {\r\n+        margin-top: 30px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658648469801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -893,5 +893,8 @@\n     }\r\n     .fotos .ver-tudo {\r\n         margin-top: 30px;\r\n     }\r\n+    .fotos-mobile .swiper-wrapper {\r\n+        padding-bottom: 40px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658648610664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -896,5 +896,9 @@\n     }\r\n     .fotos-mobile .swiper-wrapper {\r\n         padding-bottom: 40px;\r\n     }\r\n+    .embed-iframe {\r\n+        height: auto;\r\n+        margin-bottom: 10px;\r\n+    }\r\n }\r\n"
                 }
             ],
             "date": 1658104367213,

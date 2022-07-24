@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 8,
+            "activePatchIndex": 13,
             "patches": [
                 {
                     "date": 1658645128769,
@@ -40,6 +40,26 @@
                 {
                     "date": 1658645837487,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     }\r\n   })\r\n }\r\n \r\n-swiperFotos()\r\n+swiperFotos();\r\n \r\n const swiperVideos = function(){\r\n   return swiper = new Swiper('.swiper-videos', {\r\n     // Default parameters\r\n@@ -42,6 +42,6 @@\n     },\r\n   })\r\n }\r\n \r\n-swiperVideos()\r\n+swiperVideos();\r\n \r\n"
+                },
+                {
+                    "date": 1658648007456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,4 +44,22 @@\n }\r\n \r\n swiperVideos();\r\n \r\n+const swiperFotosMobile = function(){\r\n+  return swiper = new Swiper('.swiper-fotos-mob', {\r\n+    // Default parameters\r\n+    slidesPerView: 1,\r\n+    spaceBetween: 10,\r\n+    speed: 500,\r\n+    autoplay: {\r\n+      delay: 4000,\r\n+    },\r\n+    pagination: {\r\n+      el: '.swiper-pagination',\r\n+      type: 'bullets',\r\n+    },\r\n+  })\r\n+}\r\n+\r\n+swiperVideos();\r\n+\r\n"
+                },
+                {
+                    "date": 1658648136843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,16 +50,13 @@\n     // Default parameters\r\n     slidesPerView: 1,\r\n     spaceBetween: 10,\r\n     speed: 500,\r\n-    autoplay: {\r\n-      delay: 4000,\r\n-    },\r\n     pagination: {\r\n       el: '.swiper-pagination',\r\n       type: 'bullets',\r\n     },\r\n   })\r\n }\r\n \r\n-swiperVideos();\r\n+swiperFotosMobile();\r\n \r\n"
+                },
+                {
+                    "date": 1658648163202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,11 +32,8 @@\n     // Default parameters\r\n     slidesPerView: 1,\r\n     spaceBetween: 10,\r\n     speed: 500,\r\n-    autoplay: {\r\n-      delay: 4000,\r\n-    },\r\n     pagination: {\r\n       el: '.swiper-pagination',\r\n       type: 'bullets',\r\n     },\r\n"
+                },
+                {
+                    "date": 1658648193227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,9 @@\n     speed: 500,\r\n     pagination: {\r\n       el: '.swiper-pagination',\r\n       type: 'bullets',\r\n+      clickable: true,\r\n     },\r\n   })\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1658648199685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,9 @@\n     speed: 500,\r\n     pagination: {\r\n       el: '.swiper-pagination',\r\n       type: 'bullets',\r\n+      clickable: true,\r\n     },\r\n   })\r\n }\r\n \r\n"
                 }
             ],
             "date": 1658645128769,

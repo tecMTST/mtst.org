@@ -33,15 +33,29 @@ const swiperVideos = function(){
     slidesPerView: 1,
     spaceBetween: 10,
     speed: 500,
-    autoplay: {
-      delay: 4000,
-    },
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
+      clickable: true,
     },
   })
 }
 
 swiperVideos();
+
+const swiperFotosMobile = function(){
+  return swiper = new Swiper('.swiper-fotos-mob', {
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 10,
+    speed: 500,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  })
+}
+
+swiperFotosMobile();
 
