@@ -46,7 +46,7 @@
                     $cat_id = get_cat_ID( $name );
                     $link = get_category_link( $cat_id ); ?>
                     <?php if ($index != 0) : // Não exibir o post mais recente ?> 
-                    <div class="col-md-3">
+                    <div class="col-md-6 col-xl-3">
                         <div class="ultima-noticia">
                             <div class="thumb" style="background-image:url(<?php echo get_the_post_thumbnail_url($post_item['ID']) ?>)">
                                 <?php echo '<a class="link-categoria" href="'. esc_url( $link ) .'"><div class="categoria">'. $name .'</div></a>'; ?>
