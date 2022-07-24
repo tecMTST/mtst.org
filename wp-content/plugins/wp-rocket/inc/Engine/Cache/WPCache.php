@@ -2,7 +2,10 @@
 
 namespace WP_Rocket\Engine\Cache;
 
-class WPCache {
+use WP_Rocket\Engine\Activation\ActivationInterface;
+use WP_Rocket\Engine\Deactivation\DeactivationInterface;
+
+class WPCache implements ActivationInterface, DeactivationInterface {
 	/**
 	 * Filesystem instance.
 	 *
@@ -17,6 +20,73 @@ class WPCache {
 	 */
 	public function __construct( $filesystem ) {
 		$this->filesystem = $filesystem;
+	}
+
+	/**
+	 * Performs these actions during the plugin activation
+	 *
+	 * @return void
+	 */
+	public function activate() {
+		add_action( 'rocket_activation', [ $this, 'update_wp_cache' ] );
+	}
+
+	/**
+	 * Performs these actions during the plugin deactivation
+	 *
+	 * @return void
+	 */
+	public function deactivate() {
+		add_action( 'rocket_deactivation', [ $this, 'update_wp_cache' ] );
+		add_filter( 'rocket_prevent_deactivation', [ $this, 'maybe_prevent_deactivation' ] );
+	}
+
+	/**
+	 * Sets the WP_CACHE constant on (de)activation
+	 *
+	 * @since 3.6.3
+	 *
+	 * @param int $sites_number Number of WP Rocket config files found.
+	 * @return void
+	 */
+	public function update_wp_cache( $sites_number = 0 ) {
+		if ( ! rocket_valid_key() ) {
+			return;
+		}
+
+		$value = true;
+
+		if ( 'rocket_deactivation' === current_filter() ) {
+			if ( is_multisite() && 0 !== $sites_number ) {
+				return;
+			}
+
+			$value = false;
+		}
+
+		$this->set_wp_cache_constant( $value );
+	}
+
+	/**
+	 * Updates the causes array on deactivation if needed
+	 *
+	 * @since 3.6.3
+	 *
+	 * @param array $causes Array of causes to pass to the notice.
+	 */
+	public function maybe_prevent_deactivation( $causes ) {
+		if (
+			$this->find_wpconfig_path()
+			||
+			// This filter is documented in inc/Engine/Cache/WPCache.php.
+			! (bool) apply_filters( 'rocket_set_wp_cache_constant', true )
+		) {
+			return $causes;
+		}
+
+		$causes[] = 'wpconfig';
+
+		return $causes;
 	}
 
 	/**
@@ -48,17 +118,17 @@ class WPCache {
 	 * @since 3.6.1
 	 *
 	 * @param bool $value The value to set for WP_CACHE constant.
-	 * @return void
+	 * @return bool true on success, false otherwise.
 	 */
 	public function set_wp_cache_constant( $value ) {
 		if ( ! $this->should_set_wp_cache_constant( $value ) ) {
-			return;
+			return false;
 		}
 
 		$config_file_path = $this->find_wpconfig_path();
 
 		if ( ! $config_file_path ) {
-			return;
+			return false;
 		}
 
 		$config_file_contents = $this->filesystem->get_contents( $config_file_path );
@@ -80,18 +150,18 @@ class WPCache {
 			&&
 			$matches['value'] === $value
 		) {
-			return;
+			return false;
 		}
 
 		$constant = $this->get_wp_cache_content( $value );
 
 		if ( ! $wp_cache_found ) {
-			$config_file_contents = preg_replace( '/(<\?php)/i', "<?php\r\n{$constant}\r\n", $config_file_contents );
+			$config_file_contents = preg_replace( '/(<\?php)/i', "<?php\r\n{$constant}\r\n", $config_file_contents, 1 );
 		} elseif ( ! empty( $matches['value'] ) && $matches['value'] !== $value ) {
 			$config_file_contents = preg_replace( '/^\s*define\(\s*\'WP_CACHE\'\s*,\s*([^\s\)]*)\s*\).+/m', $constant, $config_file_contents );
 		}
 
-		$this->filesystem->put_contents( $config_file_path, $config_file_contents, rocket_get_filesystem_perms( 'file' ) );
+		return $this->filesystem->put_contents( $config_file_path, $config_file_contents, rocket_get_filesystem_perms( 'file' ) );
 	}
 
 	/**
@@ -115,10 +185,6 @@ class WPCache {
 			return false;
 		}
 
-		if ( rocket_get_constant( 'IS_PRESSABLE' ) ) {
-			return false;
-		}
-
 		/**
 		 * Filters the writing of the WP_CACHE constant in wp-config.php
 		 *
@@ -135,7 +201,7 @@ class WPCache {
 	 *
 	 * @return string|bool The path of wp-config.php file or false if not found.
 	 */
-	public function find_wpconfig_path() {
+	private function find_wpconfig_path() {
 		/**
 		 * Filter the wp-config's filename.
 		 *
@@ -234,7 +300,7 @@ class WPCache {
 	 * @return bool
 	 */
 	private function is_user_allowed() {
-		return current_user_can( 'rocket_manage_options' ) && rocket_valid_key();
+		return ( rocket_get_constant( 'WP_CLI', false ) || current_user_can( 'rocket_manage_options' ) ) && rocket_valid_key();
 	}
 
 	/**
@@ -251,6 +317,7 @@ class WPCache {
 		return "define( 'WP_CACHE', {$value} ); // Added by {$plugin_name}";
 	}
 
+
 	/**
 	 * Adds a Site Health check for the WP_CACHE constant value
 	 *
@@ -260,6 +327,12 @@ class WPCache {
 	 * @return array
 	 */
 	public function add_wp_cache_status_test( $tests ) {
+
+		// This filter is documented in inc/Engine/Cache/WPCache.php.
+		if ( ! (bool) apply_filters( 'rocket_set_wp_cache_constant', true ) ) {
+			return $tests;
+		}
+
 		$tests['direct']['wp_cache_status'] = [
 			'label' => __( 'WP_CACHE value', 'rocket' ),
 			'test'  => [ $this, 'check_wp_cache_value' ],

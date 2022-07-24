@@ -1,23 +1,15 @@
 <?php
+declare(strict_types=1);
 
 namespace WP_Rocket\Engine\Preload;
 
 use WP_Rocket\Admin\Options_Data;
 use WP_Rocket\Event_Management\Subscriber_Interface;
 
-/**
- * Preload Subscriber
- *
- * @since 3.2
- * @author Remy Perona
- */
 class PreloadSubscriber implements Subscriber_Interface {
 
 	/**
 	 * Homepage Preload instance
-	 *
-	 * @since 3.2
-	 * @author Remy Perona
 	 *
 	 * @var Homepage
 	 */
@@ -26,18 +18,12 @@ class PreloadSubscriber implements Subscriber_Interface {
 	/**
 	 * WP Rocket Options instance.
 	 *
-	 * @since 3.2
-	 * @author Remy Perona
-	 *
 	 * @var Options_Data
 	 */
 	private $options;
 
 	/**
 	 * Constructor.
-	 *
-	 * @since 3.2
-	 * @author Remy Perona
 	 *
 	 * @param Homepage     $homepage_preloader Homepage Preload instance.
 	 * @param Options_Data $options            WP Rocket Options instance.
@@ -49,9 +35,6 @@ class PreloadSubscriber implements Subscriber_Interface {
 
 	/**
 	 * Return an array of events that this subscriber wants to listen to.
-	 *
-	 * @since  3.2
-	 * @author Remy Perona
 	 *
 	 * @return array
 	 */
@@ -71,6 +54,10 @@ class PreloadSubscriber implements Subscriber_Interface {
 			'rocket_after_preload_after_purge_cache' => [
 				[ 'maybe_preload_mobile_homepage', 10, 3 ],
 			],
+			'admin_post_rocket_rollback'             => [ 'stop_homepage_preload', 9 ],
+			'wp_rocket_upgrade'                      => [ 'stop_homepage_preload', 9 ],
+			'rocket_options_changed'                 => 'preload_after_options_change',
+			'rocket_after_clean_used_css'            => 'preload_after_clean_used_css',
 		];
 	}
 
@@ -78,9 +65,9 @@ class PreloadSubscriber implements Subscriber_Interface {
 	 * Launches the homepage preload
 	 *
 	 * @since 3.2
-	 * @author Remy Perona
 	 *
 	 * @param string $lang The language code to preload.
+	 *
 	 * @return void
 	 */
 	protected function preload( $lang = '' ) {
@@ -97,7 +84,8 @@ class PreloadSubscriber implements Subscriber_Interface {
 	 * Launches the homepage preload if the option is active
 	 *
 	 * @since 3.2
-	 * @author Remy Perona
+	 *
+	 * @return void
 	 */
 	public function run_preload() {
 		if ( ! $this->options->get( 'manual_preload' ) ) {
@@ -112,10 +100,10 @@ class PreloadSubscriber implements Subscriber_Interface {
 	 * Cancels any preload currently running if the option is deactivated
 	 *
 	 * @since 3.2
-	 * @author Remy Perona
 	 *
 	 * @param array $old_value Previous option values.
 	 * @param array $value     New option values.
+	 *
 	 * @return void
 	 */
 	public function maybe_cancel_preload( $old_value, $value ) {
@@ -129,10 +117,10 @@ class PreloadSubscriber implements Subscriber_Interface {
 	 * Launches the preload if the option is activated
 	 *
 	 * @since 3.2
-	 * @author Remy Perona
 	 *
 	 * @param array $old_value Previous option values.
 	 * @param array $value     New option values.
+	 *
 	 * @return void
 	 */
 	public function maybe_launch_preload( $old_value, $value ) {
@@ -152,7 +140,6 @@ class PreloadSubscriber implements Subscriber_Interface {
 			'database_trashed_posts'      => true,
 			'database_spam_comments'      => true,
 			'database_trashed_comments'   => true,
-			'database_expired_transients' => true,
 			'database_all_transients'     => true,
 			'database_optimize_tables'    => true,
 			'schedule_automatic_cleanup'  => true,
@@ -167,7 +154,6 @@ class PreloadSubscriber implements Subscriber_Interface {
 			'heartbeat_admin_behavior'    => true,
 			'heartbeat_editor_behavior'   => true,
 			'varnish_auto_purge'          => true,
-			'do_beta'                     => true,
 			'analytics_enabled'           => true,
 			'sucury_waf_cache_sync'       => true,
 			'sucury_waf_api_key'          => true,
@@ -191,11 +177,12 @@ class PreloadSubscriber implements Subscriber_Interface {
 	 * After automatically preloading the homepage (after purging the cache), also preload the homepage for mobile.
 	 *
 	 * @since  3.5
-	 * @author Grégory Viguier
 	 *
 	 * @param string $home_url URL to the homepage being preloaded.
 	 * @param string $lang     The lang of the homepage.
 	 * @param array  $args     Arguments used for the preload request.
+	 *
+	 * @return void
 	 */
 	public function maybe_preload_mobile_homepage( $home_url, $lang, $args ) {
 		if ( ! $this->homepage_preloader->is_mobile_preload_enabled() ) {
@@ -215,7 +202,8 @@ class PreloadSubscriber implements Subscriber_Interface {
 	 * This notice is displayed when the preload is triggered from a different page than WP Rocket settings page
 	 *
 	 * @since 3.2
-	 * @author Remy Perona
+	 *
+	 * @return void
 	 */
 	public function notice_preload_triggered() {
 		if ( ! current_user_can( 'rocket_preload_cache' ) ) {
@@ -225,6 +213,10 @@ class PreloadSubscriber implements Subscriber_Interface {
 		$screen = get_current_screen();
 
 		if ( 'settings_page_wprocket' === $screen->id ) {
+			return;
+		}
+
+		if ( ! $this->options->get( 'manual_preload', 0 ) ) {
 			return;
 		}
 
@@ -257,7 +249,8 @@ class PreloadSubscriber implements Subscriber_Interface {
 	 * This notice is displayed when the preload is running
 	 *
 	 * @since 3.2
-	 * @author Remy Perona
+	 *
+	 * @return void
 	 */
 	public function notice_preload_running() {
 		if ( ! current_user_can( 'rocket_preload_cache' ) ) {
@@ -311,7 +304,8 @@ class PreloadSubscriber implements Subscriber_Interface {
 	 * This notice is displayed after the sitemap preload is complete
 	 *
 	 * @since 3.2
-	 * @author Remy Perona
+	 *
+	 * @return void
 	 */
 	public function notice_preload_complete() {
 		if ( ! current_user_can( 'rocket_preload_cache' ) ) {
@@ -355,7 +349,8 @@ class PreloadSubscriber implements Subscriber_Interface {
 	 * Stops currently running preload from the notice action button
 	 *
 	 * @since 3.2
-	 * @author Remy Perona
+	 *
+	 * @return void
 	 */
 	public function do_admin_post_stop_preload() {
 		if ( ! isset( $_GET['_wpnonce'] ) || ! wp_verify_nonce( sanitize_key( $_GET['_wpnonce'] ), 'rocket_stop_preload' ) ) {
@@ -371,5 +366,89 @@ class PreloadSubscriber implements Subscriber_Interface {
 
 		wp_safe_redirect( wp_get_referer() );
 		die();
+	}
+
+	/**
+	 * Stops homepage preload.
+	 *
+	 * @since 3.10
+	 *
+	 * @return void
+	 */
+	public function stop_homepage_preload() {
+		$this->homepage_preloader->cancel_preload();
+	}
+
+	/**
+	 * Preloads the homepage after changing the options
+	 *
+	 * @since 3.11
+	 *
+	 * @param array $value An array of submitted values for the settings.
+	 *
+	 * @return void
+	 */
+	public function preload_after_options_change( $value ) {
+		$mobile = false;
+
+		if (
+			isset( $value['do_caching_mobile_files'] )
+			&&
+			1 === $value['do_caching_mobile_files']
+		) {
+			$mobile = true;
+		}
+
+		$this->preload_homepage( $mobile );
+	}
+
+	/**
+	 * Preloads the homepage after cleaning the used CSS in the database
+	 *
+	 * @since 3.11
+	 *
+	 * @return void
+	 */
+	public function preload_after_clean_used_css() {
+		$mobile = false;
+
+		if ( $this->options->get( 'do_caching_mobile_files', 0 ) ) {
+			$mobile = true;
+		}
+
+		$this->preload_homepage( $mobile );
+	}
+
+	/**
+	 * Preloads the homepage (desktop & mobile if enabled)
+	 *
+	 * @since 3.11
+	 *
+	 * @param bool $mobile True to preload the mobile version, false otherwise.
+	 *
+	 * @return void
+	 */
+	private function preload_homepage( $mobile = false ) {
+		wp_safe_remote_get(
+			home_url(),
+			[
+				'timeout'    => 0.01,
+				'blocking'   => false,
+				'user-agent' => 'WP Rocket/Homepage Preload',
+				'sslverify'  => apply_filters( 'https_local_ssl_verify', false ), // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
+			]
+		);
+
+		if ( $mobile ) {
+			wp_safe_remote_get(
+				home_url(),
+				[
+					'timeout'    => 0.01,
+					'blocking'   => false,
+					'user-agent' => $this->homepage_preloader->get_mobile_user_agent_prefix() . ' WP Rocket/Homepage Preload',
+					'sslverify'  => apply_filters( 'https_local_ssl_verify', false ), // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
+				]
+			);
+		}
 	}
 }

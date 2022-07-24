@@ -14,6 +14,17 @@ defined( 'ABSPATH' ) || exit;
  * @param AdvancedCache $advanced_cache Optional. Instance of the advanced cache handler.
  */
 function rocket_generate_advanced_cache_file( $advanced_cache = null ) {
+	/**
+	 * Filters whether to generate the advanced-cache.php file.
+	 *
+	 * @since 3.6.3
+	 *
+	 * @param bool True (default) to go ahead with advanced cache file generation; false to stop generation.
+	 */
+	if ( ! (bool) apply_filters( 'rocket_generate_advanced_cache_file', true ) ) {
+		return false;
+	}
+
 	static $done = false;
 
 	if ( rocket_get_constant( 'WP_ROCKET_IS_TESTING', false ) ) {
@@ -21,7 +32,7 @@ function rocket_generate_advanced_cache_file( $advanced_cache = null ) {
 	}
 
 	if ( $done ) {
-		return;
+		return false;
 	}
 	$done = true;
 
@@ -30,14 +41,14 @@ function rocket_generate_advanced_cache_file( $advanced_cache = null ) {
 		$advanced_cache = $container->get( 'advanced_cache' );
 	}
 
-	rocket_put_content(
+	return rocket_put_content(
 		rocket_get_constant( 'WP_CONTENT_DIR' ) . '/advanced-cache.php',
 		$advanced_cache->get_advanced_cache_content()
 	);
 }
 
 /**
- * Generates the configuration file for the current domain based on the values ​​of options
+ * Generates the configuration file for the current domain based on the values of options
  *
  * @since 2.0
  *
@@ -47,7 +58,10 @@ function get_rocket_config_file() { // phpcs:ignore WordPress.NamingConventions.
 	$options = get_option( WP_ROCKET_SLUG );
 
 	if ( ! $options ) {
-		return;
+		return [
+			[],
+			'',
+		];
 	}
 
 	$buffer  = "<?php\n";
@@ -229,37 +243,52 @@ function rocket_delete_config_file() {
  */
 function rocket_init_cache_dir() {
 	global $is_apache;
+
+	$filesystem = rocket_direct_filesystem();
+
 	// Create cache folder if not exist.
-	if ( ! rocket_direct_filesystem()->is_dir( WP_ROCKET_CACHE_PATH ) ) {
+	if ( ! $filesystem->is_dir( WP_ROCKET_CACHE_PATH ) ) {
 		rocket_mkdir_p( WP_ROCKET_CACHE_PATH );
 	}
 
-	if ( ! rocket_direct_filesystem()->is_file( WP_ROCKET_CACHE_PATH . 'index.html' ) ) {
-		rocket_direct_filesystem()->touch( WP_ROCKET_CACHE_PATH . 'index.html' );
+	if ( ! $filesystem->is_file( WP_ROCKET_CACHE_PATH . 'index.html' ) ) {
+		$filesystem->touch( WP_ROCKET_CACHE_PATH . 'index.html' );
 	}
 
 	if ( $is_apache ) {
 		$htaccess_path = WP_ROCKET_CACHE_PATH . '.htaccess';
 
-		if ( ! rocket_direct_filesystem()->is_file( $htaccess_path ) ) {
-			rocket_direct_filesystem()->touch( $htaccess_path );
+		if ( ! $filesystem->is_file( $htaccess_path ) ) {
+			$filesystem->touch( $htaccess_path );
 			rocket_put_content( $htaccess_path, "<IfModule mod_autoindex.c>\nOptions -Indexes\n</IfModule>" );
 		}
 	}
 
 	// Create minify cache folder if not exist.
-	if ( ! rocket_direct_filesystem()->is_dir( WP_ROCKET_MINIFY_CACHE_PATH ) ) {
+	if ( ! $filesystem->is_dir( WP_ROCKET_MINIFY_CACHE_PATH ) ) {
 		rocket_mkdir_p( WP_ROCKET_MINIFY_CACHE_PATH );
 	}
 
+	if ( ! $filesystem->is_file( WP_ROCKET_MINIFY_CACHE_PATH . 'index.html' ) ) {
+		$filesystem->touch( WP_ROCKET_MINIFY_CACHE_PATH . 'index.html' );
+	}
+
 	// Create busting cache folder if not exist.
-	if ( ! rocket_direct_filesystem()->is_dir( WP_ROCKET_CACHE_BUSTING_PATH ) ) {
+	if ( ! $filesystem->is_dir( WP_ROCKET_CACHE_BUSTING_PATH ) ) {
 		rocket_mkdir_p( WP_ROCKET_CACHE_BUSTING_PATH );
 	}
 
+	if ( ! $filesystem->is_file( WP_ROCKET_CACHE_BUSTING_PATH . 'index.html' ) ) {
+		$filesystem->touch( WP_ROCKET_CACHE_BUSTING_PATH . 'index.html' );
+	}
+
 	// Create critical CSS folder if not exist.
-	if ( ! rocket_direct_filesystem()->is_dir( WP_ROCKET_CRITICAL_CSS_PATH ) ) {
+	if ( ! $filesystem->is_dir( WP_ROCKET_CRITICAL_CSS_PATH ) ) {
 		rocket_mkdir_p( WP_ROCKET_CRITICAL_CSS_PATH );
+	}
+
+	if ( ! $filesystem->is_file( WP_ROCKET_CRITICAL_CSS_PATH . 'index.html' ) ) {
+		$filesystem->touch( WP_ROCKET_CRITICAL_CSS_PATH . 'index.html' );
 	}
 }
 
@@ -271,9 +300,16 @@ function rocket_init_cache_dir() {
  * @return void
  */
 function rocket_init_config_dir() {
+	$filesystem = rocket_direct_filesystem();
+
 	// Create config domain folder if not exist.
-	if ( ! rocket_direct_filesystem()->is_dir( WP_ROCKET_CONFIG_PATH ) ) {
+	if ( ! $filesystem->is_dir( WP_ROCKET_CONFIG_PATH ) ) {
 		rocket_mkdir_p( WP_ROCKET_CONFIG_PATH );
+	}
+
+	// Initialize the config directory with index.html to prevent indexing.
+	if ( ! $filesystem->is_file( WP_ROCKET_CONFIG_PATH . 'index.html' ) ) {
+		$filesystem->touch( WP_ROCKET_CONFIG_PATH . 'index.html' );
 	}
 }
 
@@ -298,6 +334,7 @@ function rocket_clean_minify( $extensions = [ 'js', 'css' ] ) {
 	$min_cache_path = rocket_get_constant( 'WP_ROCKET_MINIFY_CACHE_PATH' );
 	$min_path       = $min_cache_path . get_current_blog_id() . '/';
 	$iterator       = _rocket_get_cache_path_iterator( $min_path );
+
 	if ( false === $iterator ) {
 		return;
 	}
@@ -366,9 +403,23 @@ function rocket_clean_minify( $extensions = [ 'js', 'css' ] ) {
  * @return void
  */
 function rocket_clean_cache_busting( $extensions = [ 'js', 'css' ] ) {
-	$extensions = is_string( $extensions ) ? (array) $extensions : $extensions;
+	if ( empty( $extensions ) ) {
+		return;
+	}
 
-	$cache_busting_path = WP_ROCKET_CACHE_BUSTING_PATH . get_current_blog_id();
+	if ( is_string( $extensions ) ) {
+		$extensions = (array) $extensions;
+	}
+
+	$cache_busting_path = rocket_get_constant( 'WP_ROCKET_CACHE_BUSTING_PATH' ) . get_current_blog_id() . '/';
+	$iterator           = _rocket_get_cache_path_iterator( $cache_busting_path );
+
+	if ( false === $iterator ) {
+		return;
+	}
+
+	$filesystem         = rocket_direct_filesystem();
+	$busting_path_regex = str_replace( '/', '\/', $cache_busting_path );
 
 	if ( ! rocket_direct_filesystem()->is_dir( $cache_busting_path ) ) {
 		rocket_mkdir_p( $cache_busting_path );
@@ -384,20 +435,6 @@ function rocket_clean_cache_busting( $extensions = [ 'js', 'css' ] ) {
 		return;
 	}
 
-	try {
-		$dir = new RecursiveDirectoryIterator( $cache_busting_path, FilesystemIterator::SKIP_DOTS );
-	} catch ( UnexpectedValueException $e ) {
-		// No logging yet.
-		return;
-	}
-
-	try {
-		$iterator = new RecursiveIteratorIterator( $dir, RecursiveIteratorIterator::CHILD_FIRST );
-	} catch ( Exception $e ) {
-		// No logging yet.
-		return;
-	}
-
 	foreach ( $extensions as $ext ) {
 		/**
 		 * Fires before the cache busting files are deleted
@@ -409,13 +446,13 @@ function rocket_clean_cache_busting( $extensions = [ 'js', 'css' ] ) {
 		do_action( 'before_rocket_clean_busting', $ext ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals
 
 		try {
-			$files = new RegexIterator( $iterator, '#.*\.' . $ext . '#', RegexIterator::GET_MATCH );
-			foreach ( $files as $file ) {
-				rocket_direct_filesystem()->delete( $file[0] );
-			}
-		} catch ( InvalidArgumentException $e ) {
-			// No logging yet.
+			$entries = new RegexIterator( $iterator, "/{$busting_path_regex}.*\.{$ext}/" );
+		} catch ( Exception $e ) {
 			return;
+		}
+
+		foreach ( $entries as $entry ) {
+			$filesystem->delete( $entry->getPathname() );
 		}
 
 		/**
@@ -428,21 +465,10 @@ function rocket_clean_cache_busting( $extensions = [ 'js', 'css' ] ) {
 		do_action( 'after_rocket_clean_cache_busting', $ext ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals
 	}
 
-	try {
-		foreach ( $iterator as $item ) {
-			if ( rocket_direct_filesystem()->is_dir( $item ) ) {
-				rocket_direct_filesystem()->delete( $item );
-			}
+	foreach ( $iterator as $item ) {
+		if ( $filesystem->is_dir( $item ) ) {
+			$filesystem->delete( $item );
 		}
-	} catch ( UnexpectedValueException $e ) {
-		// Log the error.
-		Logger::debug(
-			'Cache Busting folder structure contains a directory we cannot recurse into.',
-			[
-				'Full error',
-				'UnexpectedValueException' => $e->getMessage(),
-			]
-		);
 	}
 }
 
@@ -504,17 +530,19 @@ function rocket_clean_files( $urls, $filesystem = null ) {
 
 		$parsed_url = get_rocket_parse_url( $url );
 
-		foreach ( _rocket_get_cache_dirs( $parsed_url['host'], $cache_path ) as $dir ) {
-			$entry = $dir . $parsed_url['path'];
-			// Skip if the dir/file does not exist.
-			if ( ! $filesystem->exists( $entry ) ) {
-				continue;
-			}
+		if ( ! empty( $parsed_url['host'] ) ) {
+			foreach ( _rocket_get_cache_dirs( $parsed_url['host'], $cache_path ) as $dir ) {
+				$entry = $dir . $parsed_url['path'];
+				// Skip if the dir/file does not exist.
+				if ( ! $filesystem->exists( $entry ) ) {
+					continue;
+				}
 
-			if ( $filesystem->is_dir( $entry ) ) {
-				rocket_rrmdir( $entry, [], $filesystem );
-			} else {
-				$filesystem->delete( $entry );
+				if ( $filesystem->is_dir( $entry ) ) {
+					rocket_rrmdir( $entry, [], $filesystem );
+				} else {
+					$filesystem->delete( $entry );
+				}
 			}
 		}
 
@@ -580,10 +608,13 @@ function rocket_clean_home( $lang = '' ) {
 	do_action( 'before_rocket_clean_home', $root, $lang ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals
 
 	// Delete homepage.
-	$files = glob( $root . '/{index,index-*}.{html,html_gzip}', GLOB_BRACE | GLOB_NOSORT );
+	$files = glob( $root . '/*', GLOB_NOSORT );
+
 	if ( $files ) {
-		foreach ( $files as $file ) { // no array map to use @.
-			rocket_direct_filesystem()->delete( $file );
+		foreach ( $files as $file ) {
+			if ( preg_match( '#/index(?:-.+\.|\.)html(?:_gzip)?$#', $file ) ) {
+				rocket_direct_filesystem()->delete( $file );
+			}
 		}
 	}
 
@@ -596,7 +627,7 @@ function rocket_clean_home( $lang = '' ) {
 	}
 
 	// Remove the hidden empty file for mobile detection on NGINX with the Rocket NGINX configuration.
-	$nginx_mobile_detect_files = glob( $root . '/.mobile-active', GLOB_BRACE | GLOB_NOSORT );
+	$nginx_mobile_detect_files = glob( $root . '/.mobile-active', GLOB_NOSORT );
 	if ( $nginx_mobile_detect_files ) {
 		foreach ( $nginx_mobile_detect_files as $nginx_mobile_detect_file ) { // no array map to use @.
 			rocket_direct_filesystem()->delete( $nginx_mobile_detect_file );
@@ -604,7 +635,7 @@ function rocket_clean_home( $lang = '' ) {
 	}
 
 	// Remove the hidden empty file for webp.
-	$nowebp_detect_files = glob( $root . '/.no-webp', GLOB_BRACE | GLOB_NOSORT );
+	$nowebp_detect_files = glob( $root . '/.no-webp', GLOB_NOSORT );
 	if ( $nowebp_detect_files ) {
 		foreach ( $nowebp_detect_files as $nowebp_detect_file ) { // no array map to use @.
 			rocket_direct_filesystem()->delete( $nowebp_detect_file );
@@ -692,7 +723,7 @@ function rocket_clean_domain( $lang = '', $filesystem = null ) {
 	$urls = (array) apply_filters( 'rocket_clean_domain_urls', $urls, $lang );
 	$urls = array_filter( $urls );
 	if ( empty( $urls ) ) {
-		return;
+		return false;
 	}
 
 	/** This filter is documented in inc/front/htaccess.php */
@@ -749,6 +780,8 @@ function rocket_clean_domain( $lang = '', $filesystem = null ) {
 		 */
 		do_action( 'after_rocket_clean_domain', $root, $lang, $url ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals
 	}
+
+	return true;
 }
 
 /**
@@ -1019,7 +1052,7 @@ function rocket_rrmdir( $dir, array $dirs_to_preserve = [], $filesystem = null )
  *
  * @since 2.10
  *
- * @return object WP_Filesystem_Direct instance
+ * @return WP_Filesystem_Direct WP_Filesystem_Direct instance
  */
 function rocket_direct_filesystem() {
 	require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php';
@@ -1196,6 +1229,30 @@ function rocket_get_filesystem_perms( $type ) {
 }
 
 /**
+ * Gets Directory files matches regex.
+ *
+ * @since 3.6.3
+ * @access private
+ *
+ * @param string $dir   Directory to search for files inside it.
+ * @param string $regex Regular expression for files need to be searched for.
+ *
+ * @return array|RegexIterator List of files matches this regular expression.
+ */
+function _rocket_get_dir_files_by_regex( $dir, $regex ) { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
+	try {
+		$iterator = new IteratorIterator(
+			new FilesystemIterator( $dir )
+		);
+
+		return new RegexIterator( $iterator, $regex );
+	} catch ( Exception $e ) {
+		return [];
+	}
+
+}
+
+/**
  * Get the recursive iterator for the cache path.
  *
  * @since  3.5.4
@@ -1347,4 +1404,51 @@ function _rocket_is_windows_fs( $hard_reset = false ) { // phpcs:ignore WordPres
  */
 function _rocket_get_wp_rocket_cache_path() { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
 	return _rocket_normalize_path( rocket_get_constant( 'WP_ROCKET_CACHE_PATH' ) );
+}
+
+/**
+ * Gets .php files in a directory as an array of SplFileInfo objects.
+ *
+ * @since 3.6.3
+ *
+ * @param string $dir_path Directory to check.
+ *
+ * @return array .php files in the directory. [...SplFileInfo]
+ */
+function _rocket_get_php_files_in_dir( $dir_path ) { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
+	try {
+		$config_dir = new FilesystemIterator( (string) $dir_path );
+	} catch ( Exception $e ) {
+		return [];
+	}
+	$files = [];
+
+	foreach ( $config_dir as $file ) {
+		if ( $file->isFile() && 'php' === $file->getExtension() ) {
+			$files[] = $file;
+		}
+	}
+
+	return $files;
+}
+
+/**
+ * Get recursive files matched by regex.
+ *
+ * @since 3.6.3
+ *
+ * @param string $regex Regular Expression to be applied.
+ *
+ * @return array|RegexIterator List of files which match the regular expression (SplFileInfo).
+ */
+function _rocket_get_recursive_dir_files_by_regex( $regex ) { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
+	try {
+		$cache_path = _rocket_get_wp_rocket_cache_path();
+		$iterator   = new RecursiveIteratorIterator(
+			new RecursiveDirectoryIterator( $cache_path, FilesystemIterator::SKIP_DOTS )
+		);
+		return new RegexIterator( $iterator, $regex, RecursiveRegexIterator::MATCH );
+	} catch ( Exception $e ) {
+		return [];
+	}
 }

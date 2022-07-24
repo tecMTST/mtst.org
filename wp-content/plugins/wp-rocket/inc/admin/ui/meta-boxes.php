@@ -69,14 +69,15 @@ function rocket_display_cache_options_meta_boxes() {
 			<p><?php esc_html_e( 'Activate these options on this post:', 'rocket' ); ?></p>
 			<?php
 			$fields = [
-				'lazyload'         => __( 'LazyLoad for images', 'rocket' ),
-				'lazyload_iframes' => __( 'LazyLoad for iframes/videos', 'rocket' ),
-				'minify_html'      => __( 'Minify HTML', 'rocket' ),
-				'minify_css'       => __( 'Minify/combine CSS', 'rocket' ),
-				'minify_js'        => __( 'Minify/combine JS', 'rocket' ),
-				'cdn'              => __( 'CDN', 'rocket' ),
-				'async_css'        => __( 'Optimize CSS Delivery', 'rocket' ),
-				'defer_all_js'     => __( 'Defer JS', 'rocket' ),
+				'lazyload'          => __( 'LazyLoad for images', 'rocket' ),
+				'lazyload_iframes'  => __( 'LazyLoad for iframes/videos', 'rocket' ),
+				'minify_css'        => __( 'Minify/combine CSS', 'rocket' ),
+				'remove_unused_css' => __( 'Remove Unused CSS', 'rocket' ),
+				'minify_js'         => __( 'Minify/combine JS', 'rocket' ),
+				'cdn'               => __( 'CDN', 'rocket' ),
+				'async_css'         => __( 'Load CSS asynchronously', 'rocket' ),
+				'defer_all_js'      => __( 'Defer JS', 'rocket' ),
+				'delay_js'          => __( 'Delay JavaScript execution', 'rocket' ),
 			];
 
 			foreach ( $fields as $field => $label ) {
@@ -153,12 +154,13 @@ function rocket_save_metabox_options() {
 		$fields = [
 			'lazyload',
 			'lazyload_iframes',
-			'minify_html',
 			'minify_css',
 			'minify_js',
 			'cdn',
 			'async_css',
 			'defer_all_js',
+			'delay_js',
+			'remove_unused_css',
 		];
 
 		foreach ( $fields as $field ) {
