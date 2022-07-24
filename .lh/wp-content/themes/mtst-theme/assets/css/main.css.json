@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 221,
+            "activePatchIndex": 233,
             "patches": [
                 {
                     "date": 1658104367213,
@@ -892,6 +892,54 @@
                 {
                     "date": 1658619694850,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -282,9 +282,10 @@\n     margin-bottom: 0;\r\n     min-height: 72px;\r\n }\r\n \r\n-.mais-noticias .ler-mais a {\r\n+.mais-noticias .ler-mais a,\r\n+.ultima-noticia .ler-mais a {\r\n     font-size: 14px;\r\n     line-height: 16px;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1658640979299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -334,8 +334,13 @@\n     line-height: 21px;\r\n     color: var(--preto);\r\n }\r\n \r\n+.youtube-video {\r\n+    height: 300px;\r\n+    background-size: cover!important;\r\n+}\r\n+\r\n /* Vídeo Modal */\r\n \r\n .modal-dialog {\r\n     max-width: 800px;\r\n"
+                },
+                {
+                    "date": 1658641033330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -369,10 +369,10 @@\n     top: -90px;\r\n }\r\n \r\n .player-video-big {\r\n-    position: absolute;\r\n-    top: 24%;\r\n+    position: relative;\r\n+    top: 43%;\r\n     left: 43%;\r\n }\r\n \r\n .youtube-video.ltt {\r\n"
+                },
+                {
+                    "date": 1658641408165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -339,8 +339,12 @@\n     height: 300px;\r\n     background-size: cover!important;\r\n }\r\n \r\n+ul.videos {\r\n+    display: inline-flex;\r\n+}\r\n+\r\n /* Vídeo Modal */\r\n \r\n .modal-dialog {\r\n     max-width: 800px;\r\n"
+                },
+                {
+                    "date": 1658641501627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -343,8 +343,13 @@\n ul.videos {\r\n     display: inline-flex;\r\n }\r\n \r\n+ul.videos li {\r\n+    width: 46%;\r\n+    /* margin-right: 4%; */\r\n+}\r\n+\r\n /* Vídeo Modal */\r\n \r\n .modal-dialog {\r\n     max-width: 800px;\r\n"
+                },
+                {
+                    "date": 1658641539205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -348,8 +348,12 @@\n     width: 46%;\r\n     /* margin-right: 4%; */\r\n }\r\n \r\n+ul.videos li:first-child {\r\n+    margin-right: 4%;\r\n+}\r\n+\r\n /* Vídeo Modal */\r\n \r\n .modal-dialog {\r\n     max-width: 800px;\r\n"
+                },
+                {
+                    "date": 1658641614300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -345,9 +345,8 @@\n }\r\n \r\n ul.videos li {\r\n     width: 46%;\r\n-    /* margin-right: 4%; */\r\n }\r\n \r\n ul.videos li:first-child {\r\n     margin-right: 4%;\r\n"
+                },
+                {
+                    "date": 1658641647762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -344,9 +344,9 @@\n     display: inline-flex;\r\n }\r\n \r\n ul.videos li {\r\n-    width: 46%;\r\n+    width: 48%;\r\n }\r\n \r\n ul.videos li:first-child {\r\n     margin-right: 4%;\r\n"
+                },
+                {
+                    "date": 1658641810936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -387,9 +387,10 @@\n     left: 43%;\r\n }\r\n \r\n .youtube-video.ltt {\r\n-    margin-bottom: -20px;\r\n+    /* margin-bottom: -20px; */\r\n+    height: 150px;\r\n }\r\n \r\n .titulo-video.ltt {\r\n     margin-top: 0;\r\n"
+                },
+                {
+                    "date": 1658641817081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -387,9 +387,8 @@\n     left: 43%;\r\n }\r\n \r\n .youtube-video.ltt {\r\n-    /* margin-bottom: -20px; */\r\n     height: 150px;\r\n }\r\n \r\n .titulo-video.ltt {\r\n"
+                },
+                {
+                    "date": 1658641896842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -377,9 +377,9 @@\n \r\n .player-video {\r\n     position: relative;\r\n     left: 40%;\r\n-    top: -90px;\r\n+    top: 40%;\r\n }\r\n \r\n .player-video-big {\r\n     position: relative;\r\n"
+                },
+                {
+                    "date": 1658641961122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -398,9 +398,9 @@\n \r\n .titulo-video.ltt h3 {\r\n     font-size: 18px;\r\n     line-height: 20px;\r\n-    margin-bottom: 4px;\r\n+    margin-bottom: 6px;\r\n }\r\n \r\n .desc.ltt {\r\n     font-size: 14px;\r\n"
+                },
+                {
+                    "date": 1658642934107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -345,8 +345,9 @@\n }\r\n \r\n ul.videos li {\r\n     width: 48%;\r\n+    margin-bottom: 4px;\r\n }\r\n \r\n ul.videos li:first-child {\r\n     margin-right: 4%;\r\n"
                 }
             ],
             "date": 1658104367213,

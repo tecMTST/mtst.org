@@ -335,6 +335,24 @@ h2.titulo-secao {
     color: var(--preto);
 }
 
+.youtube-video {
+    height: 300px;
+    background-size: cover!important;
+}
+
+ul.videos {
+    display: inline-flex;
+}
+
+ul.videos li {
+    width: 48%;
+    margin-bottom: 4px;
+}
+
+ul.videos li:first-child {
+    margin-right: 4%;
+}
+
 /* Vídeo Modal */
 
 .modal-dialog {
@@ -361,17 +379,17 @@ h2.titulo-secao {
 .player-video {
     position: relative;
     left: 40%;
-    top: -90px;
+    top: 40%;
 }
 
 .player-video-big {
-    position: absolute;
-    top: 24%;
+    position: relative;
+    top: 43%;
     left: 43%;
 }
 
 .youtube-video.ltt {
-    margin-bottom: -20px;
+    height: 150px;
 }
 
 .titulo-video.ltt {
@@ -382,7 +400,7 @@ h2.titulo-secao {
 .titulo-video.ltt h3 {
     font-size: 18px;
     line-height: 20px;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
 .desc.ltt {
