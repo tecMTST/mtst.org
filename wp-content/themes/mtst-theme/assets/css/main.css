@@ -22,6 +22,10 @@ body {
     background: var(--branco);
 }
 
+a {
+    word-wrap: break-word;
+}
+
 a, a:hover {
     color: var(--preto);
     text-decoration: underline;
@@ -534,9 +538,17 @@ span.YouTubePopUp-Close {
     text-decoration-line: none;
 }
 
+.nav-footer ul li:hover {
+    opacity: 1;
+}
+
 .nav-footer ul li a:hover {
     opacity: 1;
-    text-decoration-line: underline;
+    text-decoration: underline;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--preto)!important;
 }
 
 /* Breadcrumbs */
@@ -661,6 +673,10 @@ section.content {
 
 .desktop-view {
     display: block!important;
+}
+
+figure {
+    max-width: 100%;
 }
 
 /* Responsivo */
@@ -1069,5 +1085,52 @@ section.content {
     }
     .programas {
         padding: 40px 14px 0;
+    }
+    li.crumb a {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .content .titulo-pagina h1 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .single .content h1 img {
+        display: none;
+    }
+    .content p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .content .wpp-post-title {
+        width: 62%;
+    }
+    .widget.popular-posts h2 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .author-container h3 {
+        font-size: 24px;
+    }
+    span.fn {
+        font-size: 22px;
+    }
+    .content h3 {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    .content h3 strong {
+        font-size: 34px;
+        line-height: 1;
+        margin-right: 10px;
+    }
+    .page-template-default section .banner {
+        height: 280px;
+    }
+    .page-template-default .titulo-pagina h1 {
+        margin-bottom: 30px;
+    }
+    .titulo-pagina h1 img {
+        height: 26px;
     }
 }

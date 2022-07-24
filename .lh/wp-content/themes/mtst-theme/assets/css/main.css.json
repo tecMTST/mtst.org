@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 291,
+            "activePatchIndex": 330,
             "patches": [
                 {
                     "date": 1658104367213,
@@ -1172,6 +1172,162 @@
                 {
                     "date": 1658656760145,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -762,8 +762,9 @@\n     .menu-principal ul li a {\r\n         font-size: 22px;\r\n         font-weight: 500;\r\n         text-align: right;\r\n+        cursor: pointer;\r\n     }\r\n     .nav-link.active, .nav-link:hover {\r\n         background-image: none;\r\n         font-weight: 700;\r\n"
+                },
+                {
+                    "date": 1658657162840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1069,5 +1069,16 @@\n     }\r\n     .programas {\r\n         padding: 40px 14px 0;\r\n     }\r\n+    li.crumb a {\r\n+        text-decoration: none;\r\n+        font-family: 'Roboto';\r\n+        font-style: normal;\r\n+        font-weight: 400;\r\n+        font-size: 14px;\r\n+        line-height: 20px;\r\n+        text-transform: uppercase;\r\n+        color: var(--preto);\r\n+        opacity: 0.8;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658657168462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1075,9 +1075,9 @@\n         font-family: 'Roboto';\r\n         font-style: normal;\r\n         font-weight: 400;\r\n         font-size: 14px;\r\n-        line-height: 20px;\r\n+        line-height: 18px;\r\n         text-transform: uppercase;\r\n         color: var(--preto);\r\n         opacity: 0.8;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658657176649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1070,15 +1070,8 @@\n     .programas {\r\n         padding: 40px 14px 0;\r\n     }\r\n     li.crumb a {\r\n-        text-decoration: none;\r\n-        font-family: 'Roboto';\r\n-        font-style: normal;\r\n-        font-weight: 400;\r\n         font-size: 14px;\r\n         line-height: 18px;\r\n-        text-transform: uppercase;\r\n-        color: var(--preto);\r\n-        opacity: 0.8;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658657303129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1073,5 +1073,10 @@\n     li.crumb a {\r\n         font-size: 14px;\r\n         line-height: 18px;\r\n     }\r\n+    .content .titulo-pagina h1 {\r\n+        margin-bottom: 30px;\r\n+        font-size: 20px;\r\n+        line-height: 24px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658657316318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1076,7 +1076,7 @@\n     }\r\n     .content .titulo-pagina h1 {\r\n         margin-bottom: 30px;\r\n         font-size: 20px;\r\n-        line-height: 24px;\r\n+        line-height: 26px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658657358759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1078,5 +1078,9 @@\n         margin-bottom: 30px;\r\n         font-size: 20px;\r\n         line-height: 26px;\r\n     }\r\n+    .single .content img {\r\n+        margin-bottom: 10px;\r\n+        display: none;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658657430613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1079,8 +1079,13 @@\n         font-size: 20px;\r\n         line-height: 26px;\r\n     }\r\n     .single .content img {\r\n-        margin-bottom: 10px;\r\n         display: none;\r\n     }\r\n+    .content p {\r\n+        font-weight: 400;\r\n+        font-size: 18px;\r\n+        line-height: 1.5;\r\n+        color: #616161;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658657438617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1082,10 +1082,8 @@\n     .single .content img {\r\n         display: none;\r\n     }\r\n     .content p {\r\n-        font-weight: 400;\r\n         font-size: 18px;\r\n         line-height: 1.5;\r\n-        color: #616161;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658657480207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1074,9 +1074,9 @@\n         font-size: 14px;\r\n         line-height: 18px;\r\n     }\r\n     .content .titulo-pagina h1 {\r\n-        margin-bottom: 30px;\r\n+        margin-bottom: 10px;\r\n         font-size: 20px;\r\n         line-height: 26px;\r\n     }\r\n     .single .content img {\r\n"
+                },
+                {
+                    "date": 1658657566412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1078,9 +1078,9 @@\n         margin-bottom: 10px;\r\n         font-size: 20px;\r\n         line-height: 26px;\r\n     }\r\n-    .single .content img {\r\n+    .single .content h1 img {\r\n         display: none;\r\n     }\r\n     .content p {\r\n         font-size: 18px;\r\n"
+                },
+                {
+                    "date": 1658657649536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1085,5 +1085,11 @@\n     .content p {\r\n         font-size: 18px;\r\n         line-height: 1.5;\r\n     }\r\n+    .wpp-post-title {\r\n+        line-height: 1.35;\r\n+        display: table-cell;\r\n+        vertical-align: middle;\r\n+        width: 62%;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658657780365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1085,11 +1085,8 @@\n     .content p {\r\n         font-size: 18px;\r\n         line-height: 1.5;\r\n     }\r\n-    .wpp-post-title {\r\n-        line-height: 1.35;\r\n-        display: table-cell;\r\n-        vertical-align: middle;\r\n+    .content .wpp-post-title {\r\n         width: 62%;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658657852993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1088,5 +1088,8 @@\n     }\r\n     .content .wpp-post-title {\r\n         width: 62%;\r\n     }\r\n+    .widget.popular-posts h2 {\r\n+        font-size: 26px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658657858929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1090,6 +1090,7 @@\n         width: 62%;\r\n     }\r\n     .widget.popular-posts h2 {\r\n         font-size: 26px;\r\n+        line-height: 32px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658657922811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1092,5 +1092,8 @@\n     .widget.popular-posts h2 {\r\n         font-size: 26px;\r\n         line-height: 32px;\r\n     }\r\n+    .author-container h3 {\r\n+        font-size: 24px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658657955669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1095,5 +1095,8 @@\n     }\r\n     .author-container h3 {\r\n         font-size: 24px;\r\n     }\r\n+    span.fn {\r\n+        font-size: 22px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658658060634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,12 @@\n     font-weight: 400;\r\n     background: var(--branco);\r\n }\r\n \r\n+a {\r\n+    word-wrap: break-word;\r\n+}\r\n+\r\n a, a:hover {\r\n     color: var(--preto);\r\n     text-decoration: underline;\r\n }\r\n"
+                },
+                {
+                    "date": 1658658363779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -538,9 +538,9 @@\n     text-decoration-line: none;\r\n }\r\n \r\n .nav-footer ul li a:hover {\r\n-    opacity: 1;\r\n+    opacity: 1!important;\r\n     text-decoration-line: underline;\r\n }\r\n \r\n /* Breadcrumbs */\r\n"
+                },
+                {
+                    "date": 1658658382006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -538,9 +538,9 @@\n     text-decoration-line: none;\r\n }\r\n \r\n .nav-footer ul li a:hover {\r\n-    opacity: 1!important;\r\n+    opacity: 1;\r\n     text-decoration-line: underline;\r\n }\r\n \r\n /* Breadcrumbs */\r\n"
+                },
+                {
+                    "date": 1658658387897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -537,9 +537,9 @@\n     text-align: left;\r\n     text-decoration-line: none;\r\n }\r\n \r\n-.nav-footer ul li a:hover {\r\n+.nav-footer ul li:hover {\r\n     opacity: 1;\r\n     text-decoration-line: underline;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1658658409487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -539,9 +539,8 @@\n }\r\n \r\n .nav-footer ul li:hover {\r\n     opacity: 1;\r\n-    text-decoration-line: underline;\r\n }\r\n \r\n /* Breadcrumbs */\r\n \r\n"
+                },
+                {
+                    "date": 1658658418191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -541,8 +541,12 @@\n .nav-footer ul li:hover {\r\n     opacity: 1;\r\n }\r\n \r\n+.nav-footer ul li a:hover {\r\n+    opacity: 1;\r\n+}\r\n+\r\n /* Breadcrumbs */\r\n \r\n section.breadcrumbs {\r\n     padding: 20px;\r\n"
+                },
+                {
+                    "date": 1658658423517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -543,8 +543,9 @@\n }\r\n \r\n .nav-footer ul li a:hover {\r\n     opacity: 1;\r\n+    text-decoration: underline;\r\n }\r\n \r\n /* Breadcrumbs */\r\n \r\n"
+                },
+                {
+                    "date": 1658658783321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -546,8 +546,12 @@\n     opacity: 1;\r\n     text-decoration: underline;\r\n }\r\n \r\n+.swiper-pagination-bullet {\r\n+    background-color: #000!important;\r\n+}\r\n+\r\n /* Breadcrumbs */\r\n \r\n section.breadcrumbs {\r\n     padding: 20px;\r\n"
+                },
+                {
+                    "date": 1658658796156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -547,9 +547,9 @@\n     text-decoration: underline;\r\n }\r\n \r\n .swiper-pagination-bullet {\r\n-    background-color: #000!important;\r\n+    background-color: var(--preto)!important;\r\n }\r\n \r\n /* Breadcrumbs */\r\n \r\n"
+                },
+                {
+                    "date": 1658659886576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1110,5 +1110,14 @@\n     }\r\n     span.fn {\r\n         font-size: 22px;\r\n     }\r\n+    .content h3 {\r\n+        font-family: 'Roboto';\r\n+        font-style: normal;\r\n+        font-weight: 700;\r\n+        font-size: 26px;\r\n+        line-height: 1.5;\r\n+        color: var(--preto);\r\n+        margin-bottom: 26px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658659894622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1111,13 +1111,8 @@\n     span.fn {\r\n         font-size: 22px;\r\n     }\r\n     .content h3 {\r\n-        font-family: 'Roboto';\r\n-        font-style: normal;\r\n-        font-weight: 700;\r\n         font-size: 26px;\r\n         line-height: 1.5;\r\n-        color: var(--preto);\r\n-        margin-bottom: 26px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658659941347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1114,5 +1114,11 @@\n     .content h3 {\r\n         font-size: 26px;\r\n         line-height: 1.5;\r\n     }\r\n+    .content h3 strong {\r\n+        font-size: 36px;\r\n+        line-height: 1;\r\n+        color: var(--vermelho-escuro);\r\n+        margin-right: 10px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658659946662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1117,8 +1117,7 @@\n     }\r\n     .content h3 strong {\r\n         font-size: 36px;\r\n         line-height: 1;\r\n-        color: var(--vermelho-escuro);\r\n         margin-right: 10px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658660024886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1119,5 +1119,9 @@\n         font-size: 36px;\r\n         line-height: 1;\r\n         margin-right: 10px;\r\n     }\r\n+    .quem-somos-topo .banner {\r\n+        width: 100%;\r\n+        height: 280px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658660037180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1119,9 +1119,8 @@\n         font-size: 36px;\r\n         line-height: 1;\r\n         margin-right: 10px;\r\n     }\r\n-    .quem-somos-topo .banner {\r\n-        width: 100%;\r\n+    .page-template-default .banner {\r\n         height: 280px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658660079341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1119,8 +1119,8 @@\n         font-size: 36px;\r\n         line-height: 1;\r\n         margin-right: 10px;\r\n     }\r\n-    .page-template-default .banner {\r\n+    .page-template-default section .banner {\r\n         height: 280px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658660146256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1122,5 +1122,10 @@\n     }\r\n     .page-template-default section .banner {\r\n         height: 280px;\r\n     }\r\n+    .titulo-pagina h1 img {\r\n+        margin-right: 20px;\r\n+        margin-top: -4px;\r\n+        height: 26px;\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1658660152135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1123,9 +1123,7 @@\n     .page-template-default section .banner {\r\n         height: 280px;\r\n     }\r\n     .titulo-pagina h1 img {\r\n-        margin-right: 20px;\r\n-        margin-top: -4px;\r\n         height: 26px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658660196084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1122,8 +1122,13 @@\n     }\r\n     .page-template-default section .banner {\r\n         height: 280px;\r\n     }\r\n+    .content .titulo-pagina h1 {\r\n+        margin-bottom: 30px;\r\n+        font-size: 20px;\r\n+        line-height: 26px;\r\n+    }\r\n     .titulo-pagina h1 img {\r\n         height: 26px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1658660202818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1122,9 +1122,9 @@\n     }\r\n     .page-template-default section .banner {\r\n         height: 280px;\r\n     }\r\n-    .content .titulo-pagina h1 {\r\n+    .page-template-default .titulo-pagina h1 {\r\n         margin-bottom: 30px;\r\n         font-size: 20px;\r\n         line-height: 26px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658660212038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1124,10 +1124,8 @@\n         height: 280px;\r\n     }\r\n     .page-template-default .titulo-pagina h1 {\r\n         margin-bottom: 30px;\r\n-        font-size: 20px;\r\n-        line-height: 26px;\r\n     }\r\n     .titulo-pagina h1 img {\r\n         height: 26px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1658660244603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1111,9 +1111,9 @@\n     span.fn {\r\n         font-size: 22px;\r\n     }\r\n     .content h3 {\r\n-        font-size: 26px;\r\n+        font-size: 22px;\r\n         line-height: 1.5;\r\n     }\r\n     .content h3 strong {\r\n         font-size: 36px;\r\n"
+                },
+                {
+                    "date": 1658660375071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -674,8 +674,12 @@\n .desktop-view {\r\n     display: block!important;\r\n }\r\n \r\n+figure {\r\n+    max-width: 100%;\r\n+}\r\n+\r\n /* Responsivo */\r\n \r\n @media (max-width: 1199px) {\r\n     ul.videos li:first-child {\r\n@@ -1115,9 +1119,9 @@\n         font-size: 22px;\r\n         line-height: 1.5;\r\n     }\r\n     .content h3 strong {\r\n-        font-size: 36px;\r\n+        font-size: 34px;\r\n         line-height: 1;\r\n         margin-right: 10px;\r\n     }\r\n     .page-template-default section .banner {\r\n"
                 }
             ],
             "date": 1658104367213,

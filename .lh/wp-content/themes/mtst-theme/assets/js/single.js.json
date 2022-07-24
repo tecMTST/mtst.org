@@ -1,0 +1,26 @@
+{
+    "sourceFile": "wp-content/themes/mtst-theme/assets/js/single.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1658660996478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1658661008516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n const noticias =  document.querySelector('.menu-noticias');\r\n noticias.classList.add('active');\r\n const homeMob =  document.querySelector('.menu-noticias.item-mob');\r\n homeMob.classList.remove('active');\r\n-const quemsomosMob =  document.querySelector('.menu-noticias.item-mob');\r\n-quemsomosMob.classList.add('active');\n\\ No newline at end of file\n+const noticiasMob =  document.querySelector('.menu-noticias.item-mob');\r\n+noticiasMob.classList.add('active');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1658661148767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const home =  document.querySelector('.menu-home');\r\n home.classList.remove('active');\r\n const noticias =  document.querySelector('.menu-noticias');\r\n noticias.classList.add('active');\r\n-const homeMob =  document.querySelector('.menu-noticias.item-mob');\r\n+const homeMob =  document.querySelector('.menu-home.item-mob');\r\n homeMob.classList.remove('active');\r\n const noticiasMob =  document.querySelector('.menu-noticias.item-mob');\r\n noticiasMob.classList.add('active');\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1658660996478,
+            "name": "Commit-0",
+            "content": "const home =  document.querySelector('.menu-home');\r\nhome.classList.remove('active');\r\nconst noticias =  document.querySelector('.menu-noticias');\r\nnoticias.classList.add('active');\r\nconst homeMob =  document.querySelector('.menu-noticias.item-mob');\r\nhomeMob.classList.remove('active');\r\nconst quemsomosMob =  document.querySelector('.menu-noticias.item-mob');\r\nquemsomosMob.classList.add('active');"
+        }
+    ]
+}
