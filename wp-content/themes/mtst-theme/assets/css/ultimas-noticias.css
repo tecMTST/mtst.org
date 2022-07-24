@@ -78,3 +78,26 @@
 .noticais-quatro-cols {
     padding-bottom: 50px;
 }
+
+@media (max-width:768px) {
+    section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .titulo-pagina {
+        padding: 10px 0;
+    }
+    h1 {
+        font-size: 26px;
+        line-height: 1.5;
+    }
+    .ultima-noticia .thumb {
+        height: 260px;
+    }
+    .noticias-uma-coluna {
+        padding-bottom: 0;
+    }
+    .ultima-noticia.ultimas-duas-col {
+        margin-bottom: 30px;
+    }
+}

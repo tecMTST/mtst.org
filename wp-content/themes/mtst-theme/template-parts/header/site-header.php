@@ -4,7 +4,7 @@
                 <div class="row">
                     <div class="col-md-2">
                         <div class="logo-mtst">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-novo.png" width="106" height="106" alt="Logo do MTST">
+                            <a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-novo.png" width="106" height="106" alt="Logo do MTST"></a>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -76,7 +76,7 @@
                 <div class="row">
                     <div class="col-3 col-logo">
                         <div class="logo-mtst">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-novo.png" width="106" height="106" alt="Logo do MTST">
+                            <a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-novo.png" width="106" height="106" alt="Logo do MTST"></a>
                         </div>
                     </div>
                     <div class="col-7">
@@ -103,9 +103,9 @@
         <!-- Menu -->
         <div class="menu-principal menu-mobile container" id="menu-mobile">
                             <nav>
-                                <ul calss="menu" id="menu">
-                                    <li><a class="nav-link menu-home active" href="<?php echo home_url(); ?>">Home</a></li>
-                                    <li><a class="nav-link menu-quem-somos" onclick="subQuemSomos()">Quem Somos</a>
+                                <ul calss="menu" id="menu-mobile">
+                                    <li><a class="nav-link menu-home item-mob active" href="<?php echo home_url(); ?>">Home</a></li>
+                                    <li><a class="nav-link menu-quem-somos item-mob" onclick="subQuemSomos()">Quem Somos</a>
                                         <ul class="submenu" id="sub-quem-somos" style="display:none;">
                                             <li><a a class="nav-link" href="<?php echo home_url(); ?>/quem-somos/o-mtst">O MTST</a></li>
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/quem-somos/fake-news">Fake News</a></li>
@@ -114,21 +114,21 @@
                                             <li><a class="nav-link" href="https://nucleodetecnologia.com.br/" target="_blank">Núcleo de Tecnologia</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="nav-link menu-noticias" onclick="subNoticias()">Notícias</a>
+                                    <li><a class="nav-link menu-noticias item-mob" onclick="subNoticias()">Notícias</a>
                                         <ul class="submenu" id="sub-noticias" style="display:none">
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/noticias/ultimas-noticias">Últimas Notícias</a></li>
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/publicacoes">Publicações</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="nav-link menu-campanha" onclick="subCampanha()">Campanhas</a>
+                                    <li><a class="nav-link menu-campanha item-mob" onclick="subCampanha()">Campanhas</a>
                                         <ul class="submenu" id="sub-campanha" style="display:none">
                                             <li><a class="nav-link" href="#">Apoia.se</a></li>
                                             <li><a class="nav-link" href="https://apoia.se/cozinhasolidaria" target="_blank">Cozinhas Solidárias</a></li>
                                             <li><a class="nav-link" href="#">Fora Bolsonaro</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="nav-link menu-loja" href="https://wa.me/5511914631714" target="_blank">Loja</a></li>
-                                    <li><a class="nav-link menu-galeria" onclick="subGaleria()">Galeria</a>
+                                    <li><a class="nav-link menu-loja item-mob" href="https://wa.me/5511914631714" target="_blank">Loja</a></li>
+                                    <li><a class="nav-link menu-galeria item-mob" onclick="subGaleria()">Galeria</a>
                                         <ul class="submenu" id="sub-galeria" style="display:none;">
                                             <li><a class="nav-link" href="https://open.spotify.com/show/5X2nnU5w9uptyMiApbPCWj" target="_blank">Podcasts</a></li>
                                             <li><a class="nav-link" href="https://www.youtube.com/c/MTSTBrasil" target="_blank">Vídeos</a></li>
