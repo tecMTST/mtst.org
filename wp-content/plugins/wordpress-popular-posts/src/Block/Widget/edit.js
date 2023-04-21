@@ -3,7 +3,7 @@ import { escape_html, unescape_html } from '../utils';
 const { serverSideRender: ServerSideRender } = wp;
 const { Component, Fragment } = wp.element;
 const { BlockControls } = wp.blockEditor;
-const { Button, CheckboxControl, Disabled, SelectControl, Spinner, TextareaControl, TextControl, Toolbar } = wp.components;
+const { CheckboxControl, Disabled, SelectControl, Spinner, TextareaControl, TextControl, Toolbar, ToolbarButton } = wp.components;
 const { __ } = wp.i18n;
 const endpoint = 'wordpress-popular-posts/v1';
 
@@ -120,8 +120,8 @@ export class WPPWidgetBlockEdit extends Component
 
         return (
             <BlockControls>
-                <Toolbar>
-                    <Button
+                <Toolbar label="{ __('Settings') }">
+                    <ToolbarButton
                         label={ this.state.editMode ? __('Preview', 'wordpress-popular-posts') : __('Edit', 'wordpress-popular-posts') }
                         icon={ this.state.editMode ? "format-image" : "edit" }
                         onClick={onPreviewChange}
@@ -380,7 +380,7 @@ export class WPPWidgetBlockEdit extends Component
 
         function onDisplayExcerptChange(value) {
             if ( false == value )
-                setAttributes({ excerpt_length: 0, excerpt_by_words: 0, display_post_excerpt: value });
+                setAttributes({ excerpt_length: 0, excerpt_by_words: 0, display_post_excerpt: value, excerpt_format: false });
             else
                 setAttributes({ display_post_excerpt: value, excerpt_length: 55 });
         }
@@ -393,7 +393,7 @@ export class WPPWidgetBlockEdit extends Component
 
         function onDisplayThumbnailChange(value) {
             if ( false == value )
-                setAttributes({ thumbnail_width: 0, thumbnail_height: 0, display_post_thumbnail: value });
+                setAttributes({ thumbnail_width: 0, thumbnail_height: 0, display_post_thumbnail: value, thumbnail_build: 'manual' });
             else
                 setAttributes({ thumbnail_width: 75, thumbnail_height: 75, display_post_thumbnail: value });
         }
@@ -413,6 +413,12 @@ export class WPPWidgetBlockEdit extends Component
                     thumbnail_width: _self.state.imgSizes[sizes[fallback].value].width,
                     thumbnail_height: _self.state.imgSizes[sizes[fallback].value].height,
                     thumbnail_size: sizes[fallback].value
+                });
+            } else {
+                setAttributes({
+                    thumbnail_width: 75,
+                    thumbnail_height: 75,
+                    thumbnail_size: ''
                 });
             }
             setAttributes({ thumbnail_build: value });
@@ -532,6 +538,13 @@ export class WPPWidgetBlockEdit extends Component
                     }
                 </div>
             }
+            { _wordpress_popular_posts.can_show_rating &&
+                <CheckboxControl
+                    label={__('Display post rating', 'wordpress-popular-posts')}
+                    checked={attributes.rating}
+                    onChange={(value) => setAttributes({ rating: value })}
+                />
+            }
         </Fragment>;
     }
 
@@ -621,7 +634,7 @@ export class WPPWidgetBlockEdit extends Component
 
                 setAttributes({
                     shorten_title: config.shorten_title.active,
-                    title_length: config.shorten_title.title_length,
+                    title_length: config.shorten_title.length,
                     title_by_words: config.shorten_title.words ? 1 : 0,
                     display_post_excerpt: config['post-excerpt'].active,
                     excerpt_format: config['post-excerpt'].format,

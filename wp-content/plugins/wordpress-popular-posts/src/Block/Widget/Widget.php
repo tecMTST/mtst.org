@@ -1,13 +1,14 @@
 <?php
 namespace WordPressPopularPosts\Block\Widget;
 
-use WordPressPopularPosts\Helper;
-use WordPressPopularPosts\Query;
-use WordPressPopularPosts\Output;
+use WordPressPopularPosts\{ Helper, Image, Output, Themer, Translate };
 use WordPressPopularPosts\Block\Block;
+use WordPressPopularPosts\Traits\QueriesPosts;
 
 class Widget extends Block
 {
+
+    use QueriesPosts;
 
     /**
      * Administrative settings.
@@ -16,7 +17,7 @@ class Widget extends Block
      * @var     array
      * @access  private
      */
-    private $admin_options = [];
+    private $config = [];
 
     /**
      * Image object.
@@ -73,9 +74,9 @@ class Widget extends Block
      * @param   \WordPressPopularPosts\Translate $translate
      * @param   \WordPressPopularPosts\Themer    $themer
      */
-    public function __construct(array $config, \WordPressPopularPosts\Output $output, \WordPressPopularPosts\Image $thumbnail, \WordPressPopularPosts\Translate $translate, \WordPressPopularPosts\Themer $themer)
+    public function __construct(array $config, Output $output, Image $thumbnail, Translate $translate, Themer $themer)
     {
-        $this->admin_options = $config;
+        $this->config = $config;
         $this->output = $output;
         $this->thumbnail = $thumbnail;
         $this->translate = $translate;
@@ -147,6 +148,14 @@ class Widget extends Block
             plugin_dir_url(dirname(dirname(dirname(__FILE__)))) . 'assets/js/blocks/block-wpp-widget.js',
             ['wp-blocks', 'wp-i18n', 'wp-element', 'wp-block-editor', 'wp-server-side-render'],
             filemtime(plugin_dir_path(dirname(dirname(dirname(__FILE__)))) . 'assets/js/blocks/block-wpp-widget.js')
+        );
+
+        wp_localize_script(
+            'block-wpp-widget-js',
+            '_wordpress_popular_posts',
+            [
+                'can_show_rating' => function_exists('the_ratings_results')
+            ]
         );
 
         wp_register_style(
@@ -273,6 +282,10 @@ class Widget extends Block
                         'type' => 'string',
                         'default' => ''
                     ],
+                    'rating' => [
+                        'type' => 'boolean',
+                        'default' => false
+                    ],
                     /* stats tag settings */
                     'stats_comments' => [
                         'type' => 'boolean',
@@ -387,7 +400,7 @@ class Widget extends Block
                 'words' => ( ! empty($excerpt_by_words) && Helper::is_number($excerpt_by_words) && $excerpt_by_words > 0 ),
             ],
             'thumbnail' => [
-                'active' => ( ! empty($thumbnail_width) && Helper::is_number($thumbnail_width) && $thumbnail_width > 0 ),
+                'active' => ( 'predefined' == $thumbnail_build && $attributes['display_post_thumbnail'] ) ? true : ( ! empty($thumbnail_width) && Helper::is_number($thumbnail_width) && $thumbnail_width > 0 ),
                 'width' => ( ! empty($thumbnail_width) && Helper::is_number($thumbnail_width) && $thumbnail_width > 0 ) ? $thumbnail_width : 0,
                 'height' => ( ! empty($thumbnail_height) && Helper::is_number($thumbnail_height) && $thumbnail_height > 0 ) ? $thumbnail_height : 0,
                 'build' => 'predefined' == $thumbnail_build ? 'predefined' : 'manual',
@@ -453,43 +466,14 @@ class Widget extends Block
 
         $isAdmin = isset($_GET['isSelected']) ? $_GET['isSelected'] : false;
 
-        if ( $this->admin_options['tools']['ajax'] && ! is_customize_preview() && ! $isAdmin ) {
+        if ( $this->config['tools']['ajax'] && ! is_customize_preview() && ! $isAdmin ) {
             $html .= '<script type="application/json">' . json_encode($query_args) . '</script>';
             $html .= '<div class="wpp-widget-block-placeholder"></div>';
 
             return $html . '</div>';
         }
 
-        // Return cached results
-        if ( $this->admin_options['tools']['cache']['active'] ) {
-
-            $key = md5(json_encode($query_args));
-            $popular_posts = \WordPressPopularPosts\Cache::get($key);
-
-            if ( false === $popular_posts ) {
-                $popular_posts = new Query($query_args);
-
-                $time_value = $this->admin_options['tools']['cache']['interval']['value']; // eg. 5
-                $time_unit = $this->admin_options['tools']['cache']['interval']['time']; // eg. 'minute'
-
-                // No popular posts found, check again in 1 minute
-                if ( ! $popular_posts->get_posts() ) {
-                    $time_value = 1;
-                    $time_unit = 'minute';
-                }
-
-                \WordPressPopularPosts\Cache::set(
-                    $key,
-                    $popular_posts,
-                    $time_value,
-                    $time_unit
-                );
-            }
-
-        } // Get popular posts
-        else {
-            $popular_posts = new Query($query_args);
-        }
+        $popular_posts = $this->maybe_query($query_args);
 
         $this->output->set_data($popular_posts->get_posts());
         $this->output->set_public_options($query_args);
@@ -509,7 +493,7 @@ class Widget extends Block
      * @param   array
      * @return  array
      */
-    private function parse_attributes($atts = [])
+    private function parse_attributes(array $atts = [])
     {
         $out = array();
 

@@ -13,14 +13,24 @@
  * @param   bool            $number_format  Whether to format the number (eg. 9,999) or not (eg. 9999)
  * @return  string
  */
-function wpp_get_views($id = NULL, $range = NULL, $number_format = true)
+function wpp_get_views(int $id = NULL, $range = NULL, bool $number_format = true) /** @TODO: starting PHP 8.0 $range can be declared as mixed $range */
 {
     // have we got an id?
     if ( empty($id) || is_null($id) || ! is_numeric($id) )
         return "-1";
 
+    $id = absint($id);
+
     global $wpdb;
     $table_name = $wpdb->prefix . "popularposts";
+    $translate = new \WordPressPopularPosts\Translate;
+
+    $id = $translate->get_object_id(
+        $id,
+        get_post_type($id),
+        true,
+        $translate->get_default_language()
+    );
 
     $args = [
         'range' => 'all',
@@ -42,12 +52,15 @@ function wpp_get_views($id = NULL, $range = NULL, $number_format = true)
 
     // Get all-time views count
     if ( 'all' == $args['range'] ) {
-        $query = "SELECT pageviews FROM {$table_name}data WHERE postid = '{$id}'";
+        $query = $wpdb->prepare(
+            "SELECT pageviews FROM {$table_name}data WHERE postid = %d;",
+            $args['_postID']
+        );
     } // Get views count within time range
     else {
         $start_date = new \DateTime(
             \WordPressPopularPosts\Helper::now(),
-            new \DateTimeZone(\WordPressPopularPosts\Helper::get_timezone())
+            wp_timezone()
         );
 
         // Determine time range
@@ -141,7 +154,7 @@ function wpp_get_views($id = NULL, $range = NULL, $number_format = true)
  * @since   2.0.3
  * @param   mixed   $args
  */
-function wpp_get_mostpopular($args = NULL)
+function wpp_get_mostpopular($args = NULL) /** @TODO: starting PHP 8.0 $args can be declared as mixed $args */
 {
     $shortcode = '[wpp';
 

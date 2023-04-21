@@ -12,6 +12,7 @@ use WPSEO_Language_Utils;
 use WPSEO_Meta;
 use WPSEO_Metabox_Analysis_Readability;
 use WPSEO_Metabox_Analysis_SEO;
+use WPSEO_Metabox_Analysis_Inclusive_Language;
 use WPSEO_Metabox_Formatter;
 use WPSEO_Post_Metabox_Formatter;
 use WPSEO_Replace_Vars;
@@ -92,6 +93,13 @@ class Elementor implements Integration_Interface {
 	protected $readability_analysis;
 
 	/**
+	 * Helper to determine whether or not the inclusive language analysis is enabled.
+	 *
+	 * @var WPSEO_Metabox_Analysis_Inclusive_Language
+	 */
+	protected $inclusive_language_analysis;
+
+	/**
 	 * Represents the estimated_reading_time_conditional.
 	 *
 	 * @var Estimated_Reading_Time_Conditional
@@ -128,6 +136,7 @@ class Elementor implements Integration_Interface {
 
 		$this->seo_analysis                       = new WPSEO_Metabox_Analysis_SEO();
 		$this->readability_analysis               = new WPSEO_Metabox_Analysis_Readability();
+		$this->inclusive_language_analysis        = new WPSEO_Metabox_Analysis_Inclusive_Language();
 		$this->social_is_enabled                  = $this->options->get( 'opengraph', false ) || $this->options->get( 'twitter', false );
 		$this->is_advanced_metadata_enabled       = $this->capability->current_user_can( 'wpseo_edit_advanced_metadata' ) || $this->options->get( 'disableadvanced_meta' ) === false;
 		$this->estimated_reading_time_conditional = $estimated_reading_time_conditional;
@@ -359,6 +368,10 @@ class Elementor implements Integration_Interface {
 			return true;
 		}
 
+		if ( $key === 'inclusive_language_score' && ! $this->inclusive_language_analysis->is_enabled() ) {
+			return true;
+		}
+
 		return false;
 	}
 
@@ -429,9 +442,8 @@ class Elementor implements Integration_Interface {
 			'isElementorEditor'        => true,
 			'postStatus'               => \get_post_status( $post_id ),
 			'analysis'                 => [
-				'plugins'                     => $plugins_script_data,
-				'worker'                      => $worker_script_data,
-				'estimatedReadingTimeEnabled' => $this->estimated_reading_time_conditional->is_met(),
+				'plugins' => $plugins_script_data,
+				'worker'  => $worker_script_data,
 			],
 			'dismissedAlerts'          => $dismissed_alerts,
 			'webinarIntroElementorUrl' => WPSEO_Shortlinker::get( 'https://yoa.st/webinar-intro-elementor' ),
@@ -706,9 +718,25 @@ class Elementor implements Integration_Interface {
 
 		$custom_fields = \get_post_custom( $post->ID );
 
+		// Simply concatenate all fields containing replace vars so we can handle them all with a single regex find.
+		$replace_vars_fields = implode(
+			' ',
+			[
+				YoastSEO()->meta->for_post( $post->ID )->presentation->title,
+				YoastSEO()->meta->for_post( $post->ID )->presentation->meta_description,
+			]
+		);
+
+		preg_match_all( '/%%cf_([A-Za-z0-9_]+)%%/', $replace_vars_fields, $matches );
+		$fields_to_include = $matches[1];
 		foreach ( $custom_fields as $custom_field_name => $custom_field ) {
 			// Skip private custom fields.
 			if ( \substr( $custom_field_name, 0, 1 ) === '_' ) {
+				continue;
+			}
+
+			// Skip custom fields that are not used, new ones will be fetched dynamically.
+			if ( ! in_array( $custom_field_name, $fields_to_include, true ) ) {
 				continue;
 			}
 
