@@ -39,12 +39,12 @@ class Simple_Author_Box_Widget_LITE extends WP_Widget {
             }
         }
 
-        echo $args['before_widget'];
+        wpsabox_wp_kses_wf($args['before_widget']);
         if ( '' != $instance['title'] ) {
-            echo $args['before_title'] . esc_html($instance['title']) . $args['after_title'];
+            wpsabox_wp_kses_wf($args['before_title'] . esc_html($instance['title']) . $args['after_title']);
         }
         include($template);
-        echo $args['after_widget'];
+        wpsabox_wp_kses_wf($args['after_widget']);
 
     }
 

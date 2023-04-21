@@ -3,8 +3,8 @@ Contributors: unicorn03, unicorn07
 Donate link: https://tentacleplugins.com/
 Tags: headers security, hsts, http headers, insecure content, force ssl, headers, login security, xss, clickjacking, mitm, cross origin, cross site, privacy, csp
 Requires at least: 4.7
-Tested up to: 6.0 
-Stable tag: 5.0.04
+Tested up to: 6.1.1 
+Stable tag: 5.0.21
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -114,6 +114,21 @@ FLoC is a mega tracker that monitors user activity on all sites, stores the info
 
 Scott Helme reported that as of May 3, already 967 of the first 1 million domains had disabled FLoC's interest-cohort in their Permissions-Policy header. That list included some big sites like The Guardian and IKEA.
 
+= Do you use CloudFlare and the Headers Security Advanced & HSTS WP plugin? =
+
+Are you experiencing any anomalies after a plugin update? If yes, please follow these instructions: clear the cache directly to the CloudFlare Client Area
+
+* Log in to your Cloudflare dashboard, and select your account and domain.
+* Select Caching > Configuration.
+* Under Cache Purge, select Custom Purge. The custom purge window will be displayed.
+* Under Purge by, select URL.
+* Enter the appropriate values in the text field using the format shown in the example.
+* Run through the additional instructions to complete the form.
+* Review the data entered.
+* Click Delete.
+
+This will cause the <a href="https://developers.cloudflare.com/cache/how-to/purge-cache/" target="_blank">cloudFlare</a>
+
 == Installation ==
 
 = ITALIAN =
@@ -129,24 +144,21 @@ Scott Helme reported that as of May 3, already 967 of the first 1 million domain
 1. Go to Plugins 'Add New'.
 2. Search for Headers Security Advanced & HSTS WP.
 3. Search for this plugin, download and activate it.
-4. Go to 'settings' > 'Permalink'. Change your login url to 'Security Url'.
-5. You can change this option whenever you want, Headers Security Advanced & HSTS WP is set automatically.
+4. You can change this option whenever you want, Headers Security Advanced & HSTS WP is set automatically.
 
 = FRANÇAIS =
 
 1. Allez dans Plugins 'Add new'.
 2. Recherchez Headers Security Advanced & HSTS WP.
 3. Recherchez ce plugin, téléchargez-le et activez-le.
-4. Allez dans "Paramètres" > "Lien permanent". Changez votre url de connexion en 'Security Url'.
-5. Vous pouvez modifier cette option quand vous le souhaitez, Headers Security Advanced & HSTS WP est réglé automatiquement.
+4. Vous pouvez modifier cette option quand vous le souhaitez, Headers Security Advanced & HSTS WP est réglé automatiquement.
 
 = DEUTSCH =
 
 1. Gehen Sie zu Plugins 'Neu hinzufügen'.
 2. Suchen Sie nach Headers Security Advanced & HSTS WP.
 3. Suchen Sie nach diesem Plugin, laden Sie es herunter und aktivieren Sie es.
-4. Gehen Sie zu "Einstellungen" > "Permalink". Ändern Sie Ihre Login-Url in 'Security Url'.
-5. Sie können diese Option jederzeit ändern, Headers Security Advanced & HSTS WP wird automatisch eingestellt.
+4. Sie können diese Option jederzeit ändern, Headers Security Advanced & HSTS WP wird automatisch eingestellt.
 
 == Screenshots ==
 
@@ -161,6 +173,85 @@ Scott Helme reported that as of May 3, already 967 of the first 1 million domain
 9. Site-wide security setting
 
 == Changelog ==
+
+= 5.0.21 =
+We don't want to tell you what to do, but here's the point: if you've updated the Headers Security Advanced & HSTS WP plugin last time, you've seen that when we suggest doing so, we don't just say it and leave it at that. Well, with this 5.0.21 version we've added and fixed a lot (we got rid of some bugs, tidied up some pesky pixels and updated the graphics) and it all works great. But it's not all! We've also added a brand new and improved interface with a modern design to make your experience even more enjoyable. Are you ready for a new HSTS values customization experience? Do it in style! With the modern and functional interface, you can now customize your HSTS values like a true stylupator! Are we agreed? Touch "update" and we'll provide you with the most beautiful, fastest, and most impressive plugin around. Enjoy!
+- Fixed: New logic has been implemented for the plugin in the different languages.
+- Fixed: A problem was sistamo that could cause on some browsers the error with the header "Permissions-Policy" and the value "document-domain".
+
+= 5.0.20 =
+We don't want to tell you what to do, but here's the point: if you've updated the Headers Security Advanced & HSTS WP plugin last time, you've seen that when we suggest doing so, we don't just say it and leave it at that. Well, with this 5.0.20 version we've added and fixed a lot (we got rid of some bugs, tidied up some pesky pixels and updated the graphics) and it all works great. But it's not all! We've also added a brand new and improved interface with a modern design to make your experience even more enjoyable. Are you ready for a new HSTS values customization experience? Do it in style! With the modern and functional interface, you can now customize your HSTS values like a true stylupator! Are we agreed? Touch "update" and we'll provide you with the most beautiful, fastest, and most impressive plugin around. Enjoy!
+- Fixed: solved problem with "best practices" on Lighthouse and Google Insight.
+- Fixed: A problem could occur with the concatenation of an object of type string.
+- Error Fixed: The plugin generated 237 characters with unexpected output during activation. If you notice "headers already sent" notes, problems with syndication feeds, or other issues, try disabling or removing this plugin.
+
+= 5.0.19 =
+We don't want to tell you what to do, but here's the point: if you've updated the Headers Security Advanced & HSTS WP plugin last time, you've seen that when we suggest doing so, we don't just say it and leave it at that. Well, with this 5.0.19 version we've added and fixed a lot (we got rid of some bugs, tidied up some pesky pixels and updated the graphics) and it all works great. But it's not all! We've also added a brand new and improved interface with a modern design to make your experience even more enjoyable. Are you ready for a new HSTS values customization experience? Do it in style! With the modern and functional interface, you can now customize your HSTS values like a true stylupator! Are we agreed? Touch "update" and we'll provide you with the most beautiful, fastest, and most impressive plugin around. Enjoy!
+- Fixed: Updated and tested some answers for HSTS preload.
+- Fixed: Issue that caused a problem with the CSS selector.
+- Fixed: A problem could occur with the concatenation of an object of type string.
+- Error Fixed: The plugin generated 237 characters with unexpected output during activation. If you notice "headers already sent" notes, problems with syndication feeds, or other issues, try disabling or removing this plugin.
+
+= 5.0.18 =
+We don't want to tell you what to do, but here's the point: if you've updated the Headers Security Advanced & HSTS WP plugin last time, you've seen that when we suggest doing so, we don't just say it and leave it at that. Well, with this 5.0.18 version we've added and fixed a lot (we got rid of some bugs, tidied up some pesky pixels and updated the graphics) and it all works great. But it's not all! We've also added a brand new and improved interface with a modern design to make your experience even more enjoyable. Are you ready for a new HSTS values customization experience? Do it in style! With the modern and functional interface, you can now customize your HSTS values like a true stylupator! Are we agreed? Touch "update" and we'll provide you with the most beautiful, fastest, and most impressive plugin around. Enjoy!
+- Fixed: Updated and tested some answers for HSTS preload.
+- Update: Donation button (PayPal) has been made independent, this no longer uses fonts by Google.
+- Fixed: Issue that caused a problem with the CSS selector.
+- Error Fixed: The plugin generated 237 characters with unexpected output during activation. If you notice "headers already sent" notes, problems with syndication feeds, or other issues, try disabling or removing this plugin.
+
+= 5.0.17 =
+We don't want to tell you what to do, but here's the point: if you've updated the Headers Security Advanced & HSTS WP plugin last time, you've seen that when we suggest doing so, we don't just say it and leave it at that. Well, with this 5.0.16 version we've added and fixed a lot (we got rid of some bugs, tidied up some pesky pixels and updated the graphics) and it all works great. But it's not all! We've also added a brand new and improved interface with a modern design to make your experience even more enjoyable. Are you ready for a new HSTS values customization experience? Do it in style! With the modern and functional interface, you can now customize your HSTS values like a true stylupator! Are we agreed? Touch "update" and we'll provide you with the most beautiful, fastest, and most impressive plugin around. Enjoy!
+- New: added page to customize HSTS header values (max-age, includeSubDomains and Preload).
+- New: Beta: We implemented a survey to listen to all users and implement new customization features in the plugin.
+- Fixed: Donation button (BuyMeCoffee) has been made independent, this no longer uses fonts by Google.
+- Fixed: Updated and tested some answers for HSTS preload.
+- Update: Donation button (PayPal) has been made independent, this no longer uses fonts by Google.
+- Update: After some testing, the header was implemented to force requests to one's domain at https://.
+- Update: Issue that caused the Plugin blocking social access to be blocked. 
+- Error Fixed: The plugin generated 237 characters with unexpected output during activation. If you notice "headers already sent" notes, problems with syndication feeds, or other issues, try disabling or removing this plugin.
+
+= 5.0.16 =
+We don't want to tell you what to do, but here's the point: if you've updated the Headers Security Advanced & HSTS WP plugin last time, you've seen that when we suggest doing so, we don't just say it and leave it at that. Well, with this 5.0.16 version we've added and fixed a lot (we got rid of some bugs, tidied up some pesky pixels and updated the graphics) and it all works great. But it's not all! We've also added a brand new and improved interface with a modern design to make your experience even more enjoyable. Are you ready for a new HSTS values customization experience? Do it in style! With the modern and functional interface, you can now customize your HSTS values like a true stylupator! Are we agreed? Touch "update" and we'll provide you with the most beautiful, fastest, and most impressive plugin around. Enjoy!
+- New: added page to customize HSTS header values (max-age, includeSubDomains and Preload).
+- New: Beta: We implemented a survey to listen to all users and implement new customization features in the plugin.
+- Fixed: Donation button (BuyMeCoffee) has been made independent, this no longer uses fonts by Google.
+- Fixed: Updated and tested some answers for HSTS preload.
+- Update: Donation button (PayPal) has been made independent, this no longer uses fonts by Google.
+- Update: After some testing, the header was implemented to force requests to one's domain at https://.
+- Update: Issue that caused the Plugin blocking social access to be blocked. 
+
+= 5.0.14 =
+We don't want to tell you what to do, but here's the thing: if you updated the Headers Security Advanced & HSTS WP plugin last time, you saw that when we propose to do it, we don't just say it. Well, with this version 5.0.14 we have added and fixed a lot of things (we got rid of some bugs, fixed some annoying pixels, and refreshed the graphics) and everything works great. Do we agree? Tap "update" and we will give you the best-looking, fastest and most impressive plugin around with the best updates in the world. Enjoy
+- New: Donation button (PayPal) has been made independent, this no longer uses fonts by Google.
+- New: After some testing, the header was implemented to force requests to one's domain at https://.
+- Fixed: Donation button (BuyMeCoffee) has been made independent, this no longer uses fonts by Google.
+- Fixed: Updated and tested some answers for HSTS preload.
+- Update: Issue that caused the Plugin blocking social access to be blocked. 
+
+= 5.0.13 =
+We don't want to tell you what to do, but here's the thing: if you updated the Headers Security Advanced & HSTS WP plugin last time, you saw that when we propose to do it, we don't just say it. Well, with this version 5.0.13 we have added and fixed a lot of things (we got rid of some bugs, fixed some annoying pixels, and refreshed the graphics) and everything works great. Do we agree? Tap "update" and we will give you the best-looking, fastest and most impressive plugin around with the best updates in the world. Enjoy
+- Update: There could have been problems with accessing the url /wp-admin and causing a 502 error, we found the annoying bug and now everything should work great.
+- Update: Donation button (Buy Me Coffee) has been made independent, this no longer uses fonts by Google.
+- Fixed: Updated and tested some answers for HSTS preload.
+- Fixed: Issue that caused the Plugin blocking social access to be blocked. 
+
+= 5.0.10 =
+ho ho ho merry christmas! We don't want to tell you what to do, but here's the thing: if you updated the Headers Security Advanced & HSTS WP plugin last time, you saw that when we propose to do it, we don't just say it. Well, with this version 5.0.10 we have added and fixed a lot of things (we got rid of some bugs, fixed some annoying pixels, and refreshed the graphics) and everything works great. Do we agree? Tap "update" and we will give you the best-looking, fastest and most impressive plugin around with the best updates in the world. Enjoy
+- Fixed: There could have been problems with accessing the url /wp-admin and causing a 502 error, we found the annoying bug and now everything should work great.
+- Fixed: Donation button (Buy Me Coffee) has been made independent, this no longer uses fonts by Google.
+- Fidex: Exterminated difficult Bugs and optimized loading speed and code optimization.
+- Update: updated and tested some answers for HSTS preload.
+- Update: Expect-CT functionality has been removed because it is no longer recommended. Although some browsers may still support it, I decided to avoid using it and changed the existing code; 
+- New: Added instructions on how to perform cache clearing with the CloudFlare service.
+- New: Compatibility with Wordpress 6.1.1 has been updated. 
+
+= 5.0.06 =
+We don't want to tell you what to do, but here's the thing: if you updated Headers Security Advanced & HSTS WP plugin last time, you saw that when we propose to do it, we don't just say it. Well, we've added and fixed a lot of things with this version 5.0.06 (we've exterminated some bugs, fixed some annoying pixels and refreshed the graphics) and everything works like a charm. So we're in agreement? Tap "update" and we'll give you the coolest, fastest and most awesome plugin out there with the best updates in the world. Enjoy
+- Fixed: There could have been problems with accessing the url /wp-admin and causing a 502 error, we found the annoying bug and now everything should work great.
+
+= 5.0.05 =
+We don't want to tell you what to do, but here's the thing: if you updated Headers Security Advanced & HSTS WP plugin last time, you saw that when we propose to do it, we don't just say it. Well, we've added and fixed a lot of things with this version 5.0.05 (we've exterminated some bugs, fixed some annoying pixels and refreshed the graphics) and everything works like a charm. So we're in agreement? Tap "update" and we'll give you the coolest, fastest and most awesome plugin out there with the best updates in the world. Enjoy
+- Fixed: After receiving two topics on the 502 issue, we fixed the problem that could occur on a restricted user.
 
 = 5.0.04 =
 We don't want to tell you what to do, but here's the thing: if you updated Headers Security Advanced & HSTS WP plugin last time, you saw that when we propose to do it, we don't just say it. Well, we've added and fixed a lot of things with this version 5.0.04 (we've exterminated some bugs, fixed some annoying pixels and refreshed the graphics) and everything works like a charm. So we're in agreement? Tap "update" and we'll give you the coolest, fastest and most awesome plugin out there with the best updates in the world. Enjoy

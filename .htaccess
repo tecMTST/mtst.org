@@ -15,3 +15,7 @@ RewriteRule . /mtst.org/index.php [L]
 </IfModule>
 
 # END WordPress
+
+# BEGIN WordPress HEADERS SECURITY ADVANCED & HSTS WP VERSION 5.0.21
+Header set Strict-Transport-Security "max-age=;"
+# END WordPress HEADERS SECURITY ADVANCED & HSTS WP VERSION 5.0.21

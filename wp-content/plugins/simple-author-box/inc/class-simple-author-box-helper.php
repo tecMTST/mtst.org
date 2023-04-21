@@ -152,7 +152,7 @@ class Simple_Author_Box_Helper
         $url = ('skype' != $icon_name) ? esc_url($url) : esc_attr($url);
 
         $svg_icon = Simple_Author_Box_Social::icon_to_svg($icon_name, $type);
-        return '<a target="' . esc_attr($sabox_blank) . '" href="' .  $url . '" aria-label="' . esc_attr(ucfirst(str_replace('_',' ',$icon_name))) . '" rel="nofollow noopener" class="' . esc_attr($sab_color) . '">' . $svg_icon . '</span></a>';
+        return '<a title="' . esc_attr(ucfirst(str_replace('_',' ',$icon_name))) . '" target="' . esc_attr($sabox_blank) . '" href="' .  $url . '" aria-label="' . esc_attr(ucfirst(str_replace('_',' ',$icon_name))) . '" rel="nofollow noopener" class="' . esc_attr($sab_color) . '">' . $svg_icon . '</span></a>';
     }
 
     public static function get_user_social_links($userd_id, $show_email = false)
@@ -172,7 +172,7 @@ class Simple_Author_Box_Helper
         return $social_links;
     }
 
-    public static function get_google_font_subsets()
+    public static function get_bunny_font_subsets()
     {
         return array(
             'none'         => 'None',
@@ -195,7 +195,7 @@ class Simple_Author_Box_Helper
         return $url;
     }
 
-    public static function get_google_fonts()
+    public static function get_bunny_fonts()
     {
         $fonts = array(
             'None',
@@ -919,7 +919,8 @@ class Simple_Author_Box_Helper
 
     public static function get_template($template_name = 'template-sab.php')
     {
-
+        global $simple_author_box;
+        
         $template = '';
 
         if (!$template) {

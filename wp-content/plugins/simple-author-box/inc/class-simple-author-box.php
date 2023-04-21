@@ -343,7 +343,7 @@ class Simple_Author_Box
     public function settings_link($links)
     {
         if (is_array($links)) {
-            $sab = sprintf('<a href="%s">%s</a>', admin_url('themes.php?page=simple-author-box'), __('Configure Author Box', 'saboxplugin'));
+            $sab = sprintf('<a href="%s">%s</a>', admin_url('themes.php?page=simple-author-box'), __('Configure Author Box', 'simple-author-box'));
             array_unshift($links, $sab);
         }
 
@@ -371,11 +371,9 @@ class Simple_Author_Box
 
             // Styles
             wp_enqueue_style('saboxplugin-admin-style', SIMPLE_AUTHOR_BOX_ASSETS . 'css/sabox-admin-style' . $suffix . '.css', array(), SIMPLE_AUTHOR_BOX_VERSION);
-            wp_enqueue_style('saboxplugin-admin-font', 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+            wp_enqueue_style('saboxplugin-admin-font', 'https://fonts.bunny.net/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
             wp_enqueue_style('wp-color-picker');
-            //wp_enqueue_style('jquery-ui', SIMPLE_AUTHOR_BOX_ASSETS . 'css/jquery-ui.min.css');
-            //wp_enqueue_media();
             wp_enqueue_style('saboxplugin-sweetalert', SIMPLE_AUTHOR_BOX_ASSETS . 'css/sweetalert2.min.css', array(), SIMPLE_AUTHOR_BOX_VERSION);
 
             wp_enqueue_style('wp-jquery-ui-dialog');
@@ -508,32 +506,32 @@ class Simple_Author_Box
         $sab_desc_font   = Simple_Author_Box_Helper::get_option('sab_box_desc_font');
         $sab_web_font    = Simple_Author_Box_Helper::get_option('sab_box_web_font');
 
-        $google_fonts = array();
+        $bunny_fonts = array();
 
         if ($sab_author_font && 'none' != strtolower($sab_author_font)) {
-            $google_fonts[] = str_replace(' ', '+', esc_attr($sab_author_font));
+            $bunny_fonts[] = str_replace(' ', '+', esc_attr($sab_author_font));
         }
 
         if ($sab_desc_font && 'none' != strtolower($sab_desc_font)) {
-            $google_fonts[] = str_replace(' ', '+', esc_attr($sab_desc_font));
+            $bunny_fonts[] = str_replace(' ', '+', esc_attr($sab_desc_font));
         }
 
         if ('1' == $this->options['sab_web'] && $sab_web_font && 'none' != strtolower($sab_web_font)) {
-            $google_fonts[] = str_replace(' ', '+', esc_attr($sab_web_font));
+            $bunny_fonts[] = str_replace(' ', '+', esc_attr($sab_web_font));
         }
 
-        $google_fonts = apply_filters('sabox_google_fonts', $google_fonts);
+        $bunny_fonts = apply_filters('sabox_bunny_fonts', $bunny_fonts);
 
-        $google_fonts = array_unique($google_fonts);
+        $bunny_fonts = array_unique($bunny_fonts);
 
-        if (!empty($google_fonts)) { // let's check the array's not empty before actually loading; we want to avoid loading 'none' font-familes
-            $final_google_fonts = array();
+        if (!empty($bunny_fonts)) { // let's check the array's not empty before actually loading; we want to avoid loading 'none' font-familes
+            $final_bunny_fonts = array();
 
-            foreach ($google_fonts as $v) {
-                $final_google_fonts[] = $v . ':400,700,400italic,700italic';
+            foreach ($bunny_fonts as $v) {
+                $final_bunny_fonts[] = $v . ':400,700,400italic,700italic';
             }
 
-            wp_register_style('sab-font', $sab_protocol . '://fonts.googleapis.com/css?family=' . implode('|', $final_google_fonts) . $sab_subset, array(), null);
+            wp_register_style('sab-font', $sab_protocol . '://fonts.bunny.net/css?family=' . implode('|', $final_bunny_fonts) . $sab_subset, array(), null);
         }
         /**
          * end changes introduced in 2.0.4
@@ -543,7 +541,7 @@ class Simple_Author_Box
             return;
         }
 
-        if (!empty($google_fonts)) {
+        if (!empty($bunny_fonts)) {
             wp_enqueue_style('sab-font');
         }
     }
@@ -560,7 +558,7 @@ class Simple_Author_Box
         $style .= Simple_Author_Box_Helper::generate_inline_css();
         $style .= '</style>';
 
-        echo $style;
+        wpsabox_wp_kses_wf($style);
     }
 
     public function shortcode($atts)

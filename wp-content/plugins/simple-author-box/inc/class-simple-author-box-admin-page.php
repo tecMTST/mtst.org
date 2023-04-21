@@ -458,24 +458,24 @@ class Simple_Author_Box_Admin_Page
             ),
             'typography-options'    => array(
                 'sab_box_subset'    => array(
-                    'label'       => __('Google font characters subset', 'simple-author-box'),
-                    'description' => __('Some Google Fonts do not support all non-latin character subsets', 'simple-author-box'),
+                    'label'       => __('Bunny font characters subset', 'simple-author-box'),
+                    'description' => __('Some Bunny Fonts do not support all non-latin character subsets', 'simple-author-box'),
                     'type'        => 'select',
-                    'choices'     => Simple_Author_Box_Helper::get_google_font_subsets(),
+                    'choices'     => Simple_Author_Box_Helper::get_bunny_font_subsets(),
                     'default'     => 'none',
                 ),
                 'sab_box_name_font' => array(
                     'label'       => __('Author name font family', 'simple-author-box'),
                     'description' => __('Select the font family for the author\'s name', 'simple-author-box'),
                     'type'        => 'select',
-                    'choices'     => Simple_Author_Box_Helper::get_google_fonts(),
+                    'choices'     => Simple_Author_Box_Helper::get_bunny_fonts(),
                     'default'     => 'None',
                 ),
                 'sab_box_job_font' => array(
                     'label'       => __('Author job title font family', 'simple-author-box'),
                     'description' => __('Select the font family for the author\'s job title', 'simple-author-box'),
                     'type'        => 'select',
-                    'choices'     => Simple_Author_Box_Helper::get_google_fonts(),
+                    'choices'     => Simple_Author_Box_Helper::get_bunny_fonts(),
                     'default'     => 'None',
                     'profeature'  => true,
                 ),
@@ -483,7 +483,7 @@ class Simple_Author_Box_Admin_Page
                     'label'       => __('Author website font family', 'simple-author-box'),
                     'description' => __('Select the font family for the author\'s website', 'simple-author-box'),
                     'type'        => 'select',
-                    'choices'     => Simple_Author_Box_Helper::get_google_fonts(),
+                    'choices'     => Simple_Author_Box_Helper::get_bunny_fonts(),
                     'default'     => 'None',
                     'condition'   => 'sab_web',
                 ),
@@ -491,7 +491,7 @@ class Simple_Author_Box_Admin_Page
                     'label'       => __('Author description font family', 'simple-author-box'),
                     'description' => __('Select the font family for the author\'s description', 'simple-author-box'),
                     'type'        => 'select',
-                    'choices'     => Simple_Author_Box_Helper::get_google_fonts(),
+                    'choices'     => Simple_Author_Box_Helper::get_bunny_fonts(),
                     'default'     => 'None',
                 ),
                 'sab_box_name_size' => array(
@@ -808,7 +808,7 @@ class Simple_Author_Box_Admin_Page
                 <div class="sabox-masthead-left">
                     <div class="wp-heading-inline">
                         <?php
-                        echo '<img src="' . SIMPLE_AUTHOR_BOX_ASSETS . 'img/simple-author-box-logo.png' . '" title="' . __('Simple Author Box', 'simple-author-box') . '" class="sab-logo">';
+                        echo '<img src="' . esc_url(SIMPLE_AUTHOR_BOX_ASSETS) . 'img/simple-author-box-logo.png' . '" title="' . esc_html__('Simple Author Box', 'simple-author-box') . '" class="sab-logo">';
                         ?>
                     </div>
                 </div>
@@ -822,7 +822,7 @@ class Simple_Author_Box_Admin_Page
             <?php
 
             if (get_transient('sab_error_msg')) {
-                echo get_transient('sab_error_msg');
+                wpsabox_wp_kses_wf(get_transient('sab_error_msg'));
             }
             ?>
             <div class="sabox-left">
@@ -875,7 +875,12 @@ class Simple_Author_Box_Admin_Page
                             }
 
                             echo '<div class="epfw-turn-into-tab" id="' . esc_attr($tab_name) . '-tab">';
-                            echo '<h3 class="sab-tab-title">' . $this->sections[$tab_name]['label'] . ($tab_name == 'themes' ? $this->generate_pro_label('themes'):'') . '</h3>';
+                            echo '<h3 class="sab-tab-title">';
+                            echo esc_html($this->sections[$tab_name]['label']);
+                            if($tab_name == 'themes'){
+                                esc_html($this->generate_pro_label('themes'));
+                            }
+                            echo '</h3>';
 
                             if($tab_name == 'typography-options' || $tab_name == 'appearance-options' || $tab_name == 'visibility') {
                                 echo '<div class="sab-tab-save">';
@@ -907,7 +912,7 @@ class Simple_Author_Box_Admin_Page
         </div><!-- sabox-content -->
 
     <?php
-      echo $this->pro_dialog();
+      wpsabox_wp_kses_wf($this->pro_dialog());
     }
 
     function pro_dialog()
@@ -1046,17 +1051,6 @@ class Simple_Author_Box_Admin_Page
 
     public function save_settings()
     {
-        if (isset($_GET['sab_wl'])) {
-            $settings = Simple_Author_Box_Helper::get_option('saboxplugin_options');
-            if ($_GET['sab_wl'] == 'true') {
-                $settings['sab_whitelabel'] = 1;
-            } else {
-                $settings['sab_whitelabel'] = 0;
-            }
-            update_option('saboxplugin_options', $settings);
-            wp_safe_redirect(admin_url('/themes.php?page=simple-author-box'));
-        }
-
         if (isset($_POST['sabox_plugin_settings_page']) && wp_verify_nonce($_POST['sabox_plugin_settings_page'], 'sabox-plugin-settings') && isset($_POST['submit-import'])) { // import settings
             unset($_POST['submit-import']);
 
@@ -1258,12 +1252,12 @@ class Simple_Author_Box_Admin_Page
         }
 
         if ($field_name == 'themes') {
-            echo '<td colspan="2">' . $this->themes_tab() . '</td>';
+            wpsabox_wp_kses_wf('<td colspan="2">' . $this->themes_tab() . '</td>');
             return;
         }
 
         if ($field_name == 'advanced') {
-            echo '<td colspan="2">' . $this->advanced_tab() . '</td>';
+            wpsabox_wp_kses_wf('<td colspan="2">' . $this->advanced_tab() . '</td>');
             return;
         }
 
@@ -1281,7 +1275,7 @@ class Simple_Author_Box_Admin_Page
 
         if ($field['type'] == 'hidden') {
             $value = isset($this->options[$field_name]) ? $this->options[$field_name] : 'none';
-            echo '<input type="hidden" class="sabox-text" id="' . esc_attr($field_name) . '" name="' . esc_attr($name) . '" value="' . $value . '" />';
+            echo '<input type="hidden" class="sabox-text" id="' . esc_attr($field_name) . '" name="' . esc_attr($name) . '" value="' . esc_attr($value) . '" />';
             return;
         }
         echo '<th scope="row">';
@@ -1302,7 +1296,7 @@ class Simple_Author_Box_Admin_Page
         }
 
         if($profeature){
-            echo '<div class="open-upsell open-upsell-block" data-feature="' . $field_name . '">';
+            echo '<div class="open-upsell open-upsell-block" data-feature="' . esc_attr($field_name) . '">';
         }
         switch ($field['type']) {
             case 'toggle':
@@ -1332,11 +1326,11 @@ class Simple_Author_Box_Admin_Page
                 break;
             case 'text':
                 $value = isset($this->options[$field_name]) ? $this->options[$field_name] : $field['default'];
-                echo '<input type="text" class="sabox-text" id="' . esc_attr($field_name) . '" name="' . esc_attr($name) . '" value="' . $value . '" ' . ($profeature?'disabled':'') . ' />';
+                echo '<input type="text" class="sabox-text" id="' . esc_attr($field_name) . '" name="' . esc_attr($name) . '" value="' . esc_attr($value) . '" ' . ($profeature?'disabled':'') . ' />';
                 break;
             case 'textarea':
                 $value = isset($this->options[$field_name]) ? $this->options[$field_name] : $field['default'];
-                echo '<textarea rows="3" cols="50"  id="' . esc_attr($field_name) . '" value="' . esc_attr($value) . '" name="' . esc_attr($name) . '" class="saboxfield sabox-text" ' . ($profeature?'disabled':'') . '>' . $value . '</textarea>';
+                echo '<textarea rows="3" cols="50"  id="' . esc_attr($field_name) . '" value="' . esc_attr($value) . '" name="' . esc_attr($name) . '" class="saboxfield sabox-text" ' . ($profeature?'disabled':'') . '>' . esc_textarea($value) . '</textarea>';
                 break;
             case 'readonly':
                 echo '<textarea clas="regular-text" rows="3" cols="50" onclick="this.focus();this.select();" readonly="readonly">' . esc_attr($field['value']) . '</textarea>';
@@ -1365,7 +1359,7 @@ class Simple_Author_Box_Admin_Page
                 $value = isset($this->options[$field_name]) ? $this->options[$field_name] : '';
                 echo '<div class="sab-element-image-wrapper">';
                 if (!empty($value)) {
-                    echo '<span class="sabox-preview-area" id="background-preview"><img src="' . $value . '" />&nbsp;<a href="javascript: void(0);" class="sab-remove-image">Remove Image</a></span>';
+                    echo '<span class="sabox-preview-area" id="background-preview"><img src="' . esc_url($value) . '" />&nbsp;<a href="javascript: void(0);" class="sab-remove-image">Remove Image</a></span>';
                 } else {
                     echo '<span class="sabox-preview-area" id="background-preview"><span class="sabox-preview-area-placeholder">Select an image from our 400,000+ images gallery, or upload your own</span></span>';
                 }
@@ -1400,7 +1394,8 @@ class Simple_Author_Box_Admin_Page
 
                 foreach ($field['choices'] as $key => $choice) {
                     echo '<div>';
-                    echo '<input id="' . $key . '-' . $field_name . '" type="checkbox" value="' . $key . '" ' . checked(1, in_array($key, $checked), false) . ' name="' . esc_attr($name) . '[]"><label for="' . $key . '-' . $field_name . '" class="checkbox-label">' . $choice . '</label>';
+                    echo '<input id="' . esc_attr($key) . '-' . esc_attr($field_name) . '" type="checkbox" value="' . esc_attr($key) . '" ' . esc_html(checked(1, in_array($key, $checked), false)) . ' name="' . esc_attr($name) . '[]">';
+                    echo '<label for="' . esc_attr($key) . '-' . esc_attr($field_name) . '" class="checkbox-label">' . esc_attr($choice) . '</label>';
                     echo '</div>';
                 }
                 echo '</div>';

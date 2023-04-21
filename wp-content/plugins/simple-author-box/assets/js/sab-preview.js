@@ -45,7 +45,7 @@ wp.SAB.views.Settings = Backbone.View.extend({
     initialize: function( args ) {
 
     	// Check for Google Fonts
-    	this.checkGoogleFonts();
+    	this.checkBunnyFonts();
 
     	this.listenTo( this.model, 'change:sab_email', this.emailVisibility );
 
@@ -291,7 +291,7 @@ wp.SAB.views.Settings = Backbone.View.extend({
     	if ( '' == font || 'None' == font ) {
     		font = 'inherit';
     	}else{
-    		this.loadGoogleFonts( font );
+    		this.loadBunnyFonts( font );
     	}
 
 
@@ -353,7 +353,7 @@ wp.SAB.views.Settings = Backbone.View.extend({
     	if ( '' == font || 'None' == font ) {
     		font = 'inherit';
     	}else{
-    		this.loadGoogleFonts( font );
+    		this.loadBunnyFonts( font );
     	}
 
 
@@ -379,7 +379,7 @@ wp.SAB.views.Settings = Backbone.View.extend({
     	if ( '' == font || 'None' == font ) {
     		font = 'inherit';
     	}else{
-    		this.loadGoogleFonts( font );
+    		this.loadBunnyFonts( font );
     	}
 
     	if ( '0' == style ) {
@@ -455,30 +455,30 @@ wp.SAB.views.Settings = Backbone.View.extend({
 
     },
 
-    checkGoogleFonts: function() {
+    checkBunnyFonts: function() {
     	var authorFont = this.model.getAttribute( 'sab_box_name_font' ),
     		webFont = this.model.getAttribute( 'sab_box_web_font' ),
     		descriptionFont = this.model.getAttribute( 'sab_box_desc_font' );
 
     	if (  '' != authorFont && 'None' != authorFont  ) {
-    		this.loadGoogleFonts( authorFont );
+    		this.loadBunnyFonts( authorFont );
     	}
 
     	if (  '' != webFont && 'None' != webFont  ) {
-    		this.loadGoogleFonts( webFont );
+    		this.loadBunnyFonts( webFont );
     	}
 
     	if (  '' != descriptionFont && 'None' != descriptionFont  ) {
-    		this.loadGoogleFonts( descriptionFont );
+    		this.loadBunnyFonts( descriptionFont );
     	}
 
     },
 
-    loadGoogleFonts: function( font ) {
+    loadBunnyFonts: function( font ) {
     	if ( ! wp.SAB.Fonts.includes( font ) ) {
     		wp.SAB.Fonts.push( font );
     		WebFont.load({
-			    google: {
+			    bunny: {
 			      families: [ font ]
 			    }
 			});

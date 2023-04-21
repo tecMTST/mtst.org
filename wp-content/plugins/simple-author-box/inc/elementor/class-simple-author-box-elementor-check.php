@@ -83,7 +83,7 @@ final class SAB_Elementor_Check {
             self::MINIMUM_ELEMENTOR_VERSION
         );
 
-        printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
+        wpsabox_wp_kses_wf('<div class="notice notice-warning is-dismissible"><p>' . $message . '</p></div>');
     }
 
     /**
@@ -106,7 +106,7 @@ final class SAB_Elementor_Check {
             self::MINIMUM_PHP_VERSION
         );
 
-        printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
+        wpsabox_wp_kses_wf('<div class="notice notice-warning is-dismissible"><p>' . $message . '</p></div>');
     }
 }
 

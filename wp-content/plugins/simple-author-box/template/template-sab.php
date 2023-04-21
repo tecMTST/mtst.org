@@ -18,10 +18,9 @@ if (isset($sabox_options['sab_web_target']) && '1' == $sabox_options['sab_web_ta
     $sab_web_target = '_self';
 }
 
+$sab_web_rel = false;
 if (isset($sabox_options['sab_web_rel']) && '1' == $sabox_options['sab_web_rel']) {
-    $sab_web_rel = 'rel="nofollow"';
-} else {
-    $sab_web_rel = '';
+    $sab_web_rel = true;
 }
 
 $sab_author_link = sprintf('<a href="%s" class="vcard author" rel="author" itemprop="url"><span class="fn" itemprop="name">%s</span></a>', esc_url(get_author_posts_url($sabox_author_id)), esc_html(get_the_author_meta('display_name', $sabox_author_id)));
@@ -46,7 +45,7 @@ if ('' != $author_description || isset($sabox_options['sab_no_description']) && 
             $alt     = $mediaid ? get_post_meta($mediaid, '_wp_attachment_image_alt', true) : get_the_author_meta('display_name', $sabox_author_id);
 
             $link = null;
-            $nofollow = '';
+            $nofollow = false;
             if (isset($sabox_options['sab_author_link'])) {
                 if ('author-page' == $sabox_options['sab_author_link']) {
 
@@ -55,7 +54,7 @@ if ('' != $author_description || isset($sabox_options['sab_no_description']) && 
                         $link = get_author_posts_url($sabox_author_id);
                 } elseif ('author-website' == $sabox_options['sab_author_link']) {
                     if (isset($sabox_options['sab_author_link_noffolow']) && '1' == $sabox_options['sab_author_link_noffolow']) {
-                        $nofollow = ' rel="nofollow"';
+                        $nofollow = true;
                     }
 
                     $link = get_the_author_meta('user_url', $sabox_author_id);
@@ -63,9 +62,9 @@ if ('' != $author_description || isset($sabox_options['sab_no_description']) && 
             }
 
             if ($link != null)
-                echo "<a $nofollow href='" . $link . "'>";
+                echo "<a " . ($nofollow?' rel="nofollow"':'') . " href='" . esc_url($link) . "'>";
 
-            echo '<img src="' . esc_url($custom_profile_image) . '" width="' . $sabox_options['sab_avatar_size'] . '"  height="' . $sabox_options['sab_avatar_size'] . '" alt="' . esc_attr($alt) . '" itemprop="image">';
+            echo '<img src="' . esc_url($custom_profile_image) . '" width="' . esc_attr($sabox_options['sab_avatar_size']) . '"  height="' . esc_attr($sabox_options['sab_avatar_size']) . '" alt="' . esc_attr($alt) . '" itemprop="image">';
 
             if ($link != null)
                 echo "</a>";
@@ -77,9 +76,9 @@ if ('' != $author_description || isset($sabox_options['sab_no_description']) && 
 
         // author box name
         echo '<div class="saboxplugin-authorname">';
-        echo apply_filters('sabox_author_html', $sab_author_link, $sabox_options, $sabox_author_id);
+        wpsabox_wp_kses_wf(apply_filters('sabox_author_html', $sab_author_link, $sabox_options, $sabox_author_id));
         if (is_user_logged_in() && get_current_user_id() == $sabox_author_id) {
-            echo '<a class="sab-profile-edit" target="_blank" href="' . get_edit_user_link() . '"> ' . esc_html__('Edit profile', 'simple-author-box') . '</a>';
+            echo '<a class="sab-profile-edit" target="_blank" href="' . esc_url(get_edit_user_link()) . '"> ' . esc_html__('Edit profile', 'simple-author-box') . '</a>';
         }
         echo '</div>';
 
@@ -89,7 +88,7 @@ if ('' != $author_description || isset($sabox_options['sab_no_description']) && 
 
         $author_description = wptexturize($author_description);
         $author_description = wpautop($author_description);
-        echo wp_kses_post($author_description);
+        wpsabox_wp_kses_wf($author_description);
         if ('' == $author_description && is_user_logged_in() && $sabox_author_id == get_current_user_id()) {
             echo '<a target="_blank" href="' . admin_url() . 'profile.php?#wp-description-wrap">' . esc_html__('Add Biographical Info', 'simple-author-box') . '</a>';
         }
@@ -99,7 +98,7 @@ if ('' != $author_description || isset($sabox_options['sab_no_description']) && 
         if (is_single() || is_page()) {
             if (get_the_author_meta('user_url') != '' && '1' == $sabox_options['sab_web']) { // author website on single
                 echo '<div class="saboxplugin-web ' . esc_attr($sab_web_align) . '">';
-                echo '<a href="' . esc_url(get_the_author_meta('user_url', $sabox_author_id)) . '" target="' . esc_attr($sab_web_target) . '" ' . $sab_web_rel . '>' . esc_html(Simple_Author_Box_Helper::strip_prot(get_the_author_meta('user_url', $sabox_author_id))) . '</a>';
+                echo '<a href="' . esc_url(get_the_author_meta('user_url', $sabox_author_id)) . '" target="' . esc_attr($sab_web_target) . '" ' . ($sab_web_rel?'rel="nofollow"':'') . '>' . esc_html(Simple_Author_Box_Helper::strip_prot(get_the_author_meta('user_url', $sabox_author_id))) . '</a>';
                 echo '</div>';
             }
         }
@@ -108,7 +107,7 @@ if ('' != $author_description || isset($sabox_options['sab_no_description']) && 
         if (is_author() || is_archive()) {
             if (get_the_author_meta('user_url') != '') { // force show author website on author.php or archive.php
                 echo '<div class="saboxplugin-web ' . esc_attr($sab_web_align) . '">';
-                echo '<a href="' . esc_url(get_the_author_meta('user_url', $sabox_author_id)) . '" target="' . esc_attr($sab_web_target) . '" ' . $sab_web_rel . '>' . esc_html(Simple_Author_Box_Helper::strip_prot(get_the_author_meta('user_url', $sabox_author_id))) . '</a>';
+                echo '<a href="' . esc_url(get_the_author_meta('user_url', $sabox_author_id)) . '" target="' . esc_attr($sab_web_target) . '" ' . ($sab_web_rel?'rel="nofollow"':'') . '>' . esc_html(Simple_Author_Box_Helper::strip_prot(get_the_author_meta('user_url', $sabox_author_id))) . '</a>';
                 echo '</div>';
             }
         }
@@ -160,7 +159,7 @@ if ('' != $author_description || isset($sabox_options['sab_no_description']) && 
                 }
 
                 if (!empty($social_link)) {
-                    echo Simple_Author_Box_Helper::get_sabox_social_icon($social_link, $social_platform);
+                    wpsabox_wp_kses_wf(Simple_Author_Box_Helper::get_sabox_social_icon($social_link, $social_platform));
                 }
             }
 

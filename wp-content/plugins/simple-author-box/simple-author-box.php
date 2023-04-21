@@ -3,20 +3,20 @@
 * Plugin Name: Simple Author Box
 * Plugin URI: https://wpauthorbox.com/
 * Description: Adds a responsive author box with social icons on any post.
-* Version: 2.48
+* Version: 2.51
 * Author: WebFactory Ltd
 * Author URI: https://www.webfactoryltd.com/
 * Requires: 4.6
 * License: GPLv3 or later
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 * Requires PHP: 5.6
-* Tested up to: 6.0
+* Tested up to: 6.2
 
 *
 * Copyright 2014-2017 Tiguan				office@tiguandesign.com
 * Copyright 2017-2019 MachoThemes 		office@machothemes.com
-* Copyright 2019 GreenTreeLabs		diego@greentreelabs.net
-* Copyright 2019-2022 WebFactory Ltd		support@webfactoryltd.com
+* Copyright 2019-2019 GreenTreeLabs		diego@greentreelabs.net
+* Copyright 2019-2023 WebFactory Ltd		support@webfactoryltd.com
 *
 * This program is free software; you can redistribute it and/or modify
 * it under the terms of the GNU General Public License, version 3, as
@@ -48,6 +48,9 @@ define('SIMPLE_AUTHOR_POINTERS', 'sab_pointers');
 $plugin_data = get_file_data(__FILE__, array('version' => 'Version'), 'plugin');
 define('SIMPLE_AUTHOR_BOX_VERSION', $plugin_data['version']);
 require_once SIMPLE_AUTHOR_BOX_PATH . 'inc/class-simple-author-box.php';
+
+require_once dirname(__FILE__) . '/wf-flyout/wf-flyout.php';
+new wf_flyout(__FILE__);
 
 global $simple_author_box;
 $simple_author_box = Simple_Author_Box::get_instance();

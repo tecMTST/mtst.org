@@ -72,4 +72,6 @@ $wpseo_no_index_author_label = sprintf(
 			<?php esc_html_e( 'Removes the inclusive language analysis section from the metabox and disables all inclusive language-related suggestions.', 'wordpress-seo' ); ?>
 		</p>
 	<?php endif; ?>
+
+	<?php do_action( 'wpseo_render_user_profile', $user ); ?>
 </div>

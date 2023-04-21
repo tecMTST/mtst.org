@@ -39,7 +39,6 @@ class Simple_Author_Box_User_Profile {
             <h2><?php esc_html_e('Social Media Links (Simple Author Box)', 'simple-author-box'); ?></h2>
             <table class="form-table" id="sabox-social-table">
                 <?php
-
                 if (!empty($social_links)) {
                     foreach ($social_links as $social_platform => $social_link) {
                         ?>
@@ -56,7 +55,9 @@ class Simple_Author_Box_User_Profile {
                                 <input name="sabox-social-links[]"
                                        type="<?php echo ('whatsapp' == $social_platform || 'phone' == $social_platform) ? 'tel' : 'text'; ?>"
                                        class="regular-text"
-                                       value="<?php echo ( 'whatsapp' == $social_platform  || 'telegram' == $social_platform || 'skype' == $social_platform || 'phone' == $social_platform ) ? esc_attr($social_link) : esc_url( $social_link ); ?>">
+                                       value="<?php 
+                                       echo esc_attr($social_link);
+                                       ?>">
                                 <span class="dashicons dashicons-trash"></span>
                             <td>
                         </tr>
@@ -112,9 +113,9 @@ class Simple_Author_Box_User_Profile {
                     <th><label for="cupp_meta"><?php esc_html_e('Profile Image', 'simple-author-box'); ?></label></th>
                     <td>
                         <div id="sab-current-image">
-                            <?php wp_nonce_field('sabox-profile-image', 'sabox-profile-nonce'); ?>
-                            <img data-default="<?php echo esc_url_raw($default_url); ?>"
-                                 src="<?php echo '' != $image ? esc_url_raw($image) : esc_url_raw($default_url); ?>"><br>
+                            <?php wp_nonce_field('sabox-profile-nonce', 'sabox-profile-nonce'); ?>
+                            <img data-default="<?php echo esc_url($default_url); ?>"
+                                 src="<?php echo '' != $image ? esc_url($image) : esc_url($default_url); ?>"><br>
                             <input type="text" name="sabox-custom-image" id="sabox-custom-image" class="regular-text"
                                    value="<?php echo esc_attr($image); ?>">
                         </div>
@@ -133,47 +134,26 @@ class Simple_Author_Box_User_Profile {
     }
 
     public function save_user_profile($user_id) {
+        if (!isset($_POST['sabox-profile-nonce']) || !wp_verify_nonce($_POST['sabox-profile-nonce'], 'sabox-profile-nonce')) {
+            return;
+        }
 
         if (isset($_POST['sabox-social-icons']) && isset($_POST['sabox-social-links'])) {
-            $social_platforms = apply_filters('sabox_social_icons', Simple_Author_Box_Helper::$social_icons);
-            $social_links     = array();
-
-            foreach ($_POST['sabox-social-links'] as $index => $social_link) {
-                if ($social_link) {
-                    $social_platform = isset($_POST['sabox-social-icons'][$index]) ? $_POST['sabox-social-icons'][$index] : false;
-                    if ($social_platform && isset($social_platforms[$social_platform])) {
-                        if ('whatsapp' == $social_platform || 'phone' == $social_platform) {
-                            $social_links[$social_platform] = esc_html($social_link);
-                        } else {
-                            $social_links[$social_platform] = esc_url_raw($social_link);
-                        }
-                    }
-                }
-            }
-
 			$social_platforms = apply_filters( 'sabox_social_icons', Simple_Author_Box_Helper::$social_icons );
 			$social_links     = array();
 			foreach ( $_POST['sabox-social-links'] as $index => $social_link ) {
 				if ( $social_link ) {
 					$social_platform = isset( $_POST['sabox-social-icons'][ $index ] ) ? $_POST['sabox-social-icons'][ $index ] : false;
 					if ( $social_platform && isset( $social_platforms[ $social_platform ] ) ) {
-						if ( 'whatsapp' == $social_platform  || 'telegram' == $social_platform || 'skype' == $social_platform || 'phone' == $social_platform) {
-							$social_links[ $social_platform ] = esc_html($social_link);
-						} else {
-							$social_links[ $social_platform ] = esc_url_raw( $social_link );
-						}
+						$social_links[$social_platform] = sanitize_text_field($social_link);
 					}
 				}
             }
 
-        update_user_meta($user_id, 'sabox_social_links', $social_links);
+            update_user_meta($user_id, 'sabox_social_links', $social_links);
 
         } else {
             delete_user_meta($user_id, 'sabox_social_links');
-        }
-
-        if (!isset($_POST['sabox-profile-nonce']) || !wp_verify_nonce($_POST['sabox-profile-nonce'], 'sabox-profile-image')) {
-            return;
         }
 
         if (!current_user_can('upload_files', $user_id)) {

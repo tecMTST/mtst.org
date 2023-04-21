@@ -56,7 +56,7 @@ class Simple_Author_Box_Previewer
         // loaded only on plugin page
         if ('appearance_page_simple-author-box' == $hook) {
 
-            wp_enqueue_script('sabox-webfont', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js', array(), false, true);
+            wp_enqueue_script('sabox-webfont', SIMPLE_AUTHOR_BOX_ASSETS . 'js/webfont.js', array(), false, true);
             wp_enqueue_script('sabox-previewer', SIMPLE_AUTHOR_BOX_ASSETS . 'js/sab-preview.js', array(
                 'jquery',
                 'backbone',
@@ -70,7 +70,7 @@ class Simple_Author_Box_Previewer
         $this->options = Simple_Author_Box_Helper::get_option('saboxplugin_options');
 
         echo '<style type="text/css">';
-        echo $this->generate_inline_css();
+        wpsabox_wp_kses_wf($this->generate_inline_css());
         echo '</style>';
 
         echo '<div class="saboxplugin-wrap" style="max-width:656px;margin:0 auto;width:100%;">'; // start saboxplugin-wrap div
@@ -108,14 +108,14 @@ class Simple_Author_Box_Previewer
                 break;
         }
 
-        echo '<div class="' . $avatar_classes . '">';
+        echo '<div class="' . esc_attr($avatar_classes) . '">';
         echo get_avatar(1, 264, 'mystery', '', array('force_default' => true));
 
         echo '</div>';
 
         // author box name
         echo '<div class="saboxplugin-authorname">';
-        echo apply_filters('sabox_preview_author_html', '<a href="#" class="vcard author"><span class="fn">John Doe</span></a>');
+        wpsabox_wp_kses_wf(apply_filters('sabox_preview_author_html', '<a href="#" class="vcard author"><span class="fn">John Doe</span></a>'));
         echo '</div>';
 
 
@@ -157,7 +157,7 @@ class Simple_Author_Box_Previewer
             $extra_class .= ' sab-icons-with-border';
         }
 
-        echo '<div class="saboxplugin-socials sabox-colored' . $extra_class . '" style="' . ('1' == $this->options['sab_hide_socials'] ? 'display:none;' : '') . '">';
+        echo '<div class="saboxplugin-socials sabox-colored' . esc_attr($extra_class) . '" style="' . ('1' == $this->options['sab_hide_socials'] ? 'display:none;' : '') . '">';
         $simple_icons_html = '';
         $circle_icons_html = '';
         $square_icons_html = '';
@@ -170,9 +170,9 @@ class Simple_Author_Box_Previewer
             $square_icons_html .= sprintf($link, 'saboxplugin-icon-color', Simple_Author_Box_Social::icon_to_svg($social_platform, 'square'));
         }
 
-        echo '<div class="sab-simple-icons">' . $simple_icons_html . '</div>';
-        echo '<div class="sab-circle-icons">' . $circle_icons_html . '</div>';
-        echo '<div class="sab-square-icons">' . $square_icons_html . '</div>';
+        wpsabox_wp_kses_wf('<div class="sab-simple-icons">' . $simple_icons_html . '</div>');
+        wpsabox_wp_kses_wf('<div class="sab-circle-icons">' . $circle_icons_html . '</div>');
+        wpsabox_wp_kses_wf('<div class="sab-square-icons">' . $square_icons_html . '</div>');
 
 
         echo '</div>';

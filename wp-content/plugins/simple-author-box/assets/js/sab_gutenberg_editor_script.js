@@ -417,32 +417,32 @@ var Edit = function (_Component) {
 				sab_subset = '&amp;subset=latin';
 			}
 
-			var google_fonts = [];
+			var bunny_fonts = [];
 
 			if ('None' != sabVars.sab_box_name_font) {
-				google_fonts.push(sabVars.sab_box_name_font.replace(' ', '+'));
+				bunny_fonts.push(sabVars.sab_box_name_font.replace(' ', '+'));
 			}
 
 			if ('None' != sabVars.sab_box_desc_font) {
-				google_fonts.push(sabVars.sab_box_desc_font.replace(' ', '+'));
+				bunny_fonts.push(sabVars.sab_box_desc_font.replace(' ', '+'));
 			}
 
 			if ('None' != sabVars.sab_box_web_font) {
-				google_fonts.push(sabVars.sab_box_web_font.replace(' ', '+'));
+				bunny_fonts.push(sabVars.sab_box_web_font.replace(' ', '+'));
 			}
 
 			function onlyUnique(value, index, self) {
 				return self.indexOf(value) === index;
 			}
-			google_fonts = google_fonts.filter(onlyUnique);
+			bunny_fonts = bunny_fonts.filter(onlyUnique);
 
-			if (google_fonts.length > 0) {
+			if (bunny_fonts.length > 0) {
 
-				google_fonts.forEach(function (entry, index) {
-					google_fonts[index] = entry + ':400,700,400italic,700italic';
+				bunny_fonts.forEach(function (entry, index) {
+					bunny_fonts[index] = entry + ':400,700,400italic,700italic';
 				});
 
-				return React.createElement('link', { href: 'https://fonts.googleapis.com/css?family=' + google_fonts.join('|') + sab_subset, rel: 'stylesheet' });
+				return React.createElement('link', { href: 'https://fonts.bunny.net/css?family=' + bunny_fonts.join('|') + sab_subset, rel: 'stylesheet' });
 			}
 		}
 	}, {

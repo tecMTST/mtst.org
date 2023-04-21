@@ -54,15 +54,15 @@ class SAB_Elementor_Widget extends \Elementor\Widget_Base {
         $settings = $this->get_settings_for_display();
         $author   = $settings['sab_author'];
         if ('auto' != $author) {
-            echo do_shortcode('[simple-author-box ids="' . esc_attr($author) . '"]');
+            wpsabox_wp_kses_wf(do_shortcode('[simple-author-box ids="' . esc_attr($author) . '"]'));
         } else {
-            echo wpsabox_author_box();
+            wpsabox_wp_kses_wf(wpsabox_author_box());
         }
 
     }
 
     protected function _content_template() {
-        echo wpsabox_author_box();
+        wpsabox_wp_kses_wf(wpsabox_author_box());
     }
 
     public function sab_get_authors() {

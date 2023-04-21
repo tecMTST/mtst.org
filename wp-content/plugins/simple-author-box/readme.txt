@@ -3,8 +3,8 @@ Contributors: WebFactory
 Tags: author box, responsive author box, author profile fields, author social icons, author bio, author description, author profile, post author, guest author, guest posts, guest author box, block
 Requires at least: 4.6
 Requires PHP: 5.6
-Tested up to: 6.0
-Stable tag: 2.48
+Tested up to: 6.2
+Stable tag: 2.51
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -24,6 +24,7 @@ Add a responsive author box with social icons to any post. Great author box for 
 * Simple Author Box has RTL support
 * Simple Author Box has AMP support
 * Great for guest posts, and guest authors
+* GDPR compatible Bunny Fonts
 
 = Simple Author Box Pro Features =
 
@@ -46,8 +47,26 @@ Add a responsive author box with social icons to any post. Great author box for 
 
 <a href="https://wpauthorbox.com/">Read more</a> about the Simple Author Box advanced features.
 
+= GDPR Compatibility =
+We are not lawyers. Please do not take any of the following as legal advice.
+Simple Author Box does not track, collect or process any user data. If you opt to use Bunny Fonts they will be loaded from a 3rd party CDN. In that case user data will be processed according to their terms of service. Based on that, we feel it's GDPR compatible, but again, please, don't take this as legal advice.
+
 
 == Changelog ==
+
+= 2.51 =
+* 2023-03-07
+* Minor security/nonce fixes
+
+= 2.50 =
+* 2023-01-06
+* Minor accessibility fixes
+
+= 2.49 =
+* 2022-11-21
+* Replaced Google Fonts with GDPR Compatible Bunny Fonts
+* Minor security fixes
+
 = 2.48 =
 * 2022-04-14
 * Fixed author box showing on all post types in some cases
