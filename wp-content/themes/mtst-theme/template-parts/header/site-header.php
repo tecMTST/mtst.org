@@ -35,7 +35,7 @@
         </div>
         <div class="menu-principal container">
             <nav role="navigation">
-                <ul calss="menu" id="menu">
+                <ul class="menu" id="menu">
                     <li><a class="nav-link menu-home active" href="<?php echo home_url(); ?>">Home</a></li>
                     <li><a class="nav-link menu-quem-somos" href="#">Quem Somos</a>
                         <ul class="submenu">

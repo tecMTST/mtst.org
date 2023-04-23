@@ -10,5 +10,6 @@
 	<?php if (is_single()) : ?>
 	<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/assets/js/single.js'></script>
 	<?php endif; ?>
+	<script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/assets/js/geral.js"></script>
 	</body>
 </html>

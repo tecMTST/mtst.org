@@ -135,7 +135,7 @@ ul.redes-sociais li {
 
 .menu-principal ul li a {
     color: var(--preto);
-    font-weight: 700;
+    font-weight: 400;
     font-size: 30px;
     line-height: 1;
     text-decoration: none;
@@ -147,8 +147,10 @@ ul.redes-sociais li {
 
 .nav-link.active, .nav-link:hover {
     background-image: url(../images/borda-menu.png);
+    font-weight: 700!important;
     background-position: bottom;
     background-repeat: no-repeat;
+    background-size: 90% 6px;
 }
 
 img {
@@ -171,7 +173,7 @@ img {
 }
 
 .menu-principal .submenu li a {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .menu-principal .submenu li a:hover {
@@ -187,7 +189,7 @@ img {
 /* Banner do topo */
 
 .banner-topo {
-    margin-bottom: 56px;
+    margin: 56px auto;
 }
 
 /* Notícias */
@@ -677,6 +679,15 @@ section.content {
 
 figure {
     max-width: 100%;
+}
+
+.banner-principal img {
+    width: 100%;
+    height: auto;
+}
+
+.banners {
+    padding: 0;
 }
 
 /* Responsivo */
