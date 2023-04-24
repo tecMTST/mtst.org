@@ -17,18 +17,16 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="redes-cont">
                             <ul class="redes-sociais">
                                 <li><a href="https://www.instagram.com/mtstbrasil/?hl=pt" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.png" alt="Instagram"></a></li>
                                 <li><a href="https://www.facebook.com/mtstbrasil/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="Facebook"></a></li>
                                 <li><a href="https://twitter.com/mtst" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.png" alt="Twitter"></a></li>
                                 <li><a href="https://www.youtube.com/channel/UC3OzrZMhnmEgVtxpJoDRkeg" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/youtube.png" alt="Youtube"></a></li>
+                                <li><a href="https://www.tiktok.com/@mtstbr" target="_blank" rel="noopener noreferrer"><img class="tiktok-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/ic_baseline-tiktok.png" alt="Tik Tok"></a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-md-1">
-
                     </div>
                 </div>
             </div>
@@ -42,8 +40,6 @@
                             <li><a href="<?php echo home_url(); ?>/quem-somos/o-mtst">O MTST</a></li>
                             <li><a href="<?php echo home_url(); ?>/quem-somos/fake-news">Fake News</a></li>
                             <li><a href="https://cozinhasolidaria.com/" target="_blank">Cozinhas Solidárias</a></li>
-                            <li><a href="https://contratequemluta.com/" target="_blank">Contrate Quem Luta</a></li>
-                            <li><a href="https://nucleodetecnologia.com.br/" target="_blank">Núcleo de Tecnologia</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link menu-noticias" href="#">Notícias</a>
@@ -52,11 +48,10 @@
                             <li><a href="<?php echo home_url(); ?>/publicacoes">Publicações</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link menu-campanha" href="#">Campanhas</a>
+                    <li><a class="nav-link menu-campanha" href="#">Contribua</a>
                         <ul class="submenu">
-                            <li><a href="#">Apoia.se</a></li>
+                            <li><a href="https://www.catarse.me/colabore_mtst">MTST</a></li>
                             <li><a href="https://apoia.se/cozinhasolidaria" target="_blank">Cozinhas Solidárias</a></li>
-                            <li><a href="#">Fora Bolsonaro</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link menu-loja" href="https://wa.me/5511914631714" target="_blank">Loja</a></li>

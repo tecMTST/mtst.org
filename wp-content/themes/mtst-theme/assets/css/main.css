@@ -2,7 +2,7 @@
 
 /* Cores */
 :root {
-    --topo: #342F2F;
+    --topo: #000;
     --branco: #fff;
     --preto: #000;
     --cinza: #616161;
@@ -59,21 +59,29 @@ section {
 /* Header */
 .topo {
     background: var(--topo);
-    padding: 10px 20px;
+    padding: 0 20px;
 }
 
 .busca {
-    padding: 20px 0;
+    padding: 17px 0;
+}
+
+.tiktok-icon {
+    max-width: 36px;
 }
 
 .search-container {
     background: var(--topo);
     width: 544px;
-    height: 64px;
+    height: 56px;
     max-width: 100%;
     border: 3px solid var(--branco);
     border-radius: 40px;
     padding: 10px 22px 10px 52px;
+}
+
+.logo-mtst img {
+    max-width: 90px;
 }
 
 input#search {
@@ -82,7 +90,7 @@ input#search {
     background: var(--topo);
     color: white;
     padding: 4px 0;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 1;
 }
 
@@ -91,6 +99,7 @@ button.lupa-busca {
     background: var(--topo);
     border: none;
     float: right;
+    max-width: 30px;
 }
 
 textarea:focus, input:focus{
@@ -136,7 +145,7 @@ ul.redes-sociais li {
 .menu-principal ul li a {
     color: var(--preto);
     font-weight: 400;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 1;
     text-decoration: none;
 }
@@ -216,7 +225,7 @@ h2.titulo-secao {
 
 .ultima-noticia .thumb {
     border-radius: 20px 20px 0px 0px;
-    height: 370px;
+    height: 344px;
     background-size: cover;
 }
 
@@ -688,6 +697,11 @@ figure {
 
 .banners {
     padding: 0;
+}
+
+
+.banner-medium {
+    margin: 60px auto 20px;
 }
 
 /* Responsivo */

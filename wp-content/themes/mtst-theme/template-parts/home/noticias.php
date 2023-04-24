@@ -62,6 +62,11 @@
                 </div>
                 <div class="ver-tudo"><a href="<?php echo home_url() ?>/noticias/ultimas-noticias">VER TUDO >>></a></div>  
             </div>
+            <div class="container">
+                <div class="banner-medium">
+                    <a href="https://contratequemluta.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-cql.jpg" alt="Contrate quem Luta"></a>
+                </div>
+            </div>
          </section>
 
          
