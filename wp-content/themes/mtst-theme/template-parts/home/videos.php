@@ -80,6 +80,11 @@
                     <a target="_blank" href="https://www.youtube.com/channel/UC3OzrZMhnmEgVtxpJoDRkeg">VER TUDO >>></a>
                 </div>
             </div>
+            <div class="container">
+                <div class="banner-medium">
+                    <a href="https://www.catarse.me/colabore_mtst" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-cartase.jpg" alt="Apoie o MTST"></a>
+                </div>
+            </div>
         </section>
 
         <section class="videos mobile-view" id="videos-mobile">
@@ -135,11 +140,6 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-                <div class="container">
-                <div class="banner-medium">
-                    <a href="https://www.catarse.me/colabore_mtst" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-cartase.jpg" alt="Contrate quem Luta"></a>
-                </div>
-            </div>
             </div>
         </section>
 

@@ -115,7 +115,7 @@ ul {
     padding-inline-start: 0;
 }
 
-ul.redes-sociais {
+ul.redes-sociais, footer ul.redes-sociais {
     display: flex;
     align-items: center;
 }
@@ -507,7 +507,7 @@ span.YouTubePopUp-Close {
 /* Footer */
 
 .site-footer {
-    padding: 72px 20px 86px;
+    padding: 72px 20px 30px;
     background-color: var(--preto);
 }
 
@@ -535,9 +535,10 @@ span.YouTubePopUp-Close {
     font-weight: 400;
     font-size: 24px;
     line-height: 30px;
-    text-align: left;
+    text-align: center;
     text-decoration-line: none;
     opacity: 0.8;
+    margin-bottom: 40px;
 }
 
 .nav-footer ul li a {
@@ -545,8 +546,7 @@ span.YouTubePopUp-Close {
     font-weight: 400;
     font-size: 24px;
     line-height: 30px;
-    text-align: left;
-    text-decoration-line: none;
+    text-decoration-line: underline;
 }
 
 .nav-footer ul li:hover {
@@ -703,6 +703,7 @@ figure {
 .banner-medium {
     margin: 60px auto 20px;
 }
+
 
 /* Responsivo */
 
