@@ -280,11 +280,13 @@ h2.titulo-secao {
 .mais-noticias .ultima-noticia .thumb {
     height: 210px;
     background-position: center;
+    padding-top: 10px;
+    border-radius: 20px 0px 0px 20px;
 }
 
 .mais-noticias .categoria {
-    font-size: 15px;
-    margin: 18px 10px;
+    font-size: 12px;
+    margin: auto 10px;
     text-align: center;
     float: inherit;
 }
@@ -302,9 +304,17 @@ h2.titulo-secao {
 
 .mais-noticias .titulo-noticia h3 {
     font-size: 16px;
-    line-height: 18px;
+    line-height: 20px;
     margin-bottom: 0;
     min-height: 72px;
+}
+
+.mais-noticias .col-5 {
+    padding-right: 0;
+}
+
+.mais-noticias .col-7 {
+    padding-left: 0;
 }
 
 .mais-noticias .ler-mais a,
