@@ -39,7 +39,6 @@
                         <ul class="submenu">
                             <li><a href="<?php echo home_url(); ?>/quem-somos/o-mtst">O MTST</a></li>
                             <li><a href="<?php echo home_url(); ?>/quem-somos/fake-news">Fake News</a></li>
-                            <li><a href="https://cozinhasolidaria.com/" target="_blank">Cozinhas Solidárias</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link menu-noticias" href="#">Notícias</a>

@@ -1,5 +1,7 @@
 <?php
-define( 'WP_CACHE', false ); // Added by WP Rocket
+
+
+ // Added by WP Rocket
 
 /**
  * As configurações básicas do WordPress

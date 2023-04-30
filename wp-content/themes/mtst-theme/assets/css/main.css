@@ -198,7 +198,7 @@ img {
 /* Banner do topo */
 
 .banner-topo {
-    margin: 56px auto;
+    margin: 20px auto;
 }
 
 /* Notícias */
@@ -225,7 +225,7 @@ h2.titulo-secao {
 
 .ultima-noticia .thumb {
     border-radius: 20px 20px 0px 0px;
-    height: 344px;
+    height: 370px;
     background-size: cover;
 }
 
@@ -284,11 +284,20 @@ h2.titulo-secao {
 
 .mais-noticias .categoria {
     font-size: 15px;
-    margin: 18px 12px;
+    margin: 18px 10px;
+    text-align: center;
+    float: inherit;
 }
 
 .mais-noticias .titulo-noticia {
     padding: 14px;
+    height: 100%;
+}
+
+.mais-noticias .ler-mais {
+    bottom: 10px;
+    right: 30px;
+    position: absolute;
 }
 
 .mais-noticias .titulo-noticia h3 {

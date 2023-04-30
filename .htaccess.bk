@@ -1,7 +1,3 @@
-# BEGIN LSCACHE
-# END LSCACHE
-# BEGIN NON_LSCACHE
-# END NON_LSCACHE
 # BEGIN WP Rocket v3.11.3
 # Use UTF-8 encoding for anything served text/plain or text/html
 AddDefaultCharset UTF-8
