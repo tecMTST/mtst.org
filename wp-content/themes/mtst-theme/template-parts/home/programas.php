@@ -21,11 +21,6 @@
                 </div>
                 <div class="ver-tudo"><a target="_blank" href="https://open.spotify.com/show/5X2nnU5w9uptyMiApbPCWj">VER TUDO >>></a></div>
             </div>
-            <div class="container">
-                <div class="banner-medium">
-                    <a href="https://www.catarse.me/colabore_mtst" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-cartase.jpg" alt="Apoie o MTST"></a>
-                </div>
-            </div>
         </section>
 
          

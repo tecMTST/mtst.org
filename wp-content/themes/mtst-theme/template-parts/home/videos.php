@@ -80,6 +80,11 @@
                     <a target="_blank" href="https://www.youtube.com/channel/UC3OzrZMhnmEgVtxpJoDRkeg">VER TUDO >>></a>
                 </div>
             </div>
+            <div class="container">
+                <div class="banner-medium">
+                    <a href="https://contratequemluta.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-contrate.jpg" alt="Apoie o MTST"></a>
+                </div>
+            </div>
         </section>
 
         <section class="videos mobile-view" id="videos-mobile">

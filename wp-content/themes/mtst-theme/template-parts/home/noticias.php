@@ -70,7 +70,7 @@
             </div>
             <div class="container">
                 <div class="banner-medium">
-                    <a href="https://contratequemluta.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-cql.jpg" alt="Contrate quem Luta"></a>
+                    <a href="https://www.catarse.me/colabore_mtst" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Banner-Catarse.jpg" alt="Catarse"></a>
                 </div>
             </div>
          </section>

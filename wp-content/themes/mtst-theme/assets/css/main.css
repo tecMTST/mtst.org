@@ -723,6 +723,11 @@ figure {
     margin: 60px auto 20px;
 }
 
+.swiper-banners .swiper-wrapper .swiper-slide img {
+    max-height: 510px;
+    width: 100%;
+} 
+
 
 /* Responsivo */
 
