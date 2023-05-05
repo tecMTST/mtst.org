@@ -88,10 +88,10 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-ini_set('display_errors','Off');
-ini_set('error_reporting', E_ALL );
-define('WP_DEBUG', false);
-define('WP_DEBUG_DISPLAY', false);
+// ini_set('display_errors','Off');
+// ini_set('error_reporting', E_ALL );
+define('WP_DEBUG', true);
+define('WP_DEBUG_DISPLAY', true);
 
 /* Adicione valores personalizados entre esta linha até "Isto é tudo". */
 

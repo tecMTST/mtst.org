@@ -18,6 +18,25 @@
     margin-bottom: 36px;
 }
 
+.full-image img {
+    width: 100%;
+}
+
+section.content {
+    padding: 0 0 60px;
+}
+
+.content p {
+    padding: 20px 0;
+    color: #000;
+    margin-bottom: 0;
+    font-size: 30px;
+}
+
+.newsletter {
+    display: none;
+}
+
 
 /* Responsivo */
 
