@@ -6,3 +6,7 @@ const homeMob =  document.querySelector('.menu-home.item-mob');
 homeMob.classList.remove('active');
 const quemsomosMob =  document.querySelector('.menu-quem-somos.item-mob');
 quemsomosMob.classList.add('active');
+
+$(".nav-link").hover(function () {
+    $(".nav-link.menu-quem-somos").toggleClass("active");
+});
