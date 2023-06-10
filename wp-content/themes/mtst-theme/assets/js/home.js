@@ -69,10 +69,15 @@ const swiperBanners = function(){
     autoplay: {
       delay: 4000,
     },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
+    },   
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 640px
@@ -80,9 +85,6 @@ const swiperBanners = function(){
         slidesPerView: 1,
         spaceBetween: 10,
       },
-      pagination: {
-        el: '.swiper-pagination',
-      },    
     }
   })
 }

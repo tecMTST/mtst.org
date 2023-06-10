@@ -7,7 +7,7 @@
                         <div class="swiper-slide">
                             <a href="<?php the_sub_field("link_do_banner"); ?>" >
                                 <img class="desktop-view" src="<?php the_sub_field("imagem_do_banner"); ?>" alt="Banner">
-                                <img class="mobile-view" src="<?php the_sub_field("imagem_do_banner"); ?>" alt="Banner">
+                                <img class="mobile-view" src="<?php the_sub_field("imagem_do_banner_mobile"); ?>" alt="Banner">
                             </a>
                         </div>
                     <?php endwhile; 

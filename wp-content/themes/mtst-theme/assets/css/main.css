@@ -744,6 +744,10 @@ figure {
     height: 100%;
 }
 
+.swiper-banners .swiper-pagination {
+    display: none;
+}
+
 
 /* Responsivo */
 
@@ -1198,5 +1202,13 @@ figure {
     }
     .titulo-pagina h1 img {
         height: 26px;
+    }
+    .swiper-banners .swiper-pagination {
+        display: block;
+    }
+    .swiper-banners .swiper-button-prev,
+    .swiper-banners .swiper-button-next
+     {
+        display: none;
     }
 }
