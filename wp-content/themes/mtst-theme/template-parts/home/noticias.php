@@ -25,7 +25,7 @@
                     <div class="col-md-6">
                     <?php if( have_rows('banner_noticias') ): 
                     while( have_rows('banner_noticias') ): the_row(); ?>
-                        <a href="<?php the_sub_field('imagem_do_banner_noticias'); ?>" target="_blank" rel="noopener noreferrer">
+                        <a href="<?php the_sub_field('link_do_banner_noticias'); ?>" target="_blank" rel="noopener noreferrer">
                             <img src="<?php the_sub_field('imagem_do_banner_noticias'); ?>" alt="Lojinha do MTST">
                         </a>
                     </div>
@@ -76,7 +76,7 @@
                 <?php if( have_rows('banner_final_noticias') ): 
                 while( have_rows('banner_final_noticias') ): the_row(); ?>
                 <div class="banner-medium">
-                    <a href="<?php the_sub_field('link_do_banner_fn'); ?>" target="_blank">
+                    <a href="<?php the_sub_field('link_do_banner_fn'); ?>">
                         <img class="desktop-view" src="<?php the_sub_field('imagem_desktop'); ?>" alt="Banner">
                         <img class="mobile-view" src="<?php the_sub_field('imagem_mobile'); ?>" alt="Banner">
                     </a>
