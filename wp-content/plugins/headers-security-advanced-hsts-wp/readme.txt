@@ -1,11 +1,11 @@
 === Plugin Name ===
-Contributors: unicorn03, unicorn07
+Contributors: unicorn03, unicorn07, erku, alexclassroom,
 Donate link: https://tentacleplugins.com/
 Tags: headers security, hsts, http headers, insecure content, force ssl, headers, login security, xss, clickjacking, mitm, cross origin, cross site, privacy, csp
 Requires at least: 4.7
-Tested up to: 6.1.1 
-Stable tag: 5.0.21
-Requires PHP: 7.0
+Tested up to: 6.2 
+Stable tag: 5.0.23
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -173,6 +173,15 @@ This will cause the <a href="https://developers.cloudflare.com/cache/how-to/purg
 9. Site-wide security setting
 
 == Changelog ==
+
+= 5.0.23 =
+We don't want to tell you what to do, but here's the point: if you've updated the Headers Security Advanced & HSTS WP plugin last time, you've seen that when we suggest doing so, we don't just say it and leave it at that. Well, with this 5.0.22 version we've added and fixed a lot (we got rid of some bugs, tidied up some pesky pixels and updated the graphics) and it all works great. Are we agreed? Touch "update" and we'll provide you with the most beautiful, fastest, and most impressive plugin around. Enjoy!
+- Fixed: fixed fatal error with verision 5.0.22 with version 5.0.23.
+
+= 5.0.22 =
+We don't want to tell you what to do, but here's the point: if you've updated the Headers Security Advanced & HSTS WP plugin last time, you've seen that when we suggest doing so, we don't just say it and leave it at that. Well, with this 5.0.22 version we've added and fixed a lot (we got rid of some bugs, tidied up some pesky pixels and updated the graphics) and it all works great. Are we agreed? Touch "update" and we'll provide you with the most beautiful, fastest, and most impressive plugin around. Enjoy!
+- Fixed: thanks to @erku's contribution, several changes were implemented to improve compliance with WordPress coding standards, leaving only a few exceptions necessary for the project to work optimally. Specifically, a PHPCS configuration file was added to handle coding rules and a properly structured composer.json file to handle dependencies. In addition, changes were made to the @alexclassroom translatable strings to improve the consistency and quality of translations within the application. These overall changes help improve code readability, facilitate future maintenance, and ensure better cross-language compatibility for users.
+- Fixed: you could encounter errors with multisite and htaccess formatting.
 
 = 5.0.21 =
 We don't want to tell you what to do, but here's the point: if you've updated the Headers Security Advanced & HSTS WP plugin last time, you've seen that when we suggest doing so, we don't just say it and leave it at that. Well, with this 5.0.21 version we've added and fixed a lot (we got rid of some bugs, tidied up some pesky pixels and updated the graphics) and it all works great. But it's not all! We've also added a brand new and improved interface with a modern design to make your experience even more enjoyable. Are you ready for a new HSTS values customization experience? Do it in style! With the modern and functional interface, you can now customize your HSTS values like a true stylupator! Are we agreed? Touch "update" and we'll provide you with the most beautiful, fastest, and most impressive plugin around. Enjoy!

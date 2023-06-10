@@ -1,5 +1,5 @@
-# Translation of Plugins - Akismet Spam Protection - Stable (latest release) in Portuguese (Brazil)
-# This file is distributed under the same license as the Plugins - Akismet Spam Protection - Stable (latest release) package.
+# Translation of Plugins - Akismet Anti-Spam: Spam Protection - Stable (latest release) in Portuguese (Brazil)
+# This file is distributed under the same license as the Plugins - Akismet Anti-Spam: Spam Protection - Stable (latest release) package.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2022-12-16 15:01:54+0000\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: GlotPress/4.0.0-alpha.4\n"
 "Language: pt_BR\n"
-"Project-Id-Version: Plugins - Akismet Spam Protection - Stable (latest release)\n"
+"Project-Id-Version: Plugins - Akismet Anti-Spam: Spam Protection - Stable (latest release)\n"
 
 #: views/config.php:65
 msgid "Akismet is active and ready to stop spam. Your site&#8217;s spam statistics will be displayed here."
@@ -225,11 +225,6 @@ msgstr "Configuração manual"
 msgid "On this page, you are able to update your Akismet settings and view spam stats."
 msgstr "Neste página, você poderá atualizar suas configurações do Akismet e ver as estatísticas de spam."
 
-#. Description of the plugin
-msgid "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. It keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key."
-msgstr "Usado por milhões, Akismet é possivelmente a melhor maneira do mundo para <strong>proteger seu blog contra spam</strong>. Ele mantém seu site protegido mesmo enquanto você dorme. Para começar: ative o plugin Akismet e vá para a página Configurações do Akismet para configurar sua chave API."
-
-#. Plugin Name of the plugin
 #: class.akismet-admin.php:114 class.akismet-admin.php:117
 msgid "Akismet Anti-Spam"
 msgstr "Akismet Anti-Spam"
@@ -457,10 +452,6 @@ msgstr "Esse comentário foi relatado como spam."
 #. Author URI of the plugin
 msgid "https://automattic.com/wordpress-plugins/"
 msgstr "https://automattic.com/wordpress-plugins/"
-
-#. Author of the plugin
-msgid "Automattic"
-msgstr "Automattic"
 
 #. Plugin URI of the plugin
 msgid "https://akismet.com/"
