@@ -54,9 +54,13 @@
                 </div>
             </div>
             <div class="container">
+                <?php if( have_rows('banner_final_videos') ): 
+                while( have_rows('banner_final_videos') ): the_row(); ?>
                 <div class="banner-medium">
-                    <a href="https://contratequemluta.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-contrate.jpg" alt="Apoie o MTST"></a>
+                    <a href="<?php the_sub_field('link_do_banner_fn');?>" target="_blank"><img src="<?php the_sub_field('imagem_desktop');?>" alt="Apoie o MTST"></a>
                 </div>
+                <?php endwhile;
+                endif; ?>
             </div>
         </section>
 
@@ -65,51 +69,26 @@
                 <h2 class="titulo-secao">VÍDEOS</h2>
                 <div class="swiper swiper-videos">
                     <div class="swiper-wrapper">
+                        <?php if( have_rows('videos') ): 
+                        while( have_rows('videos') ): the_row(); ?>
                         <div class="swiper-slide">
-                            <a href="https://youtu.be/9eS6Q4ll4fY" class="vp-a">
-                                <div class="youtube-video-mobile" style="background-image:url(https://img.youtube.com/vi/9eS6Q4ll4fY/hqdefault.jpg)">
+                            <a href="https://youtu.be/<?php the_sub_field('id_video'); ?>" class="vp-a">
+                                <div class="youtube-video-mobile" style="background-image:url(https://img.youtube.com/vi/<?php the_sub_field('id_video'); ?>/hqdefault.jpg)">
                                     <img class="player-video" src="<?php echo get_template_directory_uri(); ?>/assets/images/player.png" alt="">
                                 </div>
                             </a>
                             <div class="txt-video-r">
                                 <div class="titulo-video ltt">
-                                    <h3>Jogo do Ano! Apoie as cozinhas solidárias</h3>
+                                    <h3><?php the_sub_field('titulo_do_video'); ?></h3>
                                 </div>  
                                 <div class="desc ltt">
-                                    <p>Show de solidariedade! Já de futebol... Com Craque Neto, Dexter, MC Max B.O. e Ediane. Participe também no <a target="_blank" href="https://apoia.se/cozinhasolidaria">apoia.se/cozinhasolidaria.</a></p>
+                                    <?php the_sub_field('descricao'); ?>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <a href="https://youtu.be/9eS6Q4ll4fY" class="vp-a">
-                                <div class="youtube-video-mobile" style="background-image:url(https://img.youtube.com/vi/9eS6Q4ll4fY/hqdefault.jpg)">
-                                    <img class="player-video" src="<?php echo get_template_directory_uri(); ?>/assets/images/player.png" alt="">
-                                </div>
-                            </a>
-                            <div class="txt-video-r">
-                                <div class="titulo-video ltt">
-                                    <h3>Jogo do Ano! Apoie as cozinhas solidárias</h3>
-                                </div>  
-                                <div class="desc ltt">
-                                    <p>Show de solidariedade! Já de futebol... Com Craque Neto, Dexter, MC Max B.O. e Ediane. Participe também no <a target="_blank" href="https://apoia.se/cozinhasolidaria">apoia.se/cozinhasolidaria.</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="https://youtu.be/9eS6Q4ll4fY" class="vp-a">
-                                <div class="youtube-video-mobile" style="background-image:url(https://img.youtube.com/vi/9eS6Q4ll4fY/hqdefault.jpg)">
-                                    <img class="player-video" src="<?php echo get_template_directory_uri(); ?>/assets/images/player.png" alt="">
-                                </div>
-                            </a>
-                            <div class="txt-video-r">
-                                <div class="titulo-video ltt">
-                                    <h3>Jogo do Ano! Apoie as cozinhas solidárias</h3>
-                                </div>  
-                                <div class="desc ltt">
-                                    <p>Show de solidariedade! Já de futebol... Com Craque Neto, Dexter, MC Max B.O. e Ediane. Participe também no <a target="_blank" href="https://apoia.se/cozinhasolidaria">apoia.se/cozinhasolidaria.</a></p>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        endwhile;
+                        endif; ?>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
