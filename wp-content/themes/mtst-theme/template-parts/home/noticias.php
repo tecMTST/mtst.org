@@ -22,7 +22,7 @@
                             </div>                            
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 desktop-view">
                     <?php if( have_rows('banner_noticias') ): 
                     while( have_rows('banner_noticias') ): the_row(); ?>
                         <a href="<?php the_sub_field('link_do_banner_noticias'); ?>" target="_blank" rel="noopener noreferrer">
@@ -72,6 +72,16 @@
                 </div>
                 <div class="ver-tudo"><a href="<?php echo home_url() ?>/noticias/ultimas-noticias">VER TUDO >>></a></div>  
             </div>
+            <div class="container banner-noticias mobile-view">
+                <?php if( have_rows('banner_noticias') ): 
+                while( have_rows('banner_noticias') ): the_row(); ?>
+                    <a href="<?php the_sub_field('link_do_banner_noticias'); ?>" target="_blank" rel="noopener noreferrer">
+                        <img src="<?php the_sub_field('imagem_do_banner_noticias'); ?>" alt="Lojinha do MTST">
+                    </a>
+                <?php endwhile; 
+                endif; ?>
+            </div>
+                    
             <div class="container">
                 <?php if( have_rows('banner_final_noticias') ): 
                 while( have_rows('banner_final_noticias') ): the_row(); ?>

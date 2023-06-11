@@ -46,6 +46,11 @@ h3 strong {
 
 .content p {
     margin-bottom: 42px;
+    color: #313131;
+}
+
+section.content {
+    padding: 20px 0 60px;
 }
 
 /* Responsivo */

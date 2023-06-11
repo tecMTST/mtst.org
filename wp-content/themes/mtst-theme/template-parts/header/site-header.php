@@ -38,13 +38,12 @@
                     <li><a class="nav-link menu-quem-somos" href="#">Quem Somos</a>
                         <ul class="submenu">
                             <li><a href="<?php echo home_url(); ?>/quem-somos/o-mtst">O MTST</a></li>
-                            <li><a href="<?php echo home_url(); ?>/quem-somos/fake-news">Fake News</a></li>
+                            <li><a href="<?php echo home_url(); ?>/quem-somos/fake-news">Fato ou fake</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link menu-noticias" href="#">Notícias</a>
                         <ul class="submenu">
                             <li><a href="<?php echo home_url(); ?>/noticias/ultimas-noticias">Últimas Notícias</a></li>
-                            <li><a href="<?php echo home_url(); ?>/publicacoes">Publicações</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link menu-campanha" href="#">Contribua</a>
@@ -102,19 +101,15 @@
                                     <li><a class="nav-link menu-quem-somos item-mob" onclick="subQuemSomos()">Quem Somos</a>
                                         <ul class="submenu" id="sub-quem-somos" style="display:none;">
                                             <li><a a class="nav-link" href="<?php echo home_url(); ?>/quem-somos/o-mtst">O MTST</a></li>
-                                            <li><a class="nav-link" href="<?php echo home_url(); ?>/quem-somos/fake-news">Fake News</a></li>
-                                            <li><a class="nav-link" href="https://cozinhasolidaria.com/" target="_blank">Cozinhas Solidárias</a></li>
-                                            <li><a class="nav-link" href="https://contratequemluta.com/" target="_blank">Contrate Quem Luta</a></li>
-                                            <li><a class="nav-link" href="https://nucleodetecnologia.com.br/" target="_blank">Núcleo de Tecnologia</a></li>
+                                            <li><a class="nav-link" href="<?php echo home_url(); ?>/quem-somos/fake-news">Fato ou fake</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="nav-link menu-noticias item-mob" onclick="subNoticias()">Notícias</a>
                                         <ul class="submenu" id="sub-noticias" style="display:none">
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/noticias/ultimas-noticias">Últimas Notícias</a></li>
-                                            <li><a class="nav-link" href="<?php echo home_url(); ?>/publicacoes">Publicações</a></li>
                                         </ul>
                                     </li>
-                                    <li><a id="menu-campanha" class="nav-link menu-campanha item-mob" onclick="subCampanha()">Campanhas</a>
+                                    <li><a id="menu-campanha" class="nav-link menu-campanha item-mob" onclick="subCampanha()">Conttibua</a>
                                         <ul class="submenu" id="sub-campanha" style="display:none">
                                             <li><a class="nav-link" href="#">Apoia.se</a></li>
                                             <li><a class="nav-link" href="https://apoia.se/cozinhasolidaria" target="_blank">Cozinhas Solidárias</a></li>

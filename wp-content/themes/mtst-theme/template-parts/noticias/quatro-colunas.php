@@ -26,4 +26,5 @@
                         <?php endforeach; ?>
                     </div>
                 </div>
+                <div class="ver-tudo"><a href="<?php echo home_url(); ?>/noticias">VER TODAS >>></a></div>
             </section>
