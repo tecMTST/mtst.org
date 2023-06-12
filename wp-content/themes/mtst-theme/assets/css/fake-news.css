@@ -56,4 +56,22 @@ section.content {
 /* Responsivo */
 
 
-
+@media (max-width: 768px) {
+    section.content {
+        padding: 20px 14px 60px;
+    }
+    .accordions-head-title {
+        font-size: 20px!important;
+        padding-right: 10px!important;
+    }
+    .content p {
+        margin-bottom: 0;
+    }
+    .accordion-content {
+        padding: 0!important;
+    }
+    .content p {
+        font-size: 18px!important;
+        line-height: 1.5;
+    }
+}

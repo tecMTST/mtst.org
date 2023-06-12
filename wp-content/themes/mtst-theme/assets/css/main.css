@@ -2,7 +2,6 @@
 
 /* Cores */
 :root {
-    --topo: #000;
     --branco: #fff;
     --preto: #000;
     --cinza: #616161;
@@ -58,7 +57,7 @@ section {
 
 /* Header */
 .topo {
-    background: var(--topo);
+    background: var(--preto);
     padding: 0 20px;
 }
 
@@ -71,7 +70,7 @@ section {
 }
 
 .search-container {
-    background: var(--topo);
+    background: var(--preto);
     width: 544px;
     height: 56px;
     max-width: 100%;
@@ -87,7 +86,7 @@ section {
 input#search {
     border: none;
     width: 84%;
-    background: var(--topo);
+    background: var(--preto);
     color: white;
     padding: 4px 0;
     font-size: 20px;
@@ -96,7 +95,7 @@ input#search {
 
 button.lupa-busca {
     padding: 0;
-    background: var(--topo);
+    background: var(--preto);
     border: none;
     float: right;
     max-width: 30px;
@@ -313,8 +312,8 @@ h2.titulo-secao {
 }
 
 .mais-noticias .titulo-noticia h3 {
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 18px;
+    line-height: 22px;
     margin-bottom: 0;
     min-height: 72px;
 }
@@ -1288,5 +1287,12 @@ figure {
     }
     .logged-in .topo-mobile {
         margin-top: 46px;
+    }
+    section.breadcrumbs {
+        padding: 20px 14px;
+    }
+    .mais-noticias .titulo-noticia h3 {
+        font-size: 16px;
+        line-height: 21px;
     }
 }

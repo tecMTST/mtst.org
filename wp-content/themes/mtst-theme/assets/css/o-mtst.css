@@ -39,6 +39,18 @@ section.content {
 
 
 /* Responsivo */
-
+@media (max-width: 768px) {
+    .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    .topo-mobile .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .content p {
+        font-size: 20px;
+    }
+}
 
 
