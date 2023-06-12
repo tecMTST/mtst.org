@@ -43,6 +43,22 @@ const swiperVideos = function(){
 
 swiperVideos();
 
+const swiperProgramas = function(){
+  return swiper = new Swiper('.swiper-programas', {
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed: 500,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  })
+}
+
+swiperProgramas();
+
 const swiperFotosMobile = function(){
   return swiper = new Swiper('.swiper-fotos-mob', {
     // Default parameters

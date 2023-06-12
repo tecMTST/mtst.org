@@ -181,19 +181,6 @@
                             }
 
                         </script>
-                    <!-- <div class="col-md-3">
-                        <div class="redes-cont">
-                            <ul class="redes-sociais">
-                                <li><a href="https://www.instagram.com/mtstbrasil/?hl=pt" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.png" alt="Instagram"></a></li>
-                                <li><a href="https://www.facebook.com/mtstbrasil/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="Facebook"></a></li>
-                                <li><a href="https://twitter.com/mtst" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.png" alt="Twitter"></a></li>
-                                <li><a href="https://www.youtube.com/channel/UC3OzrZMhnmEgVtxpJoDRkeg" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/youtube.png" alt="Youtube"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-
-                    </div> -->
                 </div>
     </header>
 

@@ -313,7 +313,7 @@ h2.titulo-secao {
 }
 
 .mais-noticias .titulo-noticia h3 {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 21px;
     margin-bottom: 0;
     min-height: 72px;
@@ -760,6 +760,18 @@ figure {
     display: none;
 }
 
+.swiper-programas .swiper-pagination {
+    bottom: 0;
+}
+
+.swiper.swiper-programas {
+    padding: 0 14px;
+    margin-bottom: 20px;
+}
+
+.swiper-programas .swiper-wrapper {
+    margin-bottom: 10px;
+}
 
 
 /* Responsivo */
@@ -1242,7 +1254,6 @@ figure {
     }
     .banner-noticias {
         margin-top: 30px;
-        margin-bottom: -30px;
     }
     .mais-noticias .titulo-noticia a {
         text-decoration: none;
@@ -1268,5 +1279,14 @@ figure {
     }
     .YouTubePopUp-Wrap {
         top: -20%!important;
+    }
+    .banner-medium {
+        margin: 30px auto 20px;
+    }
+    html#mtst-site {
+        margin-top: 0!important;
+    }
+    .logged-in .topo-mobile {
+        margin-top: 46px;
     }
 }

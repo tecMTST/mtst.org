@@ -93,6 +93,18 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
+            <div class="container">
+                <div class="ver-tudo">
+                    <a target="_blank" href="https://www.youtube.com/channel/UC3OzrZMhnmEgVtxpJoDRkeg">VER TUDO >>></a>
+                </div>
+                <?php if( have_rows('banner_final_videos') ): 
+                while( have_rows('banner_final_videos') ): the_row(); ?>
+                <div class="banner-medium">
+                    <a href="<?php the_sub_field('link_do_banner_fn');?>" target="_blank"><img src="<?php the_sub_field('imagem_mobile');?>" alt="Apoie o MTST"></a>
+                </div>
+                <?php endwhile;
+                endif; ?>
+            </div>
         </section>
 
 

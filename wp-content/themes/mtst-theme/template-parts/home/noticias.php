@@ -85,7 +85,7 @@
             <div class="container">
                 <?php if( have_rows('banner_final_noticias') ): 
                 while( have_rows('banner_final_noticias') ): the_row(); ?>
-                <div class="banner-medium">
+                <div class="banner-medium desktop-view">
                     <a href="<?php the_sub_field('link_do_banner_fn'); ?>">
                         <img class="desktop-view" src="<?php the_sub_field('imagem_desktop'); ?>" alt="Banner">
                         <img class="mobile-view" src="<?php the_sub_field('imagem_mobile'); ?>" alt="Banner">
