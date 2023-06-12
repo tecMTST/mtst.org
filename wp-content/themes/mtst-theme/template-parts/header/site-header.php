@@ -109,11 +109,10 @@
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/noticias/ultimas-noticias">Últimas Notícias</a></li>
                                         </ul>
                                     </li>
-                                    <li><a id="menu-campanha" class="nav-link menu-campanha item-mob" onclick="subCampanha()">Conttibua</a>
+                                    <li><a id="menu-campanha" class="nav-link menu-campanha item-mob" onclick="subCampanha()">Contribua</a>
                                         <ul class="submenu" id="sub-campanha" style="display:none">
-                                            <li><a class="nav-link" href="#">Apoia.se</a></li>
+                                            <li><a class="nav-link" href="https://www.catarse.me/colabore_mtst">MTST</a></li>
                                             <li><a class="nav-link" href="https://apoia.se/cozinhasolidaria" target="_blank">Cozinhas Solidárias</a></li>
-                                            <li><a class="nav-link" href="#">Fora Bolsonaro</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="nav-link menu-loja item-mob" href="https://wa.me/5511914631714" target="_blank">Loja</a></li>
@@ -158,7 +157,7 @@
                             var y = document.getElementById("menu-campanha");
                                 if (x.style.display === "none") {
                                     x.style.display = "block";
-                                    y.style.marginTop = "92px";
+                                    //y.style.marginTop = "92px";
                                 } else {
                                     x.style.display = "none";
                                     y.style.marginTop = "0";
