@@ -512,7 +512,7 @@ span.YouTubePopUp-Close {
 
 /* Formulário Newsletter */
 
-.form-newsletter input {
+.form-newsletter input, .form-newsletter textarea {
     font-family: 'Roboto', sans-serif;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
@@ -528,10 +528,29 @@ span.YouTubePopUp-Close {
     height: 60px;
 }
 
+.form-newsletter textarea {
+    height: 180px;
+}
+
+.form-newsletter.form-contato input, .form-newsletter.form-contato textarea {
+    box-shadow: none;
+    border-radius: 20px;
+    border: 1px solid #00000099;
+    padding: 19px 20px;
+    margin-bottom: 0px;
+    margin-top: 6px;
+    text-align: left;
+}
+
 .form-newsletter input[type=submit] {
     font-weight: bold;
     background-color: var(--preto);
     color: var(--branco);
+}
+
+.form-newsletter.form-contato .wpcf7-submit {
+    text-align: center!important;
+    padding: 10px;
 }
 
 /* Footer */
@@ -772,6 +791,9 @@ figure {
     margin-bottom: 10px;
 }
 
+.page-id-121 main {
+    padding: 0 20px;
+}
 
 /* Responsivo */
 
@@ -921,6 +943,7 @@ figure {
 @media (max-width:768px) {
     .mobile-view {
         display: block!important;
+        margin: 0 auto;
     }
     .desktop-view {
         display: none!important;
@@ -1170,6 +1193,7 @@ figure {
     }
     .embed-iframe {
         margin-bottom: 10px;
+        padding: 30px 0;
     }
     .desc.ltt {
         font-size: 14px;

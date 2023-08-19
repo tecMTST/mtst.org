@@ -25,7 +25,7 @@
                                         <a href="<?php echo site_url(); ?>/noticias/ultimas-noticias">Notícias</a>
                                     </li>
                                     <li class="f-menu-dir">
-                                        <a href="#">Contato</a>
+                                        <a href="<?php echo site_url(); ?>/contato">Contato</a>
                                     </li>
                                 </ul>
                             </div>
