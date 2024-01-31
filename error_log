@@ -1,0 +1,40 @@
+[30-Jan-2024 17:35:30 UTC] PHP Warning:  Undefined array key "publishable_key" in /home/nucleode/mtst.nucleodetecnologia.com.br/wp-content/plugins/woocommerce-gateway-stripe/includes/admin/class-wc-rest-stripe-account-keys-controller.php on line 196
+[30-Jan-2024 17:35:30 UTC] PHP Warning:  Undefined array key "secret_key" in /home/nucleode/mtst.nucleodetecnologia.com.br/wp-content/plugins/woocommerce-gateway-stripe/includes/admin/class-wc-rest-stripe-account-keys-controller.php on line 197
+[30-Jan-2024 17:35:30 UTC] PHP Warning:  Undefined array key "test_publishable_key" in /home/nucleode/mtst.nucleodetecnologia.com.br/wp-content/plugins/woocommerce-gateway-stripe/includes/admin/class-wc-rest-stripe-account-keys-controller.php on line 198
+[30-Jan-2024 17:35:30 UTC] PHP Warning:  Undefined array key "test_secret_key" in /home/nucleode/mtst.nucleodetecnologia.com.br/wp-content/plugins/woocommerce-gateway-stripe/includes/admin/class-wc-rest-stripe-account-keys-controller.php on line 199
+[30-Jan-2024 17:35:30 UTC] PHP Warning:  Undefined array key "test_publishable_key" in /home/nucleode/mtst.nucleodetecnologia.com.br/wp-content/plugins/woocommerce-gateway-stripe/includes/admin/class-wc-rest-stripe-account-keys-controller.php on line 209
+[30-Jan-2024 17:35:30 UTC] PHP Warning:  Undefined array key "test_secret_key" in /home/nucleode/mtst.nucleodetecnologia.com.br/wp-content/plugins/woocommerce-gateway-stripe/includes/admin/class-wc-rest-stripe-account-keys-controller.php on line 210
+[30-Jan-2024 17:35:30 UTC] PHP Warning:  Undefined array key "test_webhook_secret" in /home/nucleode/mtst.nucleodetecnologia.com.br/wp-content/plugins/woocommerce-gateway-stripe/includes/admin/class-wc-rest-stripe-account-keys-controller.php on line 211
+[30-Jan-2024 17:35:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function PHPMailer\PHPMailer\mail() in /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/PHPMailer/PHPMailer.php:874
+Stack trace:
+#0 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/PHPMailer/PHPMailer.php(1961): PHPMailer\PHPMailer\PHPMailer->mailPassthru()
+#1 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/PHPMailer/PHPMailer.php(1682): PHPMailer\PHPMailer\PHPMailer->mailSend()
+#2 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/PHPMailer/PHPMailer.php(1518): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/pluggable.php(546): PHPMailer\PHPMailer\PHPMailer->send()
+#4 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-content/plugins/woocommerce/includes/class-wc-payment-gateways.php(260): wp_mail()
+#5 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-content/plugins/woocommerce/includes/class-wc-payment-gateways.php(177): WC_Payment_Gateways->notify_admin_payment_gateway_enabled()
+#6 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-content/plugins/woocommerce/includes/class-wc-payment-gateways.php(145): WC_Payment_Gateways->payment_gateway_settings_option_changed()
+#7 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/class-wp-hook.php(324): WC_Payment_Gateways->{closure}()
+#8 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#9 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/plugin.php(517): WP_Hook->do_action()
+#10 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/option.php(1034): do_action()
+#11 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/option.php(806): add_option()
+#12 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-content/plugins/woocommerce-gateway-stripe/includes/admin/class-wc-rest-stripe-account-keys-controller.php(226): update_option()
+#13 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/rest-api/class-wp-rest-server.php(1193): WC_REST_Stripe_Account_Keys_Controller->set_account_keys()
+#14 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/rest-api/class-wp-rest-server.php(1041): WP_REST_Server->respond_to_request()
+#15 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/rest-api/class-wp-rest-server.php(431): WP_REST_Server->dispatch()
+#16 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/rest-api.php(424): WP_REST_Server->serve_request()
+#17 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#18 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#19 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/plugin.php(565): WP_Hook->do_action()
+#20 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/class-wp.php(418): do_action_ref_array()
+#21 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/class-wp.php(813): WP->parse_request()
+#22 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/functions.php(1336): WP->main()
+#23 /home/nucleode/mtst.nucleodetecnologia.com.br/wp-blog-header.php(16): wp()
+#24 /home/nucleode/mtst.nucleodetecnologia.com.br/index.php(17): require('/home/nucleode/...')
+#25 {main}
+  thrown in /home/nucleode/mtst.nucleodetecnologia.com.br/wp-includes/PHPMailer/PHPMailer.php on line 874
+[30-Jan-2024 17:36:29 UTC] The Automattic\WooCommerce\Admin\API\Options::get_options function is deprecated since version 6.3.
+[30-Jan-2024 17:36:29 UTC] The Automattic\WooCommerce\Admin\API\Options::get_options function is deprecated since version 6.3.
+[30-Jan-2024 17:39:35 UTC] The Automattic\WooCommerce\Admin\API\Options::get_options function is deprecated since version 6.3.
+[30-Jan-2024 17:39:35 UTC] The Automattic\WooCommerce\Admin\API\Options::get_options function is deprecated since version 6.3.
