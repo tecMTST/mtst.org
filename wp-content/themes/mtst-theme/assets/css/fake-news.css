@@ -1,0 +1,77 @@
+/* Cores */
+:root {
+    --topo: #342F2F;
+    --branco: #fff;
+    --preto: #000;
+    --cinza: #616161;
+    --vermelho-escuro: #D70000;
+}
+
+/* Topo */
+
+.quem-somos-topo {
+    background: linear-gradient(180deg, #000000 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+.quem-somos-topo .banner {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titulo-pagina h1 {
+    margin-bottom: 36px;
+}
+
+h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: var(--preto);
+    margin-bottom: 26px;
+}
+
+h3 strong {
+    font-size: 46px;
+    line-height: 54px;
+    color: var(--vermelho-escuro);
+    margin-right: 14px;
+}
+
+.content p {
+    margin-bottom: 42px;
+    color: #313131;
+}
+
+section.content {
+    padding: 20px 0 60px;
+}
+
+/* Responsivo */
+
+
+@media (max-width: 768px) {
+    section.content {
+        padding: 20px 14px 60px;
+    }
+    .accordions-head-title {
+        font-size: 20px!important;
+        padding-right: 10px!important;
+    }
+    .content p {
+        margin-bottom: 0;
+    }
+    .accordion-content {
+        padding: 0!important;
+    }
+    .content p {
+        font-size: 18px!important;
+        line-height: 1.5;
+    }
+}
