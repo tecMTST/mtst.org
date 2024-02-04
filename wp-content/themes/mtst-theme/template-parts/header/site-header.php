@@ -48,8 +48,9 @@
                     </li>
                     <li><a class="nav-link menu-campanha" href="#">Contribua</a>
                         <ul class="submenu">
-                            <li><a href="https://www.catarse.me/colabore_mtst">MTST</a></li>
+                            <li><a href="<?php echo home_url(); ?>/contribuicao/">MTST</a></li>
                             <li><a href="https://apoia.se/cozinhasolidaria" target="_blank">Cozinhas Solidárias</a></li>
+                            <li><a href="https://www.catarse.me/colabore_mtst" target="_blank">Educação popularss</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link menu-loja" href="https://wa.me/5511914631714" target="_blank">Loja</a></li>
@@ -111,8 +112,9 @@
                                     </li>
                                     <li><a id="menu-campanha" class="nav-link menu-campanha item-mob" onclick="subCampanha()">Contribua</a>
                                         <ul class="submenu" id="sub-campanha" style="display:none">
-                                            <li><a class="nav-link" href="https://www.catarse.me/colabore_mtst">MTST</a></li>
+                                            <li><a class="nav-link" href="<?php echo home_url(); ?>/contribuicao/">MTST</a></li>
                                             <li><a class="nav-link" href="https://apoia.se/cozinhasolidaria" target="_blank">Cozinhas Solidárias</a></li>
+                                            <li><a class="nav-link" href="https://www.catarse.me/colabore_mtst" target="_blank">Educação Popular</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="nav-link menu-loja item-mob" href="https://wa.me/5511914631714" target="_blank">Loja</a></li>

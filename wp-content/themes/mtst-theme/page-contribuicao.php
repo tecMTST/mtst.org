@@ -72,8 +72,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xxl-6">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ato-mtst.jpg" alt="Ato do MTST">
+                    <div class="col-lg-6 col-xxl-6" >
+                        <div class="bg-col-contr" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/ato-mtst.jpg);"></div>
+                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ato-mtst.jpg" alt="Ato do MTST"> -->
                     </div>
                 </div>
             </div>

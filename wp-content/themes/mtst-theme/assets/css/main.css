@@ -827,8 +827,8 @@ figure {
 }
 
 .contribuicoes .col-md-4 {
-    margin-bottom: 10px;
-    padding: 0 5px;
+    margin-bottom: 14px;
+    padding: 0 14px;
 }
 
 .contribuicoes .row {
@@ -847,6 +847,17 @@ figure {
     padding-right: 0;
     padding-left: 24px;
     align-self: center;
+}
+
+.bg-col-contr {
+    height: 56vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+}
+
+.col-lg-6.col-xxl-6 {
+    padding-left: 12px;
 }
 
 /* Core styles/functionality */
@@ -1016,6 +1027,12 @@ label {
     }
     .titulo-noticia {
         padding: 14px 24px;
+    }
+    .col-lg-6.col-xxl-6 {
+        padding-left: 0;
+    }
+    .bg-col-contr {
+        background-position: center;
     }
 }
 
@@ -1416,5 +1433,9 @@ label {
     }
     .content-contrib .col-lg-5 {
         padding: 30px 10px;
+    }
+    .contribuicoes .col-md-4 {
+        margin-bottom: 14px;
+        padding: 0 7px;
     }
 }
