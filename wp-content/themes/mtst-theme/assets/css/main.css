@@ -218,13 +218,13 @@ h2.titulo-secao {
 
 .ultima-noticia {
     background: var(--branco);
-    box-shadow: 0px 4px 4px 2px rgb(0 0 0 / 25%);
-    border-radius: 20px;
+    box-shadow: 0px 2px 2px 2px rgb(0 0 0 / 15%);
+    border-radius: 12px;
 }
 
 .ultima-noticia .thumb {
-    border-radius: 20px 20px 0px 0px;
-    height: 370px;
+    border-radius: 12px 12px 0px 0px;
+    height: 406px;
     background-size: cover;
 }
 
@@ -290,7 +290,7 @@ h2.titulo-secao {
     height: 156px;
     background-position: center;
     padding-top: 10px;
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 12px 0px 0px 12px;
 }
 
 .mais-noticias .categoria {
@@ -840,12 +840,13 @@ figure {
 }
 
 .content-contrib .col-lg-5 {
-    padding: 60px 14px;
+    padding: 40px 14px 60px;
 }
 
 .content-contrib .col-lg-6 {
     padding-right: 0;
-    padding-left: 24px
+    padding-left: 24px;
+    align-self: center;
 }
 
 /* Core styles/functionality */
