@@ -50,7 +50,7 @@
                         <ul class="submenu">
                             <li><a href="<?php echo home_url(); ?>/contribuicao/">MTST</a></li>
                             <li><a href="https://apoia.se/cozinhasolidaria" target="_blank">Cozinhas Solidárias</a></li>
-                            <li><a href="https://www.catarse.me/colabore_mtst" target="_blank">Educação popularss</a></li>
+                            <li><a href="https://www.catarse.me/colabore_mtst" target="_blank">Educação Popular</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link menu-loja" href="https://wa.me/5511914631714" target="_blank">Loja</a></li>
