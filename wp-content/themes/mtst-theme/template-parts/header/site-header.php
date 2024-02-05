@@ -53,6 +53,13 @@
                             <li><a href="https://www.catarse.me/colabore_mtst" target="_blank">Educação Popular</a></li>
                         </ul>
                     </li>
+                    <li><a class="nav-link menu-campanha" href="#">Nossos Projetos</a>
+                        <ul class="submenu">
+                            <li><a href="<?php echo home_url(); ?>/cozinhas-solidarias/">Cozinhas Solidárias</a></li>
+                            <li><a href="<?php echo home_url(); ?>/centro-de-pesquisa-popular/">Centro de Pesquisa Popular</a></li>
+                            <li><a href="<?php echo home_url(); ?>/contrate-quem-luta/">Contrate Quem Luta</a></li>
+                        </ul>                   
+                    </li>
                     <li><a class="nav-link menu-loja" href="https://wa.me/5511914631714" target="_blank">Loja</a></li>
                     <li><a class="nav-link menu-galeria" href="#">Galeria</a>
                         <ul class="submenu">
