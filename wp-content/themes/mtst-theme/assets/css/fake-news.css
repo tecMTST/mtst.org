@@ -11,6 +11,7 @@
 
 .quem-somos-topo {
     background: linear-gradient(180deg, #000000 0%, rgba(196, 196, 196, 0) 100%);
+    display: none;
 }
 
 .quem-somos-topo .banner {
