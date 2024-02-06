@@ -1641,4 +1641,8 @@ main.projetos-template {
         margin-bottom: 14px;
         padding: 0 7px;
     }
+    .projetos-template p {
+        font-size: 20px;
+        line-height: 150%;
+    }
 }
