@@ -58,9 +58,11 @@ h1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 32px;
     line-height: 130%;
-    text-transform: uppercase;
+    text-transform: none;
     color: var(--preto);
     opacity: 0.8;
+    border-left: solid 4px #d70;
+    padding-left: 12px;
 }
