@@ -3,7 +3,7 @@
 }
 
 .single .content img {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 
 section.content {
@@ -52,4 +52,15 @@ section.content {
 
 .titulo-pagina h1 img {
     margin-top: 0px;
+}
+
+h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--preto);
+    opacity: 0.8;
 }

@@ -38,9 +38,9 @@ h1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
-    text-transform: uppercase;
+    font-size: 32px;
+    line-height: 130%;
+    text-transform: none;
     color: var(--preto);
     opacity: 0.8;
 }
@@ -218,13 +218,13 @@ h2.titulo-secao {
 
 .ultima-noticia {
     background: var(--branco);
-    box-shadow: 0px 4px 4px 2px rgb(0 0 0 / 25%);
-    border-radius: 20px;
+    box-shadow: 0px 2px 2px 2px rgb(0 0 0 / 15%);
+    border-radius: 12px;
 }
 
 .ultima-noticia .thumb {
-    border-radius: 20px 20px 0px 0px;
-    height: 370px;
+    border-radius: 12px 12px 0px 0px;
+    height: 379px;
     background-size: cover;
 }
 
@@ -290,7 +290,7 @@ h2.titulo-secao {
     height: 156px;
     background-position: center;
     padding-top: 10px;
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 12px 0px 0px 12px;
 }
 
 .mais-noticias .categoria {
@@ -618,7 +618,10 @@ section.breadcrumbs {
 }
 
 ul.bread {
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
 }
 
 li.crumb a {
@@ -626,8 +629,8 @@ li.crumb a {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 150%;
     text-transform: uppercase;
     color: var(--preto);
     opacity: 0.8;
@@ -827,8 +830,8 @@ figure {
 }
 
 .contribuicoes .col-md-4 {
-    margin-bottom: 10px;
-    padding: 0 5px;
+    margin-bottom: 14px;
+    padding: 0 14px;
 }
 
 .contribuicoes .row {
@@ -840,12 +843,24 @@ figure {
 }
 
 .content-contrib .col-lg-5 {
-    padding: 60px 14px;
+    padding: 40px 14px 60px;
 }
 
 .content-contrib .col-lg-6 {
     padding-right: 0;
-    padding-left: 24px
+    padding-left: 24px;
+    align-self: center;
+}
+
+.bg-col-contr {
+    height: 56vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+}
+
+.col-lg-6.col-xxl-6 {
+    padding-left: 12px;
 }
 
 /* Core styles/functionality */
@@ -870,6 +885,10 @@ label {
 
 .tab input#rd2:checked ~ .tab__content2 {
     display: flex;
+}
+
+.author-container {
+    display: none;
 }
   
 
@@ -1015,6 +1034,12 @@ label {
     }
     .titulo-noticia {
         padding: 14px 24px;
+    }
+    .col-lg-6.col-xxl-6 {
+        padding-left: 0;
+    }
+    .bg-col-contr {
+        background-position: center;
     }
 }
 
@@ -1415,5 +1440,9 @@ label {
     }
     .content-contrib .col-lg-5 {
         padding: 30px 10px;
+    }
+    .contribuicoes .col-md-4 {
+        margin-bottom: 14px;
+        padding: 0 7px;
     }
 }

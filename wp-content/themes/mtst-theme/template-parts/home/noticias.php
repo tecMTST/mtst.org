@@ -7,7 +7,7 @@
             $name = $category[0]->cat_name;
             $cat_id = get_cat_ID( $name );
             $link = get_category_link( $cat_id ); ?>
-        <section class="noticias" id="noticias" style="padding-top:30px">
+        <section class="noticias" id="noticias" style="padding-top:40px">
             <div class="container">
                 <h2 class="titulo-secao">ÚLTIMAS NOTÍCIAS</h2>
                 <div class="row">

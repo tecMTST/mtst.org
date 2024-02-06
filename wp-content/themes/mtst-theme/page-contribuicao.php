@@ -3,13 +3,15 @@
         <div class="content-contrib">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-5 offset-lg-1 col-xxl-4 offset-xxl-2">
+                    <div class="col-lg-5 offset-lg-1 col-xxl-3 offset-xxl-3 col-md-12">
                         <div class="text-intro">
-                            <h2>Lorem ipsum dolor sit</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                            <h2>Contribua</h2>
+                            <p>O MTST, um dos maiores movimentos sociais da América Latina, vai além da luta por teto. Desde 1997, trabalhamos para garantir o direito à moradia digna e, ao longo dos anos, entendemos que isso requer muito mais do que um teto sob a cabeça, pois influencia o acesso a outros direitos básicos, e aí surgiu a necessidade de atuar em diversas pontas.</p>
+                            <p>Vamos além da ocupação de espaços: onde chega uma ocupação do MTST, chegam também as cozinhas solidárias e serviços como assessoria jurídica, atendimentos de saúde, oficinas culturais, cines-debates, cursos profissionalizantes, alfabetização de jovens e adultos, atividades de recreação e formação com sem-tetinhos e outras ações que atendem demandas do território</p>
                         </div>
                         <div class="contribuicoes">
-                            <h3>Lorem ipsum dolor</h3>
+                            <h3>APOIE NOSSO TRABALHO!</h3>
+                            <p>Ao doar, você fortalece nossa luta por Teto, Trabalho e Pão e por uma vida mais digna nas periferias brasileiras.</p>
                             <div class="tab">
                                 <div class="opcoes">
                                     <input type="radio" name="accordion-1" id="rd1" checked>
@@ -70,8 +72,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xxl-6">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ato-mtst.jpg" alt="Ato do MTST">
+                    <div class="col-lg-6 col-xxl-6" >
+                        <div class="bg-col-contr" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/ato-mtst.jpg);"></div>
+                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ato-mtst.jpg" alt="Ato do MTST"> -->
                     </div>
                 </div>
             </div>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html id="mtst-site" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    
+    
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <title>Publicações &#8211; MTST</title><style id="rocket-critical-css">:root{--swiper-theme-color:#007aff}:root{--swiper-navigation-size:44px}ul{box-sizing:border-box}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.wpcf7 form .wpcf7-response-output{margin:2em 0.5em 1em;padding:0.2em 1em;border:2px solid #00a0d2}.wpcf7 form.init .wpcf7-response-output{display:none}:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%}header,main,nav{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}h1,h3{margin-top:0;margin-bottom:.5rem}ul{margin-top:0;margin-bottom:1rem}ul ul{margin-bottom:0}a{color:#007bff;text-decoration:none;background-color:transparent}img{vertical-align:middle;border-style:none}label{display:inline-block;margin-bottom:.5rem}button{border-radius:0}button,input{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button{text-transform:none}[type=submit],button{-webkit-appearance:button}[type=submit]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}input[type=checkbox]{box-sizing:border-box;padding:0}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}h1,h3{margin-bottom:.5rem;font-weight:500;line-height:1.2}h1{font-size:2.5rem}h3{font-size:1.75rem}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col-2,.col-3,.col-7,.col-md-1,.col-md-2,.col-md-3,.col-md-6{position:relative;width:100%;padding-right:15px;padding-left:15px}.col-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}@media (min-width:768px){.col-md-1{-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-md-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-md-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-md-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}}.nav-link{display:block;padding:.5rem 1rem}:root{--topo:#342F2F;--branco:#fff;--preto:#000;--cinza:#616161;--vermelho-escuro:#D70000}html,body{overflow-x:hidden}body{position:relative}body{font-family:'Roboto',sans-serif;font-weight:400;background:var(--branco)}a{word-wrap:break-word}a{color:var(--preto);text-decoration:underline}h1{font-family:'Roboto';font-style:normal;font-weight:700;font-size:36px;line-height:42px;text-transform:uppercase;color:var(--preto);opacity:0.8}.topo{background:var(--topo);padding:10px 20px}.busca{padding:20px 0}.search-container{background:var(--topo);width:544px;height:64px;max-width:100%;border:3px solid var(--branco);border-radius:40px;padding:10px 22px 10px 52px}input#search{border:none;width:84%;background:var(--topo);color:white;padding:4px 0;font-size:25px;line-height:1}button.lupa-busca{padding:0;background:var(--topo);border:none;float:right}ul{list-style-type:none;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;padding-inline-start:0}ul.redes-sociais{display:flex;align-items:center}ul.redes-sociais li{margin:0 15px;height:35px;line-height:35px}.redes-cont{display:flex;height:100%;vertical-align:middle}.menu-principal{padding:24px 20px}.menu-principal ul{display:flex;justify-content:space-between}.menu-principal ul li a{color:var(--preto);font-weight:700;font-size:30px;line-height:1;text-decoration:none}.nav-link{padding-bottom:16px}.nav-link.active{background-image:url(http://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/borda-menu.png);background-position:bottom;background-repeat:no-repeat}img{max-width:100%;height:auto}.menu-principal .submenu{display:none;padding:20px 40px 10px 30px;background-color:#fff;filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));z-index:999}.menu-principal .submenu li{margin-bottom:20px}.menu-principal .submenu li a{font-weight:500}.ultima-noticia{background:var(--branco);box-shadow:0px 4px 4px 2px rgb(0 0 0 / 25%);border-radius:20px}.ultima-noticia .thumb{border-radius:20px 20px 0px 0px;height:370px;background-size:cover}.categoria{float:right;padding:2px 18px;color:#fff;background:var(--preto);border-radius:30px;font-weight:400;font-size:20px;margin:28px}.titulo-noticia{padding:17px 34px}.titulo-noticia a{text-decoration:none}.titulo-noticia h3{font-weight:700;font-size:24px;line-height:28px;margin-bottom:18px;color:var(--preto)}.ler-mais{text-align:right;text-decoration:underline}.ler-mais a{color:var(--preto);font-weight:400;font-size:18px;line-height:1;text-decoration:none}.ultima-noticia .ler-mais a{font-size:14px;line-height:16px}.topo-mobile{display:none}.hamb{float:right;padding:40px 20px}.hamb-line{background:var(--white);display:block;height:3px;position:relative;width:30px;border-radius:4px}.hamb-line::before,.hamb-line::after{background:var(--white);content:'';display:block;height:100%;position:absolute;width:100%;border-radius:4px}.hamb-line::before{top:5px}.hamb-line::after{top:-5px}.side-menu{display:none}.menu-principal.menu-mobile{display:none}@media (max-width:1199px){.topo-desktop{display:none}.topo-mobile{display:block}.menu-principal{display:none}.logo-mtst{max-width:52px}.topo-mobile .col-logo{padding-left:0}.topo-mobile .search-container{display:none}.topo-mobile .busca{padding:0}.topo-mobile .col-7{display:table;padding:0}.topo-mobile .busca{display:table-cell;vertical-align:middle}.search-container{width:100%;height:40px;padding:5px 10px}input#search{width:100%;padding:0;font-size:14px}.hamb{float:right;padding:0;margin:0 auto;display:table-cell;vertical-align:middle}.topo-mobile .col-hamb{padding:0;display:table}.icon-mobile{display:table-cell!important;vertical-align:middle!important;padding-right:10px!important}.hamb-line::after{margin-top:-3px}.hamb-line::before{margin-top:3px}button.lupa-busca img{max-width:30px}#menu-mobile nav ul{display:block;float:right}.menu-principal ul li a{font-size:22px;font-weight:500;text-align:right}.nav-link.active{background-image:none;font-weight:700}.menu-principal .submenu li{margin-bottom:0;text-align:right}.menu-principal .submenu li a{line-height:1.3}#menu-mobile.menu-principal .submenu{display:none;padding:0;background-color:#fff;filter:none;z-index:999;position:relative;margin-bottom:10px}#menu-mobile.menu-principal{position:absolute;background:#fff;width:75%;margin-left:25%;z-index:999}.menu-principal .submenu li a{font-weight:500;font-size:18px;line-height:21px}.ultima-noticia{margin-bottom:30px}.ultima-noticia .thumb{height:258px}.titulo-noticia{padding:14px 24px}}@media (max-width:768px){.topo-desktop{display:none}.topo-mobile{display:block}.menu-principal{display:none}.logo-mtst{max-width:52px}.topo-mobile .col-logo{padding-left:0}.topo-mobile .search-container{display:none}.topo-mobile .busca{padding:0}.topo-mobile .col-7{display:table;padding:0}.topo-mobile .busca{display:table-cell;vertical-align:middle}.search-container{width:100%;height:40px;padding:5px 10px}input#search{width:100%;padding:0;font-size:14px}.hamb{float:right;padding:0;margin:0 auto;display:table-cell;vertical-align:middle}.topo-mobile .col-hamb{padding:0;display:table}.icon-mobile{display:table-cell;vertical-align:middle;padding-right:10px}.hamb-line::after{margin-top:-3px}.hamb-line::before{margin-top:3px}button.lupa-busca img{max-width:30px}#menu-mobile nav ul{display:block;float:right}.menu-principal ul li a{font-size:22px;font-weight:500;text-align:right}.nav-link.active{background-image:none;font-weight:700}.menu-principal .submenu li{margin-bottom:0;text-align:right}.menu-principal .submenu li a{line-height:1.3}#menu-mobile.menu-principal .submenu{display:none;padding:0;background-color:#fff;filter:none;z-index:999;position:relative;margin-bottom:10px}#menu-mobile.menu-principal{position:absolute;background:#fff;width:75%;margin-left:25%;z-index:999}.menu-principal .submenu li a{font-weight:500;font-size:18px;line-height:21px}.container{padding-left:0;padding-right:0}.titulo-noticia h3{font-size:18px;line-height:22px;margin-bottom:10px}.categoria{border-radius:30px;font-size:16px;margin:14px}.ultima-noticia .thumb{height:260px}.ultima-noticia{margin-bottom:30px}.titulo-noticia{padding:14px}}.archive .col-md-6{margin-bottom:40px}.archive .ultima-noticia{min-height:530px}.archive .page-header{margin-top:30px;margin-bottom:40px}.archive main{padding-bottom:40px}</style><link rel="preload" href="https://mtst.nucleodetecnologia.com.br/wp-content/cache/min/1/542d1037e3f07e5224b77299e7d09dc3.css" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  media="all" data-minify="1" />
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//fonts.bunny.net' />
+
+<link rel="alternate" type="application/rss+xml" title="Feed de categoria para MTST &raquo; Publicações" href="https://mtst.nucleodetecnologia.com.br/publicacoes/feed/" />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+
+
+
+
+
+
+
+<link rel='preload'  href='https://fonts.bunny.net/css?family=Roboto:400,700,400italic,700italic&#038;subset=latin' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://mtst.nucleodetecnologia.com.br/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<script type="text/javascript" src="https://mtst.nucleodetecnologia.com.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://mtst.nucleodetecnologia.com.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://mtst.nucleodetecnologia.com.br/wp-content/plugins/video-popup/js/YouTubePopUp.jquery.js?ver=1707171267" id="oba_youtubepopup_plugin-js"></script>
+<script type="text/javascript" src="https://mtst.nucleodetecnologia.com.br/wp-content/plugins/video-popup/js/YouTubePopUp.js?ver=1707171267" id="oba_youtubepopup_activate-js"></script>
+<script type="application/json" id="wpp-json">
+
+{"sampling_active":0,"sampling_rate":100,"ajax_url":"https:\/\/mtst.nucleodetecnologia.com.br\/wp-json\/wordpress-popular-posts\/v1\/popular-posts","api_url":"https:\/\/mtst.nucleodetecnologia.com.br\/wp-json\/wordpress-popular-posts","ID":0,"token":"640b3aac1f","lang":0,"debug":0}
+
+</script>
+<script type="text/javascript" src="https://mtst.nucleodetecnologia.com.br/wp-content/plugins/wordpress-popular-posts/assets/js/wpp.min.js?ver=6.4.0" id="wpp-js-js"></script>
+<script type="text/javascript" src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/bootstrap/bootstrap-4.6.1-dist/js/bootstrap.bundle.min.js?ver=6.4.3" id="bootstrap-js"></script>
+<link rel="https://api.w.org/" href="https://mtst.nucleodetecnologia.com.br/wp-json/" /><link rel="alternate" type="application/json" href="https://mtst.nucleodetecnologia.com.br/wp-json/wp/v2/categories/8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://mtst.nucleodetecnologia.com.br/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.4.3" />
+		<script type='text/javascript'>
+			var video_popup_unprm_general_settings = {
+    			'unprm_r_border': ''
+			};
+		</script>
+	            <style id="wpp-loading-animation-styles">@-webkit-keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}@keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}.wpp-widget-placeholder,.wpp-widget-block-placeholder,.wpp-shortcode-placeholder{margin:0 auto;width:60px;height:3px;background:#dd3737;background:linear-gradient(90deg,#dd3737 0%,#571313 10%,#dd3737 100%);background-size:200% auto;border-radius:3px;-webkit-animation:bgslide 1s infinite linear;animation:bgslide 1s infinite linear}</style>
+            <style type="text/css">.saboxplugin-wrap{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;border:1px solid #eee;width:100%;clear:both;display:block;overflow:hidden;word-wrap:break-word;position:relative}.saboxplugin-wrap .saboxplugin-gravatar{float:left;padding:0 20px 20px 20px}.saboxplugin-wrap .saboxplugin-gravatar img{max-width:100px;height:auto;border-radius:0;}.saboxplugin-wrap .saboxplugin-authorname{font-size:18px;line-height:1;margin:20px 0 0 20px;display:block}.saboxplugin-wrap .saboxplugin-authorname a{text-decoration:none}.saboxplugin-wrap .saboxplugin-authorname a:focus{outline:0}.saboxplugin-wrap .saboxplugin-desc{display:block;margin:5px 20px}.saboxplugin-wrap .saboxplugin-desc a{text-decoration:underline}.saboxplugin-wrap .saboxplugin-desc p{margin:5px 0 12px}.saboxplugin-wrap .saboxplugin-web{margin:0 20px 15px;text-align:left}.saboxplugin-wrap .sab-web-position{text-align:right}.saboxplugin-wrap .saboxplugin-web a{color:#ccc;text-decoration:none}.saboxplugin-wrap .saboxplugin-socials{position:relative;display:block;background:#fcfcfc;padding:5px;border-top:1px solid #eee}.saboxplugin-wrap .saboxplugin-socials a svg{width:20px;height:20px}.saboxplugin-wrap .saboxplugin-socials a svg .st2{fill:#fff; transform-origin:center center;}.saboxplugin-wrap .saboxplugin-socials a svg .st1{fill:rgba(0,0,0,.3)}.saboxplugin-wrap .saboxplugin-socials a:hover{opacity:.8;-webkit-transition:opacity .4s;-moz-transition:opacity .4s;-o-transition:opacity .4s;transition:opacity .4s;box-shadow:none!important;-webkit-box-shadow:none!important}.saboxplugin-wrap .saboxplugin-socials .saboxplugin-icon-color{box-shadow:none;padding:0;border:0;-webkit-transition:opacity .4s;-moz-transition:opacity .4s;-o-transition:opacity .4s;transition:opacity .4s;display:inline-block;color:#fff;font-size:0;text-decoration:inherit;margin:5px;-webkit-border-radius:0;-moz-border-radius:0;-ms-border-radius:0;-o-border-radius:0;border-radius:0;overflow:hidden}.saboxplugin-wrap .saboxplugin-socials .saboxplugin-icon-grey{text-decoration:inherit;box-shadow:none;position:relative;display:-moz-inline-stack;display:inline-block;vertical-align:middle;zoom:1;margin:10px 5px;color:#444;fill:#444}.clearfix:after,.clearfix:before{content:' ';display:table;line-height:0;clear:both}.ie7 .clearfix{zoom:1}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-twitch{border-color:#38245c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-addthis{border-color:#e91c00}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-behance{border-color:#003eb0}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-delicious{border-color:#06c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-deviantart{border-color:#036824}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-digg{border-color:#00327c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-dribbble{border-color:#ba1655}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-facebook{border-color:#1e2e4f}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-flickr{border-color:#003576}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-github{border-color:#264874}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-google{border-color:#0b51c5}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-googleplus{border-color:#96271a}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-html5{border-color:#902e13}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-instagram{border-color:#1630aa}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-linkedin{border-color:#00344f}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-pinterest{border-color:#5b040e}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-reddit{border-color:#992900}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-rss{border-color:#a43b0a}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-sharethis{border-color:#5d8420}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-skype{border-color:#00658a}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-soundcloud{border-color:#995200}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-spotify{border-color:#0f612c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-stackoverflow{border-color:#a95009}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-steam{border-color:#006388}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-user_email{border-color:#b84e05}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-stumbleUpon{border-color:#9b280e}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-tumblr{border-color:#10151b}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-twitter{border-color:#0967a0}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-vimeo{border-color:#0d7091}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-windows{border-color:#003f71}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-whatsapp{border-color:#003f71}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-wordpress{border-color:#0f3647}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-yahoo{border-color:#14002d}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-youtube{border-color:#900}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-xing{border-color:#000202}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-mixcloud{border-color:#2475a0}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-vk{border-color:#243549}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-medium{border-color:#00452c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-quora{border-color:#420e00}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-meetup{border-color:#9b181c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-goodreads{border-color:#000}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-snapchat{border-color:#999700}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-500px{border-color:#00557f}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-mastodont{border-color:#185886}.sabox-plus-item{margin-bottom:20px}@media screen and (max-width:480px){.saboxplugin-wrap{text-align:center}.saboxplugin-wrap .saboxplugin-gravatar{float:none;padding:20px 0;text-align:center;margin:0 auto;display:block}.saboxplugin-wrap .saboxplugin-gravatar img{float:none;display:inline-block;display:-moz-inline-stack;vertical-align:middle;zoom:1}.saboxplugin-wrap .saboxplugin-desc{margin:0 10px 20px;text-align:center}.saboxplugin-wrap .saboxplugin-authorname{text-align:center;margin:10px 0 20px}}body .saboxplugin-authorname a,body .saboxplugin-authorname a:hover{box-shadow:none;-webkit-box-shadow:none}a.sab-profile-edit{font-size:16px!important;line-height:1!important}.sab-edit-settings a,a.sab-profile-edit{color:#0073aa!important;box-shadow:none!important;-webkit-box-shadow:none!important}.sab-edit-settings{margin-right:15px;position:absolute;right:0;z-index:2;bottom:10px;line-height:20px}.sab-edit-settings i{margin-left:5px}.saboxplugin-socials{line-height:1!important}.rtl .saboxplugin-wrap .saboxplugin-gravatar{float:right}.rtl .saboxplugin-wrap .saboxplugin-authorname{display:flex;align-items:center}.rtl .saboxplugin-wrap .saboxplugin-authorname .sab-profile-edit{margin-right:10px}.rtl .sab-edit-settings{right:auto;left:0}img.sab-custom-avatar{max-width:75px;}.saboxplugin-wrap{ border-width: 0px; }.saboxplugin-wrap .saboxplugin-gravatar img {-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%;border-radius:50%;}.saboxplugin-wrap .saboxplugin-gravatar img {-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%;border-radius:50%;}.saboxplugin-wrap .saboxplugin-authorname {font-family:"Roboto";}.saboxplugin-wrap .saboxplugin-desc {font-family:None;}.saboxplugin-wrap {margin-top:0px; margin-bottom:0px; padding: 0px 0px }.saboxplugin-wrap .saboxplugin-authorname {font-size:26px; line-height:33px;}.saboxplugin-wrap .saboxplugin-desc p, .saboxplugin-wrap .saboxplugin-desc {font-size:18px !important; line-height:25px !important;}.saboxplugin-wrap .saboxplugin-web {font-size:14px;}.saboxplugin-wrap .saboxplugin-socials a svg {width:18px;height:18px;}</style><link rel="icon" href="https://mtst.nucleodetecnologia.com.br/wp-content/uploads/2022/06/MTST-logo.png" sizes="32x32" />
+<link rel="icon" href="https://mtst.nucleodetecnologia.com.br/wp-content/uploads/2022/06/MTST-logo.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://mtst.nucleodetecnologia.com.br/wp-content/uploads/2022/06/MTST-logo.png" />
+<meta name="msapplication-TileImage" content="https://mtst.nucleodetecnologia.com.br/wp-content/uploads/2022/06/MTST-logo.png" />
+		<style type="text/css" id="wp-custom-css">
+			.foto.foto-menor {
+    margin-bottom: 30px;
+    width: 100%;
+    height: 166px;
+}
+
+.foto.foto-menor img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    object-position: top;
+}
+
+@media (max-width: 768px) {
+	.fotos-mobile .swiper-slide img {
+    max-height: 380px;
+}
+}		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}
+return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}
+if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}
+setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}
+var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",!0);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}
+if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}
+else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
+</script>    </head>
+<body class="archive category category-publicacoes category-8">
+        <header>
+        <div class="topo topo-desktop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="logo-mtst">
+                            <a href="https://mtst.nucleodetecnologia.com.br" data-wpel-link="internal"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20106%20106'%3E%3C/svg%3E" width="106" height="106" alt="Logo do MTST" data-lazy-src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/logo-novo.png"><noscript><img src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/logo-novo.png" width="106" height="106" alt="Logo do MTST"></noscript></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="busca">
+                            <form role="search" method="get" class="search-form" action="https://mtst.nucleodetecnologia.com.br/">
+                                <div class="search-container">
+                                    <input type="text" name="s" id="search" placeholder="DIGITE A SUA BUSCA AQUI" value=""/>
+                                    <button aria-label="Buscar" class="lupa-busca" type="submit" value=""><img width="36" height="36" alt="Pesquisar" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2036%2036'%3E%3C/svg%3E" width="33" height="36" data-lazy-src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/lupa.png"/><noscript><img width="36" height="36" alt="Pesquisar" src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/lupa.png" width="33" height="36"/></noscript></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="redes-cont">
+                            <ul class="redes-sociais">
+                                <li><a href="https://www.instagram.com/mtstbrasil/?hl=pt" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><img width="35" height="35" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2035'%3E%3C/svg%3E" alt="Instagram" data-lazy-src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/instagram.png"><noscript><img width="35" height="35" src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/instagram.png" alt="Instagram"></noscript></a></li>
+                                <li><a href="https://www.facebook.com/mtstbrasil/" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><img width="35" height="35" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2035'%3E%3C/svg%3E" alt="Facebook" data-lazy-src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/facebook.png"><noscript><img width="35" height="35" src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/facebook.png" alt="Facebook"></noscript></a></li>
+                                <li><a href="https://twitter.com/mtst" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><img width="36" height="30" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2036%2030'%3E%3C/svg%3E" alt="Twitter" data-lazy-src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/twitter.png"><noscript><img width="36" height="30" src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/twitter.png" alt="Twitter"></noscript></a></li>
+                                <li><a href="https://www.youtube.com/channel/UC3OzrZMhnmEgVtxpJoDRkeg" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><img width="39" height="31" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2039%2031'%3E%3C/svg%3E" alt="Youtube" data-lazy-src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/youtube.png"><noscript><img width="39" height="31" src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/youtube.png" alt="Youtube"></noscript></a></li>
+                                <li><a href="https://www.tiktok.com/@mtstbr" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><img width="45" height="45" class="tiktok-icon" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2045%2045'%3E%3C/svg%3E" alt="Tik Tok" data-lazy-src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/ic_baseline-tiktok.png"><noscript><img width="45" height="45" class="tiktok-icon" src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/ic_baseline-tiktok.png" alt="Tik Tok"></noscript></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-principal container">
+            <nav role="navigation">
+                <ul class="menu" id="menu">
+                    <li><a class="nav-link menu-home active" href="https://mtst.nucleodetecnologia.com.br" data-wpel-link="internal">Home</a></li>
+                    <li><a class="nav-link menu-quem-somos" href="#">Quem Somos</a>
+                        <ul class="submenu">
+                            <li><a href="https://mtst.nucleodetecnologia.com.br/quem-somos/o-mtst" data-wpel-link="internal">O MTST</a></li>
+                            <li><a href="https://mtst.nucleodetecnologia.com.br/quem-somos/fake-news" data-wpel-link="internal">Fato ou fake</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link menu-noticias" href="#">Notícias</a>
+                        <ul class="submenu">
+                            <li><a href="https://mtst.nucleodetecnologia.com.br/noticias/ultimas-noticias" data-wpel-link="internal">Últimas Notícias</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link menu-campanha" href="#">Contribua</a>
+                        <ul class="submenu">
+                            <li><a href="https://mtst.nucleodetecnologia.com.br/contribuicao/" data-wpel-link="internal">MTST</a></li>
+                            <li><a href="https://apoia.se/cozinhasolidaria" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Cozinhas Solidárias</a></li>
+                            <li><a href="https://www.catarse.me/colabore_mtst" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Educação Popular</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link menu-loja" href="https://wa.me/5511914631714" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Loja</a></li>
+                    <li><a class="nav-link menu-galeria" href="#">Galeria</a>
+                        <ul class="submenu">
+                            <li><a href="https://open.spotify.com/show/5X2nnU5w9uptyMiApbPCWj" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Podcasts</a></li>
+                            <li><a href="https://www.youtube.com/c/MTSTBrasil" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Vídeos</a></li>
+                            <li><a href="https://www.instagram.com/mtstbrasil/" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Fotos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="topo topo-mobile">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-logo">
+                        <div class="logo-mtst">
+                            <a href="https://mtst.nucleodetecnologia.com.br" data-wpel-link="internal"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20106%20106'%3E%3C/svg%3E" width="106" height="106" alt="Logo do MTST" data-lazy-src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/logo-novo.png"><noscript><img src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/logo-novo.png" width="106" height="106" alt="Logo do MTST"></noscript></a>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="busca">
+                        <button class="lupa-busca" id="lupa-busca" onclick="exibirBusca()"><img width="36" height="36" alt="Pesquisar" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2036%2036'%3E%3C/svg%3E" width="33" height="36" data-lazy-src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/lupa.png"/><noscript><img width="36" height="36" alt="Pesquisar" src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/lupa.png" width="33" height="36"/></noscript></button>
+                            <form role="search" method="get" class="search-form" id="search-form" action="https://mtst.nucleodetecnologia.com.br/">
+                                <div class="search-container" id="search-container">
+                                    <input type="text" name="s" id="search" placeholder="DIGITE A SUA BUSCA AQUI" value=""/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-2 col-hamb">
+                        <!-- Hamburger icon -->
+                        <div class="icon-mobile">
+                            <input class="side-menu" type="checkbox" id="side-menu" name="c1" onclick="showMe('menu-mobile')"/>
+                            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Menu -->
+        <div class="menu-principal menu-mobile container" id="menu-mobile">
+                            <nav>
+                                <ul calss="menu" id="menu-mobile">
+                                    <li><a class="nav-link menu-home item-mob active" href="https://mtst.nucleodetecnologia.com.br" data-wpel-link="internal">Home</a></li>
+                                    <li><a class="nav-link menu-quem-somos item-mob" onclick="subQuemSomos()">Quem Somos</a>
+                                        <ul class="submenu" id="sub-quem-somos" style="display:none;">
+                                            <li><a a="" class="nav-link" href="https://mtst.nucleodetecnologia.com.br/quem-somos/o-mtst" data-wpel-link="internal">O MTST</a></li>
+                                            <li><a class="nav-link" href="https://mtst.nucleodetecnologia.com.br/quem-somos/fake-news" data-wpel-link="internal">Fato ou fake</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="nav-link menu-noticias item-mob" onclick="subNoticias()">Notícias</a>
+                                        <ul class="submenu" id="sub-noticias" style="display:none">
+                                            <li><a class="nav-link" href="https://mtst.nucleodetecnologia.com.br/noticias/ultimas-noticias" data-wpel-link="internal">Últimas Notícias</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a id="menu-campanha" class="nav-link menu-campanha item-mob" onclick="subCampanha()">Contribua</a>
+                                        <ul class="submenu" id="sub-campanha" style="display:none">
+                                            <li><a class="nav-link" href="https://mtst.nucleodetecnologia.com.br/contribuicao/" data-wpel-link="internal">MTST</a></li>
+                                            <li><a class="nav-link" href="https://apoia.se/cozinhasolidaria" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Cozinhas Solidárias</a></li>
+                                            <li><a class="nav-link" href="https://www.catarse.me/colabore_mtst" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Educação Popular</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="nav-link menu-loja item-mob" href="https://wa.me/5511914631714" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Loja</a></li>
+                                    <li><a class="nav-link menu-galeria item-mob" onclick="subGaleria()">Galeria</a>
+                                        <ul class="submenu" id="sub-galeria" style="display:none;">
+                                            <li><a class="nav-link" href="https://open.spotify.com/show/5X2nnU5w9uptyMiApbPCWj" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Podcasts</a></li>
+                                            <li><a class="nav-link" href="https://www.youtube.com/c/MTSTBrasil" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Vídeos</a></li>
+                                            <li><a class="nav-link" href="https://www.instagram.com/mtstbrasil/" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Fotos</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <script>
+                            function exibirBusca() {
+                                const lupa = document.getElementById('lupa-busca');
+                                lupa.style.display = 'none';
+                                const searchform = document.getElementById('search-container');
+                                searchform.style.display = 'block';
+                            }
+                            function showMe (box) {        
+                                var chboxs = document.getElementsByName("c1");
+                                var vis = "none";
+                                for(var i=0;i<chboxs.length;i++) { 
+                                    if(chboxs[i].checked){
+                                    vis = "block";
+                                        break;
+                                    }
+                                }
+                                document.getElementById(box).style.display = vis;
+                            }
+                            function subQuemSomos() {
+                            var x = document.getElementById("sub-quem-somos");
+                                if (x.style.display === "none") {
+                                    x.style.display = "block";
+                                } else {
+                                    x.style.display = "none";
+                                }
+                            }
+                            function subNoticias() {
+                            var x = document.getElementById("sub-noticias");
+                            var y = document.getElementById("menu-campanha");
+                                if (x.style.display === "none") {
+                                    x.style.display = "block";
+                                    //y.style.marginTop = "92px";
+                                } else {
+                                    x.style.display = "none";
+                                    y.style.marginTop = "0";
+                                }
+                            }
+                            function subCampanha() {
+                            var x = document.getElementById("sub-campanha");
+                                if (x.style.display === "none") {
+                                    x.style.display = "block";
+                                } else {
+                                    x.style.display = "none";
+                                }
+                            }
+                            function subGaleria() {
+                            var x = document.getElementById("sub-galeria");
+                                if (x.style.display === "none") {
+                                    x.style.display = "block";
+                                } else {
+                                    x.style.display = "none";
+                                }
+                            }
+
+                        </script>
+                </div>
+    </header>
+
+
+    <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
+    
+
+<main id="main" class="site-main" role="main">
+
+	
+		<div class="page-header container">
+			<h1>Publicações</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                                    
+                            
+<div id="post-2228" class="entry col-md-6">
+	<div class="ultima-noticia ultimas-duas-col">
+		<div data-bg="https://mtst.nucleodetecnologia.com.br/wp-content/uploads/2017/06/Sequência-01.00_08_49_17.Quadro004.jpg" class="thumb rocket-lazyload" style="">
+						<a class="link-categoria" href="https://mtst.nucleodetecnologia.com.br/mtst/" data-wpel-link="internal"><div class="categoria">MTST</div></a>
+			        </div>
+		<div class="titulo-noticia">
+			<h3><a href="https://mtst.nucleodetecnologia.com.br/mtst/ocupacao-mtst-zona-sul-de-sp-uma-flor-rompe-o-asfalto/" data-wpel-link="internal">VÍDEO &#8211; OCUPAÇÃO MTST ZONA SUL DE SP: Uma Flor Rompe o Asfalto</a></h3>
+			<div class="ler-mais"><a href="https://mtst.nucleodetecnologia.com.br/mtst/ocupacao-mtst-zona-sul-de-sp-uma-flor-rompe-o-asfalto/" data-wpel-link="internal">LER MAIS >>></a></div>
+		</div>
+	</div>
+</div>                        
+
+                                    
+                            
+<div id="post-239" class="entry col-md-6">
+	<div class="ultima-noticia ultimas-duas-col">
+		<div data-bg="https://mtst.nucleodetecnologia.com.br/wp-content/uploads/2016/03/mulheres-MTST.jpg" class="thumb rocket-lazyload" style="">
+						<a class="link-categoria" href="https://mtst.nucleodetecnologia.com.br/noticias/" data-wpel-link="internal"><div class="categoria">Notícias</div></a>
+			        </div>
+		<div class="titulo-noticia">
+			<h3><a href="https://mtst.nucleodetecnologia.com.br/noticias/8-de-marco-e-dia-de-luta/" data-wpel-link="internal">8 de março é dia de luta!</a></h3>
+			<div class="ler-mais"><a href="https://mtst.nucleodetecnologia.com.br/noticias/8-de-marco-e-dia-de-luta/" data-wpel-link="internal">LER MAIS >>></a></div>
+		</div>
+	</div>
+</div>                        
+
+                            </div>
+            <div class="pagination">
+                            </div>
+        </div>
+	
+	    
+</main>
+
+
+    <script type="text/javascript" src="https://mtst.nucleodetecnologia.com.br/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.8.6" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/mtst.nucleodetecnologia.com.br\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://mtst.nucleodetecnologia.com.br/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.8.6" id="contact-form-7-js"></script>
+    <style>
+            </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+                    });
+    </script>
+
+
+    <script>
+        var accordions_active = null;
+        var accordions_tabs_active = null;
+    </script>
+
+    
+
+
+<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://mtst.nucleodetecnologia.com.br/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>	<footer>
+		            <div class="newsletter" id="newsletter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="titulo-secao">
+                                <h2>FIQUE POR DENTRO!</h2>
+                            </div>
+                            <div class="news-desc">
+                                <p>Quer conhecer mais o MTST e acompanhar de perto tudo que esse grande movimento social faz? Receba nossa newsletter</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            
+<div class="wpcf7 no-js" id="wpcf7-f13218-o1" lang="pt-BR" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/publicacoes/#wpcf7-f13218-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="13218" />
+<input type="hidden" name="_wpcf7_version" value="5.8.6" />
+<input type="hidden" name="_wpcf7_locale" value="pt_BR" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f13218-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="0" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</div>
+<div class="form-newsletter">
+	<p><br />
+<span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="NOME" value="" type="text" name="your-name" /></span>
+	</p>
+	<p><br />
+<span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="EMAIL" value="" type="email" name="your-email" /></span>
+	</p>
+	<p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="ASSINAR NEWSLETTER" />
+	</p>
+</div>
+<style>
+ .wpcf7 form .wpcf7-response-output {
+ margin: -20px auto 0!important;
+ }
+ .wpcf7 form.sent .wpcf7-response-output {
+ border-color: #fff!important;
+ }
+ .form-newsletter br {
+ display: none;
+ }
+</style><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>		            <div class="site-footer">
+                <div class="container">
+                    <!-- <div class="txt-footer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis tellus vulputate sit lectus. Non consectetur a sapien, ut interdum ridiculus sagittis. Nisl blandit morbi est quis ac dolor sed. Amet quisque ut faucibus quis vel integer ullamcorper.</p>
+                    </div> -->
+                    <nav class="nav-footer">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <ul>
+                                    <li><a href="https://mtst.nucleodetecnologia.com.br/quem-somos/o-mtst" data-wpel-link="internal">Conheça o MTST</a></li>
+                                    <li><a href="https://wa.me/5511914631714" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Loja de Luta</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4">
+                                <ul>
+                                    <li><a href="https://cozinhasolidaria.com/" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Cozinhas Solidárias</a></li>
+                                    <li><a href="https://contratequemluta.com/" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Contrate quem luta</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-3">
+                                <ul>
+                                    <li class="f-menu-dir">
+                                        <a href="https://mtst.nucleodetecnologia.com.br/noticias/ultimas-noticias" data-wpel-link="internal">Notícias</a>
+                                    </li>
+                                    <li class="f-menu-dir">
+                                        <a href="https://mtst.nucleodetecnologia.com.br/contato" data-wpel-link="internal">Contato</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul>
+                                    <li style="text-align:center;margin-top:30px">
+                                        Desenvolvido pelo <a href="https://nucleodetecnologia.com.br/" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Núcleo de Tecnologia do MTST</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="redes-cont" style="display:block;margin:0 auto;max-width: 330px;">
+                                    <ul class="redes-sociais">
+                                        <li><a href="https://www.instagram.com/mtstbrasil/?hl=pt" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><img width="35" height="35" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2035'%3E%3C/svg%3E" alt="Instagram" data-lazy-src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/instagram.png"><noscript><img width="35" height="35" src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/instagram.png" alt="Instagram"></noscript></a></li>
+                                        <li><a href="https://www.facebook.com/mtstbrasil/" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><img width="35" height="35" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2035'%3E%3C/svg%3E" alt="Facebook" data-lazy-src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/facebook.png"><noscript><img width="35" height="35" src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/facebook.png" alt="Facebook"></noscript></a></li>
+                                        <li><a href="https://twitter.com/mtst" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><img width="36" height="30" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2036%2030'%3E%3C/svg%3E" alt="Twitter" data-lazy-src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/twitter.png"><noscript><img width="36" height="30" src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/twitter.png" alt="Twitter"></noscript></a></li>
+                                        <li><a href="https://www.youtube.com/channel/UC3OzrZMhnmEgVtxpJoDRkeg" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><img width="39" height="31" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2039%2031'%3E%3C/svg%3E" alt="Youtube" data-lazy-src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/youtube.png"><noscript><img width="39" height="31" src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/youtube.png" alt="Youtube"></noscript></a></li>
+                                        <li><a href="https://www.tiktok.com/@mtstbr" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><img width="45" height="45" class="tiktok-icon" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2045%2045'%3E%3C/svg%3E" alt="Tik Tok" data-lazy-src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/ic_baseline-tiktok.png"><noscript><img width="45" height="45" class="tiktok-icon" src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/images/ic_baseline-tiktok.png" alt="Tik Tok"></noscript></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>	</footer>
+				<script type='text/javascript' src="https://mtst.nucleodetecnologia.com.br/wp-content/themes/mtst-theme/assets/js/geral.js"></script>
+	<script>"use strict";function wprRemoveCPCSS(){var preload_stylesheets=document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]');if(preload_stylesheets&&0<preload_stylesheets.length)for(var stylesheet_index=0;stylesheet_index<preload_stylesheets.length;stylesheet_index++){var media=preload_stylesheets[stylesheet_index].getAttribute("media")||"all";if(window.matchMedia(media).matches)return void setTimeout(wprRemoveCPCSS,200)}var elem=document.getElementById("rocket-critical-css");elem&&"remove"in elem&&elem.remove()}window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);</script><noscript><link rel="stylesheet" href="https://mtst.nucleodetecnologia.com.br/wp-content/cache/min/1/542d1037e3f07e5224b77299e7d09dc3.css" media="all" data-minify="1" /><link rel='stylesheet' id='sab-font-css' href='https://fonts.bunny.net/css?family=Roboto:400,700,400italic,700italic&#038;subset=latin' type='text/css' media='all' /></noscript></body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1707171267 -->
