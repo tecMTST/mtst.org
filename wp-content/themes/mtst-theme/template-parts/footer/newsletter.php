@@ -6,7 +6,7 @@
                                 <h2>FIQUE POR DENTRO!</h2>
                             </div>
                             <div class="news-desc">
-                                <p>Quer conhecer mais o MTST e acompanhar de perto tudo que esse grande movimento social faz? Receba nossa newsletter</p>
+                                <p>Quer saber mais sobre nossas atividades e acompanhar as novidades? Assine nosso boletim informativo.</p>
                             </div>
                         </div>
                         <div class="col-md-6">

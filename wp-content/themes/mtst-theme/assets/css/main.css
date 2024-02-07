@@ -954,6 +954,11 @@ main.projetos-template {
     padding-bottom: 40px;
 }
 
+.projetos-template img.full-width {
+    margin: 0 auto;
+    display: flex;
+}
+
 /* Responsivo */
 
 @media (max-width: 1199px) {
