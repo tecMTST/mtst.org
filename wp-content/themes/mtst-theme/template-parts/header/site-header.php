@@ -56,7 +56,7 @@
                     <li><a class="nav-link menu-campanha" href="#">Nossos Projetos</a>
                         <ul class="submenu">
                             <li><a href="<?php echo home_url(); ?>/cozinhas-solidarias/">Cozinhas Solidárias</a></li>
-                            <li><a href="<?php echo home_url(); ?>/centro-de-pesquisa-popular/" target="_blank">Centro de Pesquisa Popular</a></li>
+                            <li><a href="<?php echo home_url(); ?>/centro-popular-de-pesquisa/" target="_blank">Centro Popular de Pesquisa</a></li>
                             <li><a href="<?php echo home_url(); ?>/contrate-quem-luta/" target="_blank">Contrate Quem Luta</a></li>
                         </ul>
                     </li>
@@ -127,7 +127,7 @@
                                     <li><a id="menu-projetos" class="nav-link menu-projetos item-mob" onclick="subProjetos()">Nossos Projetos</a>
                                         <ul class="submenu" id="sub-projetos" style="display:none">
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/cozinhas-solidarias/">Cozinhas Solidárias</a></li>
-                                            <li><a class="nav-link" href="<?php echo home_url(); ?>/centro-de-pesquisa-popular/">Centro de Pesquisa Popular</a></li>
+                                            <li><a class="nav-link" href="<?php echo home_url(); ?>/centro-popular-de-pesquisa/">Centro Popular de Pesquisa</a></li>
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/contrate-quem-luta/">Contrate Quem Luta</a></li>
                                         </ul>
                                     </li>
