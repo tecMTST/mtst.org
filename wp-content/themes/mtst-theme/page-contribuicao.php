@@ -40,7 +40,7 @@
                                             </a>
                                         </div>
                                         <div class="col-6 col-md-4">
-                                            <a href="https://buy.stripe.com/eVa0389af0oR1u88ww" class="brn-cont" target="_blank">
+                                            <a href="https://buy.stripe.com/00g9CseMp3Zb09228d" class="brn-cont" target="_blank">
                                                 R$300
                                             </a>
                                         </div>
