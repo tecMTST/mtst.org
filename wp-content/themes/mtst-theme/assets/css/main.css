@@ -970,6 +970,10 @@ img.alignleft {
     width: auto!important;
 }
 
+figcaption.wp-caption-text {
+    padding: 0 16px;
+}
+
 /* Responsivo */
 
 @media (max-width: 1199px) {
@@ -1660,5 +1664,23 @@ img.alignleft {
     .projetos-template p {
         font-size: 20px;
         line-height: 150%;
+        padding: 0 16px;
     }
+    .projetos-template h1, 
+    .projetos-template h2,
+    .projetos-template h3,
+    .projetos-template h4,
+    .projetos-template a,
+    .projetos-template .swiper {
+        padding: 0 16px;
+    }
+    iframe.instagram-media {
+        width: 90%!important;
+        margin: 0 auto 12px!important;
+    }
+    .projetos-template .swiper-button-prev, 
+    .projetos-template .swiper-button-next {
+        display: none;
+    }
+
 }
