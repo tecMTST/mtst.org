@@ -27,7 +27,8 @@ global $post; ?>
                 'post_type'      => 'post',
                 'category_name'  => 'cat-cozinhas-solidarias'
                 ) ); ?>
-                <div class="swiper swiper-post-rel">
+                <div class="swiper swiper-post-rel" style="margin-top:40px">
+                    <h3 style="margin-bottom:30px">Notícias Relacionadas</h3>
                     <div class="swiper-wrapper">
                         <?php while ( $new_query->have_posts() ) : $new_query->the_post(); ?>
                         <div class="swiper-slide">
