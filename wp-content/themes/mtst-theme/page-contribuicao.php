@@ -20,22 +20,22 @@
                                     <label for="rd2" class="tab__label">Contribuição mensal</label>
                                     <div class="row tab__content1">
                                         <div class="col-6 col-md-4">
-                                            <a href="https://buy.stripe.com/eVa0389af0oR1u88ww" class="brn-cont" target="_blank">
+                                            <a href="https://donate.stripe.com/28o9Cs1ZDfHT9JCaEE" class="brn-cont" target="_blank">
                                                 R$30
                                             </a>
                                         </div>
                                         <div class="col-6 col-md-4">
-                                            <a href="https://buy.stripe.com/eVa0389af0oR1u88ww" class="brn-cont" target="_blank">
+                                            <a href="https://buy.stripe.com/5kAg0QdIldzLbRKfZ1" class="brn-cont" target="_blank">
                                                 R$50
                                             </a>
                                         </div>
                                         <div class="col-6 col-md-4">
-                                            <a href="https://buy.stripe.com/eVa0389af0oR1u88ww" class="brn-cont" target="_blank">
+                                            <a href="https://buy.stripe.com/bIY9Cs0Vz7bndZS004" class="brn-cont" target="_blank">
                                                 R$100
                                             </a>
                                         </div>
                                         <div class="col-6 col-md-4">
-                                            <a href="https://buy.stripe.com/eVa0389af0oR1u88ww" class="brn-cont" target="_blank">
+                                            <a href="https://buy.stripe.com/fZe5mcgUxbrD9JCeV0" class="brn-cont" target="_blank">
                                                 R$200
                                             </a>
                                         </div>
@@ -45,24 +45,24 @@
                                             </a>
                                         </div>
                                         <div class="col-6 col-md-4">
-                                            <a href="https://buy.stripe.com/eVa0389af0oR1u88ww" class="brn-cont" target="_blank" style="font-size:20px">
+                                            <a href="https://buy.stripe.com/00g9CseMp3Zb09228d" class="brn-cont" target="_blank" style="font-size:20px">
                                                 OUTRO<br>VALOR
                                             </a>
                                         </div>
                                     </div>
                                     <div class="row tab__content2">
                                         <div class="col-6 col-md-4">
-                                            <a href="https://buy.stripe.com/eVa0389af0oR1u88ww" class="brn-cont" target="_blank">
+                                            <a href="https://buy.stripe.com/dR66qg1ZD2V78Fy289" class="brn-cont" target="_blank">
                                                 R$50
                                             </a>
                                         </div>
                                         <div class="col-6 col-md-4">
-                                            <a href="https://buy.stripe.com/eVa0389af0oR1u88ww" class="brn-cont" target="_blank">
+                                            <a href="https://buy.stripe.com/6oE15WdIl3ZbdZS9AC" class="brn-cont" target="_blank">
                                                 R$100
                                             </a>
                                         </div>
                                         <div class="col-6 col-md-4">
-                                            <a href="https://buy.stripe.com/eVa0389af0oR1u88ww" class="brn-cont" target="_blank" style="font-size:20px">
+                                            <a href="https://buy.stripe.com/6oE15WdIl3ZbdZS9AC" class="brn-cont" target="_blank" style="font-size:20px">
                                                 OUTRO<br>VALOR
                                             </a>
                                         </div>
