@@ -100,3 +100,34 @@ function embed_instagram_post($atts) {
 add_shortcode('instagram_post', 'embed_instagram_post');
 
 
+// Função para criar o shortcode
+function embed_twitter_post($atts) {
+  // Extrai os atributos do shortcode
+  $atts = shortcode_atts(
+      array(
+          'url' => '', // URL do post do Twitter
+          'width' => '400', // Largura do tweet incorporado
+          'height' => '300', // Altura do tweet incorporado
+      ),
+      $atts
+  );
+
+  // Verifica se foi fornecida uma URL válida
+  if (empty($atts['url'])) {
+      return 'Por favor, forneça uma URL válida do Twitter.';
+  }
+
+  // Remove "https://twitter.com/" da URL, se presente
+  $url = str_replace('https://twitter.com/', '', $atts['url']);
+
+  // Monta o HTML do tweet incorporado
+  $embed_code = '<blockquote class="twitter-tweet">';
+  $embed_code .= '<a href="' . esc_url($atts['url']) . '"></a>';
+  $embed_code .= '</blockquote>';
+  $embed_code .= '<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
+
+  return $embed_code;
+}
+add_shortcode('twitter_post', 'embed_twitter_post');
+
+
