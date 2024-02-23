@@ -23,6 +23,11 @@ body {
     background: var(--branco);
 }
 
+::selection {
+    background-color: #D70000;
+    color: #FFFFFF;
+}
+
 a {
     word-wrap: break-word;
 }
