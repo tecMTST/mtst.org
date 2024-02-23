@@ -106,25 +106,25 @@
                             <nav>
                                 <ul calss="menu" id="menu-mobile">
                                     <li><a class="nav-link menu-home item-mob active" href="<?php echo home_url(); ?>">Home</a></li>
-                                    <li><a class="nav-link menu-quem-somos item-mob" onclick="subQuemSomos()">Quem Somos</a>
+                                    <li><a href="#" class="nav-link menu-quem-somos item-mob" onclick="subQuemSomos()">Quem Somos</a>
                                         <ul class="submenu" id="sub-quem-somos" style="display:none;">
                                             <li><a a class="nav-link" href="<?php echo home_url(); ?>/quem-somos/o-mtst">O MTST</a></li>
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/quem-somos/fake-news">Fato ou fake</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="nav-link menu-noticias item-mob" onclick="subNoticias()">Notícias</a>
+                                    <li><a href="#" class="nav-link menu-noticias item-mob" onclick="subNoticias()">Notícias</a>
                                         <ul class="submenu" id="sub-noticias" style="display:none">
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/noticias/ultimas-noticias">Últimas Notícias</a></li>
                                         </ul>
                                     </li>
-                                    <li><a id="menu-campanha" class="nav-link menu-campanha item-mob" onclick="subCampanha()">Contribua</a>
+                                    <li><a href="#" id="menu-campanha" class="nav-link menu-campanha item-mob" onclick="subCampanha()">Contribua</a>
                                         <ul class="submenu" id="sub-campanha" style="display:none">
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/contribuicao/">MTST</a></li>
                                             <li><a class="nav-link" href="https://apoia.se/cozinhasolidaria" target="_blank">Cozinhas Solidárias</a></li>
                                             <li><a class="nav-link" href="https://www.catarse.me/colabore_mtst" target="_blank">Educação Popular</a></li>
                                         </ul>
                                     </li>
-                                    <li><a id="menu-projetos" class="nav-link menu-projetos item-mob" onclick="subProjetos()">Nossos Projetos</a>
+                                    <li><a href="#" id="menu-projetos" class="nav-link menu-projetos item-mob" onclick="subProjetos()">Nossos Projetos</a>
                                         <ul class="submenu" id="sub-projetos" style="display:none">
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/cozinhas-solidarias/">Cozinhas Solidárias</a></li>
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/centro-popular-de-pesquisa/">Centro Popular de Pesquisa</a></li>
@@ -132,7 +132,7 @@
                                         </ul>
                                     </li>
                                     <li><a class="nav-link menu-loja item-mob" href="https://wa.me/5511914631714" target="_blank">Loja</a></li>
-                                    <li><a class="nav-link menu-galeria item-mob" onclick="subGaleria()">Galeria</a>
+                                    <li><a href="#" class="nav-link menu-galeria item-mob" onclick="subGaleria()">Galeria</a>
                                         <ul class="submenu" id="sub-galeria" style="display:none;">
                                             <li><a class="nav-link" href="https://open.spotify.com/show/5X2nnU5w9uptyMiApbPCWj" target="_blank">Podcasts</a></li>
                                             <li><a class="nav-link" href="https://www.youtube.com/c/MTSTBrasil" target="_blank">Vídeos</a></li>
