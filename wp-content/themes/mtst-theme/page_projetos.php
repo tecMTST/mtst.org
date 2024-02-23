@@ -49,6 +49,34 @@ global $post; ?>
                     <div class="swiper-pagination"></div>
                 </div>
             <?php endif; ?>
+            <?php if ($post->post_name == 'centro-popular-de-pesquisa'): ?>
+                <?php $new_query = new WP_Query( array(
+                'posts_per_page' => -1,
+                'post_type'      => 'post',
+                'category_name'  => 'cat-centro-popular-de-pesquisa'
+                ) ); ?>
+                <div class="swiper swiper-post-rel" style="margin-top:40px">
+                    <h3 style="margin-bottom:30px">Notícias Relacionadas</h3>
+                    <div class="swiper-wrapper">
+                        <?php while ( $new_query->have_posts() ) : $new_query->the_post(); ?>
+                        <div class="swiper-slide">
+                            <div class="ultima-noticia noticias-quatro-col">
+                                <div class="thumb" style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>)">
+                                    <?php // echo '<a class="link-categoria" href="'. esc_url( $link ) .'"><div class="categoria">'. $name .'</div></a>'; ?>
+                                </div>
+                                <div class="titulo-noticia">
+                                    <a href="<?php echo get_permalink(); ?>"><h3><?php echo get_the_title(); ?></h3></a>
+                                    <div class="ler-mais"><a href="<?php echo get_permalink(); ?>">LER MAIS >>></a></div>
+                                </div>                            
+                            </div>
+                        </div>
+                        <?php endwhile; ?>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            <?php endif; ?>
         </div>
     </main>
 <style>
