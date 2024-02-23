@@ -20,11 +20,11 @@
                     <div class="col-md-4">
                         <div class="redes-cont">
                             <ul class="redes-sociais">
-                                <li><a href="https://www.instagram.com/mtstbrasil/?hl=pt" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.png" alt="Instagram"></a></li>
-                                <li><a href="https://www.facebook.com/mtstbrasil/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="Facebook"></a></li>
-                                <li><a href="https://twitter.com/mtst" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.png" alt="Twitter"></a></li>
-                                <li><a href="https://www.youtube.com/channel/UC3OzrZMhnmEgVtxpJoDRkeg" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/youtube.png" alt="Youtube"></a></li>
-                                <li><a href="https://www.tiktok.com/@mtstbr" target="_blank" rel="noopener noreferrer"><img class="tiktok-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/ic_baseline-tiktok.png" alt="Tik Tok"></a></li>
+                                <li><a href="https://www.instagram.com/mtstbrasil/?hl=pt"  rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.png" alt="Instagram"></a></li>
+                                <li><a href="https://www.facebook.com/mtstbrasil/"  rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="Facebook"></a></li>
+                                <li><a href="https://twitter.com/mtst"  rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.png" alt="Twitter"></a></li>
+                                <li><a href="https://www.youtube.com/channel/UC3OzrZMhnmEgVtxpJoDRkeg"  rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/youtube.png" alt="Youtube"></a></li>
+                                <li><a href="https://www.tiktok.com/@mtstbr"  rel="noopener noreferrer"><img class="tiktok-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/ic_baseline-tiktok.png" alt="Tik Tok"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -49,23 +49,23 @@
                     <li><a class="nav-link menu-campanha" href="#">Contribua</a>
                         <ul class="submenu">
                             <li><a href="<?php echo home_url(); ?>/contribuicao/">MTST</a></li>
-                            <li><a href="https://apoia.se/cozinhasolidaria" target="_blank">Cozinhas Solidárias</a></li>
-                            <li><a href="https://www.catarse.me/colabore_mtst" target="_blank">Educação Popular</a></li>
+                            <li><a href="https://apoia.se/cozinhasolidaria" >Cozinhas Solidárias</a></li>
+                            <li><a href="https://www.catarse.me/colabore_mtst" >Educação Popular</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link menu-campanha" href="#">Nossos Projetos</a>
                         <ul class="submenu">
                             <li><a href="<?php echo home_url(); ?>/cozinhas-solidarias/">Cozinhas Solidárias</a></li>
-                            <li><a href="<?php echo home_url(); ?>/centro-popular-de-pesquisa/" target="_blank">Centro Popular de Pesquisa</a></li>
-                            <li><a href="<?php echo home_url(); ?>/contrate-quem-luta/" target="_blank">Contrate Quem Luta</a></li>
+                            <li><a href="<?php echo home_url(); ?>/centro-popular-de-pesquisa/" >Centro Popular de Pesquisa</a></li>
+                            <li><a href="<?php echo home_url(); ?>/contrate-quem-luta/" >Contrate Quem Luta</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link menu-loja" href="https://wa.me/5511914631714" target="_blank">Loja</a></li>
+                    <li><a class="nav-link menu-loja" href="https://wa.me/5511914631714" >Loja</a></li>
                     <li><a class="nav-link menu-galeria" href="#">Galeria</a>
                         <ul class="submenu">
-                            <li><a href="https://open.spotify.com/show/5X2nnU5w9uptyMiApbPCWj" target="_blank">Podcasts</a></li>
-                            <li><a href="https://www.youtube.com/c/MTSTBrasil" target="_blank">Vídeos</a></li>
-                            <li><a href="https://www.instagram.com/mtstbrasil/" target="_blank">Fotos</a></li>
+                            <li><a href="https://open.spotify.com/show/5X2nnU5w9uptyMiApbPCWj" >Podcasts</a></li>
+                            <li><a href="https://www.youtube.com/c/MTSTBrasil" >Vídeos</a></li>
+                            <li><a href="https://www.instagram.com/mtstbrasil/" >Fotos</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -120,8 +120,8 @@
                                     <li><a href="#" id="menu-campanha" class="nav-link menu-campanha item-mob" onclick="subCampanha()">Contribua</a>
                                         <ul class="submenu" id="sub-campanha" style="display:none">
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/contribuicao/">MTST</a></li>
-                                            <li><a class="nav-link" href="https://apoia.se/cozinhasolidaria" target="_blank">Cozinhas Solidárias</a></li>
-                                            <li><a class="nav-link" href="https://www.catarse.me/colabore_mtst" target="_blank">Educação Popular</a></li>
+                                            <li><a class="nav-link" href="https://apoia.se/cozinhasolidaria" >Cozinhas Solidárias</a></li>
+                                            <li><a class="nav-link" href="https://www.catarse.me/colabore_mtst" >Educação Popular</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#" id="menu-projetos" class="nav-link menu-projetos item-mob" onclick="subProjetos()">Nossos Projetos</a>
@@ -131,12 +131,12 @@
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/contrate-quem-luta/">Contrate Quem Luta</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="nav-link menu-loja item-mob" href="https://wa.me/5511914631714" target="_blank">Loja</a></li>
+                                    <li><a class="nav-link menu-loja item-mob" href="https://wa.me/5511914631714" >Loja</a></li>
                                     <li><a href="#" class="nav-link menu-galeria item-mob" onclick="subGaleria()">Galeria</a>
                                         <ul class="submenu" id="sub-galeria" style="display:none;">
-                                            <li><a class="nav-link" href="https://open.spotify.com/show/5X2nnU5w9uptyMiApbPCWj" target="_blank">Podcasts</a></li>
-                                            <li><a class="nav-link" href="https://www.youtube.com/c/MTSTBrasil" target="_blank">Vídeos</a></li>
-                                            <li><a class="nav-link" href="https://www.instagram.com/mtstbrasil/" target="_blank">Fotos</a></li>
+                                            <li><a class="nav-link" href="https://open.spotify.com/show/5X2nnU5w9uptyMiApbPCWj" >Podcasts</a></li>
+                                            <li><a class="nav-link" href="https://www.youtube.com/c/MTSTBrasil" >Vídeos</a></li>
+                                            <li><a class="nav-link" href="https://www.instagram.com/mtstbrasil/" >Fotos</a></li>
                                         </ul>
                                     </li>
                                 </ul>
