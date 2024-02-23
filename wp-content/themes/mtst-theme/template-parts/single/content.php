@@ -3,6 +3,9 @@
                     <div class="titulo-pagina">
                         <h1><?php the_title(); ?></h1>
                     </div>
+                    <div class="date-time">
+                        <?php echo get_the_date(); ?>
+                    </div>
                     <div class="row">
                         <div class="col-md-8">
                             <?php the_content(); ?>

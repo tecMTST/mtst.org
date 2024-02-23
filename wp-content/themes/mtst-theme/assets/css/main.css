@@ -28,6 +28,10 @@ body {
     color: #FFFFFF;
 }
 
+.date-time {
+    color: #616161;
+}
+
 a {
     word-wrap: break-word;
 }
