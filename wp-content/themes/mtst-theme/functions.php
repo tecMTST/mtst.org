@@ -131,3 +131,48 @@ function embed_twitter_post($atts) {
 add_shortcode('twitter_post', 'embed_twitter_post');
 
 
+// Função para carregar o script do Instagram
+function enqueue_instagram_script() {
+  ?>
+  <script async src="//www.instagram.com/embed.js"></script>
+  <?php
+}
+add_action('wp_footer', 'enqueue_instagram_script');
+
+// Shortcode para incorporar post do Instagram com legenda
+function embed_instagram_post_captioned($atts) {
+  $atts = shortcode_atts(
+      array(
+          'url' => '', // URL do post do Instagram
+      ),
+      $atts,
+      'instagram_post_captioned'
+  );
+
+  if (empty($atts['url'])) {
+      return 'Por favor, forneça a URL do post do Instagram.';
+  }
+
+  $instagram_url = esc_url($atts['url']);
+  return '<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="' . $instagram_url . '" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; max-width:540px; min-width:326px; padding:0; width:99.375%;"></blockquote>';
+}
+add_shortcode('instagram_post_captioned', 'embed_instagram_post_captioned');
+
+// Shortcode para incorporar post do Instagram sem legenda
+function embed_instagram_post_no_caption($atts) {
+  $atts = shortcode_atts(
+      array(
+          'url' => '', // URL do post do Instagram
+      ),
+      $atts,
+      'instagram_post_no_caption'
+  );
+
+  if (empty($atts['url'])) {
+      return 'Por favor, forneça a URL do post do Instagram.';
+  }
+
+  $instagram_url = esc_url($atts['url']);
+  return '<blockquote class="instagram-media" data-instgrm-permalink="' . $instagram_url . '" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; max-width:540px; min-width:326px; padding:0; width:99.375%;"></blockquote>';
+}
+add_shortcode('instagram_post_no_caption', 'embed_instagram_post_no_caption');
