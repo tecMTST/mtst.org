@@ -8,7 +8,7 @@
                             <div class="col-md-3">
                                 <ul>
                                     <li><a href="<?php echo site_url(); ?>/quem-somos/o-mtst">Conheça o MTST</a></li>
-                                    <li><a href="https://wa.me/5511914631714" target="_blank">Loja de Luta</a></li>
+                                    <li><a href="http://lojinha.mtst.org/" target="_blank">Loja de Luta</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-1"></div>

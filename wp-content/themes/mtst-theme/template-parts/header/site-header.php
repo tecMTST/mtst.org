@@ -60,7 +60,7 @@
                             <li><a href="<?php echo home_url(); ?>/contrate-quem-luta/" >Contrate Quem Luta</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link menu-loja" href="https://wa.me/5511914631714" >Loja</a></li>
+                    <li><a class="nav-link menu-loja" href="http://lojinha.mtst.org/" target="_blank">Loja</a></li>
                     <li><a class="nav-link menu-galeria" href="#">Galeria</a>
                         <ul class="submenu">
                             <li><a href="https://open.spotify.com/show/5X2nnU5w9uptyMiApbPCWj" >Podcasts</a></li>
@@ -131,7 +131,7 @@
                                             <li><a class="nav-link" href="<?php echo home_url(); ?>/contrate-quem-luta/">Contrate Quem Luta</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="nav-link menu-loja item-mob" href="https://wa.me/5511914631714" >Loja</a></li>
+                                    <li><a class="nav-link menu-loja item-mob" href="http://lojinha.mtst.org/" >Loja</a></li>
                                     <li><a href="#" class="nav-link menu-galeria item-mob" onclick="subGaleria()">Galeria</a>
                                         <ul class="submenu" id="sub-galeria" style="display:none;">
                                             <li><a class="nav-link" href="https://open.spotify.com/show/5X2nnU5w9uptyMiApbPCWj" >Podcasts</a></li>
